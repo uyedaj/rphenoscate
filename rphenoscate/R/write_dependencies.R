@@ -84,7 +84,7 @@ for(i in 1:length(uterms))
 
         if (D[i,j])
         {
-            edge = sprintf("\"%s\" -> \"%s\"",uterms[i],uterms[j])
+            edge = sprintf("\"%s\" -> \"%s\"",uterms[j],uterms[i])
             cat(sprintf("%s %s\n",uterms[i],uterms[j]))
             x = sprintf("'%s' -> '%s'",unames[i],unames[j])
             if (Disa[i,j] && Dpartof[i,j]) {
