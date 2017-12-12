@@ -87,8 +87,20 @@ for(i in 1:length(uterms))
             edge = sprintf("\"%s\" -> \"%s\"",uterms[i],uterms[j])
             cat(sprintf("%s %s\n",uterms[i],uterms[j]))
             x = sprintf("'%s' -> '%s'",unames[i],unames[j])
-            if (Disa[i,j]) { x = cat(x," [is_a]")}
-            if (Dpartof[i,j]) { x = cat(x," [part_of]")}
+            if (Disa[i,j] && Dpartof[i,j]) {
+                x = paste0(x," [is_a,partof]")
+                edge = paste0(edge," [label=\"is_a,partof\",color=purple]")
+            }
+            else if (Disa[i,j])
+            {
+                x = paste0(x," [is_a]")
+                edge = paste0(edge," [label=\"is_a\",color=red]")
+            }
+            else if (Dpartof[i,j])
+            {
+                x = paste0(x," [part_of]")
+                edge = paste0(edge," [label=\"part_of\",color=blue]")
+            }
             cat(x,"\n")
                                         # chr.id | state | chr.ancestor | state |
             cat(sprintf("%i,0,%i,1\n",j,i), file=outfile)

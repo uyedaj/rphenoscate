@@ -8,40 +8,40 @@ edge [style="setlinewidth(2)"];
 "UBERON:0006291" [label="(4) scapula pre-cartilage condensation"]
 "UBERON:0006849" [label="(5) scapula"]
 "UBERON:0007829" [label="(6) pectoral girdle bone"]
-"UBERON:0007829" -> "UBERON:0004741" 
-"UBERON:0007829" -> "UBERON:0006849" 
-"UBERON:0007829" -> "UBERON:2000663" 
-"UBERON:0007829" -> "UBERON:2001852" 
-"UBERON:0007829" -> "UBERON:2001998" 
-"UBERON:0007829" -> "UBERON:2002019" 
+"UBERON:0007829" -> "UBERON:0004741" [label="is_a",color=red] 
+"UBERON:0007829" -> "UBERON:0006849" [label="is_a",color=red] 
+"UBERON:0007829" -> "UBERON:2000663" [label="is_a",color=red] 
+"UBERON:0007829" -> "UBERON:2001852" [label="is_a",color=red] 
+"UBERON:0007829" -> "UBERON:2001998" [label="is_a",color=red] 
+"UBERON:0007829" -> "UBERON:2002019" [label="is_a",color=red] 
 "UBERON:0007829" -> "UBERON:2002030" 
-"UBERON:0007829" -> "UBERON:4000160" 
-"UBERON:0007829" -> "UBERON:4200022" 
-"UBERON:0007829" -> "UBERON:4300104" 
+"UBERON:0007829" -> "UBERON:4000160" [label="is_a",color=red] 
+"UBERON:0007829" -> "UBERON:4200022" [label="is_a",color=red] 
+"UBERON:0007829" -> "UBERON:4300104" [label="is_a",color=red] 
 "UBERON:0015057" [label="(7) scapula endochondral element"]
-"UBERON:0015057" -> "UBERON:0006290" 
-"UBERON:0015057" -> "UBERON:0006291" 
-"UBERON:0015057" -> "UBERON:0006849" 
+"UBERON:0015057" -> "UBERON:0006290" [label="is_a",color=red] 
+"UBERON:0015057" -> "UBERON:0006291" [label="is_a",color=red] 
+"UBERON:0015057" -> "UBERON:0006849" [label="is_a",color=red] 
 "UBERON:1500007" [label="(8) mesopterygium cartilage"]
 "UBERON:2000623" [label="(9) basipterygium bone"]
-"UBERON:2000623" -> "UBERON:2002072" 
-"UBERON:2000623" -> "UBERON:2002076" 
+"UBERON:2000623" -> "UBERON:2002072" [label="part_of",color=blue] 
+"UBERON:2000623" -> "UBERON:2002076" [label="part_of",color=blue] 
 "UBERON:2000663" [label="(10) extrascapula"]
-"UBERON:2000663" -> "UBERON:4200099" 
-"UBERON:2000663" -> "UBERON:4200103" 
+"UBERON:2000663" -> "UBERON:4200099" [label="is_a",color=red] 
+"UBERON:2000663" -> "UBERON:4200103" [label="is_a",color=red] 
 "UBERON:2001537" [label="(11) mesocoracoid cartilage"]
 "UBERON:2001586" [label="(12) pectoral fin radial bone"]
-"UBERON:2001586" -> "UBERON:2001587" 
-"UBERON:2001586" -> "UBERON:2001588" 
+"UBERON:2001586" -> "UBERON:2001587" [label="is_a",color=red] 
+"UBERON:2001586" -> "UBERON:2001588" [label="is_a",color=red] 
 "UBERON:2001587" [label="(13) pectoral fin proximal radial bone"]
-"UBERON:2001587" -> "UBERON:2002026" 
-"UBERON:2001587" -> "UBERON:2002027" 
-"UBERON:2001587" -> "UBERON:2002028" 
-"UBERON:2001587" -> "UBERON:2002029" 
-"UBERON:2001587" -> "UBERON:4300087" 
+"UBERON:2001587" -> "UBERON:2002026" [label="is_a",color=red] 
+"UBERON:2001587" -> "UBERON:2002027" [label="is_a",color=red] 
+"UBERON:2001587" -> "UBERON:2002028" [label="is_a",color=red] 
+"UBERON:2001587" -> "UBERON:2002029" [label="is_a",color=red] 
+"UBERON:2001587" -> "UBERON:4300087" [label="is_a",color=red] 
 "UBERON:2001588" [label="(14) pectoral fin distal radial bone"]
-"UBERON:2001588" -> "UBERON:2002279" 
-"UBERON:2001588" -> "UBERON:2002280" 
+"UBERON:2001588" -> "UBERON:2002279" [label="is_a",color=red] 
+"UBERON:2001588" -> "UBERON:2002280" [label="is_a",color=red] 
 "UBERON:2001589" [label="(15) propterygium cartilage"]
 "UBERON:2001761" [label="(16) pectoral fin lepidotrichium 1"]
 "UBERON:2001762" [label="(17) pectoral fin lepidotrichium 2"]
@@ -66,57 +66,57 @@ edge [style="setlinewidth(2)"];
 "UBERON:2002279" [label="(36) pectoral fin distal radial bone 2"]
 "UBERON:2002280" [label="(37) pectoral fin distal radial bone 3"]
 "UBERON:2101586" [label="(38) pectoral fin radial element"]
-"UBERON:2101586" -> "UBERON:2001586" 
-"UBERON:2101586" -> "UBERON:2101587" 
-"UBERON:2101586" -> "UBERON:2101588" 
-"UBERON:2101586" -> "UBERON:2201586" 
+"UBERON:2101586" -> "UBERON:2001586" [label="is_a",color=red] 
+"UBERON:2101586" -> "UBERON:2101587" [label="is_a",color=red] 
+"UBERON:2101586" -> "UBERON:2101588" [label="is_a",color=red] 
+"UBERON:2101586" -> "UBERON:2201586" [label="is_a",color=red] 
 "UBERON:2101587" [label="(39) pectoral fin proximal radial element"]
-"UBERON:2101587" -> "UBERON:2001587" 
-"UBERON:2101587" -> "UBERON:2102026" 
-"UBERON:2101587" -> "UBERON:2102027" 
-"UBERON:2101587" -> "UBERON:2102028" 
-"UBERON:2101587" -> "UBERON:2102029" 
-"UBERON:2101587" -> "UBERON:2201587" 
-"UBERON:2101587" -> "UBERON:4300081" 
-"UBERON:2101587" -> "UBERON:4300082" 
-"UBERON:2101587" -> "UBERON:4300083" 
+"UBERON:2101587" -> "UBERON:2001587" [label="is_a",color=red] 
+"UBERON:2101587" -> "UBERON:2102026" [label="is_a",color=red] 
+"UBERON:2101587" -> "UBERON:2102027" [label="is_a",color=red] 
+"UBERON:2101587" -> "UBERON:2102028" [label="is_a",color=red] 
+"UBERON:2101587" -> "UBERON:2102029" [label="is_a",color=red] 
+"UBERON:2101587" -> "UBERON:2201587" [label="is_a",color=red] 
+"UBERON:2101587" -> "UBERON:4300081" [label="is_a",color=red] 
+"UBERON:2101587" -> "UBERON:4300082" [label="is_a",color=red] 
+"UBERON:2101587" -> "UBERON:4300083" [label="is_a",color=red] 
 "UBERON:2101588" [label="(40) pectoral fin distal radial element"]
-"UBERON:2101588" -> "UBERON:2001588" 
-"UBERON:2101588" -> "UBERON:2102279" 
-"UBERON:2101588" -> "UBERON:2102280" 
-"UBERON:2101588" -> "UBERON:2201588" 
+"UBERON:2101588" -> "UBERON:2001588" [label="is_a",color=red] 
+"UBERON:2101588" -> "UBERON:2102279" [label="is_a",color=red] 
+"UBERON:2101588" -> "UBERON:2102280" [label="is_a",color=red] 
+"UBERON:2101588" -> "UBERON:2201588" [label="is_a",color=red] 
 "UBERON:2102026" [label="(41) pectoral fin proximal radial element 1"]
-"UBERON:2102026" -> "UBERON:2002026" 
-"UBERON:2102026" -> "UBERON:2202026" 
+"UBERON:2102026" -> "UBERON:2002026" [label="is_a",color=red] 
+"UBERON:2102026" -> "UBERON:2202026" [label="is_a",color=red] 
 "UBERON:2102027" [label="(42) pectoral fin proximal radial element 2"]
-"UBERON:2102027" -> "UBERON:2002027" 
-"UBERON:2102027" -> "UBERON:2202027" 
+"UBERON:2102027" -> "UBERON:2002027" [label="is_a",color=red] 
+"UBERON:2102027" -> "UBERON:2202027" [label="is_a",color=red] 
 "UBERON:2102028" [label="(43) pectoral fin proximal radial element 3"]
-"UBERON:2102028" -> "UBERON:2002028" 
-"UBERON:2102028" -> "UBERON:2202028" 
+"UBERON:2102028" -> "UBERON:2002028" [label="is_a",color=red] 
+"UBERON:2102028" -> "UBERON:2202028" [label="is_a",color=red] 
 "UBERON:2102029" [label="(44) pectoral fin proximal radial element 4"]
-"UBERON:2102029" -> "UBERON:2002029" 
-"UBERON:2102029" -> "UBERON:2202029" 
+"UBERON:2102029" -> "UBERON:2002029" [label="is_a",color=red] 
+"UBERON:2102029" -> "UBERON:2202029" [label="is_a",color=red] 
 "UBERON:2102279" [label="(45) pectoral fin distal radial element 2"]
-"UBERON:2102279" -> "UBERON:2002279" 
-"UBERON:2102279" -> "UBERON:2202279" 
+"UBERON:2102279" -> "UBERON:2002279" [label="is_a",color=red] 
+"UBERON:2102279" -> "UBERON:2202279" [label="is_a",color=red] 
 "UBERON:2102280" [label="(46) pectoral fin distal radial element 3"]
-"UBERON:2102280" -> "UBERON:2002280" 
-"UBERON:2102280" -> "UBERON:2202280" 
+"UBERON:2102280" -> "UBERON:2002280" [label="is_a",color=red] 
+"UBERON:2102280" -> "UBERON:2202280" [label="is_a",color=red] 
 "UBERON:2201586" [label="(47) pectoral fin radial cartilage"]
-"UBERON:2201586" -> "UBERON:2201587" 
-"UBERON:2201586" -> "UBERON:2201588" 
+"UBERON:2201586" -> "UBERON:2201587" [label="is_a",color=red] 
+"UBERON:2201586" -> "UBERON:2201588" [label="is_a",color=red] 
 "UBERON:2201587" [label="(48) pectoral fin proximal radial cartilage"]
-"UBERON:2201587" -> "UBERON:1500007" 
-"UBERON:2201587" -> "UBERON:2001589" 
-"UBERON:2201587" -> "UBERON:2202026" 
-"UBERON:2201587" -> "UBERON:2202027" 
-"UBERON:2201587" -> "UBERON:2202028" 
-"UBERON:2201587" -> "UBERON:2202029" 
-"UBERON:2201587" -> "UBERON:4400000" 
+"UBERON:2201587" -> "UBERON:1500007" [label="is_a",color=red] 
+"UBERON:2201587" -> "UBERON:2001589" [label="is_a",color=red] 
+"UBERON:2201587" -> "UBERON:2202026" [label="is_a",color=red] 
+"UBERON:2201587" -> "UBERON:2202027" [label="is_a",color=red] 
+"UBERON:2201587" -> "UBERON:2202028" [label="is_a",color=red] 
+"UBERON:2201587" -> "UBERON:2202029" [label="is_a",color=red] 
+"UBERON:2201587" -> "UBERON:4400000" [label="is_a",color=red] 
 "UBERON:2201588" [label="(49) pectoral fin distal radial cartilage"]
-"UBERON:2201588" -> "UBERON:2202279" 
-"UBERON:2201588" -> "UBERON:2202280" 
+"UBERON:2201588" -> "UBERON:2202279" [label="is_a",color=red] 
+"UBERON:2201588" -> "UBERON:2202280" [label="is_a",color=red] 
 "UBERON:2202026" [label="(50) pectoral fin proximal radial cartilage 1"]
 "UBERON:2202027" [label="(51) pectoral fin proximal radial cartilage 2"]
 "UBERON:2202028" [label="(52) pectoral fin proximal radial cartilage 3"]
@@ -125,30 +125,30 @@ edge [style="setlinewidth(2)"];
 "UBERON:2202280" [label="(55) pectoral fin distal radial cartilage 3"]
 "UBERON:4000160" [label="(56) anocleithrum"]
 "UBERON:4000175" [label="(57) pectoral fin lepidotrichium"]
-"UBERON:4000175" -> "UBERON:2001761" 
-"UBERON:4000175" -> "UBERON:2001762" 
-"UBERON:4000175" -> "UBERON:2001787" 
-"UBERON:4000175" -> "UBERON:2001993" 
+"UBERON:4000175" -> "UBERON:2001761" [label="is_a",color=red] 
+"UBERON:4000175" -> "UBERON:2001762" [label="is_a",color=red] 
+"UBERON:4000175" -> "UBERON:2001787" [label="is_a",color=red] 
+"UBERON:4000175" -> "UBERON:2001993" [label="is_a",color=red] 
 "UBERON:4200022" [label="(58) extracleithrum"]
 "UBERON:4200099" [label="(59) lateral extrascapular"]
 "UBERON:4200103" [label="(60) median extrascapular"]
 "UBERON:4200135" [label="(61) puboischiadic bar"]
 "UBERON:4300016" [label="(62) pelvic cartilage"]
 "UBERON:4300081" [label="(63) mesopterygium element"]
-"UBERON:4300081" -> "UBERON:1500007" 
-"UBERON:4300081" -> "UBERON:4300087" 
+"UBERON:4300081" -> "UBERON:1500007" [label="is_a",color=red] 
+"UBERON:4300081" -> "UBERON:4300087" [label="is_a",color=red] 
 "UBERON:4300082" [label="(64) metapterygium element"]
-"UBERON:4300082" -> "UBERON:4400000" 
+"UBERON:4300082" -> "UBERON:4400000" [label="is_a",color=red] 
 "UBERON:4300083" [label="(65) propterygium element"]
-"UBERON:4300083" -> "UBERON:2001589" 
+"UBERON:4300083" -> "UBERON:2001589" [label="is_a",color=red] 
 "UBERON:4300087" [label="(66) mesopterygium bone"]
 "UBERON:4300092" [label="(67) mesocoracoid element"]
-"UBERON:4300092" -> "UBERON:2001537" 
+"UBERON:4300092" -> "UBERON:2001537" [label="is_a",color=red] 
 "UBERON:4300104" [label="(68) ectocoracoid bone"]
 "UBERON:4300117" [label="(69) pelvic fin soft ray"]
 "UBERON:4300147" [label="(70) pectoral fin base"]
 "UBERON:4300151" [label="(71) pelvic intercleithral cartilage"]
 "UBERON:4400000" [label="(72) metapterygium cartilage"]
 "UBERON:4440009" [label="(73) pectoral fin radial skeleton"]
-"UBERON:4440009" -> "UBERON:2101586" 
+"UBERON:4440009" -> "UBERON:2101586" [label="part_of",color=blue] 
 }
