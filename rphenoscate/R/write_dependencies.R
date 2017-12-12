@@ -5,13 +5,21 @@
 uberon_filename = argv[1]
 input_filename = argv[2]
 
-# open obo file with DEX editor to see
+# this does not work.
 part_of = "BFO:0000050"
 
 library('ontologyIndex')
 print("Loading ontology 'uberon.obo'")
+uberon_is_a= get_ontology(uberon_filename,
+                      propagate_relationships = c("is_a"),
+                      extract_tags = 'minimal')
+
+uberon_part_of = get_ontology(uberon_filename,
+                      propagate_relationships = c("part_of"),
+                      extract_tags = 'minimal')
+
 uberon = get_ontology(uberon_filename,
-                      propagate_relationships = c("is_a", part_of),
+                      propagate_relationships = c("is_a", "part_of"),
                       extract_tags = 'minimal')
 
 # 1. read list of uberon terms, one per line
@@ -19,24 +27,31 @@ input=file(input_filename,open="r")
 lines=readLines(input)
 
 uterms = c()
+unames = c()
 for(i in 1:length(lines))
 {
     uterms[i] = sprintf("UBERON:%s",lines[i])
+    unames[i] = get_term_property(uberon,"name",uterms[i])
 }
+
+
 # 2. for each pair of terms, check dependencies
 D = get_term_descendancy_matrix(uberon, uterms);
+Disa = get_term_descendancy_matrix(uberon_is_a, uterms);
+Dpartof = get_term_descendancy_matrix(uberon_part_of, uterms);
 for(i in 1:length(uterms))
 {
-    name1 = get_term_property(uberon,"name",uterms[i])
     for(j in 1:length(uterms))
     {
         if (i == j) next;
 
-        name2 = get_term_property(uberon,"name",uterms[j])
         if (D[i,j])
         {
             cat(sprintf("%s %s\n",uterms[i],uterms[j]))
-            cat(sprintf("'%s' -> '%s'\n",name1,name2))
+            x = sprintf("'%s' -> '%s'",unames[i],unames[j])
+            if (Disa[i,j]) { x = cat(x," [is_a]")}
+            if (Dpartof[i,j]) { x = cat(x," [part_of]")}
+            cat(x,"\n")
         }
         # OK, so does i depend on j?
     }
