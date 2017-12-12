@@ -42,16 +42,22 @@ part_of = "BFO:0000050"
 library('ontologyIndex')
 print("Loading ontology 'uberon.obo'")
 uberon_is_a= get_ontology(uberon_filename,
-                      propagate_relationships = c("is_a"),
-                      extract_tags = 'minimal')
+                          propagate_relationships = c("is_a"),
+                          extract_tags = 'minimal')
 
 uberon_part_of = get_ontology(uberon_filename,
-                      propagate_relationships = c("part_of"),
-                      extract_tags = 'minimal')
+                              propagate_relationships = c("part_of"),
+                              extract_tags = 'minimal')
+
+uberon_develops_from = get_ontology(uberon_filename,
+                                    propagate_relationships = c("develops_from"),
+                                    extract_tags = 'minimal')
 
 uberon = get_ontology(uberon_filename,
-                      propagate_relationships = c("is_a", "part_of"),
+                      propagate_relationships = c("is_a", "part_of","develops_from"),
                       extract_tags = 'minimal')
+
+# FIXME: optionally handle develops_from ?
 
 dotfile = file("dependencies.dot",open="w")
 cat("digraph \"token0\" {\ngraph [ranksep=0.25, fontname=Arial,  nodesep=0.25, ranksep=0.5];\nnode [fontname=Arial, style=filled, height=0, width=0, shape=box];\nedge [style=\"setlinewidth(2)\"];\n",file=dotfile);
@@ -73,6 +79,7 @@ for(i in 1:length(lines))
 D = remove_indirect(get_term_descendancy_matrix(uberon, uterms));
 Disa = remove_indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
 Dpartof = remove_indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
+Ddevelopsfrom = remove_indirect(get_term_descendancy_matrix(uberon_develops_from, uterms));
 outfile = file("dependencies.txt",open="w")
 for(i in 1:length(uterms))
 {
@@ -100,6 +107,11 @@ for(i in 1:length(uterms))
             {
                 x = paste0(x," [part_of]")
                 edge = paste0(edge," [label=\"part_of\",color=blue]")
+            }
+            else if (Ddevelopsfrom[i,j])
+            {
+                x = paste0(x," [develops_from]")
+                edge = paste0(edge," [label=\"develops_from\",color=green]")
             }
             cat(x,"\n")
                                         # chr.id | state | chr.ancestor | state |
