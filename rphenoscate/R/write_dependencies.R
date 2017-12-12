@@ -1,6 +1,37 @@
 #!/usr/bin/r
 # ./write_dependencies.R ../../../uberon.obo ../../data/jackson_chars_nopolys.txt
 
+
+# This function does logical matrix multiplication (|| and && instead of + and *)
+# It is used to find out if i is connected to j through any k
+logical_mult = function(x,y)
+{
+    I = dim(x)[1]
+    K = dim(x)[2]
+    J = dim(y)[2]
+
+    z = rep(FALSE,I*J)
+    dim(z) = c(I,J)
+    for(i in 1:I)
+    {
+        for(j in 1:J)
+        {
+            for(k in 1:K)
+            {
+                z[i,j] = z[i,j] || (x[i,k] && y[k,j])
+            }
+        }
+    }
+    z
+}
+
+# connected(i,j) if i is connected to j but not through any other k
+remove_indirect = function(x)
+{
+    x & (!logical_mult(x,x))
+}
+
+
 # 0. Get arguments
 uberon_filename = argv[1]
 input_filename = argv[2]
