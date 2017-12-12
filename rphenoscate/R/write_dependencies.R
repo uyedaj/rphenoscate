@@ -39,6 +39,7 @@ for(i in 1:length(lines))
 D = get_term_descendancy_matrix(uberon, uterms);
 Disa = get_term_descendancy_matrix(uberon_is_a, uterms);
 Dpartof = get_term_descendancy_matrix(uberon_part_of, uterms);
+outfile = file("dependencies.txt",open="w")
 for(i in 1:length(uterms))
 {
     for(j in 1:length(uterms))
@@ -52,10 +53,15 @@ for(i in 1:length(uterms))
             if (Disa[i,j]) { x = cat(x," [is_a]")}
             if (Dpartof[i,j]) { x = cat(x," [part_of]")}
             cat(x,"\n")
+                                        # chr.id | state | chr.ancestor | state |
+            cat(sprintf("%i,0,%i,1\n",j,i), file=outfile)
+            cat(sprintf("%i,1,%i,1\n",j,i), file=outfile)
         }
         # OK, so does i depend on j?
     }
 }
+
+close(outfile)
 
 # 2201586 = pectoral fin radial cartilege
 # 2202027 = pectoral fin proximal radial cartilege 2
