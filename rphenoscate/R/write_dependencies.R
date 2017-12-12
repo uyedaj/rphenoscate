@@ -67,9 +67,9 @@ for(i in 1:length(lines))
 
 
 # 2. for each pair of terms, check dependencies
-D = get_term_descendancy_matrix(uberon, uterms);
-Disa = get_term_descendancy_matrix(uberon_is_a, uterms);
-Dpartof = get_term_descendancy_matrix(uberon_part_of, uterms);
+D = remove_indirect(get_term_descendancy_matrix(uberon, uterms));
+Disa = remove_indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
+Dpartof = remove_indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
 outfile = file("dependencies.txt",open="w")
 for(i in 1:length(uterms))
 {
