@@ -53,6 +53,9 @@ uberon = get_ontology(uberon_filename,
                       propagate_relationships = c("is_a", "part_of"),
                       extract_tags = 'minimal')
 
+dotfile = file("dependencies.dot",open="w")
+cat("digraph \"token0\" {\ngraph [ranksep=0.25, fontname=Arial,  nodesep=0.25, ranksep=0.5];\nnode [fontname=Arial, style=filled, height=0, width=0, shape=box];\nedge [style=\"setlinewidth(2)\"];\n",file=dotfile);
+
 # 1. read list of uberon terms, one per line
 input=file(input_filename,open="r")
 lines=readLines(input)
@@ -73,12 +76,15 @@ Dpartof = remove_indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
 outfile = file("dependencies.txt",open="w")
 for(i in 1:length(uterms))
 {
+    cat(sprintf("\"%s\" [label=\"(%s) %s\"]\n",uterms[i], i, unames[i]),file=dotfile)
+
     for(j in 1:length(uterms))
     {
         if (i == j) next;
 
         if (D[i,j])
         {
+            edge = sprintf("\"%s\" -> \"%s\"",uterms[i],uterms[j])
             cat(sprintf("%s %s\n",uterms[i],uterms[j]))
             x = sprintf("'%s' -> '%s'",unames[i],unames[j])
             if (Disa[i,j]) { x = cat(x," [is_a]")}
@@ -87,12 +93,16 @@ for(i in 1:length(uterms))
                                         # chr.id | state | chr.ancestor | state |
             cat(sprintf("%i,0,%i,1\n",j,i), file=outfile)
             cat(sprintf("%i,1,%i,1\n",j,i), file=outfile)
+            cat(edge, "\n", file=dotfile)
         }
         # OK, so does i depend on j?
     }
 }
 
 close(outfile)
+
+cat("}\n", file=dotfile)
+close(dotfile)
 
 # 2201586 = pectoral fin radial cartilege
 # 2202027 = pectoral fin proximal radial cartilege 2
