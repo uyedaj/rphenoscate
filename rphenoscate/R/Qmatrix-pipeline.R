@@ -106,4 +106,27 @@ seq.of.chars # pair of chars where #1 depends on #2 (swith off dependency), also
 #know character order in state names
 
 
+#########################
+# Topological sorting
+#########################
+
+g <- barabasi.game(100)
+topo_sort(g)
+
+el <- matrix( c("foo", "bar", "bar", "foobar"), nc = 2, byrow = TRUE)
+g=graph_from_edgelist(el)
+plot(g)
+
+# make edge table without repeats
+chrs.depen.red=chrs.depen[chrs.depen[,2]==1,]
+chrs.edges<-as.matrix(chrs.depen.red[,c(3,1)])
+rownames(chrs.edges)<-NULL
+colnames(chrs.edges)<-NULL
+as.character(chrs.edges)
+chrs.edges<-matrix(as.character(chrs.edges), ncol = 2, byrow = F)
+
+g=graph_from_edgelist(chrs.edges)
+plot(g, vertex.color="green", vertex.size=1,
+     vertex.label.dist=0.5, edge.arrow.size=.5 )
+
 

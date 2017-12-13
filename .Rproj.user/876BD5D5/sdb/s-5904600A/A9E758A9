@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1513193411970.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A9E758A9",
+    "lastKnownWriteTime" : 4641581810644057230,
+    "last_content_update" : 1513193411970,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "8FCCC2CB",
+        "caption" : "chrs.depen.red",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=chrs.depen.red&cache_key=8FCCC2CB",
+        "displayedObservations" : 76,
+        "environment" : "",
+        "object" : "chrs.depen.red",
+        "preview" : 0,
+        "totalObservations" : 76,
+        "variables" : 4
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
