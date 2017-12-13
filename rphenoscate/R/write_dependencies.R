@@ -83,7 +83,7 @@ Ddevelopsfrom = remove_indirect(get_term_descendancy_matrix(uberon_develops_from
 outfile = file("dependencies.txt",open="w")
 for(i in 1:length(uterms))
 {
-    cat(sprintf("\"%s\" [label=\"(%s) %s\"]\n",uterms[i], i, unames[i]),file=dotfile)
+    cat(sprintf("\"%s\" [label=\"%s\n(%s)\"]\n",uterms[i], unames[i], uterms[i]),file=dotfile)
 
     for(j in 1:length(uterms))
     {
@@ -91,33 +91,46 @@ for(i in 1:length(uterms))
 
         if (D[i,j])
         {
-            edge = sprintf("\"%s\" -> \"%s\"",uterms[j],uterms[i])
             cat(sprintf("%s %s\n",uterms[i],uterms[j]))
+
+            labels = c()
+            rgb=c("00","00","00")
+
+            if (Disa[i,j])
+            {
+                labels = c(labels,"is_a")
+                rgb[1] = "ff"
+            }
+            if (Dpartof[i,j])
+            {
+                labels = c(labels, "part_of")
+                rgb[3] = "ff"
+            }
+            if (Ddevelopsfrom[i,j])
+            {
+                labels = c(labels, "develops_from")
+                rgb[2] = "ff"
+            }
+
+            label = ""
+            attributes = c(paste0("color=\"#",paste0(rgb,collapse=''),"\""))
+            if (length(labels) > 0)
+            {
+                label = paste(labels,sep=",")
+                attributes=c(attributes,paste0("label=\"",label,"\""))
+            }
+
+
             x = sprintf("'%s' -> '%s'",unames[i],unames[j])
-            if (Disa[i,j] && Dpartof[i,j]) {
-                x = paste0(x," [is_a,partof]")
-                edge = paste0(edge," [label=\"is_a,partof\",color=purple]")
-            }
-            else if (Disa[i,j])
-            {
-                x = paste0(x," [is_a]")
-                edge = paste0(edge," [label=\"is_a\",color=red]")
-            }
-            else if (Dpartof[i,j])
-            {
-                x = paste0(x," [part_of]")
-                edge = paste0(edge," [label=\"part_of\",color=blue]")
-            }
-            else if (Ddevelopsfrom[i,j])
-            {
-                x = paste0(x," [develops_from]")
-                edge = paste0(edge," [label=\"develops_from\",color=green]")
-            }
             cat(x,"\n")
-                                        # chr.id | state | chr.ancestor | state |
-            cat(sprintf("%i,0,%i,1\n",j,i), file=outfile)
-            cat(sprintf("%i,1,%i,1\n",j,i), file=outfile)
-            cat(edge, "\n", file=dotfile)
+
+            # chr.id | state | chr.ancestor | state |
+            cat(sprintf("%s,0,%s,1\n",unames[j],unames[i]), file=outfile)
+            cat(sprintf("%s,1,%s,1\n",unames[j],unames[i]), file=outfile)
+
+            edge = sprintf("\"%s\" -> \"%s\"",uterms[j],uterms[i])
+            attributes = paste0("[",paste0(attributes,collapse=','),"]")
+            cat(edge, " ", attributes, "\n", file=dotfile)
         }
         # OK, so does i depend on j?
     }
