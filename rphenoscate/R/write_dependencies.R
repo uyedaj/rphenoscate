@@ -115,8 +115,8 @@ for(i in 1:length(uterms))
             }
             cat(x,"\n")
                                         # chr.id | state | chr.ancestor | state |
-            cat(sprintf("%i,0,%i,1\n",j,i), file=outfile)
-            cat(sprintf("%i,1,%i,1\n",j,i), file=outfile)
+            cat(sprintf("%s,0,%s,1\n",unames[j],unames[i]), file=outfile)
+            cat(sprintf("%s,1,%s,1\n",unames[j],unames[i]), file=outfile)
             cat(edge, "\n", file=dotfile)
         }
         # OK, so does i depend on j?
