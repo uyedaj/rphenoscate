@@ -96,10 +96,19 @@ get.dependencies = function(uberon.filename, uterms, indirect=FALSE)
     colnames = c("chr.id","dependent.chr.id","subrels")
     df = empty.df(colnames)
 
-    D = remove.indirect(get_term_descendancy_matrix(uberon, uterms));
-    Disa = remove.indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
-    Dpartof = remove.indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
-    Ddevelopsfrom = remove.indirect(get_term_descendancy_matrix(uberon_develops_from, uterms));
+    if (indirect)
+    {
+        maybe.remove.indirect = function(x) {x}
+    }
+    else
+    {
+        maybe.remove.indirect = remove.indirect
+    }
+
+    D = maybe.remove.indirect(get_term_descendancy_matrix(uberon, uterms));
+    Disa = maybe.remove.indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
+    Dpartof = maybe.remove.indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
+    Ddevelopsfrom = maybe.remove.indirect(get_term_descendancy_matrix(uberon_develops_from, uterms));
 
     for(i in 1:length(uterms))
     {
@@ -257,6 +266,9 @@ write.dependencies(add.names(deps),"dependencies_with_names.txt")
 
 write.dot(deps,"dependencies.dot")
 write.terms(deps,"terms.txt")
+
+indirect.deps = get.dependencies(uberon.filename, uberon.terms, indirect=TRUE)
+write.dependencies(indirect.deps,"indirect_dependencies.txt")
 
 # 2201586 = pectoral fin radial cartilege
 # 2202027 = pectoral fin proximal radial cartilege 2
