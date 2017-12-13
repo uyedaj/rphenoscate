@@ -1,15 +1,16 @@
+#
+# FUNCTIONS FOR WORKING WITH MATRICES
+#
+
 library("copula", lib.loc="~/.local/R/site-library") #stirling numbers
 setwd("/home/tarasov/Dropbox/Rev-Bayes-test")
 library(R.basic)
 library("magrittr", lib.loc="/Library/Frameworks/R.framework/Versions/3.4/Resources/library")
 
-chrs.depen<-read.csv("dependencies.txt", header=T,  stringsAsFactors = F, na.strings = "")
 
-##
-# 
-##
 #' @title Combining two matrices
-#' @description Combining two matrices
+#' @description Combining two matrices. The parametric schem of matrice is defined by nattural
+#' numbers; different numbers = different rate parameters
 #' @param M1 matrix; if dependency true thenM1 controls M2
 #' @param M2 matrix; if dependency true then: M2 depends on those states of M1 specified in dependent.state
 #' @param dependent.state state(s) of M1 that switch on matrix M2 
@@ -21,8 +22,8 @@ chrs.depen<-read.csv("dependencies.txt", header=T,  stringsAsFactors = F, na.str
 #' rownames(M1)<-colnames(M1)<-c("0","1")
 #' M2<-matrix(c(-3,3,  4,-4),2,2,byrow=TRUE)
 #' rownames(M2)<-colnames(M2)<-c("0","1")
-#' comb2matrices(M3, M2, dependent.state=NULL)
-#' comb2matrices(M3, M2, dependent.state=2)
+#' comb2matrices(M1, M2, dependent.state=NULL)
+#' comb2matrices(M1, M2, dependent.state=2)
 
 # if dependency true then: M2 depends on M1 states specified in dependent.state
 comb2matrices<-function(M1,M2, dependent.state=NULL, name.sep="", diag.as=""){
@@ -89,6 +90,7 @@ M_kr=t(M_kr)
 return(M_kr)
 }
 
+rate_diff_joint(M1)
 
 ##create matrices
 m_dim=4
@@ -148,9 +150,11 @@ for (i in 1:length(part_scheme)){
 return(all(tru.vals))
 }
 
+M3=comb2matrices(M1, M2, dependent.state=2)
+
 M_kr=indepen2matrices(M1, M2,  name.sep=":", diag.as=0)
 M_kr=indepen2matrices(M1, M2,  name.sep=":")
-is_strg_lumpable(M_kr, part_scheme)
+is_strg_lumpable(M3, part_scheme)
 
 ##########
 # check weak lumpability: a special case involving division of rows bys sums of nrows
