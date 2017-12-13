@@ -49,9 +49,9 @@ addrow = function (df,row)
     rbind(df,dfrow)
 }
 
+# Read list of uberon terms, one integer per line (separate into different function)
 read.uberon.terms = function(filename)
 {
-                                        # 1. read list of uberon terms, one per line (separate into different function)
     input=file(filename, open="r")
     lines=readLines(input)
     uterms = c()
@@ -150,10 +150,20 @@ get.dependencies = function(uberon.filename, uterms, indirect=FALSE)
     triple(df,uterms,hashmap(uterms,unames))
 }
 
+add.names = function(deps,outfile)
+{
+    df = deps[[1]]
+    id.to.name = deps[[3]]
+    df$chr.name = id.to.name[[ df$chr.id ]]
+    df$dependent.chr.name = id.to.name[[ df$dependent.chr.id ]]
+    df2 = data.frame(df$chr.id,df$chr.name,df$dependent.chr.id,df$dependent.chr.name,df$subrels)
+    triple(df2,df[[2]],df[[3]])
+}
+
 write.dependencies = function(deps,outfile)
 {
     df = deps[[1]]
-    write.csv(deps[[1]], outfile, row.names=F, quote=F)
+    write.csv(df, outfile, row.names=F, quote=F)
 }
 
 write.dot = function(deps.tuple,filename)
@@ -219,11 +229,23 @@ write.dot = function(deps.tuple,filename)
     close(dotfile)
 }
 
+write.terms=function(deps,filename)
+{
+    uterms = deps[[2]]
+
+    outfile = file(filename,open="w")
+    for(i in 1:length(uterms))
+    {
+        cat(uterms[i],"\n",file=outfile)
+    }
+    close(outfile)
+}
+
 library('hashmap')
 library('sets')
 library('ontologyIndex')
-#uberon.terms = read.uberon.terms('../../data/jackson_chars_nopolys.txt')
-#deps = get.dependencies('../../../uberon.obo', uberon.terms)
+uberon.terms = read.uberon.terms('../../data/jackson_chars_nopolys.txt')
+deps = get.dependencies('../../../uberon.obo', uberon.terms)
 
 uberon.filename = argv[1]
 uberon.terms = read.uberon.terms(argv[2])
@@ -231,7 +253,10 @@ uberon.terms = read.uberon.terms(argv[2])
 deps = get.dependencies(uberon.filename, uberon.terms)
 
 write.dependencies(deps,"dependencies.txt")
+write.dependencies(add.names(deps),"dependencies_with_names.txt")
+
 write.dot(deps,"dependencies.dot")
+write.terms(deps,"terms.txt")
 
 # 2201586 = pectoral fin radial cartilege
 # 2202027 = pectoral fin proximal radial cartilege 2
