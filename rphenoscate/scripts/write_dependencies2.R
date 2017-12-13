@@ -52,10 +52,8 @@ write.terms=function(deps,filename)
     close(outfile)
 }
 
-uberon.filename = argv[1]
-uberon.terms = read.uberon.terms(argv[2])
-
-deps = get.dependencies(uberon.filename, uberon.terms)
+uberon.terms = read.uberon.terms('../../data/jackson_chars_nopolys.txt')
+deps = get.dependencies('../../../uberon.obo', uberon.terms)
 
 write.dependencies(deps,"dependencies.txt")
 write.dependencies(add.names(deps),"dependencies_with_names.txt")
