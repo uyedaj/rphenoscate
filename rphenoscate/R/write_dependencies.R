@@ -26,7 +26,7 @@ logical_mult = function(x,y)
 }
 
                                         # connected(i,j) if i is connected to j but not through any other k
-remove_indirect = function(x)
+remove.indirect = function(x)
 {
     x & (!logical_mult(x,x))
 }
@@ -96,10 +96,10 @@ get.dependencies = function(uberon.filename, uterms, indirect=FALSE)
     colnames = c("chr.id","dependent.chr.id","subrels")
     df = empty.df(colnames)
 
-    D = remove_indirect(get_term_descendancy_matrix(uberon, uterms));
-    Disa = remove_indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
-    Dpartof = remove_indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
-    Ddevelopsfrom = remove_indirect(get_term_descendancy_matrix(uberon_develops_from, uterms));
+    D = remove.indirect(get_term_descendancy_matrix(uberon, uterms));
+    Disa = remove.indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
+    Dpartof = remove.indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
+    Ddevelopsfrom = remove.indirect(get_term_descendancy_matrix(uberon_develops_from, uterms));
 
     for(i in 1:length(uterms))
     {
