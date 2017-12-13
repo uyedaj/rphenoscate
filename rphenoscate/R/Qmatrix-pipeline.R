@@ -129,4 +129,49 @@ g=graph_from_edgelist(chrs.edges)
 plot(g, vertex.color="green", vertex.size=1,
      vertex.label.dist=0.5, edge.arrow.size=.5 )
 
+components(g, "weak")
+######## datasets with uberon ids
+chrs.uber<-read.csv("dependencies.txt", header=T,  stringsAsFactors = F, na.strings = "")
+chrs.uber<-as.matrix(chrs.uber[,c(1,2)])
+g=graph_from_edgelist(chrs.uber)
+plot(g, vertex.color="green", vertex.size=1,
+     vertex.label.dist=0.5, vertex.label=NA, edge.arrow.size=.5 )
+
+con.comp=components(g, "weak")
+
+#sorting connected components and saving them
+ub.ids=cbind(names(con.comp$membership), as.numeric(unname(con.comp$membership)))
+ub.ids=ub.ids[order(ub.ids[,2]),]
+colnames(ub.ids)<-c("id", "component_category")
+
+write.csv(ub.ids, file="chrs_as_connected_components.csv")
+##########
+
+# getting subgraph to navigate
+topo_sort(g)
+
+# get a subgraph for test
+test=cbind(c(10, 10, 6)%>% as.character(), c(59, 60, 10)%>% as.character())
+g=graph_from_edgelist(test)
+plot(g)
+node.sorted=topo_sort(g, mode = c("out"))
+node.sorted=names(node.sorted)%>% as.numeric()
+node.sorted=node.sorted[node.sorted%in%test[,1]]
+match(node.sorted, test[,1])
+test=cbind(test, match(test[,1], node.sorted))
+test=test[order(test[,3]),]
+
+# doing loop to merge matrices
+g1=graph_from_edgelist(test[,c(1,2)])
+plot(g1)
+
+#make loop to get node ancestors
+test1=test
+i=1
+#subcomp=matrix(NA, ncol=2, nrow=vcount(g1))
+subcomp=list()
+for (i in 1:vcount(g1)){
+  tmp=subcomponent(g1, i, mode="in")%>% names()%>% as.numeric()
+  subcomp[[i]]<-list(tmp[1], tmp[-1])
+}
 
