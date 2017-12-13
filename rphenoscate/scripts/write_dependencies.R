@@ -1,7 +1,7 @@
 #!/usr/bin/r
 # ./write_dependencies.R ../../../uberon.obo ../../data/jackson_chars_nopolys.txt
 
-source("get.dependencies.R")
+source("../R/get.dependencies.R")
 
 # Read list of uberon terms, one integer per line (separate into different function)
 read.uberon.terms = function(filename)
@@ -38,7 +38,7 @@ write.dependencies = function(deps,outfile)
     write.csv(df, outfile, row.names=F, quote=F)
 }
 
-source("write.dot.R")
+source("../R/write.dot.R")
 
 write.terms=function(deps,filename)
 {
