@@ -1,152 +1,77 @@
-scapula,0,scapula cartilage element,1
-scapula,1,scapula cartilage element,1
-scapula cartilage element,0,scapula pre-cartilage condensation,1
-scapula cartilage element,1,scapula pre-cartilage condensation,1
-cleithrum,0,pectoral girdle bone,1
-cleithrum,1,pectoral girdle bone,1
-scapula,0,pectoral girdle bone,1
-scapula,1,pectoral girdle bone,1
-extrascapula,0,pectoral girdle bone,1
-extrascapula,1,pectoral girdle bone,1
-postcleithrum 1,0,pectoral girdle bone,1
-postcleithrum 1,1,pectoral girdle bone,1
-posttemporal-supracleithrum,0,pectoral girdle bone,1
-posttemporal-supracleithrum,1,pectoral girdle bone,1
-pterotic-posttemporal-supracleithrum,0,pectoral girdle bone,1
-pterotic-posttemporal-supracleithrum,1,pectoral girdle bone,1
-ventral keel of coracoid,0,pectoral girdle bone,1
-ventral keel of coracoid,1,pectoral girdle bone,1
-anocleithrum,0,pectoral girdle bone,1
-anocleithrum,1,pectoral girdle bone,1
-extracleithrum,0,pectoral girdle bone,1
-extracleithrum,1,pectoral girdle bone,1
-ectocoracoid bone,0,pectoral girdle bone,1
-ectocoracoid bone,1,pectoral girdle bone,1
-scapula pre-cartilage condensation,0,scapula endochondral element,1
-scapula pre-cartilage condensation,1,scapula endochondral element,1
-mesopterygium bone,0,mesopterygium cartilage,1
-mesopterygium bone,1,mesopterygium cartilage,1
-middle anterior process of basipterygium,0,basipterygium bone,1
-middle anterior process of basipterygium,1,basipterygium bone,1
-lateral process of basipterygium,0,basipterygium bone,1
-lateral process of basipterygium,1,basipterygium bone,1
-lateral extrascapular,0,extrascapula,1
-lateral extrascapular,1,extrascapula,1
-median extrascapular,0,extrascapula,1
-median extrascapular,1,extrascapula,1
-pectoral fin proximal radial bone,0,pectoral fin radial bone,1
-pectoral fin proximal radial bone,1,pectoral fin radial bone,1
-pectoral fin distal radial bone,0,pectoral fin radial bone,1
-pectoral fin distal radial bone,1,pectoral fin radial bone,1
-pectoral fin proximal radial bone 1,0,pectoral fin proximal radial bone,1
-pectoral fin proximal radial bone 1,1,pectoral fin proximal radial bone,1
-pectoral fin proximal radial bone 2,0,pectoral fin proximal radial bone,1
-pectoral fin proximal radial bone 2,1,pectoral fin proximal radial bone,1
-pectoral fin proximal radial bone 3,0,pectoral fin proximal radial bone,1
-pectoral fin proximal radial bone 3,1,pectoral fin proximal radial bone,1
-pectoral fin proximal radial bone 4,0,pectoral fin proximal radial bone,1
-pectoral fin proximal radial bone 4,1,pectoral fin proximal radial bone,1
-mesopterygium bone,0,pectoral fin proximal radial bone,1
-mesopterygium bone,1,pectoral fin proximal radial bone,1
-pectoral fin distal radial bone 2,0,pectoral fin distal radial bone,1
-pectoral fin distal radial bone 2,1,pectoral fin distal radial bone,1
-pectoral fin distal radial bone 3,0,pectoral fin distal radial bone,1
-pectoral fin distal radial bone 3,1,pectoral fin distal radial bone,1
-pectoral fin proximal radial element,0,pectoral fin radial element,1
-pectoral fin proximal radial element,1,pectoral fin radial element,1
-pectoral fin distal radial element,0,pectoral fin radial element,1
-pectoral fin distal radial element,1,pectoral fin radial element,1
-pectoral fin radial cartilage,0,pectoral fin radial element,1
-pectoral fin radial cartilage,1,pectoral fin radial element,1
-pectoral fin proximal radial element 1,0,pectoral fin proximal radial element,1
-pectoral fin proximal radial element 1,1,pectoral fin proximal radial element,1
-pectoral fin proximal radial element 2,0,pectoral fin proximal radial element,1
-pectoral fin proximal radial element 2,1,pectoral fin proximal radial element,1
-pectoral fin proximal radial element 3,0,pectoral fin proximal radial element,1
-pectoral fin proximal radial element 3,1,pectoral fin proximal radial element,1
-pectoral fin proximal radial element 4,0,pectoral fin proximal radial element,1
-pectoral fin proximal radial element 4,1,pectoral fin proximal radial element,1
-pectoral fin proximal radial cartilage,0,pectoral fin proximal radial element,1
-pectoral fin proximal radial cartilage,1,pectoral fin proximal radial element,1
-mesopterygium element,0,pectoral fin proximal radial element,1
-mesopterygium element,1,pectoral fin proximal radial element,1
-metapterygium element,0,pectoral fin proximal radial element,1
-metapterygium element,1,pectoral fin proximal radial element,1
-propterygium element,0,pectoral fin proximal radial element,1
-propterygium element,1,pectoral fin proximal radial element,1
-pectoral fin distal radial element 2,0,pectoral fin distal radial element,1
-pectoral fin distal radial element 2,1,pectoral fin distal radial element,1
-pectoral fin distal radial element 3,0,pectoral fin distal radial element,1
-pectoral fin distal radial element 3,1,pectoral fin distal radial element,1
-pectoral fin distal radial cartilage,0,pectoral fin distal radial element,1
-pectoral fin distal radial cartilage,1,pectoral fin distal radial element,1
-pectoral fin proximal radial cartilage 1,0,pectoral fin proximal radial element 1,1
-pectoral fin proximal radial cartilage 1,1,pectoral fin proximal radial element 1,1
-pectoral fin proximal radial cartilage 2,0,pectoral fin proximal radial element 2,1
-pectoral fin proximal radial cartilage 2,1,pectoral fin proximal radial element 2,1
-pectoral fin proximal radial cartilage 3,0,pectoral fin proximal radial element 3,1
-pectoral fin proximal radial cartilage 3,1,pectoral fin proximal radial element 3,1
-pectoral fin proximal radial cartilage 4,0,pectoral fin proximal radial element 4,1
-pectoral fin proximal radial cartilage 4,1,pectoral fin proximal radial element 4,1
-pectoral fin distal radial cartilage 2,0,pectoral fin distal radial element 2,1
-pectoral fin distal radial cartilage 2,1,pectoral fin distal radial element 2,1
-pectoral fin distal radial cartilage 3,0,pectoral fin distal radial element 3,1
-pectoral fin distal radial cartilage 3,1,pectoral fin distal radial element 3,1
-pectoral fin radial bone,0,pectoral fin radial cartilage,1
-pectoral fin radial bone,1,pectoral fin radial cartilage,1
-pectoral fin proximal radial cartilage,0,pectoral fin radial cartilage,1
-pectoral fin proximal radial cartilage,1,pectoral fin radial cartilage,1
-pectoral fin distal radial cartilage,0,pectoral fin radial cartilage,1
-pectoral fin distal radial cartilage,1,pectoral fin radial cartilage,1
-mesopterygium cartilage,0,pectoral fin proximal radial cartilage,1
-mesopterygium cartilage,1,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial bone,0,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial bone,1,pectoral fin proximal radial cartilage,1
-propterygium cartilage,0,pectoral fin proximal radial cartilage,1
-propterygium cartilage,1,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial cartilage 1,0,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial cartilage 1,1,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial cartilage 2,0,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial cartilage 2,1,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial cartilage 3,0,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial cartilage 3,1,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial cartilage 4,0,pectoral fin proximal radial cartilage,1
-pectoral fin proximal radial cartilage 4,1,pectoral fin proximal radial cartilage,1
-metapterygium cartilage,0,pectoral fin proximal radial cartilage,1
-metapterygium cartilage,1,pectoral fin proximal radial cartilage,1
-pectoral fin distal radial bone,0,pectoral fin distal radial cartilage,1
-pectoral fin distal radial bone,1,pectoral fin distal radial cartilage,1
-pectoral fin distal radial cartilage 2,0,pectoral fin distal radial cartilage,1
-pectoral fin distal radial cartilage 2,1,pectoral fin distal radial cartilage,1
-pectoral fin distal radial cartilage 3,0,pectoral fin distal radial cartilage,1
-pectoral fin distal radial cartilage 3,1,pectoral fin distal radial cartilage,1
-pectoral fin proximal radial bone 1,0,pectoral fin proximal radial cartilage 1,1
-pectoral fin proximal radial bone 1,1,pectoral fin proximal radial cartilage 1,1
-pectoral fin proximal radial bone 2,0,pectoral fin proximal radial cartilage 2,1
-pectoral fin proximal radial bone 2,1,pectoral fin proximal radial cartilage 2,1
-pectoral fin proximal radial bone 3,0,pectoral fin proximal radial cartilage 3,1
-pectoral fin proximal radial bone 3,1,pectoral fin proximal radial cartilage 3,1
-pectoral fin proximal radial bone 4,0,pectoral fin proximal radial cartilage 4,1
-pectoral fin proximal radial bone 4,1,pectoral fin proximal radial cartilage 4,1
-pectoral fin distal radial bone 2,0,pectoral fin distal radial cartilage 2,1
-pectoral fin distal radial bone 2,1,pectoral fin distal radial cartilage 2,1
-pectoral fin distal radial bone 3,0,pectoral fin distal radial cartilage 3,1
-pectoral fin distal radial bone 3,1,pectoral fin distal radial cartilage 3,1
-pectoral fin lepidotrichium 1,0,pectoral fin lepidotrichium,1
-pectoral fin lepidotrichium 1,1,pectoral fin lepidotrichium,1
-pectoral fin lepidotrichium 2,0,pectoral fin lepidotrichium,1
-pectoral fin lepidotrichium 2,1,pectoral fin lepidotrichium,1
-pectoral fin spine,0,pectoral fin lepidotrichium,1
-pectoral fin spine,1,pectoral fin lepidotrichium,1
-branched pectoral fin ray,0,pectoral fin lepidotrichium,1
-branched pectoral fin ray,1,pectoral fin lepidotrichium,1
-mesopterygium cartilage,0,mesopterygium element,1
-mesopterygium cartilage,1,mesopterygium element,1
-metapterygium cartilage,0,metapterygium element,1
-metapterygium cartilage,1,metapterygium element,1
-propterygium cartilage,0,propterygium element,1
-propterygium cartilage,1,propterygium element,1
-mesocoracoid cartilage,0,mesocoracoid element,1
-mesocoracoid cartilage,1,mesocoracoid element,1
-pectoral fin radial element,0,pectoral fin radial skeleton,1
-pectoral fin radial element,1,pectoral fin radial skeleton,1
+chr.id,dependent.chr.id,subrels
+UBERON:0006290,UBERON:0006849,develops_from
+UBERON:0006291,UBERON:0006290,develops_from
+UBERON:0007829,UBERON:0004741,is_a
+UBERON:0007829,UBERON:0006849,is_a
+UBERON:0007829,UBERON:2000663,is_a
+UBERON:0007829,UBERON:2001852,is_a
+UBERON:0007829,UBERON:2001998,is_a
+UBERON:0007829,UBERON:2002019,is_a
+UBERON:0007829,UBERON:2002030,
+UBERON:0007829,UBERON:4000160,is_a
+UBERON:0007829,UBERON:4200022,is_a
+UBERON:0007829,UBERON:4300104,is_a
+UBERON:0015057,UBERON:0006291,is_a
+UBERON:1500007,UBERON:4300087,develops_from
+UBERON:2000623,UBERON:2002072,part_of
+UBERON:2000623,UBERON:2002076,part_of
+UBERON:2000663,UBERON:4200099,is_a
+UBERON:2000663,UBERON:4200103,is_a
+UBERON:2001586,UBERON:2001587,is_a
+UBERON:2001586,UBERON:2001588,is_a
+UBERON:2001587,UBERON:2002026,is_a
+UBERON:2001587,UBERON:2002027,is_a
+UBERON:2001587,UBERON:2002028,is_a
+UBERON:2001587,UBERON:2002029,is_a
+UBERON:2001587,UBERON:4300087,is_a
+UBERON:2001588,UBERON:2002279,is_a
+UBERON:2001588,UBERON:2002280,is_a
+UBERON:2101586,UBERON:2101587,is_a
+UBERON:2101586,UBERON:2101588,is_a
+UBERON:2101586,UBERON:2201586,is_a
+UBERON:2101587,UBERON:2102026,is_a
+UBERON:2101587,UBERON:2102027,is_a
+UBERON:2101587,UBERON:2102028,is_a
+UBERON:2101587,UBERON:2102029,is_a
+UBERON:2101587,UBERON:2201587,is_a
+UBERON:2101587,UBERON:4300081,is_a
+UBERON:2101587,UBERON:4300082,is_a
+UBERON:2101587,UBERON:4300083,is_a
+UBERON:2101588,UBERON:2102279,is_a
+UBERON:2101588,UBERON:2102280,is_a
+UBERON:2101588,UBERON:2201588,is_a
+UBERON:2102026,UBERON:2202026,is_a
+UBERON:2102027,UBERON:2202027,is_a
+UBERON:2102028,UBERON:2202028,is_a
+UBERON:2102029,UBERON:2202029,is_a
+UBERON:2102279,UBERON:2202279,is_a
+UBERON:2102280,UBERON:2202280,is_a
+UBERON:2201586,UBERON:2001586,develops_from
+UBERON:2201586,UBERON:2201587,is_a
+UBERON:2201586,UBERON:2201588,is_a
+UBERON:2201587,UBERON:1500007,is_a
+UBERON:2201587,UBERON:2001587,develops_from
+UBERON:2201587,UBERON:2001589,is_a
+UBERON:2201587,UBERON:2202026,is_a
+UBERON:2201587,UBERON:2202027,is_a
+UBERON:2201587,UBERON:2202028,is_a
+UBERON:2201587,UBERON:2202029,is_a
+UBERON:2201587,UBERON:4400000,is_a
+UBERON:2201588,UBERON:2001588,develops_from
+UBERON:2201588,UBERON:2202279,is_a
+UBERON:2201588,UBERON:2202280,is_a
+UBERON:2202026,UBERON:2002026,develops_from
+UBERON:2202027,UBERON:2002027,develops_from
+UBERON:2202028,UBERON:2002028,develops_from
+UBERON:2202029,UBERON:2002029,develops_from
+UBERON:2202279,UBERON:2002279,develops_from
+UBERON:2202280,UBERON:2002280,develops_from
+UBERON:4000175,UBERON:2001761,is_a
+UBERON:4000175,UBERON:2001762,is_a
+UBERON:4000175,UBERON:2001787,is_a
+UBERON:4000175,UBERON:2001993,is_a
+UBERON:4300081,UBERON:1500007,is_a
+UBERON:4300082,UBERON:4400000,is_a
+UBERON:4300083,UBERON:2001589,is_a
+UBERON:4300092,UBERON:2001537,is_a
+UBERON:4440009,UBERON:2101586,part_of
