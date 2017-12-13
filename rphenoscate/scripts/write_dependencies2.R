@@ -64,6 +64,9 @@ write.terms(deps,"terms.txt")
 indirect.deps = get.dependencies(uberon.filename, uberon.terms, indirect=TRUE)
 write.dependencies(indirect.deps,"indirect_dependencies.txt")
 
+library(ontology_plot)
+onto_plot(deps[[4]], deps[[2]])
+
 # 2201586 = pectoral fin radial cartilege
 # 2202027 = pectoral fin proximal radial cartilege 2
 # UBERON:2201586 UBERON:2202027
