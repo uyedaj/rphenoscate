@@ -23,28 +23,29 @@ dependentCases <- which(variableDep==1)
 for(i in dependentCases) print(table(tds[[i]][['X']]))
 
 pdf("../data/asrDependentCases.pdf")
-for(i in dependentCases){
-tmptd <- tds[[i]]
-phy <- multi2di(tmptd$phy, random=FALSE)
-phy$edge.length[phy$edge.length==0] <- .Machine$double.eps
-aceDep <- ace(tmptd[['X']], phy , "discrete", model="ARD", marginal=TRUE)
-aceInd1 <- ace(tmptd[[1]], phy, "discrete", model="ARD", marginal=TRUE)
-aceInd2 <- ace(tmptd[[2]], phy, "discrete", model="ARD", marginal=TRUE)
+for(i in dependentCases)
+{
+    tmptd <- tds[[i]]
+    phy <- multi2di(tmptd$phy, random=FALSE)
+    phy$edge.length[phy$edge.length==0] <- .Machine$double.eps
+    aceDep <- ace(tmptd[['X']], phy , "discrete", model="ARD", marginal=TRUE)
+    aceInd1 <- ace(tmptd[[1]], phy, "discrete", model="ARD", marginal=TRUE)
+    aceInd2 <- ace(tmptd[[2]], phy, "discrete", model="ARD", marginal=TRUE)
 
-adjxy <- c(3,3)
-par(mfrow=c(1,2))
-plot(phy, show.tip.label=FALSE)
-#nodelabels(pie=aceDep$lik.anc, piecol=c("black", "green", "red"))
-try(nodelabels(pie=cbind(aceDep$lik.anc[,1], aceDep$lik.anc[,2]+aceDep$lik.anc[,3]), piecol=c("black", "green"), adj=-1*adjxy))
-try(nodelabels(pie=cbind(aceDep$lik.anc[,1] + aceDep$lik.anc[,2], aceDep$lik.anc[,3]), piecol=c("black", "red"), adj=adjxy))
-tiplabels(pch=21, col=tmptd[[1]]+1, bg=tmptd[[1]]+1, cex=0.5)
-tiplabels(pch=21, bg=c("black", "green")[tmptd[[2]]+1], col=c("black", "green")[tmptd[[2]]+1],, adj=c(7.5,0.5), cex=0.5)
+    adjxy <- c(3,3)
+    par(mfrow=c(1,2))
+    plot(phy, show.tip.label=FALSE)
+                                        #nodelabels(pie=aceDep$lik.anc, piecol=c("black", "green", "red"))
+    try(nodelabels(pie=cbind(aceDep$lik.anc[,1], aceDep$lik.anc[,2]+aceDep$lik.anc[,3]), piecol=c("black", "green"), adj=-1*adjxy))
+    try(nodelabels(pie=cbind(aceDep$lik.anc[,1] + aceDep$lik.anc[,2], aceDep$lik.anc[,3]), piecol=c("black", "red"), adj=adjxy))
+    tiplabels(pch=21, col=tmptd[[1]]+1, bg=tmptd[[1]]+1, cex=0.5)
+    tiplabels(pch=21, bg=c("black", "green")[tmptd[[2]]+1], col=c("black", "green")[tmptd[[2]]+1],, adj=c(7.5,0.5), cex=0.5)
 
-plot(phy, show.tip.label=FALSE)
-try(nodelabels(pie=aceInd1$lik.anc, piecol=c("black", "red"), adj=adjxy))
-try(nodelabels(pie=aceInd2$lik.anc, piecol=c("black", "green"), adj=-1*adjxy))
-tiplabels(pch=21, col=tmptd[[1]]+1, bg=tmptd[[1]]+1, cex=0.5)
-tiplabels(pch=21, bg=c("black", "green")[tmptd[[2]]+1], col=c("black", "green")[tmptd[[2]]+1],, adj=c(7.5,0.5), cex=0.5)
+    plot(phy, show.tip.label=FALSE)
+    try(nodelabels(pie=aceInd1$lik.anc, piecol=c("black", "red"), adj=adjxy))
+    try(nodelabels(pie=aceInd2$lik.anc, piecol=c("black", "green"), adj=-1*adjxy))
+    tiplabels(pch=21, col=tmptd[[1]]+1, bg=tmptd[[1]]+1, cex=0.5)
+    tiplabels(pch=21, bg=c("black", "green")[tmptd[[2]]+1], col=c("black", "green")[tmptd[[2]]+1],, adj=c(7.5,0.5), cex=0.5)
 }
 dev.off()
 
