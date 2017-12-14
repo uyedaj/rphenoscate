@@ -3,7 +3,7 @@ library(treeplyr)
 td <- readRDS("../data/matchedTreeDataDated.rds")
 td <- select(td, -1)
 ## Read in relation table
-rt <- read.csv("../rphenoscate/R/dependencies.txt")
+rt <- read.csv("../rphenoscate/R/dependencies_with_names.txt")
 rt <- apply(rt, 2, function(x) gsub(" ", ".", x, fixed=TRUE))
 rt <- apply(rt, 2, function(x) gsub("-", ".", x, fixed=TRUE))
 
@@ -11,8 +11,8 @@ rt <- apply(rt, 2, function(x) gsub("-", ".", x, fixed=TRUE))
 variableDep <- NULL
 tds <- list()
 for(i in 1:nrow(rt)){
-  t1 <- rt[i,1]
-  t2 <- rt[i,3]
+  t1 <- rt[i,2]
+  t2 <- rt[i,4]
   tmptd <- select(td, t1, t2) %>% filter(., (!is.na(td[[t1]])), (!is.na(td[[t2]]))) %>% mutate(., X = paste0(.[[2]], .[[1]]))
   tmpvar <- apply(tmptd$dat, 2, function(x) length(unique(x)))
   if(all(tmpvar > 1) & tmpvar[3] > 2) variableDep <- c(variableDep, 1) else { variableDep <- c(variableDep, 0) }
