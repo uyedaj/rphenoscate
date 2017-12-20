@@ -57,7 +57,6 @@ comb2matrices<-function(M1,M2, dependent.state=NULL, name.sep="", diag.as=""){
 #' @param list.matrices Lsit of matrices
 #' @return Matrix
 #' @examples
-#' 
 combNmatrices<-function(list.matrices,  ...){
   comb.matrix<-list.matrices[[1]]
   
@@ -74,7 +73,6 @@ combNmatrices<-function(list.matrices,  ...){
 #' @return List of matrices
 #' @examples
 #' init_binary_matrix(g)
-
 init_binary_matrix<-function(graph){
   matrix.list=list()
   n.matrix=vcount(graph)
@@ -91,7 +89,7 @@ init_binary_matrix<-function(graph){
 }
 
 
-#' @title Get all dependency functions given a dependecy graph
+#' @title Get all dependency matrices given a dependecy graph
 #' @description Construct dependency matrices and their correponding attributes
 #' @param graph igraph object of ontology terms
 #' @return List of matrices and their attributes
@@ -227,7 +225,7 @@ plot(g1)
 # getting all matrices for g1
 mt=get_graph_matrix(g1)
 str(mt)
-# matrix for a terms
+# matrix for a term
 mt$comb.matrices$`UBERON:2002076`$matrix
 
 
