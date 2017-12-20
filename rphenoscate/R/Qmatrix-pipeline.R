@@ -1,6 +1,5 @@
 library("magrittr")
 library("igraph")
-setwd("~/my-papers-2017/Rphenoscate/rphenoscate/rphenoscate/R")
 
 ##############################################################################################
 # FUNCTIONS
