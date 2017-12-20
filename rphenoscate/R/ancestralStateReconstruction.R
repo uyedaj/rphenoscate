@@ -20,8 +20,11 @@ for(i in 1:nrow(rt)){
 }
 
 dependentCases <- which(variableDep==1)
+
+## See the counts for each state in each dependent case
 for(i in dependentCases) print(table(tds[[i]][['X']]))
 
+## Make a figure of all the dependent cases
 pdf("../data/asrDependentCases.pdf")
 for(i in dependentCases){
 tmptd <- tds[[i]]
