@@ -1,0 +1,166 @@
+---
+title: "Ontologically-informed Discrete Character Models"
+output: html_notebook
+---
+
+This notebook provides a tutorial on how to use the rphenoscate package to fit discrete character models on traits that have ontologically-informed dependencies.
+```{r}
+library(ape)
+library(treeplyr)
+library(ontologyIndex)
+library(igraph)
+library(magrittr)
+source("../R/get.dependencies.R")
+```
+
+First, let's load our data and ontology.
+
+```{r}
+td <- readRDS("../../data/matchedTreeDataDated.rds")
+td <- treeply(td, multi2di, random=FALSE)
+td$phy$edge.length[td$phy$edge.length==0] <- .Machine$double.eps
+td
+
+```
+
+```{r}
+ontology <- ontologyIndex::get_OBO("../../data/uberon.obo")
+traits <- gsub(".", " ", colnames(td$dat), fixed=TRUE)
+ids <- names(ontology$name[match(traits, ontology$name)])
+td <- select(td, which(!is.na(ids)))
+traits <- traits[!is.na(ids)]
+uberon.terms <- na.omit(ids)
+glossary <- data.frame(uberon=uberon.terms, trait=colnames(td$dat))
+deps <- get.dependencies('../../data/uberon.obo', uberon.terms)
+tdID <- td
+colnames(tdID$dat) <- uberon.terms
+
+```
+
+
+```{r}
+chrs.uber <- deps[[1]]
+chrs.uber<-as.matrix(chrs.uber[,c(1,2)])
+# make igraph object
+g=graph_from_edgelist(chrs.uber)
+# plot all dependecies
+plot(g, vertex.color="green", vertex.size=1,
+     vertex.label.dist=0.5, vertex.label.cex=0.5, vertex.label=NULL, edge.arrow.size=.5 )
+
+```
+
+```{r}
+# now let's select some components to get matrices for them
+# there are a few ways to do it:
+
+# 1. working with connected components
+con.comp=components(g, "weak")
+# let's get a component with three nodes
+com.id=which(con.comp$csize==15)
+comp=con.comp$membership[con.comp$membership==com.id] %>% names()
+# crating a new graph for this component
+g1=subgraph(g, comp)
+# plotting it
+plot(g1)
+```
+
+```{r}
+# getting all matrices for g1
+mt=get_graph_matrix(g1)
+str(mt)
+# matrix for a term
+mt$comb.matrices$`UBERON:2002076`$matrix
+
+```
+
+
+```{r}
+mt$comb.matrices$`UBERON:2002076`$matrix
+```
+
+
+```{r}
+comp=con.comp$membership[con.comp$membership==com.id] %>% names()
+# craeting a new graph for this component
+g2=subgraph(g, comp)
+plot(g2)
+# now I make a subgraph for "UBERON:2000663" that includes only the nearest neighbors
+g3=make_ego_graph(g, order=1, nodes = "UBERON:2000663", mode = c("all"), mindist = 0)
+g3=g3[[1]]
+plot(g3)
+```
+
+```{r}
+mt=get_graph_matrix(g3)
+# get a list of all combined matrices
+comb.mt=lapply(mt$nodes.sorted, function(x) mt$comb.matrices[[x]]$matrix)
+names(comb.mt)=mt$nodes.sorted
+comb.mt
+
+```
+
+```{r}
+focalTraits <- names(comb.mt[1:3])
+tmptd <- select(tdID, names(comb.mt[1:3])) %>% filter(., apply(.$dat, 1, function(x) all(!is.na(x)))) %>% mutate(., X=apply(.$dat, 1, function(x) paste(x, collapse="")))
+table(tmptd[['X']])
+g.mt <- comb.mt$`UBERON:4200099`
+states <- levels(as.factor(tmptd[['X']]))
+g.mt <- g.mt[states, states]
+g.mt[g.mt>0] <- c(5,5,1,2,3,4)
+asrDep <- ace(tmptd[['X']], tmptd$phy, type="discrete", marginal=TRUE, model=g.mt)
+
+
+```
+
+```{r}
+## Independent traits ASR
+mt$binary.matrices
+models <- setNames(c("ER", "ARD", "ARD"), focalTraits)
+asrInd <- lapply(focalTraits, function(x) ace(tmptd[[x]], tmptd$phy, type="discrete", marginal=TRUE, model=models[x]))
+likAncInd <- do.call(cbind, lapply(asrInd, function(x) x$lik.anc))
+ll <- list()
+for(i in 1:length(focalTraits)){
+    ll[[i]] <- c(2*i-1, 2*i)
+}
+indices <- do.call(expand.grid, ll)
+mlikAncInd <- do.call(cbind, lapply(1:nrow(indices), function(x) apply(likAncInd[,unlist(indices[x,])], 1, prod)))
+colnames(mlikAncInd) <- sapply(1:nrow(indices), function(x) paste(rep(c(0,1), nrow(indices))[unlist(indices[x,])], collapse=""))
+
+```
+
+
+```{r fig.height=10, fig.width=10}
+par(mfrow=c(1,2))
+plot(tmptd$phy, show.tip.label=FALSE)
+cols <- setNames(viridis::viridis(length(states)), states)
+likAnc <- asrDep$lik.anc
+likAnc[likAnc < 0] <- 0
+likAnc <- t(sapply(1:nrow(likAnc), function(x) likAnc[x,]/sum(likAnc)))
+nodelabels(pie=likAnc, piecol=cols)
+tiplabels(pch=21, bg=cols[tmptd[['X']]])
+legend(0, 40, states, pch=21, pt.bg = cols)
+
+
+plot(tmptd$phy, show.tip.label=FALSE)
+likAnc <- mlikAncInd
+cols2 <- setNames(viridis::viridis(ncol(likAnc)), colnames(likAnc))
+cols2[names(cols)] <- cols
+likAnc[likAnc < 0] <- 0
+likAnc <- t(sapply(1:nrow(likAnc), function(x) likAnc[x,]/sum(likAnc)))
+nodelabels(pie=likAnc, piecol=cols)
+tiplabels(pch=21, bg=cols[tmptd[['X']]])
+legend(0, 40, names(cols2), pch=21, pt.bg = cols2)
+```
+
+```{r}
+## Diversitree implementation (more flexible, esp with root state)
+```
+
+
+
+
+
+
+
+
+
