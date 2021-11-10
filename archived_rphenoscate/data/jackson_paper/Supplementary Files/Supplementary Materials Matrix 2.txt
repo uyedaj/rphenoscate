@@ -1,0 +1,3048 @@
+taxa_name	pectoral fin	pelvic fin
+Bellottia robusta	?	0
+Typhlobelus ternetzi	1	0
+Eurypharyngidae	1	0
+Nessorhamphus danae	1	0
+Platyurosternarchus macrostomus	1	0
+Alabes hoesei	0	0
+Apteronotus leptorhynchus	1	0
+Belonion apodion	1	0
+Trichomycterus catamarcensis	1	0
+Nettastomatidae	0	0
+Anguillidae	1	0
+Scorpaeniformes	?	0 and 1
+Melanocetidae	1	0
+Aseraggodes holcomi	0	1
+Gymnotus cylindricus	1	0
+Serrivomeridae	1	0
+Amblyopsis rosae	1	0
+Neoopisthopterus cubanus	?	0
+Tetraodontidae	1	0 and 1
+Apteronotus albifrons	1	0
+Linophrynidae	1	0
+Halimuraenoides	1	0 and 1
+Pholis fasciata	1	0
+Eurypharynx pelecanoides	?	0
+Opisthopterus equatorialis	1	0
+Synbranchidae	0 and 1	0
+Magosternarchus raptor	1	0
+Schindleriidae	1	0
+Sternarchorhamphus muelleri	1	0
+Heterenchelyidae	0	0
+Ereunias grallator	1	0
+Sternopygidae	1	0
+Prodiodon erinaceus	?	0
+Simpsonichthys cholopteryx	1	0
+Derichthyidae	?	0
+Ranzania laevis	1	0
+Anarhichadidae	1	0
+Porotergus gimbeli	1	0
+Colocongridae	1	0
+Megupsilon aporus	1	0
+Parapteronotus hasemani	1	0
+Ereuniidae	1	0 and 1
+Dolichallabes microphthalmus	0	0 and 1
+Phallostethidae	1	0 and 1
+Archaeotetraodon winterbottomi	?	0
+Ophisternon afrum	0	0
+Trichiuridae	?	0 and 1
+Gymnotus anguillaris	1	0
+Parabrotulidae	1	0
+Heptadiodon echinus	?	0
+Zaprora silenus	1	0
+Pristigaster sp. (DiDario 1999)	?	0 and 1
+Eurypleuron	1	0
+Odontognathus compressus	1	0
+Rhabdolichops troscheli	1	0
+Apteronotidae	1	0
+Hoplunnis	1	0
+Sternarchogiton sp. B (Albert 2001)	1	0
+Listrura camposi	1	0
+Schilbidae	1	0 and 1
+Congrogadus hierichthys	1	0
+Thaumatichthyidae	1	0
+Hypopomidae	1	0
+Balistidae	1	0 and 1
+Apteronotus apurensis	1	0
+Ophididae	?	0 and 1
+Proaracana dubia	?	0
+Neoopisthopterus tropicus	?	0
+Opisthopterus valenciennesi	1	0
+Glanapteryx anguilla	1	0 and 1
+Saccopharyngidae	1	0
+Rhabdolichops electrogrammus	1	0
+Siluridae	1	0 and 1
+Ceratiidae	1	0
+Encheliophis	0	0
+Goodeidae	1	0 and 1
+Sternopygus macrurus	1	0
+Gasterosteidae	1	0 and 1
+Anguilliformes	?	0
+Pillaia indica	1	0
+Conniella apterygia	1	0
+Monognathidae	0	0
+Kaupichthys	1	0
+Electrophorus electricus	1	0
+Muraenidae	0	0
+Cyclopteridae	1	0 and 1
+Rivulidae	1	0 and 1
+Microsternarchus bilineatus	1	0
+Neochanna apoda	1	0
+Halidesmus	1	0 and 1
+Stylephoridae	1	0 and 1
+Haliophis	1	0 and 1
+Adontosternarchus sachsi	1	0
+Odacidae	1	0 and 1
+Gymnotiformes	1	0
+Sphoeroides maculatus	?	0
+Triodon macropterus	1	0
+Comephoridae	1	0
+Cyematidae	1	0
+Osteoglossidae	1	0 and 1
+Rhamphichthys rostratus	1	0
+Ptilichthys goodei	1	0
+Siphonognathus argyrophanes	1	0
+Moringuidae	0	0
+Synbranchus madeirae	0	0
+Ophisternon candidum	0	0
+Molidae	1	0 and 1
+Rivulus nudiventris	1	0
+Diceratiidae	1	0
+Megadontognathus cuyuniense	1	0
+Opisthopterus dovii	1	0
+Congridae	?	0
+Simpsonichthys boitonei	1	0
+Bythitidae	?	0 and 1
+Gymnallabes typus	0	0 and 1
+Triodontidae	1	0 and 1
+Typhlichthys subterraneus	1	0
+Aracana aurita	?	0
+Racenisia fimbriipinna	1	0
+Percopsiformes	?	0 and 1
+Ostracion cubicus	?	0
+Spinacanthidae	?	0
+Zignoichthys oblongus	?	0
+Chlopsidae	?	0
+Cetomimoides parri	1	0
+Bellottia apoda	?	0
+Empetrichthys	1	0
+Ophichthus rex	?	0
+Papyrocranus congoensis	1	0
+Clupeidae	1	0 and 1
+Robinsia catherinae	0	0
+Pliosteostoma lutipinnis	?	0
+Centrophrynidae	1	0
+Distocyclus conirostris	1	0
+Carapus	1	0
+Zignodon fornasieroae	?	0
+Gigantactinidae	1	0
+Lepturacanthus	1	0
+Listrura nematopteryx	1	0
+Caulophryne	1	0 and 1
+Labridae	1	0 and 1
+Chendol keelini	1	0
+Bellottia armiger	?	0
+Onuxodon	1	0
+Lagocephalus laevigatus	1	0
+Channallabes apus	0	0 and 1
+Cyema atrum	1	0
+Canthigaster rostrata	?	0
+Macrouroides inflaticeps	1	0
+Xenoconger	1	0
+Nemichthyidae	1	0
+Monopterus boueti	0	0
+Platytroctidae	1	0 and 1
+Atheriniformes	?	0 and 1
+Macrocephenchelys brachialis	1	0
+Orthosternarchus tamandua	1	0
+Synbranchus marmoratus	0	0
+Muraenichthys	0	?
+Mastacembelus apectoralis	0	?
+Crenichthys	1	0
+Stylephorus chordatus	1	0
+Stomiidae	0 and 1	1
+Oneirodidae	1	0
+Chlopsis	0	0
+Belonidae	1	0 and 1
+Monodactylus	1	0 and 1
+Apteronotus cuchillo	1	0
+Chaudhuria	1	0
+Ostraciidae	1	0 and 1
+Clupeiformes	?	0 and 1
+Cyprinodontidae	1	0 and 1
+Caulophrynidae	1	0
+Glanapteryx niobium	1	0
+Gigantura indica	1	0 and 1
+Sternopygus sp. (Fink and Fink 1981)	1	0
+Hypopygus lepturus	1	0
+Ophichthidae	?	0
+Lycenchelys fedorovi	?	0
+Simpsonichthys parallelus	1	0
+Osteoglossiformes	?	0 and 1
+Pygidianops eigenmanni	1	0
+Halimuraena	1	0 and 1
+Gadiformes	?	0 and 1
+Stichaeidae	1	0 and 1
+Aetapcus	1	0
+Himantolophidae	1	0
+Congrogadus malayanus	1	0
+Parona signata	1	0 and 1
+Pataecidae	1	0
+Kasatkia memorabilis	1	0
+Trichomycteridae	1	0 and 1
+Vitiaziella cubiceps	1	0
+Prodiodon tenuispinus	?	0
+Archaeotetraodon jamestyleri	?	0
+Monopterus cuchia	0	0
+Symphurus williamsi	0 and 1	?
+Lamprogrammus niger	1	0
+Chendol lubricus	1	0
+Eigenmannia virescens	1	0
+Chologaster cornuta	1	0
+Ascelichthys rhodorus	?	0
+Cyprinodontiformes	?	0 and 1
+Magosternarchus duccis	1	0
+Lamprogrammus shcherbachevi	1	0
+Listrura tetraradiata	1	0
+Spinacanthus cuneiformis	?	0
+Synbranchus lampreia	0	0
+Protobalistum imperialis	?	0
+Apteronotus magdalenensis	1	0
+Monopterus albus	0	0
+Neocyema erythrosoma	0 and 1	0
+Alabes brevis	0	0
+Rhamphichthyidae	1	0
+Gobiesocidae	0 and 1	0 and 1
+Tetraodontiformes	?	0 and 1
+Gymnarchidae	?	0
+Xenoconger fryeri	0	0
+Archolaemus blax	1	0
+Hypopomus artedi	1	0
+Paraliparis	1	0
+Radiicephalus elongatus	1	0
+Synbranchiformes	?	0
+Natalichthys	1	0 and 1
+Sternarchorhynchus oxyrhynchus	1	0
+Raconda russeliana	1	0
+Muraenesocidae	1	0
+Gymnorhamphichthys hypostomus	1	0
+Macrocephenchelys brevirostris	1	0
+Apteronotus cuchillejo	1	0
+Heteroconger	0	?
+Steatogenys elegans	1	0
+Xiphiidae	?	0 and 1
+Giganturidae	?	0
+Echiodon	1	0
+Gymnallabes nops	0	0
+Ophisternon bengalense	0	0
+Sternarchella schotti	1	0
+Gymnotus carapo	1	0
+Pristigaster cayana	?	0 and 1
+Oligolactoria bubiki	?	0
+Apodichthys	1	0
+Bellottia galatheae	?	0
+Eremophilus	1	0
+Creediidae	1	0 and 1
+Cynoglossidae	0	0
+Eolactoria sorbinii	?	0
+Listrura boticario	1	0
+Blennodesmus	1	0 and 1
+Trichiurus	1	0
+Miuroglanis platycephalus	1	0
+Alabes parvula	0	0
+Pshekhadiodon parini	?	0
+Aphanius apodus	1	0
+Trinectes maculatus	0	?
+Plagiotremus iosodon	?	0
+Eigenmannia sp. (Fink and Fink 1981)	1	0
+Sternarchogiton nattereri	1	0
+Typhlobelus macromycterus	1	0
+Syngnathidae	?	0
+Neoceratiidae	1	0
+Ptilichthyidae	?	0
+Ophisternon infernale	0	0
+Diodon holocanthus	?	0
+Protobalistidae	?	0
+Chaudhuriidae	1	0
+Mola mola	1	0
+Adontosternarchus sp. (Fink and Fink 1981)	1	0
+Alabes dorsalis	0	1
+Kentrocapros aculeatus	?	0
+Hephthocara simum	?	0
+Myrocongridae	1	0
+Cetomimidae	1	0
+Acanthostracion quadricornis	?	0
+Echiophis punctifer	?	0
+Xiphias gladius	1	0
+Cyprinodon diabolis	1	0
+Stephanoberyciformes	?	0 and 1
+Sternarchella sima	1	0
+Bihunichthys monopteroides	1	0
+Icosteidae	?	0
+Blenniidae	1	0 and 1
+Opisthopterus tardoore	1	0
+Synaphobranchidae	?	0
+Icosteus aenigmaticus	1	0 and 1
+Zoarcidae	1	0 and 1
+Desmodema lorum	1	0
+Achiropsettidae	0 and 1	?
+Carapidae	?	0 and 1
+Centrophryne spinulosa	1	0
+Chaudhuria fusipinnis	1	0
+Pseudochromidae	1	0 and 1
+Ophisternon aenigmaticum	0	0
+Thermobiotes mytilogeiton	0	?
+Notopteridae	1	0 and 1
+Macrouridae	?	0 and 1
+Anguilla rostrata	?	0
+Compasaria sp. 1 (Albert 2001)	1	0
+Lophotidae	1	0 and 1
+Gymnotidae	1	0
+Ophidiiformes	?	0 and 1
+Speoplatyrhinus poulsoni	1	0
+Stromateidae	1	0
+Clariidae	1	0 and 1
+Radiicephalidae	?	0 and 1
+Channidae	1	0 and 1
+Neopataecus	1	0
+Monacanthidae	1	0
+Lycenchelys hureaui	?	0
+Trachipteridae	?	0 and 1
+Opisthopterus macrops	1	0
+Aulopiformes	?	0 and 1
+Lycenchelys monstrosa	?	0
+Lampriformes	?	0 and 1
+Pristigasteridae	1	0 and 1
+Eotetraodon pygmaeus	?	0
+Odontognathus mucronatus	1	0
+Rhodichthys regina	1	0
+Aphyonidae	1	0 and 1
+Zaproridae	?	0
+Robia legula	1	0 and 1
+Chilomycterus schoepfii	?	0
+Beloniformes	?	0 and 1
+Lamprogrammus fragilis	1	0
+Neoceratias spinifer	1	0
+Compsaraia compsus	1	0
+Diodontidae	1	0
+Idiacanthus atlanticus	0	1
+Pillaia kachinica	1	0
+Gymnarchus niloticus	1	0
+Carangidae	1	0 and 1
+Sternopygus astrabes	1	0
+Rusichthys	1	0 and 1
+Gasterosteiformes	?	0 and 1
+Hephthocara crassiceps	?	0
+Rachycentron canadum	1	0 and 1
+Desmodema polystictum	1	0
+Alabes	0	?
+Ammodytidae	1	0 and 1
+Perciformes	?	0 and 1
+Lycenchelys xanthoptera	?	0
+Apodocreedia vanderhorsti	1	0
+Brachyhypopomus brevirostris	1	0
+Amblyopsidae	?	0 and 1
+Platytroctes apus	1	0
+Lophiiformes	?	0 and 1
+Derichthys serpentinus	1	0
+Soleidae	0 and 1	1
+Plagiotremus spilistius	?	0
+Eumecichthys fiski	1	0
+Megalomycteridae	?	0 and 1
+Galaxiidae	1	0 and 1
+Forbesichthys agassizii	1	0
+Opisthopterus effulgens	1	0
+Chaudhuria caudata	1	0
+Neochanna diversus	1	0
+Liparidae	1	0 and 1
+Eigenmannia humboldtii	1	0
+Scytalina cerdale	1	0
+Pataecus	1	0
+Ataxolepis apus	1	0
+Lamprogrammus exutus	1	0
+Scytalinidae	?	0
+Saccopharyngiformes	?	0
+Channa nox	?	0
+Lamprogrammus brunswigi	1	0
+Siluriformes	1	0 and 1
+Cryptacanthodidae	1	0
+Snyderidia canina	1	0
+Nessorhamphus ingolfianus	1	0
+Gorgasia	0	?
+Hypoptychidae	?	0
+Demissolinea novaeguineensis	1	0
+Eremophilus mutisii	1	0
+Lycenchelys nanospinata	?	0
+Bellottia cryptica	?	0
+Kasatkia seigeli	1	0
+Gigantura chuni	1	0 and 1
+Garo khajuriai	1	0
+Papyrocranus afer	1	0
+Hypoptychus dybowskii	1	0
+Odontognathus panamensis	1	0
+Pholidae	1	0 and 1
+Nectoliparis pelagicus	1	0
+Macrognathus pancalus	1	0
+Gasterosteus aculeatus	1	0 and 1
+Parastromateus niger	1	0 and 1
+Cottidae	1	0 and 1
+Monodactylidae	1	0
+Nagaichthys filipes	1	0
+Nocomis effusus	1	1
+Genus 7 sp. (Bockmann 1998)	1	1
+Brachysynodontis batensoda	1	1
+Pseudobunocephalus bifidus	1	?
+Stomias boa	1	1
+Hara hara	1	1
+Holocentridae	?	1
+Microglanis poecilus	1	1
+Lithoxus lithoides	1	1
+Cyprinella nivea	1	1
+Capromimus abbreviatus	1	1
+"Notropis sp. ""sawfin shiner"" (Coburn and Cavender 1992)"	1	1
+Pterodoras rivasi	1	?
+Bunocephalus sp. (Friel 1994)	1	?
+Macroparalepis affinis	1	1
+Parachromis loisellei	?	1
+Synodontis angelica	1	1
+Ancharius fuscus	?	1
+Dolichancistrus cobrensis	1	1
+Glyptothorax cous	1	1
+Aspredinichthys tibicen	1	1
+Halecomorphi	1	1
+Pseudobunocephalus amazonicus	1	?
+Microdevario kubotai	1	?
+Ictalurus mexicanus	1	1
+Pylodictis olivaris	1	1
+Hyalobagrus ornatus	1	1
+Cyttus traversi	1	1
+Hydrolycus scomberoides	1	1
+Lepidonotothen squamifrons	1	?
+Cetopsidium minutum	1	1
+Brachyrhamdia marthae	1	1
+Mimagoniates barberi	?	1
+Astroblepus sp. (Fink and Fink 1981)	1	1
+Imparfinis sp. n. (Bockman 1998)	1	1
+Tautoga	1	1
+Pimelodus pictus	1	1
+Netuma bilineata	1	1
+Micralestes cf. acutidens (Zanata and Vari 2005)	1	1
+Anabantidae	1	1
+Chalceus epakros	1	1
+Plicofollis polystaphylodon	1	1
+Cetopsorhamdia iheringi	1	1
+Pseudecheneis sulcata	1	1
+Hemitremia flammea	1	1
+Scopelosaurus hoedti	1	1
+Xenurobrycon pteropus	?	1
+Cetopsidium orientale	1	1
+Pogonopoma parahybae	1	1
+Leptolepis coryphaenoides	1	1
+Astroblepus sp. (Britto 2003)	1	?
+Phenacobius crassilabrum	1	1
+Schizolecis guntheri	1	1
+Peckoltia sp. 2 (Armbruster 2004)	1	1
+Brachyrhamdia meesi	1	1
+Ameiurus natalis	1	1
+Atopodontus	1	1
+Xyliphius melanopterus	1	1
+Ariopsis felis	1	1
+Notoscopelus resplendens	1	1
+Zenopsis conchifer	1	1
+Pseudolithoxus anthrax	1	1
+Parakysis verrucosus	1	1
+Gephyrocharax chocoensis	?	1
+Hypostomus albopunctatus	1	1
+Cynopotamus tocantinensis	1	?
+Mylocheilus caurinus	1	1
+Carpiodes carpio	1	1
+Cetopsis motatanensis	1	1
+Goeldiella eques	1	1
+Pterygoplichthys pardalis	1	1
+Notropis chrosomus	1	1
+Bunocephalus amaurus	1	?
+Mirapinnidae	?	1
+Pangasiidae	1	?
+Neoarius graeffei	1	1
+Corydoras polystictus	1	?
+Ameiurus melas	1	1
+Scopelarchidae	1	1
+Epapterus blohmi	1	1
+Rhynchocypris	1	?
+Oreosomatidae	1	1
+Acestrorhynchus pantaneiro	1	?
+Silurus glanis	1	1
+Centromochlus romani	1	1
+Bagrus bajad	1	1
+Aphanotorulus ammophilus	1	1
+Synodontis schall	1	1
+Phenacorhamdia unifasciata	1	1
+Erethistes sp. (Chen 1994)	1	?
+Pareiorhaphis cameroni	1	1
+Berycidae	?	1
+Kryptopterus limpok	1	1
+Bunocephalus coracoideus	1	1
+Rhinichthys falcatus	1	1
+Pseudancistrus brevispinis	1	1
+Paraliparis bathybius	1	?
+Pangasius nasutus	?	1
+Cetopsorhamdia sp. n. A (Bockmann 1998)	1	1
+Cephalosilurus apurensis	1	1
+Trachinocephalus myops	1	1
+Chiloglanis batesii	1	1
+Anoplogaster cornuta	1	1
+Aspredinidae	1	?
+Pseudocyttus maculatus	1	1
+Stethopristes eos	1	1
+Cetopsorhamdia picklei	1	1
+Hepsetus odoe	1	1
+Noturus insignis	1	1
+Scobinancistrus pariolispos	1	1
+Myctophum affine	1	1
+Crossoloricaria venezuelae	1	1
+Melamphaes suborbitalis	1	1
+Exastilithoxus fimbriatus	1	1
+Chionobathyscus dewitti	1	1
+Diplomystidae	1	?
+Centromochlus reticulatus	1	?
+Synodontis nigrita	1	1
+Corydoras osteocarus	1	1
+Pachythrissops laevis	1	1
+Allocyttus verrucosus	1	1
+Tandanus tandanus	1	1
+Kronichthys sp. 1 (Armbruster 2004)	1	1
+Hydrolycus tatauaia	1	1
+Liosomadoras oncinus	1	1
+Glyptothorax sp. (Friel 1994)	1	?
+Morone americana	1	1
+Corydoras rabauti	1	1
+Entomocorus gameroi	1	1
+Gladioglanis conquistador	1	1
+Oryzias bonneorum	1	1
+Paraconger	1	?
+Conta conta	1	1
+Netuma proxima	1	1
+Piaractus mesopotamicus	1	1
+Corydoras ephippifer	1	?
+Leiocassis micropogon	1	1
+Gasterosteus wheatlandi	1	1
+Xenolepidichthys dalgleishi	1	1
+Trachelyichthys decaradiatus	1	1
+Panaque sp. (de Pinna 1993)	?	1
+Synodus variegatus	1	1
+Bagre marinus	1	1
+Corydoras barbatus sp. I (Britto 2003)	1	?
+Oryzias javanicus	1	1
+Schilbe mystus	1	1
+Doras carinatus	1	1
+Careproctus cypselurus	1	?
+Platydoras sp. (Royero 1999)	1	1
+Notropis imeldae	1	1
+Rhaphiodon vulpinus	1	1
+Euchilichthys guentheri	1	1
+Phenacogrammus urotaenia	1	1
+Centromochlus existimatus	1	1
+Encheloclarias tapeinopterus	?	1
+Cetopsis arcana	1	1
+Amblydoras sp. (Friel 1994)	1	?
+Corydoras trilineatus	1	?
+Pseudomystus myersi	1	1
+Teleostei	1	1
+Sudis atrox	1	1
+Genus 6 sp. (Bockmann 1998)	1	1
+Phreatobius cisternarum	1	1
+Acestrorhynchus grandoculis	1	?
+Oryzias dancena	1	1
+Chrysichthys johnelsi	1	1
+Diplomystes sp. (Vigliotta 2008)	1	1
+Euchilichthys royauxi	1	1
+Ancharius	1	1
+Sisor rabdophorus	1	1
+Pseudeutropius brachypopterus	1	1
+Ictalurus pricei	1	1
+Cetopsidium morenoi	1	1
+Hypostomus plecostomoides	1	1
+Auchenipteridae	1	?
+Ameiurus nebulosus	1	1
+Myoglanis sp. (Bockmann 1998)	1	1
+Paraliparis copei	1	?
+Ictalurus australis	1	1
+Corydoras loretoensis	1	?
+Hemisorubim platyrhynchos	1	1
+Lophiosilurus alexandri	1	?
+Hemibagrus baramensis	1	1
+Loricariichthys brunneus	1	1
+Clarias sp. (Fink and Fink 1981)	1	1
+Phenacogrammus altus	1	1
+Yunnanilus pleurotaenia	1	1
+Synodontis ? sp. (Royero 1999)	1	1
+Mystus cavasius	1	1
+Notropis dorsalis	1	1
+Rhamdiopsis moreirai	1	1
+Asterophysus batrachus	1	1
+Hypophthalmus edentatus	1	1
+Elops hawaiensis	1	1
+Phenacobius teretulus	1	1
+Corydoras bicolor	1	?
+Hemigrammopetersius barnardi	1	1
+Synodontis katangae	1	1
+Pareiorhina rudolphi	1	1
+Erimyzon tenuis	?	1
+Pseudobunocephalus iheringii	1	?
+Liobagrus obesus	1	?
+Ictalurus lupus	1	1
+Brachyglanis nocturnus	1	1
+Hemipsilichthys? (Armbruster 2004)	1	1
+Cetopsis coecutiens	1	1
+Anodus elongatus	1	1
+Noturus stigmosus	1	1
+Nototheniops	1	?
+Cichlasoma beani	?	1
+Gnathobagrus depressus	1	1
+Anchoa lyolepis	?	1
+Hisonotus notatus	1	?
+Oryzias minutillus	1	1
+Chrysichthys cranchii	1	1
+Rita rita	1	1
+Genus 12 sp. (Bockmann 1998)	1	1
+Platydoras costatus	1	1
+Ictalurus balsanus	1	1
+Engraulis sp. (Arratia 1999)	1	1
+Atherinomorus stipes	?	1
+Protoclupea atacamensis	1	1
+Tatia creutzbergi	1	1
+Trichomycteridae sp. (de Pinna 1993)	?	1
+Phenacogrammus ansorgii	1	1
+Lebiasina provenzanoi	1	?
+Chaca bankanensis	?	1
+Chasmocranus longior	1	1
+Protacanthodes ombonii	?	1
+Batasio batasio	1	1
+Ichthyborus ornatus	1	1
+Phenacorhamdia sp. B (Bockmann 1998)	1	1
+Brachyglanis frenatus	1	1
+Erethistes sp. (de Pinna 1993)	?	1
+Curimata macrops	1	1
+Anomalopidae	?	1
+Pseudotrichonotus altivelis	1	1
+Hoplosternum littorale	1	1
+Loricariichthys labialis	1	1
+Acrochordonichthys pachyderma	1	?
+Brachypetersius altus	1	1
+Acrochordonichthys rugosus	1	1
+Siluranodon auritus	1	1
+Nemacheilus rupecula	1	1
+Gephyrocharax melanocheir	?	1
+Eutropiichthys vacha	1	1
+Danionella mirifica	1	?
+Baryancistrus niveatus	1	1
+Neoscopelus macrolepidotus	1	1
+Pimelodella sp. n. (Bockmann 1998)	1	1
+Ageneiosus atronasus	?	1
+Hemisynodontis membranaceus	1	1
+Platystomatichthys sturio	1	1
+Cheilinus chlorourus	1	1
+Imparfinis sp. B (Bockmann 1998)	1	1
+Macrurocyttus acanthopodus	1	1
+Cranoglanis bouderius	1	1
+Charitosomous lineolatus	1	1
+Pseudolaguvia shawi	1	1
+Cichlasoma festae	?	1
+Clarias nieuhofii	?	1
+Akysis sp. (Friel 1994)	1	?
+Oxyropsis carinata	1	1
+Ernstichthys sp. (de Pinna 1996)	1	?
+Platystacus sp. (Mo 1991)	1	1
+Roestes molossus	1	1
+Chrysichthys brachynema	1	1
+Chiloglanis macropterus	1	1
+Pseudacanthicus leopardus	1	1
+Cyclocheilichthys armatus	?	1
+Allocyttus niger	1	1
+Trachycorystes trachycorystes	1	1
+Denticetopsis praecox	1	1
+Tatia aulopygia	1	?
+Myoglanis potaroensis	1	1
+Omosudis lowii	1	1
+Otocinclus vittatus	1	1
+Brycinus derhami	1	1
+Scoloplacidae	1	1
+Liparis montagui	1	?
+Proeutropiichthys taakree	1	1
+Entomocorus benjamini	1	1
+Trachelyopterus galeatus	1	1
+Nangra nangra	1	1
+Micralestes elongatus	1	1
+Chandramara chandramara	1	1
+Anisochromis	1	1
+Centromochlus concolor	1	?
+Adrianichthys roseni	1	1
+Akysis sp. 1 (Chen 1994)	1	?
+Hemibagrus menoda	1	1
+Hoplosternum magdalenae	1	?
+Bryconaethiops microstoma	1	1
+Amphilius jacksonii	1	1
+Plotosus limbatus	?	1
+Cyclopterus lumpus	1	?
+Notarius grandicassis	1	1
+Clupea harengus	?	1
+Auchenipterus sp. (de Pinna 1993)	?	1
+Hygophum macrochir	?	1
+Liparis fabricii	1	?
+Liposarcus sp. (Friel 1994)	1	?
+Pseudobunocephalus lundbergi	1	?
+Pariolius armillatus	1	1
+Oryzias matanensis	1	1
+Megalodoras uranoscopus	1	1
+Trichomycterus alternatus	1	?
+Phractocephalus hemioliopterus	1	1
+Cetopsis gobioides	1	1
+Loricaria cataphracta	1	1
+Rivulus breviceps	1	1
+Brycinus nurse	1	1
+Plagiotremus rhinorhynchos	?	1
+Trichomycterus itatiayae	1	?
+Olyra burmanica	1	1
+Lophiidae	1	?
+Trichomycterus reinhardti	1	?
+Polymixia lowei	1	1
+Pterodoras sp. (Royero 1999)	1	1
+Elassodiscus tremebundus	1	?
+Galeichthys feliceps	1	1
+Acanthopsoides graciroides (Sawada 1982)	1	1
+Antigonia capros	1	1
+Pterygoplichthys zuliaensis	1	1
+Acestrorhynchus falcatus	1	1
+Acestridium discus	1	?
+Hypostomus sp. round snout 2 (Armbruster 2004)	1	1
+Plagiotremus phenax	?	1
+Ameiurus platycephalus	1	1
+Cynopotamus argenteus	1	1
+Rhoadsia altipinna	1	1
+Stemonosudis rothschildi	1	1
+Mystus wolffii	1	1
+Barbus versluysii	1	1
+Pareiorhaphis nudulus	1	1
+Chiloglanis sp. E (Vigliotta 2008)	1	1
+Cetopsorhamdia sp. n. B (Bockmann 1998)	1	1
+Notothenia coriiceps	1	?
+Schilbe congensis	1	1
+Synodontis victoriae	1	1
+Synodontis sorex	1	1
+Phtheirichthys lineatus	1	1
+Evermannella indica	1	1
+Hisonotus taimensis	1	?
+Oryzias setnai	1	1
+Pseudomystus inornatus	1	1
+Paralepis coregonoides	1	1
+Rhinodoras sp. (Vigliotta 2008)	1	1
+Brachypetersius notospilus	1	1
+Lythrurus umbratilis	1	1
+Masturus lanceolatus	1	?
+Dissostichus mawsoni	1	?
+Platystacus cotylephorus	1	?
+Pimelodus ornatus	1	1
+Trachydoras microstomus	1	1
+Scorpiodoras heckelii	1	1
+Bathypterois pectinatus	1	1
+Osteoglossum bicirrhosum	1	1
+Corydoras sp. (Mo 1991)	1	1
+Creagrutus sp. (Fink and Fink 1981)	1	1
+Arius sp. (Royero 1999)	1	1
+Distichodus notospilus	1	1
+Microglanis eurystoma	1	?
+Bathypterois longipes	1	1
+Clarias fuscus	?	1
+Anodontiglanis dahli	?	1
+Gagata gagata	1	1
+Entomocorus n. sp. (Royero 1999)	1	1
+Chrysichthys bocagii	1	1
+Deltistes luxatus	?	1
+Batasio tengana	1	1
+Parachromis motaguensis	?	1
+Chasmocranus chimantanus	1	1
+Dolichancistrus atratoensis	1	1
+Hemibagrus wyckioides	1	1
+Nemadoras leporhinus	1	1
+Scoloplax distolothrix	1	?
+Xyliphius cf. lepturus (Friel 1994)	1	?
+Tachysurus fulvidraco	1	1
+Neoplecostomus sp. (Britto 2003)	1	?
+Amblyceps laticeps	1	?
+Barbourisiidae	?	1
+Bryconaethiops boulengeri	1	1
+Champsocephalus gunnari	1	1
+Sudis hyalina	1	1
+Aspredinichthys filamentosus	1	?
+Parazen pacificus	1	1
+Malapterurus monsembeensis	1	1
+Plectrypops lima	1	1
+Phenacorhamdia sp. C (Bockmann 1998)	1	1
+Hemibagrus macropterus	1	1
+Paralepis brevirostris	1	1
+Esox niger	1	1
+Paraliparis garmani	1	?
+Barbus callensis	1	1
+Esox sp. (Fink and Fink 1981)	1	1
+Hemibagrus planiceps	1	1
+Saurida undosquamis	1	1
+Naso unicornis	1	1
+Melanotaenia splendida	1	1
+Oxycheilinus arenatus	1	1
+Adrianichthys kruyti	1	1
+Hemibagrus punctatus	1	1
+Leptoancistrus canensis	1	1
+Pungitius pungitius	1	1
+Lepidogalaxiidae	1	?
+Lasiancistrus sp. (Armbruster 2004)	1	1
+Vandellia sp. (Fink and Fink 1981)	1	1
+Neocyttus rhomboidalis	1	1
+Pterobrycon landoni	?	1
+Corydoras axelrodi	1	?
+Belonoglanis tenuis	1	1
+Glandulocauda melanogenys	?	1
+Kronichthys heylandi	1	1
+Pimelodella australis	1	1
+Chiloglanis deckenii	?	1
+Doumea alula	1	1
+Micralestes cf. elongatus (Zanata and Vari 2005)	1	1
+Ancistrus sp. (Armbruster 2004)	1	1
+Centromochlus heckelii	1	1
+Notropis stramineus	1	1
+Cynopotamus kincaidi	1	?
+Ernstichthys megistus	1	?
+Lepidorhombus boscii	1	1
+Chacidae	1	?
+Genidens genidens	1	1
+Sargocentron vexillarium	?	1
+Oryzias sarasinorum	1	1
+Loricariinae sp. (Friel 1994)	1	?
+Diapoma speculiferum	?	1
+Ariopsis latirostris	1	1
+Orthodon microlepidotus	1	1
+Notropis wickliffi	1	1
+Pterobunocephalus dolichurus	1	?
+Alestes baremoze	1	1
+Aspredo aspredo	1	1
+Thrissops cephalus	1	1
+Cetopsidium pemon	1	1
+Parachiloglanis hodgarti	1	?
+Clarotes laticeps	1	1
+Plotosus canius	1	1
+Synodontis acanthomias	1	1
+Orinocodoras eigenmanni	1	?
+Corydoras ambiacus	1	?
+Chirocentrodon bleekerianus	?	1
+Pseudobunocephalus rugosus	1	?
+Sperata seenghala	1	1
+Synodontis pleurops	1	1
+Hypsidoris farsonensis	1	1
+Chrysichthys walkeri	1	1
+Aptocyclus ventricosus	1	?
+Amsichthys knighti	1	1
+Cinetodus carinatus	1	1
+Microlepidogaster sp. (Armbruster 2004)	1	1
+Barbus barbus	1	1
+Serrasalmus rhombeus	1	1
+Noturus flavus	1	1
+Acestrorhynchus heterolepis	1	1
+Akysis sp. 1 (de Pinna 1996)	1	?
+Notropis oxyrhynchus	1	1
+Elassoma zonatum	?	1
+Genus 11 sp. (Bockmann 1998)	1	1
+Chrysichthys auratus	1	1
+Imparfinis microps	1	1
+Neopagetopsis ionah	1	1
+Chaetostoma pearsei	1	1
+Lamontichthys llanero	1	1
+Bagrichthys macropterus	1	1
+Hypostomus emarginatus 1 (Armbruster 2004)	1	1
+Andersonia leptura	1	1
+Zenion hololepis	1	1
+Cetopsis plumbea	1	1
+Brochis splendens	1	1
+Agamyxis albomaculatus	1	1
+Kronichthys	1	?
+Amphilius longirostris	1	1
+Petersius conserialis	1	1
+Exostoma labiatum	1	1
+Chionodraco myersi	1	1
+Imparfinis sp. A (Bockmann 1998)	1	1
+Glyptothorax sinensis	1	1
+Hoplomyzon sp. (Friel 1994)	1	?
+Hemiodus unimaculatus	1	1
+Stolothrissa tanganicae	?	1
+Astroblepidae	1	?
+Pseudobagarius macronemus	1	1
+Mystus bocourti	1	1
+Tetranematichthys n. sp. (Royero 1999)	1	1
+Scopaeocharax rhinodus	?	1
+Corydoras stenocephalus	1	?
+Oreoglanis delacouri	1	1
+Ladigesia roloffi	1	1
+Rhamdiopsis sp. n. A (Bockmann 1998)	1	1
+Humbertia sp. (Arratia 1999)	1	1
+Ancistrus chagresi	1	1
+Tatia intermedia	1	1
+Cathorops melanopus	?	1
+Albula sp. (Fink and Fink 1981)	1	1
+Bathysauropsis gracilis	1	1
+Gladioglanis machadoi	1	1
+Zenopsis nebulosa	1	1
+Liobagrus cf. marginatus (Mo 1991)	1	1
+Remora australis	1	1
+Glanidium albescens	1	1
+Pseudotrematomus scotti	1	?
+Pimelodella sp. B (Bockmann 1998)	1	1
+Pseudotatia parva	1	1
+"Cetopsidium sp. (de Pinna, Ferraris and Vari 2007)"	1	1
+Silurus mento	1	?
+Notropis baileyi	1	1
+Clarias meladerma	?	1
+Pseudopimelodus schultzi	1	?
+Hexanematichthys mastersi	1	1
+Brycinus lateralis	1	1
+Algansea avia	1	1
+Micralestes lualabae	1	1
+Hypostomus robinii	1	1
+Astroblepus heterodon	1	1
+Xyliphius lepturus	1	?
+Pogonopoma wertheimeri	1	1
+Capros aper	1	1
+Evermannellidae	1	1
+Centroberyx affinis	1	1
+Pseudomystus siamensis	1	1
+Corydoras undulatus	1	?
+Otocinclus sp. (Schaefer 1987)	1	1
+Bathysaurus mollis	1	1
+Galaxias platei	1	1
+Alestopetersius caudalis	1	1
+Bagrus docmak	1	1
+Chaetostoma sp. (Friel 1994)	1	?
+Pangasianodon hypophthalmus	1	1
+Holocentrus	?	1
+Oxycheilinus celebicus	1	1
+Centrolabrus	1	1
+Psednos melanocephalus	1	?
+Acanthicus hystrix	1	1
+Homaloptera sp. (Fink and Fink 1981)	1	1
+Stephanoberyx	?	1
+Dekeyseria pulchra	1	1
+Chrysichthys helicophagus	1	1
+Amarginops hildae	1	1
+Netuma thalassina	1	1
+Loricariidae	1	?
+Bagroides melapterus	1	1
+Corydoras n. sp. (Britto 2003)	1	?
+Gagata itchkeea	1	1
+Grammicolepis brachiusculus	1	1
+Cyttus australis	1	1
+Oryzias luzonensis	1	1
+Parahollardia lineata	1	1
+Gobionotothen gibberifrons	1	?
+Pseudobagrus taeniatus	1	1
+Pseudauchenipterus nodosus	1	1
+Careproctus reinhardti	1	?
+Ethmalosa fimbriata	?	1
+Lestrolepis intermedia	1	1
+Anchoviella carrikeri	?	1
+Otothyris sp. (Britto 2003)	1	?
+Cichlasoma urophthalmum	?	1
+Orthrias tigris	1	1
+Macrhybopsis gelida	1	1
+Panaqolus maccus	1	1
+Sabanejewia aurata	1	1
+Crossoloricaria sp. (Armbruster 2004)	1	1
+Xenocharax spilurus	1	1
+Astroblepus festae	1	1
+Acanthobunocephalus nicoi	1	?
+Brycon sp. (Lucena and Menezes 1998)	1	?
+Macropsobrycon uruguayanae	?	1
+Corydoras bondi	1	1
+Amphilophus hogaboomorum	?	1
+Leiocassis doriae	1	1
+Ictalurus furcatus	1	1
+Amatitlania nigrofasciata	?	1
+Hoplomyzon atrizona	1	?
+Bovichtidae	1	?
+Mochokiella paynei	1	1
+Synodontis alberti	1	1
+Silurus aristotelis	1	?
+Mystus gulio	1	1
+Chrysichthys longipinnis	1	1
+Nandopsis haitiensis	?	1
+Misgurnus anguillicaudatus	1	1
+Glyptothorax trilineatus	1	1
+Bagarius bagarius	1	1
+Lestidiops affinis	1	1
+Dianema urostriatum	1	1
+Albula vulpes	?	1
+Ilisha megaloptera	?	1
+Pseudotocinclus tietensis	1	?
+Corynopoma riisei	?	1
+Hemipsilichthys gobio	1	1
+Bunocephalus chamaizelus	1	?
+Sperata aor	1	1
+Heterocharax macrolepis	1	?
+Cynodon gibbus	1	1
+Notropis longirostris	1	1
+Xyliphius kryptos	1	?
+Liobagrus mediadiposalis	1	?
+Genus C species C (Malabarba 1998)	?	1
+Herichthys cyanoguttatus	?	1
+Austroglanis barnardi	1	1
+Lefua nikkonis	1	1
+Careproctus melanurus	1	?
+Corymbophanes andersoni	1	1
+Moxostoma macrolepidotum	?	1
+Taunayia bifasciata	1	1
+Liparis liparis	1	?
+Genus 2 sp. A (Bockmann 1998)	1	1
+Elops saurus	1	1
+Allothrissops mesogaster	1	1
+Cyprinella callistia	1	1
+Liparis inquilinus	1	?
+Chlorophthalmus atlanticus	1	1
+Acentronichthys sp. n. B (Bockmann 1998)	1	1
+Rineloricaria rupestris	1	1
+Mochokidae	1	?
+Mimagoniates sylvicola	?	1
+Alestes macrophthalmus	1	1
+Cyttopsis rosea	1	1
+Rhamdella longiuscula	1	1
+Copionodon pecten	1	?
+Synodontis euptera	1	1
+Astroblepus sp. (Armbruster 2004)	1	1
+Lebiasina bimaculata	1	1
+Hypostomus plecostomus	1	1
+Pseudeutropius mitchelli	1	1
+Cetopsis amphiloxa	1	1
+Trichomycterus taenia	1	1
+Semotilus atromaculatus	1	1
+Tomocichla tuba	?	1
+Astroblepus grixalvii	1	1
+Potamorhina laticeps	?	1
+Glanidium ribeiroi	1	?
+Micralestes acutidens	1	1
+Bunocephalus sp. (de Pinna 1996)	1	?
+Anaethalion angustissimus	1	1
+Glyptothorax telchitta	1	1
+Parotocinclus jimi	1	?
+Pseudolaguvia tuberculata	1	1
+Thymallus arcticus	1	1
+Hoplostethus mediterraneus	1	1
+Gogo brevibarbis	1	1
+Semotilus corporalis	1	1
+Leptorhamdia marmorata	1	1
+Hassar affinis	1	1
+Schizodon nasutus	?	1
+Pseudobagrus medianalis	1	1
+Enchodus gracilis	1	1
+Franciscodoras	1	1
+Mochokus niloticus	1	1
+Simenchelys parasitica	1	?
+Laemolyta taeniata	?	1
+Austroglanis sp. (de Pinna 1993)	?	1
+Bathysauroides gigas	1	1
+Pagetopsis macropterus	1	1
+Chalceus guaporensis	1	1
+Cheimarrichthyidae	1	?
+Cirrhilabrus	1	1
+Microthrissa royauxi	?	1
+Erethistes pusillus	1	1
+Cyttus novaezealandiae	1	1
+Lycenchelys maculata	?	1
+Phyllonemus filinemus	1	1
+Ancistrus pirareta	1	1
+Oxydoras niger	1	1
+Corydoras septentrionalis	1	1
+Astroblepus festae sp. 1 (Mo 1991)	1	1
+Pseudomystus rugosus	1	1
+Imparfinis sp. cf. minutus (Bockman 1998)	1	1
+Cyprinella labrosa	1	1
+Notropis candidus	1	1
+Synodontis nigriventris	1	1
+Odontostomops normalops	1	1
+Hemiancistrus holostictus	1	1
+Chiloglanis sp. C (Vigliotta 2008)	1	1
+Oxyropsis sp. (Schaefer 1991)	1	?
+Cetopsis sandrae	1	1
+Horiomyzon retropinnatus	1	1
+Anchoviella brevirostris	?	1
+Catostomus wigginsi	?	1
+Pseudancistrus sp. (Armbruster 2004)	1	1
+Tyttocharax sp. A (Weitzman and Fink 1985)	?	1
+Etrumeus teres	1	1
+Tarletonbeania crenularis	1	1
+Ixinandria sp. (Britto 2003)	1	?
+Pachythrissops furcatus	1	1
+Barbatula toni	1	1
+Brachyplatystoma rousseauxii	?	1
+Corydoras reticulatus	1	?
+Aspidoras aff. poecilus (Britto 2003)	1	?
+Amphilophus robertsoni	?	1
+Pseudobagarius pseudobagarius	1	1
+Dorosoma smithi	?	1
+Algansea barbata	1	1
+Parotocinclus spilosoma	1	?
+Notacanthus bonaparte	?	1
+Pseudoplesiops	1	1
+Micralestes pabrensis	1	1
+Microsynodontis sp. (Vigliotta 2008)	1	1
+Poeciliidae	1	?
+Cypho	1	1
+Mystus sp. (Kailola 2004)	1	1
+Pseudorinelepis genibarbis	1	1
+Luxilus cerasinus	1	1
+Wertheimeria	1	1
+Imparfinis mirini	1	1
+Auchenipterichthys longimanus	1	1
+Doumea thysi	?	1
+Tatia brunnea	1	1
+Mystus keletius	1	1
+Pteronotropis welaka	1	1
+Pelteobagrus ussuriensis	1	1
+Pellonula leonensis	?	1
+Plotosus anguillaris	1	1
+Rhamdioglanis frenatus	1	1
+Sturisoma festivum	1	1
+Phractura sp. (Vigliotta 2008)	1	1
+Hemiancistrus sp. (Armbruster 2004)	1	1
+Laides hexanema	1	1
+Notropis leuciodus	1	1
+Chilodus punctatus	1	1
+Imparfinis nemacheir	1	1
+Elops affinis	1	1
+Carassius auratus	?	1
+Imparfinis borodini	1	1
+Tocantinsia piresi	1	1
+Pareiorhina sp. (Britto 2003)	1	?
+Pterygoplichthys gibbiceps	1	1
+Zeus faber	1	1
+Lycoptera davidi cf. L. tokunagai (Arratia 1999)	?	1
+Leporinus gomesi	?	1
+Chrysichthys mabusi	1	1
+Microsynodontis christyi	?	1
+Notropis perpallidus	1	1
+Tetragonopterus argenteus	1	1
+Rineloricaria jubata	1	1
+Cetopsis oliveirai	1	1
+Batasio dayi	1	1
+Liobagrus andersoni	1	?
+Catostomus tahoensis	?	1
+Rita gogra	1	1
+Trachyglanis sp. (de Pinna 1993)	?	1
+Hemibagrus hainanensis	1	1
+Hypostomus plecostomus 2 (Armbruster 2004)	1	1
+Pseudocorynopoma doriae	?	1
+Pholidophorus bechei	1	1
+Scopeloberyx robustus	?	1
+Trichomycterus brasiliensis	1	?
+Ariosoma	1	?
+Notemigonus crysoleucas	1	1
+Schistura fowleriana	1	1
+Encrasicholina purpurea	?	1
+Corydoras paleatus	1	?
+Gagata cenia	1	?
+Corydoras guapore	1	?
+Chrysichthys sp. 1 (de Pinna 1993)	?	1
+Synodontis ornatipinnis	1	1
+Coreobagrus ichikawai	1	1
+Ageneiosus magoi	1	1
+Sardina pilchardus	?	1
+Pterodoras granulosus	1	1
+Prochilodus vimboides	1	1
+Parauchenoglanis ngamensis	1	1
+Pseudocheilinops	1	1
+Hoplomyzon sexpapilostoma	1	1
+Imparfinis guttatus	1	1
+Hoplias malabaricus	1	1
+Pseudexostoma yunnanense	1	1
+Lepomis marginatus	?	1
+Opsopoeodus emiliae	1	1
+Rosenblattichthys hubbsi	1	1
+Microsynodontis batesii	1	1
+Misgurnus mizolepis	1	1
+Aulichthys	?	1
+Remora remora	1	1
+Paramphilius firestonei	?	1
+Eutropius sp. (de Pinna 1993)	?	1
+Paralepididae	1	1
+Calophysus macropterus	?	1
+Brycinus aff. nurse (Zanata and Vari 2005)	1	1
+Dactylopterus volitans	?	1
+Astroblepus longifilis	1	1
+Chiloglanis carnosus	1	1
+Brycinus sadleri	1	1
+Microglanis sp. (de Pinna 1993)	?	1
+Chanos chanos	1	1
+Pinirampus pirinampu	1	1
+Pimelodella sp. A (Bockmann 1998)	1	1
+Sturisoma lyra	1	1
+Pseudobagrus microps	1	1
+Genus sp. 1 (Royero 1999)	1	1
+Roestes ogilviei	1	1
+Harengula jaguana	1	1
+Notropis atrocaudalis	1	1
+Saurida tumbil	1	?
+Notogoneus osculus	1	1
+Olyridae	1	?
+Hydrocynus brevis	1	1
+Phoxinus perenurus	1	1
+Plagopterus argentissimus	1	1
+Nemuroglanis mariai	1	1
+Hybopsis rubrifrons	1	1
+Aspidoras poecilus	1	?
+Elassodiscus caudatus	1	?
+Echeneis naucrates	1	1
+Hypostomus francisci	1	1
+Potamarius grandoculis	?	1
+Glyptothorax laosensis	1	?
+Chiloglanis neumanni	1	1
+Phractura tenuicauda	?	1
+Synodus scituliceps	1	1
+Ancistrus sp. (Britto 2003)	1	?
+Prietella phreatophila	1	1
+Euchiloglanis davidi	1	1
+Pangio kuhlii	1	1
+Sciades proops	1	1
+Pseudocheilinus	1	1
+Dionda	1	?
+Moringua edwardsi	1	?
+Hoplomyzon cf. papillatus (Friel 1994)	1	?
+Chiloglanis sp. D (Vigliotta (2008)	1	1
+Anotopterus pharao	1	1
+Hemibagrus bongan	1	1
+Astroblepus chotae	1	1
+Scleromystax prionotos	1	?
+Euchilichthys sp. C (Vigliotta 2008)	1	1
+Trachelyopterichthys anduzei	1	1
+Astroblepus whymperi	1	1
+Horabagrus brachysoma	1	1
+Zaireichthys zonatus	?	1
+Austroglanis sclateri	1	1
+Cheilinus abudjubbe	1	1
+Synodontis decora	1	1
+Rhamdiopsis microcephala	1	1
+Labrus	1	1
+Heptapterus mustelinus	1	1
+Paracetopsis esmeraldas	1	1
+Algansea tincella	1	1
+Pseudancistrus orinoco	1	1
+Danio margaritatus	1	?
+Neoplecostomus microps	1	1
+Nematogenyidae	1	?
+Auchenipterus dentatus	1	1
+Saurida gracilis	1	1
+Rhamdia laticauda	1	1
+Pimephales promelas	1	1
+Notropis braytoni	1	1
+Hypostomus cordovae	1	1
+Parailia pellucida	1	1
+Charax pauciradiatus	1	1
+Gephyrocharax sp. (Weitzman and Fink 1985)	?	1
+Mochokus brevis	1	1
+Liobagrus anguillicauda	1	1
+Notropis simus	1	1
+Megalonema sp. (de Pinna 1993)	?	1
+Acrobrycon sp. (Burns et al 1995)	?	1
+Brycinus macrolepidotus	1	1
+Cetopsorhamdia molinae	1	1
+Brustiarius solidus	1	1
+Dinotopterus cunningtoni	1	1
+Cheilinus lunulatus	1	1
+Aspistor hardenbergi	1	1
+Ageneiosus inermis	1	1
+Chiloglanis sp. F (Vigliotta 2008)	1	1
+Hypostomus sp. round snout 1 (Armbruster 2004)	1	1
+Bunocephalus colombianus	1	?
+Citharoides macrolepis	?	1
+Trigonostigma hengeli	1	?
+Erethistoides montana	1	1
+Akysis sp. 2 (de Pinna 1996)	1	?
+Esox americanus	1	1
+Chaenodraco wilsoni	1	1
+Aulorhynchus flavidus	1	1
+Anadoras grypus	1	1
+Bunocephalus n. sp. 5 (Friel 1994)	1	?
+Synodontis sp. (Royero 1999)	1	1
+Psednos micruroides	1	?
+Neoarius pectoralis	1	1
+Apeltes quadracus	1	1
+Pangasius macronema	1	1
+Citharoides macrolepidotus	1	1
+Rita kuturnee	1	1
+Sturisoma sp. (Friel 1994)	1	?
+Pseudolabrus crassilabris	1	1
+Bunocephalus verrucosus	1	?
+Denticetopsis macilenta	1	1
+Channichthyidae	1	?
+Ilisha elongata	?	1
+Cypriniformes	1	1
+Chaetostoma sovichthys	1	1
+Chaetostoma stannii	1	1
+New genus (Schaefer 1991)	1	?
+Amaralia hypsiura	1	1
+Coccorella atlantica	1	1
+Heteropneustes sp. (de Pinna 1993)	?	1
+Leiarius marmoratus	?	1
+Pseudomystus stenomus	1	1
+Lamontichthys filamentosus	1	1
+Hiodon alosoides	1	1
+Chionodraco hamatus	1	1
+Olivaichthys viedmensis	1	?
+Mimagoniates inequalis	?	1
+Sciades troschelii	1	1
+Lythrurus roseipinnis	1	1
+Cetopsidae	1	?
+Chiloglanis disneyi	1	1
+Clinostomus funduloides	1	1
+Ixinandria montebelloi	1	1
+Corydoras atropersonatus	1	?
+Coryphaena equiselis	1	1
+Notropis hypsilepis	1	1
+Wetmorella albofasciata	1	1
+Pseudobagrus pictus	1	1
+Leporacanthicus galaxias	1	1
+Acrochordonichthys ischnosoma	1	?
+Chaetostoma anomalum	1	1
+Exostoma sp. (de Pinna 1996)	1	?
+Tetranematichthys quadrifilis	1	1
+Potamalosa richmondia	?	1
+Mimagoniates rheocharis	?	1
+Pseudomystus robustus	1	1
+Trachelyichthys n. sp 1 (Royero 1999)	1	1
+Chionodraco rastrospinosus	1	1
+Pterobunocephalus depressus	1	?
+Balistomorphus spinosus	?	1
+Bagrichthys micranodus	1	1
+Curimata inornata	?	1
+Bagrichthys hypselopterus	1	1
+Chasmocranus lopezi	1	1
+Parenchodus longipterygius	1	1
+Saurida normani	1	1
+Aspidoras virgulatus	1	?
+Chasmistes liorus	?	1
+Squaliforma squalina	1	1
+Distichodus sp. (Fink and Fink 1981)	1	1
+Silonia silondia	1	1
+Bathypterois viridensis	1	1
+Parauchenoglanis balayi	1	1
+Harpagiferidae	1	?
+Tricuspidalestes caeruleus	1	1
+Pelteobagrus eupogon	1	1
+Scopelarchoides nicholsi	1	1
+Landonia latidens	?	1
+Pardiglanis tarabinii	1	1
+Grasseichthys gabonensis	1	1
+Chrysichthys ornatus	1	1
+Microsynodontis vigilis	1	1
+Psettodes	1	1
+Chrysichthys sp. 2 (de Pinna 1993)	?	1
+Brycon sp. (Fink and Fink 1981)	1	1
+Cheilinus oxycephalus	1	1
+Cyprinella formosa	1	1
+Hemipsilichthys sp. (Armbruster 2004)	1	1
+Oryzias nebulosus	1	1
+Brachypleura novaezeelandiae	1	1
+Imparfinis stictonotus	1	1
+Panaqolus albomaculatus	1	1
+Alosa pseudoharengus	1	1
+Heteropneustes fossilis	1	1
+Pteragogus	1	1
+Odontostilbe fugitiva	?	1
+Hemibagrus wyckii	1	1
+Chaenocephalus aceratus	1	1
+Lophiobagrus aquilus	1	1
+Clupeoides venulosus	?	1
+Hypostomus sp. (Britto 2003)	1	?
+Mastacembelus ophidium	1	?
+Iracema caiana	1	?
+Brycinus imberi	1	1
+Phenacogrammus aurantiacus	1	1
+Mystus vittatus	1	1
+Glandulocauda melanopleura	?	1
+Phenacogrammus major	1	1
+Panaque nigrolineatus	1	1
+Brochis britskii	1	?
+Clarias buettikoferi	?	1
+Clupisoma garua	1	1
+Bathytyphlops marionae	1	1
+Synodontis notata	1	1
+Reganella sp. (Britto 2003)	1	?
+Mastiglanis asopos	1	1
+Bunocephalus larai	1	?
+Poecilocharax sp. (Fink and Fink 1981)	1	1
+Hypostomus hemicochliodon	1	1
+Amphilius brevis	1	1
+Nemapteryx augusta	1	1
+Neosilurus sp. (Kailola 2004)	1	1
+Mastacembelus cunningtoni	1	?
+Pseudochaenichthys georgianus	1	1
+Hemibagrus sabanus	1	1
+Cetopsis othonops	1	1
+Cinetodus froggatti	1	1
+Bagrus meridionalis	1	1
+Horaglanis krishnai	?	1
+Liobagrus reinii	1	1
+Ailiichthys punctata	1	1
+Nannoptopoma spectabile	1	1
+Oreosoma atlanticum	1	1
+Phenacobius mirabilis	1	1
+Notropis ozarcanus	1	1
+Bagarius yarrelli	1	1
+Petenia splendida	?	1
+Peckoltia sp. big spot (Armbruster 2004)	1	1
+Rhinichthys cataractae	1	1
+Scopaeocharax atopodus	?	1
+Platysilurus mucosus	?	1
+Amphilius atesuensis	1	1
+Cnidoglanis sp. (Mo 1991)	1	1
+Leiarius pictus	?	1
+Bathysaurus ferox	1	1
+Parasudis truculenta	1	1
+Genus 2 sp. B (Bockmann 1998)	1	1
+Notoglanidium walkeri	1	1
+Plectocretacicus clarae	1	1
+Hoplerythrinus unitaeniatus	1	1
+Callichthys sp. (Mo 1991)	1	1
+Rhamdia quelen	1	1
+Pleuragramma antarctica	1	?
+Diplomystes chilensis	1	1
+Notropis atherinoides	1	1
+Nocomis biguttatus	1	1
+Gymnodraco acuticeps	1	?
+Nematogenys inermis	1	1
+Chalceus spilogyros	1	1
+Brycinus kingsleyae	1	1
+Lythrurus ardens	1	1
+Hara jerdoni	1	1
+Corydoras ellisae	1	?
+Auchenipterichthys thoracatus	1	1
+Protriacanthus gortanii	?	1
+Benthalbella macropinna	1	1
+Pterygoplichthys lituratus	1	1
+Pseudobagrus truncatus	1	1
+Cynodon septenarius	1	1
+Megalancistrus parananus	1	1
+Zaireichthys sp. B (Vigliotta 2008)	1	?
+Notropis chlorocephalus	1	1
+Elassoma	?	1
+Merluccius bilinearis	?	1
+Heterocheirodon	?	1
+Corydoras haraldschultzi	1	?
+Rhinichthys cobitis	?	1
+Ernstichthys intonsus	1	?
+Notropis chihuahua	1	1
+Phractura scaphyrhynchura	?	1
+Imparfinis pristos	1	1
+Loricaria sp. (Friel 1994)	1	?
+Mastacembelus platysoma	1	?
+Zacco platypus	1	1
+Synodontis haugi	1	1
+Chrysichthys ansorgii	1	1
+Gilchristella aestuaria	?	1
+Trachelyopterichthys taeniatus	1	1
+Panaqolus purusiensis	1	1
+Cheirodon interruptus	1	1
+Dacodraco hunteri	1	1
+Strongylura marina	?	1
+Lithogenes villosus	1	1
+Pseudobagrus emarginatus	1	1
+Ilisha striatula	?	1
+Channichthys rhinoceratus	1	1
+Luxilus chrysocephalus	1	1
+Phractura lindica	1	1
+Cygnodraco mawsoni	1	?
+Patagonotothen ramsayi	1	?
+Pseudoloricaria sp. (Britto 2003)	1	?
+Chiloglanis sp. A (Vigliotta 2008)	1	1
+Vomeridens infuscipinnis	1	?
+Brachypetersius gabonensis	1	1
+Arctozenus risso	1	1
+Ameiurus catus	1	1
+Porochilus rendahli	?	1
+Nemuroglanis panamensis	1	1
+Hypoptopoma sp. (Armbruster 2004)	1	1
+Cyttomimus stelgis	1	1
+Cyprinella spiloptera	1	1
+Anduzedoras oxyrhynchus	?	1
+Malapterurus microstoma	1	1
+Corydoras vittatus	1	?
+Astyanax parahybae	1	1
+Pimephales vigilax	1	1
+Denticetopsis epa	1	1
+Olyra longicaudata	1	1
+Bunocephalus n. sp. 4 (Friel 1994)	1	?
+Phenacorhamdia sp. D (Bockmann 1998)	1	1
+Oreoglanis macropterus	1	1
+Congiopodus peruvianus	1	?
+Clupeocharax schoutedeni	1	1
+Hypostomus cochliodon	1	1
+Sturisoma sp. (Schaefer 1987)	1	1
+Acanthopleurus trispinosus	?	1
+Cryodraco antarcticus	1	1
+Euchilichthys sp. B (Vigliotta 2008)	1	1
+Sebastes owstoni	1	?
+Parauchenoglanis ahli	1	1
+Clarias gariepinus	?	1
+Bunocephalus cf. knerii (Friel 1994)	1	?
+Sorubim lima	1	1
+Lithoxus bovallii	1	1
+Osteogeneiosus militaris	1	1
+Synodontis njassae	1	1
+Garra sp. 'Discognathichthys' (Coburn and Cavender 1992)	?	1
+Acestrorhynchus lacustris	1	1
+Tatia galaxias	1	1
+Vieja maculicauda	?	1
+Xyliphius sp. (Chen 1994)	1	?
+Sargocentron punctatissimum	1	1
+Pseudomystus fuscus	?	1
+Rhinelepis aspera	1	1
+Tatia gyrina	1	?
+Pseudomystus moeschii	1	1
+Synodontis albolineata	1	1
+Ancistrus cirrhosus	1	1
+Lepidarchus adonis	1	1
+Hypostomus commersoni	1	1
+Chrysichthys punctatus	1	1
+Hypostomus punctatus	1	1
+Pterygoplichthys multiradiatus	1	1
+Notropis heterolepis	1	1
+Chiloglanis sp. (de Pinna 1993)	?	1
+Paracheilinus	1	1
+Psednos groenlandicus	1	?
+Pseudobagrus aurantiacus	1	1
+Rasbora kalochroma	?	1
+Chaetostoma fischeri	1	1
+Corydoras eques	1	?
+Oncorhynchus clarkii	1	1
+Corydoras agassizii	1	?
+Pseudaphritis urvillii	1	?
+Mystus leucophasis	1	1
+Pseudocheirodon arnoldi	?	1
+Breitensteinia insignis	1	1
+Heterotis	1	1
+Citharus linguatula	1	1
+Hypoptopoma sp. (Schaefer 1987)	1	1
+Auchenipterus nuchalis	1	1
+Corydoras julii	1	1
+Hydrocynus cf. brevis (Zanata and Vari 2005)	1	1
+Chlorophthalmus agassizi	1	1
+Bagrichthys sp. 1 (de Pinna 1993)	?	1
+Cetopsorhamdia boquillae	1	1
+Lophiobagrus cyclurus	1	1
+Zaireichthys sp. A (Vigliotta 2008)	1	1
+Farlowella knerii	1	1
+Centromochlus punctatus	1	?
+Tinca tinca	?	1
+Cetopsidium ferreirai	1	1
+Akysis sp. 3 (de Pinna 1996)	1	?
+Yuriria alta	1	1
+Fundulidae	1	?
+Dolichancistrus pediculatus	1	1
+Cetopsorhamdia sp. n. C (Bockmann 1998)	1	1
+Balistomorphus orbiculatus	?	1
+Leptorhamdia sp. (Bockmann 1998)	1	1
+Engraulis ringens	1	1
+Trichomycterus rivulatus	1	1
+Histiodraco velifer	1	?
+Oryzias latipes	1	1
+Amblyceps mangois	1	1
+Boulengerella lateristriga	1	?
+Luxilus pilsbryi	1	1
+Chrysichthys aluuensis	1	1
+Acestrorhynchus falcirostris	1	1
+Pseudolaguvia ribeiroi	1	1
+Ictalurus dugesii	1	1
+Mystus nigriceps	1	1
+Glyptothorax pectinopterus	1	1
+Microlepidogaster sp. (Britto 2003)	1	?
+Pseudobagrus longirostris	1	1
+Hypostomus boulengeri	1	1
+Notropis blennius	1	1
+Pangasianodon gigas	1	1
+Corydoras elegans	1	?
+Xyliphius magdalenae	1	?
+Hybognathus placitus	1	1
+Cyprinella pyrrhomelas	1	1
+Oligancistrus punctatissimus	1	1
+Zeidae	1	1
+Amaralia n. sp. (Friel 1994)	1	?
+Bathyaethiops caudomaculatus	1	1
+Megacheirodon unicus	?	1
+Lignobrycon myersi	1	?
+Moxostoma carinatum	?	1
+Anaethalion sp. (Arratia 1999)	1	1
+Gephyroglanis congicus	1	1
+Hypomasticus mormyrops	?	1
+Dekeyseria niveata	1	1
+Copionodon orthiocarinatus	1	?
+Pterygoplichthys etentaculatus	1	1
+Aspidoras albater	1	?
+Corydoras metae	1	?
+Satan eurystomus	1	1
+Lasiancistrus guacharote	1	1
+Ctenolucius sp. (Fink and Fink 1981)	1	1
+Hypoptopoma joberti	1	1
+Heptapterus sympterygium	1	1
+Hypostomus emarginatus 2 (Armbruster 2004)	1	1
+Sawbwa resplendens	1	?
+Exastilithoxus sp. (Armbruster 2004)	1	1
+Liparis gibbus	1	?
+Plagiotremus	1	?
+Imparfinis hollandi	1	1
+Chaetostoma breve	1	1
+Synodontis gambiensis	1	1
+Loricaria sp. (Schaefer 1987)	1	1
+Cephalosilurus fowleri	1	?
+Notropis calientis	1	1
+Brachyplatystoma vaillantii	?	1
+Phoxinus phoxinus	1	1
+Corymbophanes kaiei	1	1
+Scardinius erythrophthalmus	?	1
+Oxyropsis wrightiana	1	1
+Leiocassis poecilopterus	1	1
+Anaspidoglanis macrostomus	1	1
+Hemiancistrus megacephalus	1	1
+Percophidae	1	?
+Roeboides myersii	1	?
+Pterygoplichthys punctatus	1	1
+Prohollardia avita	?	1
+Mystus malabaricus	1	1
+Neotropius acutirostris	1	1
+Trachydoras sp. (Vigliotta 2008)	1	1
+Brycinus intermedius	1	1
+Chrysichthys wagenaari	1	1
+Bunocephalus n. sp. 2 (Friel 1994)	1	?
+Synodontis unicolor	1	1
+Cryodraco atkinsoni	?	1
+Leiocassis sp. (Mo 1991)	1	1
+Myxocyprinus asiaticus	1	1
+Relictus solitarius	1	1
+Hydrolycus armatus	1	1
+Citharinus gibbosus	1	1
+Cochlefelis danielsi	1	1
+Parotocinclus collinsae	1	?
+Crenuchus spilurus	1	1
+Cetopsis pearsoni	1	1
+Xenurobrycon polyancistrus	?	1
+Pachythrissops propterus	1	1
+Batrochoglanis raninus	1	1
+Halosauridae	?	1
+Petrotyx sanguineus	?	1
+Hypancistrus inspector	1	1
+Heterobranchus bidorsalis	1	1
+Pseudancistrus barbatus	1	1
+Megalops cyprinoides	1	1
+Arius maculatus	?	1
+Cetopsis candiru	1	1
+Chrysichthys habereri	1	1
+Notropis scepticus	1	1
+Oryzias mekongensis	1	1
+Pseudopimelodus mangurus	1	?
+Isbrueckerichthys alipionis	1	1
+Centromochlus n. sp. (Royero 1999)	1	1
+Pagetopsis maculatus	1	1
+Petrocephalus	?	1
+Orinocodoras sp. (Royero 1999)	1	1
+Arius africanus	1	1
+Glanidium leopardum	1	1
+Synodontis zambezensis	1	1
+Neblinichthys pilosus	1	1
+Odontostilbe mitoptera	?	1
+Synodontidae	?	1
+Cyprinella	1	?
+Corydoras xinguensis	1	?
+Polymixia	?	1
+Chiloglanis polypogon	1	1
+Schizodon fasciatus	1	1
+Anchoa spinifer	?	1
+Chalceus macrolepidotus	1	1
+Arius arius	1	1
+Nedystoma dayi	1	1
+Pseudopimelodus sp. (Friel 1994)	1	?
+Peckoltia oligospila	1	1
+Hypostomus bolivianus	1	1
+Synodontis macrostigma	1	1
+Alestopetersius smykalai	1	1
+Pseudacanthicus serratus	1	1
+Triportheus guentheri	1	?
+Corydoras robineae	?	1
+Erethistidae	1	?
+Chrysichthys maurus	1	1
+Kronichthys sp. 2 (Armbruster 2004)	1	1
+Velifer	?	1
+Benthalbella elongata	1	1
+Semaprochilodus insignis	?	1
+Neosilurus novaeguineae	?	1
+Notropis amabilis	1	1
+Balistapus undulatus	?	1
+Brevoortia pectinata	?	1
+Harttia sp. (Armbruster 2004)	1	1
+Melamphaes	?	1
+Hoplomyzon n. sp. (Friel 1994)	1	?
+Nedystoma novaeguineae	1	1
+Peckoltia ucayalensis	1	1
+Pseudauchenipterus jequitinhonhae	1	1
+Hemiarius dioctes	1	1
+Coryphaena hippurus	1	1
+Chlorophthalmidae	?	1
+Centromochlus schultzi	1	?
+Schilbe intermedius	1	1
+Nemacheilus masyai	1	1
+Arius madagascariensis	?	1
+Ctenolucius hujeta	1	1
+Auchenipterus sp. (cuyuni) (Royero 1999)	1	1
+Corydoras nattereri	1	?
+Ictalurus meridionalis	?	1
+Diplophos taenia	1	1
+Pseudopimelodidae	1	?
+Percomorpha	?	1
+Pyrrhulina australis	1	1
+Niwaella multifasciata	1	1
+Salminus hilarii	1	1
+Scopelarchus analis	1	1
+Sturisomatichthys citurensis	1	1
+Gephyrocharax valencia	?	1
+Myctophum	?	1
+Auchenoglanis occidentalis	1	1
+Synodontis batesii	1	1
+Callichthys callichthys	1	1
+Evermannella balbo	1	1
+Liparis pulchellus	1	?
+Rhytiodus microlepis	?	1
+Cichlasoma grammodes	?	1
+Planaltina sp. (Burns et al 1995)	?	1
+Nemacheilus fasciatus	1	1
+Oxycheilinus mentalis	1	1
+Iotichthys phlegethontis	1	1
+Catostomus commersonii	1	1
+Parauchenoglanis monkei	1	1
+Austroglanis gilli	1	1
+Nemacheilus insignis	1	1
+Scopelosaurus argenteus	1	1
+Sisoridae	1	?
+Lepidonotothen	1	?
+Aspidoras belenos	1	?
+Characiformes	1	1
+Carpathospinosus propheticus	?	1
+Ptychocheilus grandis	1	1
+Champsocephalus esox	?	1
+Pseudobagrus tenuifurcatus	1	1
+Denticetopsis seducta	1	1
+Ipnops meadi	1	1
+Chiasmodontidae	1	?
+Parodon suborbitalis	1	1
+Mystus tengara	1	1
+Catostomus clarkii	?	1
+Bunocephalus doriae	1	?
+Isorineloricaria spinosissma	1	1
+Scleropages formosus	1	1
+Chrysichthys longibarbis	1	1
+Adrianichthys poptae	1	1
+Mystus elongatus	1	1
+Neosilurus sp. 1 (de Pinna 1993)	?	1
+Hypentelium etowanum	?	1
+Hemiodus semitaeniatus	1	1
+Notropis cummingsae	1	1
+Pseudobunocephalus cf. bifidus (Friel 1994)	1	?
+Anchoviella guianensis	?	1
+Pareutropius debauwi	1	1
+Atopochilus savorgnani	1	1
+Alepisaurus ferox	1	1
+Moxostoma erythrurum	?	1
+Gelanoglanis stroudi	1	1
+Cheilinus trilobatus	1	1
+Parakysis anomalopteryx	1	1
+Cichlasoma ornatum	?	1
+Grammicolepididae	1	1
+Notropis ortenburgeri	1	1
+Bunocephalus	1	1
+Oncorhynchus mykiss	1	1
+Culaea inconstans	1	1
+Paradistichodus dimidiatus	1	1
+Alepisaurus	1	1
+Parotocinclus polyochrus	1	?
+Loricariichthys sp. (Schaefer 1987)	1	1
+Centromochlus megalops	1	1
+Trachelyopterus coriaceus	1	1
+Guiritinga barbus	1	1
+Charax sp. (Buckup 1998)	1	1
+Chaca burmensis	1	1
+Ageneiosus pardalis	?	1
+Hypancistrus zebra	1	1
+Umbra limi	1	1
+Gonorynchiformes	1	1
+Anchoa compressa	1	1
+Clinostomus elongatus	1	1
+Astroblepus festae sp. 3 (Mo 1991)	1	1
+Cetengraulis edentulus	?	1
+Cyprinella galactura	1	1
+Leporinus striatus	?	1
+Glyptothorax major	1	1
+Opsanus tau	?	1
+Panaque sp. (Friel 1994)	1	?
+Hysteronotus sp. (Weitzman and Menezes 1998)	?	1
+Dupouyichthys sapito	1	?
+Brachyplatystoma juruense	?	1
+Gambusia vittata	?	1
+Pinguipedidae	1	?
+Gogangra viridescens	1	1
+Auchenoglanis biscutatus	1	1
+Oryzias curvinotus	1	1
+Oryzias uwai	1	1
+Hybognathus hayi	1	1
+Pimelodella altipinnis	?	1
+Oreoglanis siamensis	1	1
+Silurus soldatovi	1	?
+Acentronichthys leptos	1	1
+Acestrorhynchus altus	1	?
+Xyliphius cf. melanopterus (Friel 1994)	1	?
+Lestidium atlanticum	1	1
+Decapogon sp. (Schaefer 1987)	1	?
+Farlowella sp. (Schaefer 1987)	1	1
+Neoplecostomus sp. (Schaefer 1991)	1	?
+Mugil cephalus	?	1
+Gilbertolus maracaiboensis	1	?
+Arius manillensis	1	1
+Corydoras baderi	1	?
+Trichomycterus zonatus	1	?
+Doumea gracila	1	1
+Ameiurus serracanthus	1	1
+Aulopidae	?	1
+Indonotothenia	1	?
+Macrotocinclus flexilis	1	?
+Sciades herzbergii	1	1
+Schilbe grenfelli	?	1
+Cobitis biwae	1	1
+Planiloricaria sp. (Britto 2003)	1	?
+Limatulichthys sp. (Britto 2003)	1	?
+Leptodoras sp. (Friel 1994)	1	?
+Enchodus brevis	1	1
+Oryzias carnaticus	1	1
+Catostomus insignis	?	1
+Corydoras ehrhardti	1	?
+Hybopsis hypsinotus	1	1
+Cheilinus fasciatus	1	1
+Eumicrotremus derjugini	1	?
+Megalops sp. (Fink and Fink 1981)	1	1
+Doradidae	1	?
+Spintherobolus papilliferus	?	1
+Brachyrhamdia heteropleura	1	1
+Synodontis clarias	1	1
+Herklotsichthys punctatus	?	1
+Bryconaethiops macrops	1	1
+Centrodoras sp. (Vigliotta 2008)	1	1
+Assiculus	1	1
+Pseudotriacanthus strigilifer	1	1
+Tetracamphilius notatus	1	1
+Bryconamericus brevirostris	1	1
+Euchilichthys dybowskii	1	1
+Brachyrhamdia imitator	1	1
+Abramites sp. (Fink and Fink 1981)	1	1
+Neosilurus equinus	?	1
+Beryx splendens	?	1
+Parotocinclus maculicauda	1	?
+Parailia congica	?	1
+Paracetopsis bleekeri	1	1
+Uegitglanis zammaranoi	?	1
+Melanotaenia nigrans	?	1
+Centromochlus sp. (Rio Negro) (Royero 1999)	1	1
+Notropis rubellus	1	1
+Ompok leiacanthus	1	1
+Mastacembelus frenatus	1	?
+Parazen	?	1
+Erethistes sp. (de Pinna 1996)	1	?
+Algansea lacustris	1	1
+Allothrissops sp. (Arratia 1999)	1	1
+Hybognathus hankinsoni	1	1
+Schistura spilota	1	1
+Pimephales notatus	1	1
+Xenurobrycon macropus	?	1
+Plicofollis argyropleuron	1	1
+Lythrurus snelsoni	1	1
+Otothyris lophophanes	1	?
+Clarias anguillaris	?	1
+Bagrus ubangensis	1	1
+Pseudanos winterbottomi	?	1
+Cimolichthys nepaholica	1	1
+Cheilinus undulatus	1	1
+Nemuroglanis lanceolatus	1	1
+Gephyrocharax sinuensis	?	1
+Mastacembelus loennbergii	1	?
+Notropis boucardi	?	1
+Domeykos profetaesis	1	1
+Triacanthodidae	1	1
+Dekeyseria scaphirhyncha	1	1
+Mimagoniates lateralis	?	1
+Neoarius utarus	1	1
+Lophiobagrus brevispinis	1	1
+Oregonichthys crameri	1	1
+Oryzias pectoralis	1	1
+Pangasius sp. (de Pinna 1993)	?	1
+Ameiurus brunneus	1	1
+Scoloplax dolicholophia	1	?
+Cochlefelis insidiator	1	1
+Megalops atlanticus	1	1
+Gymnocorymbus sp. (Fink and Fink 1981)	1	1
+Cyprinella zanema	1	1
+Glyptothorax platypogon	1	1
+Pseudobagrus brevianalis	1	1
+Brevoortia tyrannus	1	1
+Thryssa mystax	?	1
+Aspidoras rochai	1	?
+Pimelodina flavipinnis	1	1
+Chlidichthys	1	1
+Siganus luridus	1	1
+Cyprinella caerulea	1	1
+Gastromyzon borneensis	1	1
+Moxostoma duquesnii	?	1
+Pleuragramma	1	?
+Chromobotia macracanthus	1	1
+Parauchenoglanis altipinnis	1	1
+Prodontocharax melanotus	?	1
+Rineloricaria teffeana	1	1
+Tatia sp. (de Pinna 1993)	?	1
+Nemuroglanis pauciradiatus	1	1
+Mystus armatus	1	1
+Acestrorhynchus abbreviatus	1	?
+Pachythrissops sp. (Arratia 1999)	1	1
+Boulengerella cuvieri	1	1
+Cetopsis fimbriata	1	1
+Ictiobus bubalus	?	1
+Pseudobagarius leucorhynchus	1	1
+Pteronotropis hubbsi	1	1
+Pseudotothyris obtusa	1	?
+Dallia pectoralis	1	1
+Chrysichthys sianenna	1	1
+Synodontis rebeli	1	1
+Corydoras sp. (de Pinna 1993)	?	1
+Heptapterus stewarti	1	1
+Thryssa baelama	?	1
+Genidens planifrons	1	1
+Catostomus plebeius	?	1
+Silurus grahami	1	?
+Hypostomus watwata	1	1
+Chrysichthys platycephalus	1	1
+Notropis nubilus	1	1
+Corydoras aeneus	1	1
+Citharinus sp. (Sidlauskas and Vari 2008)	?	1
+Clupeichthys aesarnensis	?	1
+Gephyrocharax major	?	1
+Richardsonius egregius	1	1
+Megalonema xanthum	?	1
+Helogenes marmoratus	1	1
+Lycoptera davidi	?	1
+Ictaluridae	1	?
+Oryzias sinensis	1	1
+Ogcocephalidae	1	?
+Gilbertolus atratoensis	1	1
+Ompok miostoma	1	1
+Oryzias celebensis	1	1
+Corydoras nanus	1	?
+Trichomycterus albinotatus	1	?
+Bathysauropsis malayanus	1	1
+Ictalurus punctatus	1	1
+Opsariichthys bidens	1	1
+Clarias sp. (de Pinna 1993)	?	1
+Aulichthys japonicus	1	1
+Chiloglanis sp. G (Vigliotta 2008)	1	1
+Pseudotothyris sp. (Schaefer 1991)	1	?
+Hybopsis winchelli	1	1
+Albula	?	1
+Magnisudis atlantica	1	1
+Pterobrycon myrnae	?	1
+Bathydraconidae	1	1
+Synodontis brichardi	?	1
+Cranoglanididae	1	?
+Lythrurus fumeus	1	1
+Moxostoma congestum	?	1
+Amphilius cryptobullatus	1	1
+Ageneiosus ucayalensis	1	1
+Notoglanidium thomasi	1	1
+Zaireichthys brevis	?	1
+Lile piquitinga	?	1
+Oryzias haugiangensis	1	1
+Helogenes castaneus	1	1
+Oryzias timorensis	1	1
+Doratonotus	1	1
+Alestes bimaculatus	1	1
+Otothyris sp. (Schaefer 1991)	1	?
+Nemapteryx armiger	1	1
+Trogloglanis pattersoni	1	1
+Indoreonectes evezardi	1	1
+Lindbergichthys nudifrons	1	?
+Pareiorhaphis bahianus	1	1
+Hybopsis amnis	1	1
+Myctophum obtusirostre	1	1
+Anaethalion knorri	1	1
+Phrynorhombus norvegicus	?	1
+Stephanolepis hispidus	?	1
+Saurida brasiliensis	1	1
+Catostomus platyrhynchus	?	1
+Plagiotremus goslinei	?	1
+Aethotaxis mitopteryx	1	?
+Gyrinocheilus sp. (Fink and Fink 1981)	1	1
+Parotocinclus britskii	1	1
+Tharsis dubius	1	1
+Exallodontus aguanai	?	1
+Plotosidae	1	?
+Bunocephalus aleuropsis	1	?
+Notropis texanus	1	1
+Ageneiosus sp. 1 (Mo 1991)	1	1
+Euristhmus lepturus	?	1
+Wallago sp. (Mo 1991)	1	1
+Oryzias hubbsi	1	1
+Scopelarchoides signifer	1	1
+Hypophthalmidae	1	?
+Notropis potteri	1	1
+Phreatobius sp. 1 (de Pinna 1993)	?	1
+Hypoptopoma sp. (Britto 2003)	1	?
+Chrysichthys nigrodigitatus	1	1
+Megalechis thoracata	1	?
+Pimelodus maculatus	1	1
+Anchovia surinamensis	?	1
+Glyptothorax sp. (de Pinna 1996)	1	?
+Paraplotosus albilabris	?	1
+Cretatriacanthus guidottii	1	1
+Liobagrus marginatus	1	?
+Carpiodes cyprinus	?	1
+Clarias teijsmanni	?	1
+Opsariichthys uncirostris	1	1
+Parotocinclus sp. (Britto 2003)	1	?
+Cetopsis orinoco	1	1
+Bunocephalus knerii	1	?
+Eurypholis pulchellus	1	1
+Leporinus tigrinus	?	1
+Alestopetersius hilgendorfi	1	1
+Oxycheilinus orientalis	1	1
+Dianema longibarbis	1	1
+Astroblepus boulengeri	1	1
+Pseudobagrus taphraphilus	1	1
+Curimatopsis microlepis	?	1
+Hoplomyzon papillatus	1	?
+Phractura sp. (Mo 1991)	1	1
+Zaireichthys rotundiceps	1	1
+Chaetostomus sp. (Britto 2003)	1	?
+Leiocassis hosii	1	1
+Triportheus albus	1	1
+Ipnops agassizii	1	1
+Lampris guttatus	?	1
+Palaeolycus dreginensis	1	1
+Psetta maxima	?	1
+Hypentelium nigricans	?	1
+Malacosteus niger	1	1
+Ameiurus sp. (de Pinna 1993)	?	1
+Brochis multiradiatus	1	1
+Trachycorystes sp. (de Pinna 1993)	?	1
+Aracanidae	1	1
+Hybognathus nuchalis	1	1
+Gephyrocharax whaleri	?	1
+Ernstichthys anduzei	1	?
+Loricaria sp. (Britto 2003)	1	?
+Aulopus filamentosus	1	1
+Amphilius uranoscopus	1	1
+Serrapinnus	?	1
+Corydoras leucomelas	1	?
+Symphodus	1	1
+Tautogolabrus	1	1
+Cochlefelis spatula	1	1
+Rhinosardinia amazonica	?	1
+Moenkhausia lepidura	1	?
+Notropis heterodon	1	1
+Percopsis	?	1
+Notropis sabinae	1	1
+Cephalocassis borneensis	1	1
+Amphilius platychir	?	1
+Gonialosa modesta	?	1
+Ictiobus niger	1	1
+Kronichthys sp. (Schaefer 1987)	1	1
+Parachaenichthys charcoti	1	?
+Batrachoididae	1	1
+Acanthuridae	1	1
+Trachichthyidae	?	1
+Gephyrocharax caucanus	?	1
+Hypomasticus despaxi	1	1
+Plagiotremus azaleus	?	1
+Chiloconger	1	?
+Notropis volucellus	1	1
+Nannobrachium cuprarium	1	1
+Hisonotus laevior	1	?
+Tatia neivai	1	?
+Olyra kempi	1	1
+Auchenipterus demerarae	?	1
+Neoarius coatesi	1	1
+Amphilophus macracanthus	?	1
+Leiocassis saravacensis	1	1
+Uncisudis advena	1	1
+Leporellus vittatus	?	1
+Diplomystes camposensis	1	1
+Hisonotus leucofrenatus	1	1
+Plotosus lineatus	?	1
+Nipponocypris temminckii	1	1
+Acinocheirodon melanogramma	?	1
+Porochilus argenteus	?	1
+Gagata sp. (de Pinna 1993)	?	1
+Hemiodus quadrimaculatus	1	1
+Neoarius midgleyi	1	1
+Corydoras zygatus	1	?
+Claroteidae	1	?
+Phractura longicauda	1	1
+Rhinoliparis barbulifer	1	?
+Batrochoglanis villosus	1	?
+Catostomus santaanae	?	1
+Notropis procne	1	1
+Trachyglanis minutus	1	1
+Gibberichthys	?	1
+Tatia boemia	1	?
+Sciades guatemalensis	?	1
+Notothenia rossii	1	?
+Cheirodon pisciculus	?	1
+Neosilurus sp. 2 (de Pinna 1993)	?	1
+Scoloplax dicra	?	1
+Glanidium cesarpintoi	1	?
+Pogonophryne scotti	1	?
+Ipnops murrayi	1	1
+Schilbe laticeps	1	1
+Notropis scabriceps	1	1
+Bathybagrus graueri	1	1
+Lythrurus	1	?
+Thorichthys pasionis	?	1
+Nannostomus unifasciatus	1	1
+Rhabdalestes rhodesiensis	1	1
+Gila robusta	?	1
+Notropis xaenocephalus	1	1
+Thymallus thymallus	1	1
+Moxostoma rupiscartes	?	1
+Cobitis takatsuensis	1	1
+Pimelodus albicans	1	1
+Trachelyichthys exilis	?	1
+Cephalocassis melanochir	1	1
+Notoglanidium pallidum	1	1
+Tandanus bostocki	?	1
+Erimonax monachus	1	1
+Cetopsis baudoensis	1	1
+Synodontis longirostris	1	1
+Chasmocranus rosae	?	1
+Amphiliidae	1	?
+Argopleura diquensis	?	1
+Xiurenbagrus xiurenensis	1	?
+Hemibagrus peguensis	1	1
+Amblycipitidae	1	?
+Hozukius guyotensis	1	?
+Alepisauridae	1	1
+Cathorops hypophthalmus	1	1
+Hemiancistrus aspidolepis	1	1
+Notropis semperasper	1	1
+Monocentridae	?	1
+Pseudotrichonotidae	?	1
+Pimelodella chagresi	?	1
+Parancistrus aurantiacus	1	1
+Parazenidae	1	1
+Rasbora kalbarensis	1	?
+Bagrichthys sp. 2 (de Pinna 1993)	?	1
+Aphanotorulus unicolor	1	1
+Bagrichthys macracanthus	1	1
+Homaloptera smithi	1	1
+Lythrurus bellus	1	1
+Searsia koefoedi	?	1
+Diretmidae	?	1
+Cetopsis montana	1	1
+Arius arenarius	1	1
+Macrhybopsis meeki	1	1
+Pimelodus blochii	1	1
+Ancistrus stigmaticus	1	1
+Chasmistes cujus	?	1
+Sciades felis	1	1
+Micralestes sp. (Zanata and Vari 2005)	1	1
+Corydoras sp. A (Britto 2003)	1	?
+Pangasius pangasius	1	1
+Enchodus petrosus	1	1
+Opisthonema oglinum	?	1
+Pseudopimelodus sp. (de Pinna 1993)	?	1
+Luxilus albeolus	1	1
+Gonorynchus greyi	1	1
+Erimyzon sucetta	?	1
+Clarias theodorae	?	1
+Notropis amoenus	1	1
+Moxostoma lacerum	?	1
+Gephyrocharax atracaudatus	?	1
+Ailia coila	1	1
+Centroberyx	?	1
+Pseudanos irinae	?	1
+Aphredoderus sayanus	?	1
+Schuettea	1	1
+Phoxinus cumberlandensis	1	1
+Laemolyta proxima	?	1
+Santanaclupea	?	1
+Bryconops alburnoides	1	1
+Macrurocyttus	1	1
+Lepidorhombus whiffiagonis	?	1
+Ictalurus sp. (Fink and Fink 1981)	1	1
+Brycon falcatus	1	1
+Moxostoma anisurum	?	1
+Corydoras aurofrenatus	1	?
+Enchodus venator	1	1
+Caenotropus maculosus	?	1
+Neotropius khavalchor	1	1
+Gila pulchra	?	1
+Ageneiosus sp. 2 (Mo 1991)	1	1
+Ituglanis metae	1	1
+Ilisha africana	?	1
+cf. Arius macrorhynchus (Kailola 2004)	1	1
+Leptoscopidae	1	?
+Thryssa dussumieri	?	1
+Leporinus cf. moralesi (Sidlauskas and Vari 2008)	?	1
+Rharbichthys ferox	1	1
+Pellona ditchela	?	1
+Notropis bifrenatus	1	1
+Benthalbella dentata	1	1
+Umbra pygmaea	?	1
+Hemibagrus guttatus	1	1
+Cyprinella camura	1	1
+Clarias laeviceps	?	1
+Nannothrissa parva	?	1
+Oryzias nigrimas	1	1
+Oryzias marmoratus	1	1
+Pectinochromis lubbocki	1	1
+Synodontis flavitaeniata	?	1
+Compsura gorgonae	?	1
+Dactylopteridae	?	1
+Pareiorhina sp. (Armbruster 2004)	1	1
+Charax unimaculatus	1	?
+Barbatula barbatula	1	1
+Corydoras flaveolus	1	?
+Abramites hypselonotus	?	1
+Farlowella sp. (Britto 2003)	1	?
+Hollandichthys multifasciatus	?	1
+Megalancistrus sp. (Schaefer 1987)	1	1
+Pareiorhaphis splendens	1	1
+Trachelyopterus sp. (de Pinna 1993)	?	1
+Spectracanthicus murinus	1	1
+Erimyzon oblongus	1	1
+Synodontis contracta	1	1
+Gnathocharax steindachneri	1	?
+Eumicrotremus orbis	1	?
+Synodontis serrata	1	1
+Leporinus ortomaculatus	?	1
+Opisthonema berlangai	?	1
+Silurichthys phaiosoma	1	1
+Pseudobagrus vachellii	1	1
+Scoloplax sp. (de Pinna 1993)	?	1
+Acestrorhynchus microlepis	1	1
+Synodontis congica	1	1
+Phractura sp. (de Pinna 1993)	?	1
+Chrysichthys persimilis	1	1
+Neoarius latirostris	?	1
+Kneria wittei	1	1
+Sinogastromyzon puliensis	1	1
+Silurichthys indragiriensis	?	1
+Platanichthys platana	?	1
+Careproctus rastrinus	1	?
+Wallago attu	?	1
+Pterodoras sp. (Kailola 2004)	1	1
+Microlepidogaster sp. (Schaefer 1991)	1	?
+Microrasbora rubescens	1	?
+Otocinclus vestitus	1	1
+Danio erythromicron	1	?
+Hemiodus sp. (Fink and Fink 1981)	1	1
+Notosudidae	?	1
+Pseudotrematomus hansoni	1	?
+Brachyplatystoma filamentosum	1	1
+Notropis lutipinnis	1	1
+Roestes sp. (Lucena and Menezes 1998)	1	?
+Hypostomus hondae	1	1
+Synodontis sp. (de Pinna 1993)	?	1
+Tatia strigata	1	?
+Parauchenoglanis loennbergi	1	1
+Pimephales tenellus	1	1
+Aethotaxis	1	?
+Leptoglanis sp. (de Pinna 1993)	?	1
+Hisonotus candombe	1	1
+Trachelyopterus sp. (Vigliotta 2008)	1	1
+Plagiotremus laudandus	?	1
+Distichodus sp. (Sidlauskas and Vari 2008)	?	1
+Glyptothorax sp. (de Pinna 1993)	?	1
+Microsynodontis emarginata	1	1
+Hypsophrys nicaraguensis	?	1
+Pseudauchenipterus affinis	1	?
+Mimagoniates microlepis	?	1
+Chalceus erythrurus	1	1
+Cyttidae	?	1
+Alestes dentex	1	1
+Coregonus sp. (Fink and Fink 1981)	1	1
+Cobitis taenia	1	1
+Corydoras maculifer	1	?
+Pterothrissus	?	1
+Brycinus leuciscus	1	1
+Amissidens hainesi	1	1
+Leptobotia curta	1	1
+Brustiarius nox	1	1
+Paralichthys squamilentus	?	1
+Iksookimia koreensis	1	1
+Richardsonius balteatus	1	1
+Oryzias profundicola	1	1
+Pseudobunocephalus sp. (Friel 1994)	1	?
+Olivaichthys mesembrinus	1	1
+Phoxinus oreas	1	1
+Mastacembelus flavidus	1	?
+Lasiancistrus caucanus	1	1
+Lythrurus fasciolaris	?	1
+Chiloglanis congicus	1	1
+Parauchenoglanis longiceps	1	1
+Pollachius virens	?	1
+Notropis altipinnis	1	1
+Hypostomus sp. (de Pinna 1993)	?	1
+Ascalabos voithii	1	1
+Chrysichthys delhezi	1	1
+Laemolyta garmani	?	1
+Acestrorhynchus britskii	1	?
+Anostomoides laticeps	?	1
+Phoxinus neogaeus	1	1
+Leporinus cf. ecuadorensis (Sidlauskas and Vari 2008)	?	1
+Pangasius sanitwongsei	?	1
+Danionella translucida	1	?
+Lycoptera cf. L. sinensis (Arratia 1999)	?	1
+Moxostoma cervinum	?	1
+Malapteruridae	1	?
+Leiocassis similis	1	1
+Alepisaurus brevirostris	1	1
+Formosania lacustre	1	1
+Neoscopelidae	?	1
+Cycleptus elongatus	?	1
+Mastacembelus stappersii	1	?
+Aspidoras fuscoguttatus	1	?
+Duboisialestes tumbensis	1	1
+Rhabdalestes septentrionalis	1	1
+Bothidae	1	1
+Clupisoma prateri	?	1
+Neosilurus hyrtlii	?	1
+Denticetopsis sauli	1	1
+Charax gibbosus	1	?
+Hemiancistrus maracaiboensis	1	1
+Sargocentron tiere	?	1
+Petulanos intermedius	?	1
+Neoarius leptaspis	1	1
+Amarginops platus	1	1
+Corydoras pygmaeus	1	?
+Notropis bairdi	1	1
+Hemimyzon formosanus	1	1
+Synodontis depauwi	?	1
+Synodontis acanthoperca	1	1
+Cathorops spixii	1	1
+Oxycheilinus digrammus	1	1
+Synodontis granulosa	1	1
+Corydoras acutus	1	?
+Pseudobagrus ransonnettii	1	1
+Talismania aphos	?	1
+Anoplogastridae	?	1
+Acrocheilus alutaceus	1	1
+Ictalurus sp. (Mo 1991)	1	1
+Phoxinus erythrogaster	1	1
+Parachromis friedrichsthalii	?	1
+Platyglanis depierrei	1	1
+Bunocephalus sp. (Mo 1991)	1	1
+Hoplias microlepis	1	1
+Thrissops cf. T. subovatus (Arratia 1999)	1	1
+Zaireichthys rhodesiensis	1	1
+Anaethalion angustus	1	1
+Anchoa lamprotaenia	?	1
+Liobagrus formosanus	1	?
+Hypomasticus pachycheilus	?	1
+Astroblepus simonsii	1	1
+Corydoras napoensis	1	?
+Nototheniops nybelini	1	?
+Varasichthyidae	1	?
+Lipopterichthys sp. (Britto 2003)	1	?
+Chrysobrycon myersi	?	1
+Harpadon nehereus	1	1
+Hassar orestis	1	1
+Cyclocheilichthys furcatus	?	1
+Pseudobagrus pratti	1	1
+Phreatobius sp. 2 (de Pinna 1993)	?	1
+Malapterurus electricus	1	1
+Notropis chalybaeus	1	1
+Porochilus meraukensis	?	1
+Doumea typica	1	1
+Trichogenes longipinnis	1	?
+Scophthalmus aquosus	1	1
+Pteronotropis hypselopterus	1	1
+Bathymicrops regis	1	1
+Phoxinus eos	1	1
+Triacanthidae	1	1
+Rita chrysea	1	1
+Delturus angulicauda	1	1
+Pseudeutropius atherinoides	1	1
+Ageneiosus cf. guianensis (Mo 1991)	1	1
+Ahliesaurus berryi	1	1
+Corydoras gracilis	1	?
+Brevoortia aurea	?	1
+Catostomus ardens	?	1
+Peckoltia sp. 1 (Armbruster 2004)	1	1
+Notropis maculatus	1	1
+Corydoras bertoni	1	?
+Notropis boops	1	1
+Laeviscutella dekimpei	?	1
+Chrysichthys grandis	1	1
+Hypostomus sp. (Schaefer 1987)	1	1
+Umbra krameri	1	1
+Nematalosa papuensis	?	1
+Corydoras punctatus	1	?
+Amphilius rheophilus	?	1
+Remora osteochir	1	1
+Pseudotrematomus bernacchii	1	?
+Opsariichthys sp. (Cavender and Coburn 1992)	?	1
+Artedidraco orianae	1	?
+Melichthys niger	?	1
+Neoscopelus	?	1
+Margariscus	1	?
+Limatulichthys griseus	1	1
+Ageneiosus sp. 3 (Mo 1991)	1	1
+Eumicrotremus spinosus	1	?
+Iotabrycon praecox	?	1
+Remorina albescens	1	1
+Argopleura sp. (Weitzman and Fink 1985)	?	1
+Hexanematichthys sagor	1	1
+Bagridae	1	?
+Corydoras arcuatus	1	?
+Oxycheilinus bimaculatus	1	1
+Chiloglanis sp. B (Vigliotta 2008)	1	1
+Farlowella sp. (de Pinna 1993)	?	1
+Brycon dentex	1	1
+Acanthocobitis botia	1	1
+Osteoglossum ferreirai	?	1
+Hoplostethus	?	1
+Chaca chaca	1	1
+Aspidoras microgalaeus	1	?
+Trachelyopterus striatulus	?	1
+Planaltina myersi	?	1
+Silurus lithophilus	1	?
+Hesperoleucus symmetricus	1	1
+Odontostilbe dialeptura	?	1
+Corydoras garbei	1	?
+Ogilbyina	1	1
+Ketengus typus	1	1
+Neblinichthys roraima	1	1
+Salmo sp. (Fink and Fink 1981)	1	1
+Pseudomystus breviceps	1	1
+Cryptoheros spilurus	?	1
+Barbonymus schwanenfeldii	?	1
+Eoplectus bloti	?	1
+Acanthopleurus collettei	?	1
+Noturus gyrinus	?	1
+Mesoborus sp. (Fink and Fink 1981)	1	1
+Trichomycterus mirissumba	1	?
+Rasbora vaterifloris	1	?
+Apareiodon sp. (Fink and Fink 1981)	1	1
+Pseudancistrus sp. gold spot (Armbruster 2004)	1	1
+Pterygoplichthys sp. (Schaefer 1987)	1	1
+Rondeletiidae	?	1
+Heteropneustidae	1	?
+Adelosebastes latens	1	?
+Lycoptera sinensis?	?	1
+Helicophagus waandersii	?	1
+Dussumieria acuta	?	1
+Chrysichthys thonneri	1	1
+Entomocorus sp. (de Pinna 1993)	?	1
+Algansea aphanea	1	1
+Anostomus anostomus	?	1
+Isbrueckerichthys duseni	1	1
+Echeneis neucratoides	1	1
+Triacanthodes anomalus	?	1
+Notropis shumardi	1	1
+Micralestes occidentalis	1	1
+Misgurnus fossilis	1	1
+Chiloglanis occidentalis	1	1
+Neosilurus brevidorsalis	?	1
+Pterobunocephalus sp. (Friel 1994)	1	?
+Piabucina panamensis	1	1
+Malapterurus beninensis	1	1
+Pimelodella macturki	?	1
+Catostomus discobolus	?	1
+Garra sp. (Coburn and Cavender 1992)	?	1
+Bunocephalus n. sp. 1 (Friel 1994)	1	?
+Ompok sp. (de Pinna 1993)	?	1
+Corydoras panda	1	?
+Gila	1	?
+Hypoptopoma steindachneri	1	?
+Harengula clupeola	?	1
+Parapsettus panamensis	1	1
+Trichonotidae	1	?
+Clariallabes longicauda	?	1
+Petulanos plicatus	?	1
+Brachymystax lenok	1	1
+Clarias angolensis	1	1
+Notropis nazas	1	1
+Characidium sp. (Fink and Fink 1981)	1	1
+Dorosoma cepedianum	?	1
+Cryptarius truncatus	1	1
+Rasbora daniconius	?	1
+Astroblepus festae sp. 2 (Mo 1991)	1	1
+Hemiancistrus landoni	1	1
+Parauchenoglanis punctatus	1	1
+Seriola dumerili	1	1
+Odaxothrissa mento	?	1
+Protoclupea chilensis	1	1
+Nemacheilus savona	1	1
+Myctophidae	?	1
+Herichthys steindachneri	?	1
+Orthrias panthera	1	1
+Tribolodon	1	?
+Veliferidae	?	1
+Bothus ocellatus	?	1
+Liobagrus nigricauda	1	?
+Lefua echigonia	1	1
+Cyprinus carpio	1	1
+Pseudoplatystoma fasciatum	?	1
+Synodus foetens	1	1
+Brycinus longipinnis	1	1
+Diplomystus dentatus	1	1
+Neoplecostomus paranensis	1	1
+Assiculoides	1	1
+Cyprinella lutrensis	1	1
+Lacantuniidae	1	?
+Dinoperca	?	1
+Notropis girardi	1	1
+Bunocephalus n. sp. 3 (Friel 1994)	1	?
+Cetopsidae sp. (de Pinna 1993)	?	1
+Denticeps clupeoides	1	1
+Distichodus maculatus	1	1
+Agoniates anchovia	1	?
+Corydoras difluviatilis	1	?
+Herichthys bartoni	?	1
+Iheringichthys labrosus	1	1
+Clarias ngamensis	?	1
+Cinetodus crassilabris	1	1
+Acestrorhynchus isalineae	1	?
+Saurorhamphus freyeri	1	1
+Clariallabes petricola	?	1
+Rasbora dusonensis 2 (Cavender and Coburn 1992)	?	1
+Sardinella albella	?	1
+Thorichthys affinis	?	1
+Oxycheilinus unifasciatus	1	1
+Batrachocephalus mino	1	1
+Helogenes sp. (Mo 1991)	1	1
+Alosa caspia	?	1
+Lepthoplosternum pectorale	1	?
+Oligosarcus argenteus	1	?
+Tetrabrachiidae	1	?
+Liobagrus marginatoides	1	?
+Astyanax mexicanus	1	1
+Microlepidogaster perforatus	1	?
+Triplophysa stoliczkai	1	1
+Notropis anogenus	1	1
+Kneria katangae	1	1
+Moapa coriacea	1	1
+Ilisha melastoma	?	1
+Tomocichla sieboldii	?	1
+Hydrocynus forskahlii	1	1
+Austroglanididae	1	?
+Pogonichthys macrolepidotus	1	1
+Cichla ocellaris	?	1
+Spinachia spinachia	1	1
+Varasichthys ariasi	1	1
+Kneria auriculata	?	1
+Cnidoglanis macrocephalus	?	1
+Pseudocorynopoma heterandria	?	1
+Hiodon tergisus	1	1
+Kolpotocheirodon theloura	?	1
+Adrianichthys oophorus	1	1
+Lycothrissa crocodilus	?	1
+Gila pandora	?	1
+Metavelifer	1	1
+Hemibagrus nemurus	1	1
+Imparfinis sp. (de Pinna 1993)	?	1
+Gephyrocharax venezuelae	?	1
+Glyptothorax fokiensis	1	1
+Ompok bimaculatus	1	1
+Hisonotus maculipinnis	1	?
+Loricariidae sp. (Mo 1991)	1	1
+Parotocinclus sp. (Schaefer 1991)	1	?
+Cyprinella whipplei	1	1
+Chrysobrycon hesperus	?	1
+Campostoma ornatum	1	1
+Stolephorus indicus	?	1
+Hybopsis amblops	1	1
+Notropis stilbius	1	1
+Pseudomystus leiacanthus	1	1
+Neoarius velutinus	1	1
+Mastacembelus brichardi	1	?
+Odontostilbe pequira	?	1
+Propimelodus sp. (Mo 1991)	1	1
+Cyclocheilichthys enoplos	?	1
+Glanidium melanopterum	1	?
+Lipopterichthys carrioni	1	1
+Cyprinodon variegatus	1	?
+Callichthyidae	1	?
+Harpagifer antarcticus	1	?
+Phractura ansorgii	1	1
+Ernstichthys sp. (de Pinna 1993)	?	1
+Schistura breviceps	1	1
+Leporinus cf. niceforoi (Sidlauskas and Vari 2008)	?	1
+Nothobranchiidae	1	?
+Sciades emphysetus	1	1
+Helicolenus hilgendorfii	1	?
+Corydoras hastatus	1	?
+Hypostomus micromaculatus	1	1
+Notropis buchanani	1	1
+Thorichthys meeki	?	1
+Luxilus zonistius	1	1
+Parachromis dovii	?	1
+Orthogonikleithrus hoelli	1	1
+Xenolepidichthys	?	1
+Thrissops regleyi	1	1
+Loricariichthys sp. (Britto 2003)	1	?
+Cheirodontops geayi	?	1
+Campostoma anomalum	1	1
+Leptolepides haerteisi	?	1
+Roeboides sp. A (Lucena and Menezes 1998)	1	?
+Prochilodus rubrotaeniatus	?	1
+Ichthyodectiformes	1	?
+Liobagrus styani	1	?
+Mastacembelus batesii	1	?
+Mastacembelus signatus	1	?
+Notropis harperi	1	1
+Hypoptopoma gulare	1	?
+Heterobranchus longifilis	1	1
+Tyttocharax sp. B (Weitzman and Fink 1985)	?	1
+Cheirocerus abuelo	?	1
+Esox masquinongy	?	1
+Charax stenopterus	1	?
+Synodus synodus	1	1
+Saccoderma melanostigma	?	1
+Micralestes eburneensis	1	1
+Porochilus obbesi	?	1
+Xyrauchen texanus	?	1
+Gnathodolus bidens	?	1
+Heptapteridae	1	?
+Chauliodus sloani	1	1
+Niwaella delicata	1	1
+Ariidae	1	?
+Annamia normani	1	1
+Notropis petersoni	1	1
+Arnoldichthys spilopterus	1	1
+Ilisha kampeni	?	1
+Tyttocharax madeirae	?	1
+Scopaeocharax sp. (Burns et al 1995)	?	1
+Moxostoma poecilurum	?	1
+Notothenia	1	?
+Trematomus	1	?
+Leporellus pictus	?	1
+Acanthopleurus serratus	?	1
+Rineloricaria lanceolata	1	1
+Thoburnia hamiltoni	?	1
+Lepidoblepharon ophthalmolepis	?	1
+Saccodon wagneri	1	1
+Microglanis aff. iberingi (Shibatta 1998)	1	?
+Doumea chappuisi	?	1
+Bryconops affinis	1	1
+Microglanis cibelae	1	?
+Pseudeutropius moolenburghae	1	1
+Ptychocharax rhyacophila	?	1
+Mystus pelusius	1	1
+Anaethalion cf. A. subovatus (Arratia 1999)	1	1
+Oryzias orthognathus	1	1
+Notropis hudsonius	1	1
+Compsura heterura	?	1
+Sardinella janeiro	?	1
+Acrochordonichthys sp. (de Pinna 1993)	?	1
+Cobitis striata	1	1
+Aplocheilidae	1	?
+Chiloglanis niloticus	1	1
+Cichlasoma istlanum	?	1
+Luciopimelodus pati	?	1
+Neoarius taylori	1	1
+Notropis topeka	1	1
+Lepidomeda vittata	?	1
+Monacanthus ciliatus	?	1
+Catostomus microps	?	1
+Osteogeneiosus sp. (Mo 1991)	1	1
+Cottoperca gobio	1	?
+Boraras urophthalmoides	1	?
+Brycinus brevis	1	1
+Eospinus daniltshenkoi	?	1
+Amblygaster sp. (DiDario 2004)	?	1
+Micronemacheilus pulcher	1	1
+Neosilurus ater	?	1
+Thrissops subovatus	1	1
+Uranoscopidae	1	?
+Hypoptopoma thoracatum	1	?
+Cathorops liropus	?	1
+Corydoras barbatus sp. II (Britto 2003)	1	?
+Dianema sp. (Kailola 2004)	1	1
+Pterengraulis atherinoides	?	1
+Caenotropus mestomorgmatos	?	1
+Zeugopterus punctatus	1	1
+Akysidae	1	?
+Derepodichthys	?	1
+Schizolecis sp. (Britto 2003)	1	?
+Corydoras habrosus	1	?
+Clariallabes melas	?	1
+Nocomis leptocephalus	1	1
+Crystallichthys cyclospilus	1	?
+Paranotothenia	1	?
+Rhamdia sp. (Kailola 2004)	1	1
+Astroblepus orientalis	1	?
+Acanthomorpha	?	1
+Cichlasoma atromaculatum	?	1
+Synaptolaemus cingulatus	?	1
+Heterobranchus isopterus	?	1
+Pelteobagrus nudiceps	1	1
+Luxilus coccogenis	1	1
+Moxostoma pappillosum	?	1
+Pterocryptis cochinchinensis	?	1
+Cichlasoma ramsdeni	?	1
+Engraulis encrasicolus	1	1
+Mastacembelus goro	1	?
+Lavinia exilicauda	1	1
+Chirocentrus dorab	?	1
+Rasbora spilocerca	1	?
+Acestrorhynchus nasutus	1	1
+Clupea pallasii	?	1
+Brachyglanis magoi	?	1
+Thryssa hamiltonii	?	1
+Notropis photogenis	1	1
+Rita sp. (Kailola 2004)	1	1
+Pterygoplichthys sp. (de Pinna 1993)	?	1
+Paralichthyidae	1	?
+Wetmorella nigropinnata	1	1
+Pellona harroweri	?	1
+Clupeonella cultriventris	?	1
+Parodon caliensis	1	1
+Sciades dowii	1	1
+Acanthocleithron chapini	1	1
+Corydoras ornatus	1	?
+Bathybagrus tetranema	1	1
+Brycinus carolinae	1	1
+Remora brachyptera	1	1
+Chasmocranus sp. (de Pinna 1993)	?	1
+Luisichthys vinalesensis	1	1
+Ilisha amazonica	?	1
+Valenciidae	1	?
+Epibulus insidiator	1	1
+Akysis sp. (de Pinna 1993)	?	1
+Silurus asotus	1	1
+Rasbora dusonensis	?	1
+Pellona castelnaeana	?	1
+Thrissops cf. T. formosus (Arratia 1999)	1	1
+Aphyocheirodon hemigrammus	?	1
+Cephalosilurus albomarginatus	1	?
+Squalius pyrenaicus	?	1
+Pseudochondrostoma polylepis	?	1
+Notropis greenei	1	1
+Agosia chrysogaster	1	1
+Campostoma oligolepis	1	1
+Notropis edwardraneyi	1	1
+Brevoortia smithi	?	1
+Hemiarius stormii	1	1
+Parailia spiniserrata	?	1
+Hyperlophus vittatus	?	1
+Notropis telescopus	1	1
+Neoarius berneyi	1	1
+Plicofollis nella	1	1
+Pseudochromis	1	1
+Leporinus friderici	?	1
+Parabathymyrus	1	?
+Microglanis parahybae	1	?
+Xenurobrycon heterodon	?	1
+Acestrorhynchus minimus	1	?
+Nocomis raneyi	1	1
+Catostomus bernardini	?	1
+Eremichthys	1	?
+Hysteronotus megalostomus	?	1
+Cichlasoma salvini	?	1
+Achiridae	?	1
+Phyllonemus typus	1	1
+Nandopsis tetracanthus	?	1
+Chrysichthys brevibarbis	1	1
+Hime japonica	1	1
+Phractura clauseni	?	1
+Brycon pesu	1	1
+Cryptobalistes brevis	?	1
+Potamothrissa obtusirostris	?	1
+Moxostoma lachneri	?	1
+Silurus meridionalis	1	?
+Bagre bagre	1	1
+Zaireichthys camerunensis	?	1
+Notropis ariommus	1	1
+Triportheus nematurus	1	?
+Rhytiodus argenteofuscus	?	1
+Cyprinus	?	1
+Catostomus catostomus	?	1
+Notropis buccula	1	1
+Brachionichthyidae	1	?
+Grundulus bogotensis	1	1
+Nocomis micropogon	1	1
+Rineloricaria sp. (Britto 2003)	1	?
+Cryothenia	1	?
+Pseudobagarius baramensis	1	?
+Anchoa tricolor	?	1
+Lubbockichthys	1	1
+Nematistius pectoralis	1	1
+Eurypholis boissieri	1	1
+Hybopsis lineapunctata	1	1
+Syncrossus hymenophysa	1	1
+Schistura fasciolata	1	1
+Gobionotothen	1	?
+Mastacembelus plagiostomus	1	?
+Coreobagrus brevicorpus	1	1
+Cordylancistrus torbesensis	1	1
+Retropinnidae	1	?
+Lindbergichthys	1	?
+Corydoras cochui	1	?
+Characidium cf. zebra (Buckup 1998)	1	1
+Moclaybalistes danekrus	?	1
+Pelteobagrus intermedius	1	1
+Mylopharodon conocephalus	1	1
+Lepidocephalus guntea	1	1
+Vieja synspila	?	1
+Acantopsis choirorhynchos	1	1
+Osmerus mordax	?	1
+Lefua costata	1	1
+Leporinus pellegrinii	?	1
+Lampridae	?	1
+Leuciscus cephalus	?	1
+Paramphilius trichomycteroides	?	1
+Pagothenia borchgrevinki	1	?
+Mastacembelus nigromarginatus	1	?
+Danio rerio	1	1
+Lythrurus alegnotus	?	1
+Leporinus aripuanaensis	?	1
+Cryptoheros septemfasciatus	?	1
+Prochilodus lineatus	1	1
+Luxilus cornutus	1	?
+Zeugopterus regius	1	?
+Plagiotremus townsendi	?	1
+Hemisorubim sp. (de Pinna 1993)	?	1
+Catostomus rimiculus	?	1
+Astroblepus sp. (de Pinna 1993)	?	1
+Exostoma sp. (de Pinna 1993)	?	1
+Anchovia clupeoides	?	1
+Hypophthalmus longifilis	1	1
+Mystus montanus	1	1
+Catostomus sp. (Fink and Fink 1981)	1	1
+Margariscus margarita	?	1
+Rhamdia guatemalensis	?	1
+Leuciscus idus	?	1
+Catostomus macrocheilus	?	1
+Centromochlus perugiae	1	?
+Thoburnia atripinnis	?	1
+Bryconamericus iheringii	1	?
+Codoma ornata	?	1
+Phenacobrycon henni	?	1
+Pimelodidae	1	?
+Euchiloglanis kishinouyei	1	?
+Cinetodus conorhynchus	1	1
+Botia dayi	1	1
+Leucaspius delineatus	?	1
+Neoplecostomus sp. (de Pinna 1993)	?	1
+Microdevario nana	1	?
+Tyttocharax sp. (Burns et al 1995)	?	1
+Lonchogenys ilisha	1	?
+Rhinichthys atratulus	1	1
+Liauchenoglanis maculatus	1	1
+Catostomus fumeiventris	?	1
+Thoburnia rhothoeca	?	1
+Nanocheirodon	?	1
+Antennariidae	1	1
+Exostoma sp. (Chen 1994)	1	?
+Auchenipterus nigripinnis	1	1
+Mastacembelus tanganicae	1	?
+Anchoa marinii	?	1
+Argopleura magdalenensis	?	1
+Cyprinella venusta	1	1
+Triacanthus biaculeatus	?	1
+Glyptothorax sp. (Chen 1994)	1	?
+Mastacembelus micropectus	1	?
+Exoglossum	1	?
+Roeboides sp. B (Lucena and Menezes 1998)	1	?
+Percopsis omiscomaycus	?	1
+Platygobio gracilis	1	1
+Ictiobus cyprinellus	?	1
+Plagiotremus tapeinosoma	?	1
+Boraras maculatus	1	?
+Catostomus occidentalis	?	1
+Bovichtus variegatus	1	?
+Moxostoma hubbsi	?	1
+Synodontis sp. (Mo 1991)	1	1
+Boraras micros	1	?
+Hilsa kelee	?	1
+Moxostoma ariommum	?	1
+Rhinichthys osculus	1	1
+Bulbonaricus	0	?
+Notropis rubricroceus	?	1
+Ichthyborus sp. (Fink and Fink 1981)	1	1
+Cyprinella chloristia	1	1
+Trachinidae	1	?
+Paedocypris	1	?
+Sebastes vulpes	1	?
+Carpiodes velifer	?	1
+Trachelyopterus fisheri	?	1
+Arnoglossus laterna	?	1
+Hypostomus margaritifer	1	?
+Artedidraconidae	1	?
+Mastacembelus moorii	1	?
+Minytrema melanops	?	1
+Acrobrycon ipanquianus	?	1
+Spratelloides delicatulus	?	1
+Nototheniidae	1	?
+Notropis uranoscopus	1	1
+Anostomus ternetzi	?	1
+Cyprinella callitaenia	1	1
+Amblyceps murraystuarti	1	?
+Ageneiosus sp. (de Pinna 1993)	?	1
+Phenacobius uranops	1	1
+Tischlingerichthys viohli	?	1
+Hemiodus argenteus	?	1
+Hisonotus nigricauda	1	?
+Notropis chiliticus	1	1
+Notropis jemezanus	1	1
+Anchoa filifera	?	1
+Hypoptopoma sp. (Schaefer 1991)	1	?
+Cyprinella trichroistia	1	1
+Leporinus jatuncochi	?	1
+Pangio anguillaris	1	1
+Hypomasticus megalepis	?	1
+Crenicichla saxatilis	?	1
+Notacanthidae	?	1
+Couesius	1	?
+Vieja fenestrata	?	1
+Rocio octofasciata	?	1
+Mastacembelus ellipsifer	1	?
+Labracinus	1	1
+Encrasicholina heteroloba	?	1
+Cichlasoma facetum	?	1
+Oxyropsis sp. (de Pinna 1993)	?	1
+Bolcabalistes varii	?	1
+Rhodeus ocellatus	?	1
+Chaunacidae	1	?
+Oligobalistes robustus	?	1
+Sardinella maderensis	?	1
+Alosa mediocris	?	1
+Bleekeria	?	1
+Esox lucius	1	1
+Gila crassicauda	1	?
+Leptoglanis xenognathus	?	1
+Parachromis managuensis	?	1
+Pachythrissops vectensis	1	1
+Wertheimeria maculata	?	1
+Parasilurus asotus	1	1
+Psettodes erumei	?	1
+Potamarius nelsoni	?	1
+Anablepidae	1	?
+Indostomidae	1	1
+Novumbra hubbsi	?	1
+Hydrolycus wallacei	1	1
+Lile stolifera	?	1
+Orthogonikleithrus leichi	?	1
+Algansea popoche	1	1
+Rhytiodus lauzannei	?	1
+Limnothrissa miodon	?	1
+Enchodus marchesettii	1	1
+Mastacembelus flavomarginatus	1	?
+Boraras merah	1	?
+Escualosa thoracata	?	1
+Cyprinella xaenura	1	1
+Parapimelodus valenciennis	?	1
+Bathysauridae	?	1
+Osmeridae	1	?
+Argopleura chocoensis	?	1
+Notropis sallaei	?	1
+Regalecidae	?	1
+Carpiodes sp. (Fink and Fink 1981)	1	1
+Kryptopterus bicirrhis	?	1
+Gvozdarus	1	?
+Anodontostoma chacunda	?	1
+Phrynorhombus regius	?	1
+Hippoglossus hippoglossus	?	1
+Steindachnerina elegans	1	1
+Balistomorphus ovalis	?	1
+Triglidae	1	?
+Notropis spectrunculus	1	1
+Nanobagrus armatus	?	1
+Herklotsichthys dispilonotus	?	1
+Glyptothorax platypogonides	1	?
+Schizodon vittatus	?	1
+Konosirus punctatus	?	1
+Pseudanos gracilis	?	1
+Bunocephalus sp. (de Pinna 1993)	?	1
+Plagiotremus ewaensis	?	1
+Hybognathus sp. (Coburn and Cavender 1992)	?	1
+Yasuhikotakia modesta	1	1
+Platyallabes tihoni	?	1
+Scophthalmus rhombus	?	1
+Profundulidae	1	?
+Mastacembelus vanderwaali	1	?
+Sundadanio axelrodi	1	?
+Moxostoma robustum	?	1
+Parachela oxygastroides	?	1
+Gila atraria	1	?
+Esox reichertii	?	1
+Anchoviella jamesi	?	1
+Ipnopidae	?	1
+Sartor elongatus	?	1
+Bunocephalus sp. 1 (Chen 1994)	1	?
+Catostomus latipinnis	?	1
+Leporinus fasciatus	?	1
+Scleromystax barbatus	?	1
+Devario malabaricus	?	1
+Pseudotrematomus	1	?
+Macrhybopsis aestivalis	1	1
+Nematalosa erebi	?	1
+Bunocephalus sp. 2 (Chen 1994)	1	?
+Macrhybopsis storeriana	1	1
+Cichlasoma trimaculatum	?	1
+Hoplosternum punctatum	?	1
+Astyanax	1	?
+Bunocephalus sp. 3 (Chen 1994)	1	?
+Tharsis	1	?
+Pellona flavipinnis	?	1
+Horadandia atukorali	1	?
+Pagothenia	1	?
+Moxostoma austrinum	?	1
+Eleginops	1	?
+Patagonotothen	1	?
+Pseudorasbora parva	?	1
+Clupeichthys bleekeri	?	1
+Schizodon knerii	?	1
+Clupeoides papuensis	?	1
+Schizodon isognathus	?	1
+Diapoma terofali	?	1
+Leporinus agassizii	?	1
+Leporinus cf. fasciatus (Sidlauskas and Vari 2008)	?	1
+Anchoviella lepidentostole	?	1
+Gordichthys	1	1
+Tanichthys micagemmae	1	?
+Chasmistes brevirostris	?	1
+Bathymyrus	1	?
+Moxostoma mascotae	?	1
+Gephyrocharax intermedius	?	1
+Catostomus snyderi	?	1
+Lophichthyidae	1	?
+Moxostoma valenciennesi	?	1
+Champsodontidae	1	?
+Brycon guatemalensis	1	1
+Gerlachea australis	1	?
+Leptolepides sprattiformis	1	1
+Catostomus leopoldi	?	1
+Pseudanos trimaculatus	?	1
+Anodontostoma selangkat	?	1
+Schizodon scotorhabdotus	?	1
+Akysis sp. 2 (Chen 1994)	1	?
+Sebastiscus marmoratus	1	?
+Poecilothrissa congica	?	1
+Laemolyta orinocensis	?	1
+Acanthocharax microlepis	1	?
+Balistes vetula	?	1
+Boraras brigittae	1	?
+Aspidoras pauciradiatus	?	1
+Anchoa januaria	?	1
+Catostomus columbianus	?	1
+Protacanthodes nimesensis	?	1
+Mastacembelus albomaculatus	1	?
+Hoplocharax	1	?
+Dissostichus	1	?
+Erimystax	1	?
+Phallostethus lehi	?	0 and 1
+Phallostethus dunckeri	?	0 and 1

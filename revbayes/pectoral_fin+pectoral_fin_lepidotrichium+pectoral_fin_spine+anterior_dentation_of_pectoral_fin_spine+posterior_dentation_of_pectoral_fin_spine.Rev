@@ -1,0 +1,288 @@
+#############################
+# Tarasov 2019
+# Template for PARAMO pipeline
+#
+#
+#############################
+
+#######################
+# Reading in the Data #
+#######################
+
+# names to declare
+analysis_name = "pectoral_fin+pectoral_fin_lepidotrichium+pectoral_fin_spine+anterior_dentation_of_pectoral_fin_spine+posterior_dentation_of_pectoral_fin_spine"
+tree_2_read= "data/fishtree.tre"
+chrs_2_read= "data/pectoral_fin+pectoral_fin_lepidotrichium+pectoral_fin_spine+anterior_dentation_of_pectoral_fin_spine+posterior_dentation_of_pectoral_fin_spine.char"
+
+
+# variables to be predifined in this template
+mcmc_gen = 10000
+#burnin_gen = 2000
+log_freq = 100
+
+#seed(2555)
+
+# moves and monitors
+mvi = 0
+mni = 0
+
+# variable obtained from scipt
+NUM_STATES = 32
+# arg of readCharacterDataDelimited()
+
+
+# Read in the character data
+char_data = readCharacterDataDelimited(chrs_2_read, type="NaturalNumbers", delimiter=" ", stateLabels = NUM_STATES, headers=false)
+# Read in tree
+psi = readTrees(tree_2_read)[1]
+
+
+
+
+#######################
+# Character Evolution Model
+#######################
+
+# declare rate matrix
+
+NUM_STATES=32
+for (i in 1:NUM_STATES) {
+  for (j in 1:NUM_STATES) {
+      rates[i][j] <-0.0
+  }
+}
+r17~dnExp(20)
+r50~dnExp(20)
+r83~dnExp(20)
+r116~dnExp(20)
+r149~dnExp(20)
+r182~dnExp(20)
+r215~dnExp(20)
+r248~dnExp(20)
+r281~dnExp(20)
+r314~dnExp(20)
+r347~dnExp(20)
+r380~dnExp(20)
+r413~dnExp(20)
+r446~dnExp(20)
+r479~dnExp(20)
+r512~dnExp(20)
+r513~dnExp(20)
+r537~dnExp(20)
+r546~dnExp(20)
+r570~dnExp(20)
+r579~dnExp(20)
+r603~dnExp(20)
+r612~dnExp(20)
+r636~dnExp(20)
+r645~dnExp(20)
+r669~dnExp(20)
+r678~dnExp(20)
+r702~dnExp(20)
+r711~dnExp(20)
+r735~dnExp(20)
+r744~dnExp(20)
+r768~dnExp(20)
+r777~dnExp(20)
+r785~dnExp(20)
+r797~dnExp(20)
+r810~dnExp(20)
+r818~dnExp(20)
+r830~dnExp(20)
+r843~dnExp(20)
+r851~dnExp(20)
+r863~dnExp(20)
+r876~dnExp(20)
+r884~dnExp(20)
+r896~dnExp(20)
+r909~dnExp(20)
+r917~dnExp(20)
+r921~dnExp(20)
+r926~dnExp(20)
+r927~dnExp(20)
+r942~dnExp(20)
+r950~dnExp(20)
+r954~dnExp(20)
+r957~dnExp(20)
+r960~dnExp(20)
+r975~dnExp(20)
+r983~dnExp(20)
+r987~dnExp(20)
+r989~dnExp(20)
+r992~dnExp(20)
+r1008~dnExp(20)
+r1016~dnExp(20)
+r1020~dnExp(20)
+r1022~dnExp(20)
+r1023~dnExp(20)
+moves[++mvi] = mvScale(r17, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r50, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r83, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r116, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r149, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r182, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r215, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r248, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r281, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r314, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r347, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r380, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r413, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r446, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r479, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r512, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r513, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r537, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r546, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r570, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r579, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r603, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r612, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r636, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r645, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r669, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r678, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r702, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r711, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r735, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r744, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r768, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r777, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r785, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r797, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r810, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r818, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r830, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r843, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r851, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r863, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r876, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r884, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r896, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r909, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r917, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r921, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r926, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r927, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r942, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r950, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r954, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r957, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r960, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r975, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r983, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r987, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r989, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r992, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r1008, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r1016, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r1020, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r1022, lambda=1, tune=true, weight=2)
+moves[++mvi] = mvScale(r1023, lambda=1, tune=true, weight=2)
+rates[1][17]:=r17
+rates[2][18]:=r50
+rates[3][19]:=r83
+rates[4][20]:=r116
+rates[5][21]:=r149
+rates[6][22]:=r182
+rates[7][23]:=r215
+rates[8][24]:=r248
+rates[9][25]:=r281
+rates[10][26]:=r314
+rates[11][27]:=r347
+rates[12][28]:=r380
+rates[13][29]:=r413
+rates[14][30]:=r446
+rates[15][31]:=r479
+rates[16][32]:=r512
+rates[17][1]:=r513
+rates[17][25]:=r537
+rates[18][2]:=r546
+rates[18][26]:=r570
+rates[19][3]:=r579
+rates[19][27]:=r603
+rates[20][4]:=r612
+rates[20][28]:=r636
+rates[21][5]:=r645
+rates[21][29]:=r669
+rates[22][6]:=r678
+rates[22][30]:=r702
+rates[23][7]:=r711
+rates[23][31]:=r735
+rates[24][8]:=r744
+rates[24][32]:=r768
+rates[25][9]:=r777
+rates[25][17]:=r785
+rates[25][29]:=r797
+rates[26][10]:=r810
+rates[26][18]:=r818
+rates[26][30]:=r830
+rates[27][11]:=r843
+rates[27][19]:=r851
+rates[27][31]:=r863
+rates[28][12]:=r876
+rates[28][20]:=r884
+rates[28][32]:=r896
+rates[29][13]:=r909
+rates[29][21]:=r917
+rates[29][25]:=r921
+rates[29][30]:=r926
+rates[29][31]:=r927
+rates[30][14]:=r942
+rates[30][22]:=r950
+rates[30][26]:=r954
+rates[30][29]:=r957
+rates[30][32]:=r960
+rates[31][15]:=r975
+rates[31][23]:=r983
+rates[31][27]:=r987
+rates[31][29]:=r989
+rates[31][32]:=r992
+rates[32][16]:=r1008
+rates[32][24]:=r1016
+rates[32][28]:=r1020
+rates[32][30]:=r1022
+rates[32][31]:=r1023
+
+rate_matrix := fnFreeK(transition_rates=rates, rescaled=false, matrixExponentialMethod="eigen")
+root_freq <- simplex(1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1 ,1)
+
+
+###############
+# create the model
+###############
+morpho_ctmc ~ dnPhyloCTMC(Q=rate_matrix, tree=psi, rootFreq=root_freq, branchRates=1.0, type="NaturalNumbers")
+
+# clamp data
+morpho_ctmc.clamp(char_data)
+
+### workspace model wrapper ###
+mymodel = model(rate_matrix)
+
+# create the monitors
+# model param to file monitor
+monitors[++mni] = mnModel(filename="output/" + analysis_name + ".log", printgen=log_freq)
+# model param to screen monitor
+monitors[++mni] = mnScreen(printgen=log_freq)
+# tree monitor fro treetrace awith Stocj mapping
+#monitors[++mni] = mnFile(filename="output/mk1.trees", printgen=10, psi)
+monitors[++mni] = mnJointConditionalAncestralState(filename="output/" + analysis_name + ".asr", printgen=1000, tree=psi, ctmc=morpho_ctmc, type="NaturalNumbers")
+# Stoch mapping monitor
+monitors[++mni]= mnStochasticCharacterMap(ctmc=morpho_ctmc, filename="output/" + analysis_name + ".stm", printgen=1000)
+
+
+###############
+# run MCMC analysis
+###############
+mymcmc = mcmc(mymodel, monitors, moves, nruns=1, moveschedule="random")
+
+### pre-burnin to tune the proposals
+mymcmc.burnin(generations=3000, tuningInterval=1000)
+
+### run the MCMC
+mymcmc.run(mcmc_gen)
+
+mymcmc.operatorSummary()
+
+
+#######################################

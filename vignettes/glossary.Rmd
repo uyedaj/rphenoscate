@@ -1,0 +1,42 @@
+---
+title: "Glossary"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+**Annotation** - Ontology terms tagged to free-text such as a character description or a taxon name
+
+**Character** - Feature specified in a morphological phylogenetic matrix
+
+**Entity** - An organismal feature, such as an anatomical part, function, or behavior. In Phenoscape, anatomical entities are represented by terms from the [Uberon anatomy ontology]
+
+**Inference** - A statement (in our case, a phenotype statement) that is a logical consequence from an asserted fact or facts. For example, the presence of a pectoral fin can be inferred from the presence of pectoral fin rays because the term ‘pectoral fin ray’ in the anatomy ontology has a part_of relationship to ‘pectoral fin’.
+
+**KB** - [Phenoscape Knowledgebase]
+
+**Quality** - A term that describes how an entity varies in its features (e.g., shape, size, color…). Phenotypic qualities are represented by terms from the [PATO ontology]
+
+**Ontology** - Ontologies are knowledge graphs that represent the knowledge for a particular domain (e.g., anatomy, taxonomy, environment), with terms (concepts) linked by well-defined relationships.
+
+**OntoTrace** - A KB tool that automatically generates synthetic presence/absence supermatrices from phenotypes in the KB. For any anatomical entity and taxon, OntoTrace produces a matrix containing both author-asserted and inferred presence/absence characters.
+
+**Phenotype** - An annotation of a phenotypic description with terms from an anatomy ontology and quality ontology.
+
+**Taxon annotations** - Phenotypes that are linked to taxa. In Phenoscape, taxa are represented by terms from the [Vertebrate Taxonomy Ontology]
+
+**Trait** - An observable feature of an organism.
+
+
+[Phenoscape Knowledgebase]: https://kb.phenoscape.org/
+[Uberon anatomy ontology]: http://www.ontobee.org/ontology/UBERON
+[PATO ontology]: http://www.ontobee.org/ontology/PATO
+[Vertebrate Taxonomy Ontology]: http://www.ontobee.org/ontology/VTO
