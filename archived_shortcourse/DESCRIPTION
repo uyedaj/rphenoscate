@@ -1,0 +1,50 @@
+Package: SCATE.shortcourse
+Title: Short Course on Phylogenetic Comparative Analysis of Integrated Anatomical Traits
+Version: 0.1.1
+Authors@R: 
+    c(person("Hilmar", "Lapp",
+             email = "hilmar.lapp@duke.edu",
+             role = c("aut", "cre"),
+             comment = c(ORCID="0000-0001-9107-0714")
+           ),
+      person("Wasila", "Dahdul",
+             email = "Wasila.Dahdul@usd.edu",
+             role = c("aut"),
+             comment = c(ORCID="0000-0003-3162-7490")
+           ),
+      person("Josef", "Uyeda",
+             email = "juyeda@vt.edu",
+             role = c("aut"),
+             comment = c(ORCID="0000-0003-4624-9680")
+           ))
+Description: Encapsulates the material for the short course on _Phylogenetic
+  comparative analysis of integrated anatomical traits_ in the form of an R package.
+  This ensures that by installing the course package, all R dependencies are
+  installed and available in the necessary versions.
+License: CC0 + file LICENSE.md
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/phenoscape/scate-shortcourse, https://phenoscape.org/scate-shortcourse/
+BugReports: https://github.com/phenoscape/scate-shortcourse/issues
+Depends:
+    R (>= 3.5.0),
+    RNeXML,
+    rphenoscape (>= 0.2.12),
+    treeplyr
+Imports:
+    igraph,
+    corHMM,
+    ontologyIndex,
+    knitr,
+    rmarkdown,
+    pracma, 
+    phytools,
+    RColorBrewer,
+    magrittr
+Suggests: 
+    doParallel,
+    foreach,
+    tidyverse
+VignetteBuilder: knitr
+Remotes: phenoscape/rphenoscape
+RoxygenNote: 6.1.1

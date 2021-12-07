@@ -1,35 +1,42 @@
-Package: SCATE.shortcourse
-Title: Short Course on Phylogenetic Comparative Analysis of Integrated Anatomical Traits
+Package: rphenoscate
+Title: Semantics for Comparative Analyses of Trait Evolution
 Version: 0.1.1
 Authors@R: 
-    c(person("Hilmar", "Lapp",
-             email = "hilmar.lapp@duke.edu",
+    c(person("Porto", "Diego",
+             email = "diegosporto@vt.edu",
              role = c("aut", "cre"),
-             comment = c(ORCID="0000-0001-9107-0714")
+             comment = c(ORCID="0000-0002-1657-9606")
            ),
-      person("Wasila", "Dahdul",
-             email = "Wasila.Dahdul@usd.edu",
+      person("Tarasov", "Sergei",
+             email = "sergei.tarasov@helsinki.fi",
              role = c("aut"),
-             comment = c(ORCID="0000-0003-3162-7490")
+             comment = c(ORCID="0000-0001-5237-2330")
            ),
+	  person("Hilmar", "Lapp",
+             email = "hilmar.lapp@duke.edu",
+             role = c("aut"),
+             comment = c(ORCID="0000-0001-9107-0714")
+           ),		   
       person("Josef", "Uyeda",
              email = "juyeda@vt.edu",
              role = c("aut"),
              comment = c(ORCID="0000-0003-4624-9680")
            ))
-Description: Encapsulates the material for the short course on _Phylogenetic
-  comparative analysis of integrated anatomical traits_ in the form of an R package.
-  This ensures that by installing the course package, all R dependencies are
-  installed and available in the necessary versions.
-License: CC0 + file LICENSE.md
+Description: Provides tools for semantic-aware evolutionary analyses of anatomical traits.
+  It integrates semantic tools from rphenoscape and the whole-anatomy approach from PARAMO into a common framework for studying integrated anatomical traits. 
+  Current available capabilities include: setting structured Markov models for sets of characters based on a dependency matrix; 
+  recoding dependent traits as a single multistate character; building files to perform analyses on RevBayes or corHMM;
+  visualizing dependency structure among characters with graphs and stochastic maps.
+License: GPL (>= 2)
 Encoding: UTF-8
+Language: en-US
 LazyData: true
-URL: https://github.com/phenoscape/scate-shortcourse, https://phenoscape.org/scate-shortcourse/
-BugReports: https://github.com/phenoscape/scate-shortcourse/issues
+URL: https://github.com/uyedaj/rphenoscate
+BugReports: https://github.com/uyedaj/rphenoscate/issues
 Depends:
     R (>= 3.5.0),
     RNeXML,
-    rphenoscape (>= 0.2.12),
+    rphenoscape (>= 0.2.16),
     treeplyr
 Imports:
     igraph,
@@ -46,5 +53,5 @@ Suggests:
     foreach,
     tidyverse
 VignetteBuilder: knitr
-Remotes: phenoscape/rphenoscape
-RoxygenNote: 6.1.1
+Remotes: uyedaj/rphenoscate
+RoxygenNote: 7.1.1
