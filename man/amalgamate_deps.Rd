@@ -10,8 +10,8 @@ amalgamate_deps(dep_mat)
 \item{dep_mat}{A dependency matrix}
 }
 \value{
-A list of: 
-$M Transition matrices for the Structured-Hidden State Markov Models that can be run in RevBayes, 
+A list of:
+$M Transition matrices for the Structured-Hidden State Markov Models that can be run in RevBayes,
 corHMM or other tools
 $graph The full graph of all dependencies among traits
 $con.comp A list of the group membership etc. produced by `igraph::components`
