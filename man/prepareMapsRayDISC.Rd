@@ -2,10 +2,10 @@
 % Please edit documentation in R/paramo_functions.R
 \name{prepareMapsRayDISC}
 \alias{prepareMapsRayDISC}
-\title{Function for processing RevBayes stochastic maps (V2).}
+\title{Function for processing corHMM stochastic maps.}
 \usage{
 prepareMapsRayDISC(td, simmaps, discretization_level = 100)
 }
 \description{
-Function for processing RevBayes stochastic maps (V2).
+Function for processing corHMM stochastic maps.
 }
