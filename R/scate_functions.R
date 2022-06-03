@@ -11,14 +11,14 @@
 #' Obtains a presence-absence dependency matrix when using external ontologies
 #'
 #' @param td A treeplyr treedata object with characters to recode
-#' @param ONTO An 'ontology_index' object of an external ontology imported in R using the package 'ontologyIndex' 
+#' @param ONTO An 'ontology_index' object of an external ontology imported in R using the package 'ontologyIndex'
 #' @param tax.col Indicates if the first column of the data set contains taxon names
 #'
 #' @export
 dep_matrix <- function(td, ONT, tax.col = F){
 
   m <- as.data.frame(td$dat)
-  
+
   if(tax.col == T){ terms <- colnames(m)[-1] }else{ terms <- colnames(m) }
 
   iris <- names(ONT$name[match(terms, ONT$name)])
@@ -45,7 +45,7 @@ dep_matrix <- function(td, ONT, tax.col = F){
 auto_dep_matrix <- function(td, tax.col = F){
 
   m <- as.data.frame(td$dat)
-  
+
   if(tax.col == T){ mat <- as.matrix(dist(match(colnames(m)[-1], colnames(m)[-1]), diag = T, upper = T)) }else{
     mat <- as.matrix(dist(match(colnames(m), colnames(m)), diag = T, upper = T))
   }
@@ -912,9 +912,9 @@ amalgamated_simmaps_corHMM <- function(fits, ...){
 	colnames(new.row) <- colnames(xx)
 	xx <- rbind(xx, new.row)
     stmp <- corHMM::makeSimmap(td$phy, xx, model=Q, rate.cat = 1, ...)
-	
+
 	trees[[i]] <- lapply(stmp, function(x) x <- phytools::drop.tip.simmap(x, "...delete...") )
-	
+
   }
   return(trees)
 }
@@ -1275,7 +1275,7 @@ as_matrixRB_symbolic <- function(Q, symb='q'){
 #'
 #' @param Q rate matrix
 #' @return matrix
- 
+
 #'
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
