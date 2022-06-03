@@ -1,0 +1,139 @@
+---
+title: "char_amalgama"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{char_amalgama}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Constructing Character Hierarchies
+
+This vignette shows how to construct rate matrix $Q$, for inapplicable and anatomically dependent morphological characters, to use it in phylogenetic inference. It use several character hierarchies as examples (Fig. 1).
+
+To construct a rate matrix for a given character hierarchy, fist, you need to draw (e.g., on a paper) a dependency diagram (e.g., Fig. 1B-E) that reflects hierarchical relationship between characters and then apply the DDA (Dependency Diagram Amalgamation) algorithm manually.
+
+The dependency diagram consists of three building blocks (Fig. 1F): (i) absent/present ($a/p$) character; (ii) qualitative character; and (iii) dependency arrow. The $a/p$ character includes two subblocks: the $a/p-node$ and $p-node$, which are the character itself and its state $p$ respectively. In the diagram, the $a/p$ and qualitative characters are interlinked by means of a dependency arrow to reflect hierarchical relationships; specifically, the dependency arrow links the $p-node$ of a controlling character with a dependent character (that can be either from the  $a/p$ or qualitative category). 
+
+The DDA algorithm (Fig. 1B) works by taking the diagram and traversing it from tips to root in the topologically ordered manner; during the traversing the DDA amalgamates characters. The amalgamations occur only at $a/p-$ or $p-nodes$ using the following rules:
+
+
+1. At each $p-node$ combine all child characters via SMM amalgamation.
+2. At each $a/p-node$ conditionally combine all child characters via:
+   * $ED_{ql}$ amalgamation if the children are qualitative characters.
+   * $ED_{ap}$ amalgamation if the children are a/p characters.
+   * The mixture of $ED_{ql}$ and $ED_{ap}$ amalgamations if the children are a/p and qualitative characters; this requires appropriate construction of the embedded dependency vector ($\boldsymbol{\phi_{d}}$) to match the dependencies between states.
+3. The amalgamation a the root of the dependency diagram yields the desired final rate matrix.
+
+The R code for manual amalgamations with DDA algorithm is given below for the four cases from Fig. 1.
+
+
+
+![Fig. 1. **A)** Complex hierarchy of three a/p and four qualitative characters. **B)** Dependency Diagram for (A); "#" indicates the sequence of steps in DDA algorithm; $SMM()$ idicates SMM amalgamation; $ED_{ap}()$ and $ED_{ql}()$ indicate a/p and qualitative types of ED amalgamations respectively. **C-D)** Dependency Diagram for three tail cases.  ](Fig_1_vignette.png){width=90%}
+
+## Complex Hierrachy (Fig. 1B)
+ 
+In this amalgamation, we assume that qualitative and a/p characters evolve at different rates: 2 and 1 respectively. We amalgamate three a/p and four qualitative characters, and print the $Q$ matrix to used in RevBayes.
+
+```{r setup}
+library(rphenoscate)
+```
+
+
+```{r}
+# STEP #1
+# Q can be defined as
+C1 <-matrix(c(-1, 1, 1, -1), 2, 2, byrow = TRUE, dimnames =list( c("r", "b"), c("r", "b")) )
+# or using the special function initQ
+C1 <- initQ(c('r', 'b'), 1)
+S <- initQ(c('o', 'c'), 1)
+step1 <- amaSMM( C1, S)
+
+# STEP #2
+# armor: A* absent, A present
+A <- initQ(c('A*', 'A'), 2)
+step2 <- amaED(A, step1, type = "ql")
+
+# STEP #3
+C2 <- initQ(c("g", "p"), 1)
+
+# STEP #4
+# spine: S* absent, S present
+Sp <- initQ(c('S*', 'S'), 2)
+step4 <- amaED(Sp, C2, type = "ql")
+
+# STEP #5
+# size
+Si <- initQ(c("l", "s"), 1)
+# !!! For automatic construction of phi in step 6, the order of SMM amalgamation is important: first place a/p characters in amaSMM() and only then the qualitative ones.
+step5 <- amaSMM(step2, step4, Si)
+
+# STEP #6
+# tail: T* absent, T present
+Tl <- initQ(c('T*', 'T'), 2)
+step6 <- amaED(Tl, step5, type = "ap")
+
+# OR with manual phi
+phi <- c(1,1, rep(0, 28))
+step6 <- amaED(Tl, step5, phi=phi)
+
+dim(step6)
+
+# to RevBayes
+Qrb1 <- as_matrixRB(step6)
+Qrb2 <- as_matrixRB(step6, symb = 'q')
+
+# copy/paste this matrices
+cat(Qrb1)
+cat(Qrb2)
+
+# or save
+#cat(Qrb2, file='Qrb2.txt')
+```
+
+
+## Tail Color Case (Fig. 1C)
+
+```{r}
+C <- initQ(c("r", "b"), 1)
+Tl <- initQ(c('T*', 'T'), 1)
+
+Qtc <- amaED(Tl, C, type = "ql")
+cat(as_matrixRB(Qtc))
+```
+
+
+## Tail Armor Case (Fig. 1D)
+
+```{r}
+C1 <- initQ(c("r", "b"), 1)
+A <- initQ(c('A*', 'A'), 2)
+Tl <- initQ(c('T*', 'T'), 2)
+
+step1 <- amaED(A, C, type = "ql")
+Qta <- amaED(Tl, step1, type = "ap")
+cat(as_matrixRB(Qta, symb='q'))
+```
+
+## Tail Color + Tail Color Case (Fig. 1E)
+
+```{r}
+C1 <- initQ(c("r", "b"), 1)
+A <- initQ(c('A*', 'A'), 2)
+C <- initQ(c("b", "r"), 1)
+Tl <- initQ(c('T*', 'T'), 2)
+
+step1 <- amaED(A, C, type = "ql")
+step2 <- amaSMM(step1, C)
+Qac <- amaED(Tl, step2 , type = "ap")
+cat(as_matrixRB(Qac, symb='q'))
+```
+
+
