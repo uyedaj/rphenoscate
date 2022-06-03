@@ -4,7 +4,7 @@
 \alias{makeTraitTree}
 \title{Makes a trait tree using semantic similarity.}
 \usage{
-makeTraitTree(td, skip = 1:2)
+makeTraitTree(td, external = F, ONT, method = "nj")
 }
 \description{
 Makes a trait tree using semantic similarity.

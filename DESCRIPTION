@@ -1,10 +1,10 @@
 Package: rphenoscate
 Title: Semantics for Comparative Analyses of Trait Evolution
 Version: 0.1.1
-Authors@R: 
+Authors@R:
     c(person("Porto", "Diego",
-             email = "diegosporto@vt.edu",
-             role = c("aut", "cre"),
+             email = "diegosporto@gmail.com",
+             role = c("aut"),
              comment = c(ORCID="0000-0002-1657-9606")
            ),
       person("Tarasov", "Sergei",
@@ -16,15 +16,15 @@ Authors@R:
              email = "hilmar.lapp@duke.edu",
              role = c("aut"),
              comment = c(ORCID="0000-0001-9107-0714")
-           ),		   
+           ),
       person("Josef", "Uyeda",
              email = "juyeda@vt.edu",
-             role = c("aut"),
+             role = c("aut", "cre"),
              comment = c(ORCID="0000-0003-4624-9680")
            ))
 Description: Provides tools for semantic-aware evolutionary analyses of anatomical traits.
-  It integrates semantic tools from rphenoscape and the whole-anatomy approach from PARAMO into a common framework for studying integrated anatomical traits. 
-  Current available capabilities include: setting structured Markov models for sets of characters based on a dependency matrix; 
+  It integrates semantic tools from rphenoscape and the whole-anatomy approach from PARAMO into a common framework for studying integrated anatomical traits.
+  Current available capabilities include: setting structured Markov models for sets of characters based on a dependency matrix;
   recoding dependent traits as a single multistate character; building files to perform analyses on RevBayes or corHMM;
   visualizing dependency structure among characters with graphs and stochastic maps.
 License: GPL (>= 2)
@@ -35,23 +35,21 @@ URL: https://github.com/uyedaj/rphenoscate
 BugReports: https://github.com/uyedaj/rphenoscate/issues
 Depends:
     R (>= 3.5.0),
-    RNeXML,
-    rphenoscape (>= 0.2.16),
-    treeplyr
+    treeplyr,
+    rphenoscape
 Imports:
-    igraph,
-    corHMM,
-    ontologyIndex,
-    knitr,
-    rmarkdown,
-    pracma, 
+    ape,
     phytools,
-    RColorBrewer,
-    magrittr
-Suggests: 
-    doParallel,
-    foreach,
-    tidyverse
+    corHMM,
+    igraph,
+    pracma,
+    dplyr,
+    tidyr,
+    knitr
+Suggests:
+    tidyverse,
+    ontologyIndex,
+    rmarkdown
 VignetteBuilder: knitr
 Remotes: uyedaj/rphenoscate
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0

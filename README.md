@@ -1,13 +1,14 @@
 # RPhenoscate: Semantics for Comparative Analyses of Trait Evolution # 
 
 -   Authors: Diego Porto, Sergei Tarasov, Hilmar Lapp, Josef Uyeda
--   Maintainer: Diego Porto
+-   Maintainer: Josef Uyeda
 
 
--   Install package using devtools:
+-   Install rphenoscape and rphenoscate packages using devtools:
 ```
 install.packages("devtools")
 require(devtools)
+install_github("phenoscape/rphenoscape")
 install_github("uyedaj/rphenoscate")
 ```
 
@@ -17,7 +18,7 @@ https://github.com/uyedaj/rphenoscate/issues
 
 
 -   Tutorial and examples:
-https://github.com/uyedaj/rphenoscate/tutorial.Rmd
+https://github.com/uyedaj/rphenoscate/tutorials
 
 
 -   Manuscript describing package utilities:

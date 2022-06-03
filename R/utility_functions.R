@@ -1,4 +1,86 @@
+#####################################
+##### UPDATE: Diego (2022)      #####
+#####################################
 
+#' Utility function for process an ontoFAST object
+#'
+#' @param ontoFAST A named list produced by the function `annot_all_chars` from the package ontoFAST
+#' @param ONTO An 'ontology_index' object of an external ontology imported in R using the package 'ontologyIndex'
+#' @param s.filter Indicates if to use a strict filter of terms
+#' @param g.filter Indicates if to use a general filter of terms
+#' @param s.terms A character vector with particular ontology terms to be sorted out
+#' @param g.terms A character vector with general terms or expressions to be sorted out
+#'
+#' @export
+process.ontofast <- function(ontoFAST, ONT, s.filter = F, g.filter = F, s.terms, g.terms){
+
+  M <- lapply(ontoFAST, function(x) ONT$name[names(ONT$name) %in% x] )
+
+  if(s.filter == T){
+
+    M <- lapply(M, function(x) x[!x %in% s.terms])
+
+  }
+
+  if(g.filter == T){
+
+    for(j in 1:length(g.terms)){
+
+      M <- lapply(M, function(x) x[!grepl(x, pattern = g.terms[j])] )
+
+    }
+
+  }
+
+  for(i in 1:length(M)){
+
+    print(paste0("CHAR_", i, ": ", names(M)[i]))
+    print(rbind(1:length(M[[i]]), M[[i]]))
+
+    x <- as.numeric(readline("Choose a number or 0 to skip: "))
+
+    if(x > 0){ M[[i]] <- M[[i]][x] }else{
+
+      y <- readline("Do you want to try to find a more suitable term? yes or no: ")
+
+      if(y == "yes"){
+
+        z <- as.character(readline("Please, choose a term from your selected ontology (no quotes!): "))
+
+        candidates <- ONT$name[grepl(ONT$name, pattern = z)]
+
+        if(length(candidates) > 1){
+
+          print(cbind(candidates, 1:length(candidates)))
+
+          w <- as.numeric(readline("Please, select one of the terms from the list: "))
+
+          M[[i]] <- candidates[w]
+
+          names(M)[i] <- candidates[w]
+
+        }else{
+
+          M[[i]] <- candidates
+          names(M)[i] <- candidates
+
+          }
+
+
+      }
+
+    }
+
+  }
+
+  return(M)
+
+}
+
+
+#########################
+##### OLD FUNCTIONS #####
+#########################
 
 #' Utility function for displaying the number of matching species and average value across them from an Ontotrace matrix.
 #'
