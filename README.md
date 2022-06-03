@@ -1,4 +1,4 @@
-# RPhenoscate: Semantics for Comparative Analyses of Trait Evolution # 
+# RPhenoscate: Semantics for Comparative Analyses of Trait Evolution #
 
 -   Authors: Diego Porto, Sergei Tarasov, Hilmar Lapp, Josef Uyeda
 -   Maintainer: Diego Porto
@@ -8,7 +8,8 @@
 ```
 install.packages("devtools")
 require(devtools)
-install_github("uyedaj/rphenoscate")
+install_github("phenoscape/rphenoscape")
+install_github("uyedaj/rphenoscate", build_vignettes = TRUE)
 ```
 
 
