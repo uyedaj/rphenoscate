@@ -4,6 +4,297 @@
 ##### General utility functions #####
 #####################################
 
+#####################################
+##### UPDATE: Diego (2022)      #####
+#####################################
+
+#' Obtains a presence-absence dependency matrix when using external ontologies
+#'
+#' @param td A treeplyr treedata object with characters to recode
+#' @param ONTO An 'ontology_index' object of an external ontology imported in R using the package 'ontologyIndex'
+#' @param tax.col Indicates if the first column of the data set contains taxon names
+#'
+#' @export
+dep_matrix <- function(td, ONT, tax.col = F){
+
+  m <- as.data.frame(td$dat)
+
+  if(tax.col == T){ terms <- colnames(m)[-1] }else{ terms <- colnames(m) }
+
+  iris <- names(ONT$name[match(terms, ONT$name)])
+
+  z <- sapply(iris, function(x) intersection_with_descendants(ONT, roots = x, terms = iris) )
+
+  mat <- do.call(cbind, lapply(z, function(x) iris %in% x ))
+  mat <- mat*1
+  diag(mat) <- NA
+
+  colnames(mat) <- rownames(mat) <- terms
+
+  return(mat)
+
+}
+
+
+#' Obtains a 'auto-dependency' matrix when amalgamating characters referring to the same anatomical entity
+#'
+#' @param td A treeplyr treedata object with characters to recode
+#' @param tax.col Indicates if the first column of the data set contains taxon names
+#'
+#' @export
+auto_dep_matrix <- function(td, tax.col = F){
+
+  m <- as.data.frame(td$dat)
+
+  if(tax.col == T){ mat <- as.matrix(dist(match(colnames(m)[-1], colnames(m)[-1]), diag = T, upper = T)) }else{
+    mat <- as.matrix(dist(match(colnames(m), colnames(m)), diag = T, upper = T))
+  }
+  mat[mat > 0] <- 2
+  mat[mat == 0] <- 1
+  mat[mat == 2] <- 0
+  mat[upper.tri(mat)] <- 0
+  diag(mat) <- NA
+  if(tax.col == T){ colnames(mat) <- rownames(mat) <- colnames(m)[-1] }else{ colnames(mat) <- rownames(mat) <- colnames(m) }
+
+  return(mat)
+
+}
+
+
+#' Amalgamates and recodes traits using the matrices returned by amalgamate_deps_gen
+#'
+#' @param td A treeplyr treedata object with characters to recode
+#' @param amal.deps A list produced by the function `amalgamate_deps_gen`
+#' @param tax.col Indicates if the first column of the data set contains taxon names
+#'
+#' @export
+recode_traits_gen <- function(td, amal.deps, tax.col = T)
+{
+
+  # Format as data.frame #
+  td$dat <- as.data.frame(td$dat)
+
+  ## Prepare data ##
+  # Get vectors for new traits #
+  if(tax.col == T){ new.traits <- lapply(amal.deps$groups, function(x) { td$dat[, (x + 1)] } ) }else{
+
+    new.traits <- lapply(amal.deps$groups, function(x) { td$dat[,x] } )
+
+  }
+
+  # Get index of non-dependent and dependent traits #
+  nondep.index <- !sapply(new.traits, is.data.frame)
+  dep.index <- sapply(new.traits, is.data.frame)
+
+  ## Process non-dependent traits ##
+  # Get non-dependent traits #
+  nondep.traits <- new.traits[nondep.index]
+
+  # Recode inapplicables for non-dependent traits #
+  nondep.traits <- lapply(nondep.traits, function(x) gsub(x, pattern = "-", replacement = "?") )
+  # OBS.: "-" (inapplicables) in non-dependent traits will be interpreted as "?" (missings) #
+
+  # Get missing for non-dependent traits #
+  miss.states <- lapply(amal.deps$states[nondep.index], function(x) paste0(x, collapse = "&") )
+
+  # Recode missing for non-dependent traits #
+  nondep.traits <- mapply(x = nondep.traits, y = miss.states, function(x,y){ gsub(x, pattern = "\\?", replacement = y) }, SIMPLIFY = F)
+
+  ## Process dependent traits ##
+  # OBS.: In this context 'dependency' means simply that two or more traits are annotated with the same ontology term.
+  # For this more general type of dependency SMM models are used and traits recoded accordingly.
+  # However, 'true' dependencies can also occur (i.e., parthood-relations or property-instantiation).
+  # They require more complex models. In these cases, EDql and EDap models are used.
+
+  # Get dependent traits #
+  dep.traits <- new.traits[dep.index]
+
+  # Merge states of dependent traits #
+  dep.traits <- lapply(dep.traits, function(x) apply(x, 1, paste0, collapse = "") )
+
+  # Get observed state combinations for dependent traits #
+  obs.states <- lapply(dep.traits, function(x) unique(x) )
+
+  # Get all possible state combinations for dependent traits #
+  dep.states <- amal.deps$states[dep.index]
+
+  # Get recoded states for dependent traits #
+  recode.states <- lapply(dep.states, function(x) paste(0:(length(x) - 1)) )
+
+  # Recoding of inapplicable states for dependent traits #
+  for(i in 1:length(dep.traits)){
+
+    if(length(grep(dep.traits[[i]], pattern = "0-")) > 0){
+
+      dep.traits[[i]] <- gsub(dep.traits[[i]], pattern = "0-", replacement = "0")
+
+    }
+
+    if(length(grep(dep.traits[[i]], pattern = "1-")) > 0){
+
+      dep.traits[[i]] <- gsub(dep.traits[[i]], pattern = "0\\1(.)", replacement = "1\\1")
+      dep.traits[[i]] <- gsub(dep.traits[[i]], pattern = "1-", replacement = "0")
+
+    }
+
+  }
+
+  # Recode all non-missings from dependent traits #
+  new.states <- mapply(x = recode.states, y = dep.traits, z = dep.states, function(x,y,z) {x[match(y,z)]}, SIMPLIFY = F )
+
+  # Get all elements with missing from depend traits #
+  miss.states <- mapply(x = dep.traits, y = new.states, function(x,y) { x[is.na(y)] } )
+
+  # Reorganize missing labels "?" #
+  miss.states <- lapply(miss.states, function(x) { gsub(x, pattern = "\\?", replacement = ".") })
+
+  # Get all recoded states from elements with missing from dependent traits #
+  miss.states <- mapply(x = miss.states, y = recode.states, z = dep.states, function(x,y,z) { sapply(x, function(w) paste0(y[grepl(z, pattern = w)], collapse = "&") ) } )
+
+  # Extract traits with missings from dependent traits #
+  new.states.miss <- new.states[sapply(miss.states, is.character)]
+
+  # Extract recoded states for traits with missing from dependent traits #
+  miss.states <- miss.states[sapply(miss.states, is.character)]
+
+  # Recode traits with missing from dependent traits #
+  for(i in 1:length(new.states.miss)) { new.states.miss[[i]][is.na(new.states.miss[[i]])] <- miss.states[[i]] }
+
+  # Join all recoded dependent traits #
+  new.states[sapply(new.states, function(x) { any(is.na(x)) } )] <- new.states.miss
+
+  # Join all recoded traits #
+  new.traits[dep.index] <- new.states
+  new.traits[nondep.index] <- nondep.traits
+
+  # Build final data set #
+  M <- as.data.frame(do.call(cbind, new.traits))
+  td <- treeplyr::make.treedata(td$phy, cbind(td$dat[,1],M))
+
+  # Return results #
+  return(td)
+
+}
+
+
+#' Generates a model for traits given a dependency matrix when using external ontologies
+#'
+#' @param td A treeplyr treedata object with characters to amalgamate
+#' @param dep.mat A dependency matrix produced by the function `dep_matrix`
+#' @param mode Indicates whether to perform automatic amalgamations using SMM models ('auto') or
+#' to check for different types of dependencies using ED models ('check'). See Tarasov (2021) for details
+#' @param state.data A list with information about character states descriptions. If mode = 'check', the function
+#' will try to automatically check the type of trait dependency based of state descriptions
+#' @param tax.col Indicates if the first column of the data set contains taxon names
+#'
+#' @return A list of:
+#' $traits The old trait names that were amalgamated
+#' $drop The dependent traits that were dropped after amalgamation
+#' $groups The groups of traits that were amalgamated
+#' $M Transition matrices for the Markov Models (SMM or ED) that can be run in RevBayes, corHMM or other tools
+#' $states A list providing the final amalgamated states
+#' $state.data A list providing the character state descriptions for the amalgamated traits
+#'
+#' @export
+amalgamate_deps_gen <- function(td, dep.mat, mode = c("auto", "check"), state.data, tax.col = T)
+{
+
+  # Format as data.frame #
+  td$dat <- as.data.frame(td$dat)
+
+  # Create list to store results #
+  amal.deps <- list()
+
+  # Get all trait terms #
+  if(tax.col == T){ amal.deps$traits <- colnames(td$dat)[-1] }else{ amal.deps$traits <- colnames(td$dat) }
+
+  # Get total number of traits #
+  N <- length(amal.deps$traits)
+
+  # Get traits to drop based on dependencies #
+  amal.deps$drop <- rowSums(dep.mat, na.rm = T)
+
+  # Get groups of traits to keep #
+  amal.deps$groups <- apply(dep.mat, 2, function(x) which(x != 0 | is.na(x)) )
+
+  # Create several lists to store information #
+  amal.deps$M <- list()
+  amal.deps$states <- list()
+  amal.deps$state.data <- list()
+
+  ## Automatic DDA algorithm  across matrix (tentatively!) ##
+  for(i in 1:N){
+
+    # Get a single trait (or groups of traits to be amalgamated) #
+    if(tax.col == T){ states <- td$dat[,(amal.deps$groups[[i]] + 1)] }else{ states <- td$dat[,amal.deps$groups[[i]]] }
+
+    # Get state information #
+    amal.deps$state.data[[i]] <- state.data[amal.deps$groups[[i]]]
+
+    # Process groups of dependent traits #
+    if(length(dim(states)) > 0){
+
+      states <- lapply(apply(states, 2, unique, simplify = F), function(x) x[order(x)] )
+      names(states) <- names(amal.deps$groups[[i]])
+      states <- sapply(states, function(x) suppressWarnings(x[!is.na(as.numeric(x))]),  simplify = F )
+
+      # Set initial Q matrices #
+      M <- lapply(states, function(x) initQ(x,1) )
+
+      # Decide between 'automatic' amalgamation (SMM) of 'check' amalgamation (evaluates if SMM or ED models) #
+      if(mode == "auto"){ amal.deps$M[[i]] <- do.call(amaSMM, M) }
+      if(mode == "check"){
+
+        test <- sum(unlist(sapply(state.data[amal.deps$groups[[i]]], function(x) as.numeric(grep(x, pattern = "absent")) )))
+
+
+        # Decide between SMM or ED models #
+        if(test > 0){
+
+          # ED-quality model #
+          amal.deps$M[[i]] <- do.call(amaED, setNames(c(M, "ql"), c("Qc", rep("Qd", (length(M) - 1)), "type")))
+
+          # OBS.: Should include ED-ap models (but complex, requires +3 traits) #
+
+        }else{ amal.deps$M[[i]] <- do.call(amaSMM, M) } # SMM-ind models #
+
+      }
+
+    }else{
+
+      # Single traits (non-dependent) #
+      states <- unique(states)[order(unique(states))]
+      states <- suppressWarnings(states[!is.na(as.numeric(states))])
+
+      amal.deps$M[[i]] <- initQ(states,1)
+
+    }
+
+  }
+
+  # Set names of Q matrices #
+  names(amal.deps$M) <- names(amal.deps$groups)
+
+  # Adjust names #
+  names(amal.deps$state.data) <- names(amal.deps$M)
+
+  # cleaning #
+  amal.deps$groups <- amal.deps$groups[!amal.deps$drop]
+  amal.deps$M <- amal.deps$M[!amal.deps$drop]
+  amal.deps$state.data <- amal.deps$state.data[!amal.deps$drop]
+
+  # Get states #
+  amal.deps$states <- lapply(amal.deps$M, function(x) colnames(x) )
+
+  # Return results #
+  return(amal.deps)
+
+}
+
+
+#########################
+##### OLD FUNCTIONS #####
+#########################
 
 #' Recodes a treedata object based on amalgamated characters.
 #'
@@ -591,7 +882,7 @@ amalgamated_fits_corHMM <- function(td, amalgamations, ...){
     new.row <- data.frame("...delete...", paste(0:(ncol(.M)-1), collapse="&"))
     colnames(new.row) <- colnames(dat)
     .dat <- rbind(dat, new.row)
-    fits[[i]] <- corHMM::rayDISC(.phy, .dat, rate.mat = .M, ...)
+    fits[[i]] <- corHMM::rayDISC(.phy, .dat, rate.mat = .M, model = "ARD", ...)
   }
   attributes(fits)$td <- td
   names(fits) <- colnames(td$dat)
@@ -599,10 +890,10 @@ amalgamated_fits_corHMM <- function(td, amalgamations, ...){
 }
 
 
-#' A wrapper for phytools that draws stochastic character maps given a corHMM fit.
+#' A wrapper for corHMM that draws stochastic character maps given a corHMM fit.
 #'
 #' @param fits A list produced by `amalgamated_fits_corHMM`
-#' @param ... Additional arguments passed to `phytools::make.simmap`
+#' @param ... Additional arguments passed to `corHMM::makeSimmap`
 #'
 #' @details This function takes the models produced from `amalgamated_fits_corHMM` and
 #' uses them to generate stochastic character maps.
@@ -610,21 +901,23 @@ amalgamated_fits_corHMM <- function(td, amalgamations, ...){
 #' @return A list of stochastic character maps for each character in the dataset
 #'
 #' @export
-amalgamated_simmaps_phytools <- function(fits, ...){
+amalgamated_simmaps_corHMM <- function(fits, ...){
   td <- attributes(fits)$td
   trees <- list()
   for(i in 1:ncol(td$dat)){
-    xx <- fits[[i]]$tip.states[1:length(td$phy$tip.label),]
-    root <- fits[[i]]$tip.states[length(td$phy$tip.label)+1,]
-    rownames(xx) <- td$phy$tip.label
+    xx <- as.data.frame(cbind(td$phy$tip.label, as.character(td$dat[[i]])))
     Q <- fits[[i]]$solution
-    Q[is.na(Q)] <- 0
-    diag(Q) <- -1*apply(Q, 1, sum)
-    trees[[i]] <- phytools::make.simmap(td$phy, xx, Q=Q, pi=root, ...)
+	phy <- phytools::bind.tip(td$phy, "...delete...", edge.length = 0, where=length(td$phy$tip.label)+1)
+	new.row <- data.frame("...delete...", paste(0:(ncol(Q)-1), collapse="&"))
+	colnames(new.row) <- colnames(xx)
+	xx <- rbind(xx, new.row)
+    stmp <- corHMM::makeSimmap(td$phy, xx, model=Q, rate.cat = 1, ...)
+
+	trees[[i]] <- lapply(stmp, function(x) x <- phytools::drop.tip.simmap(x, "...delete...") )
+
   }
   return(trees)
 }
-
 
 
 #####################################
@@ -964,21 +1257,25 @@ as_matrixRB_symbolic <- function(Q, symb='q'){
 
 }
 
+
+#####       NOT EXPORTED        #####
+
+#####################################
+##### UPDATE: Sergei (2022)     #####
+#####################################
+
 ## HIDDEN_EXTENSION ##
 
 #' @importFrom dplyr %>%
 #' @importFrom MASS fractions
 #' @importFrom numbers mLCM
 
-
-
-
 #' @title Equal Rate Hidden Extension of rate matrix
 #' @description Gives minimal equal rate hidden extension by finding least common multiple of rates.
 #'
 #' @param Q rate matrix
 #' @return matrix
-#' @export
+
 #'
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
@@ -1054,7 +1351,7 @@ EHEtransform<-function(Q)
 #' @param Q rate matrix
 #' @param threshold rounds the values in its first argument to the specified number of decimal places. It is needed for rate comparing rates using round().
 #' @return a list that contains matrix and state names generated by latent characters
-#' @export
+
 #'
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
@@ -1159,7 +1456,7 @@ CHEtransform <- function(Q, threshold=10){
 #' @param Q an instance of rate matrix with cells having specific rate values
 #' @param diag.as sets the main diagonal elements; can be "negative", NA, or some value; "negative" returns negative row sum
 #' @return matrix where numbers correspond to different rate parameters
-#' @export
+
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
 #'Q2model(Q)
@@ -1197,7 +1494,7 @@ Q2model<-function(Q, diag.as=NA)
 #' @param Q a rate matrix with cells having specific rate values
 #' @param part_scheme partition of state in Q represented as a list
 #' @return Boolean value
-#' @export
+
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
 #'Q.h <- EHEtransform(Q)
