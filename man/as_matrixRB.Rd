@@ -2,22 +2,22 @@
 % Please edit documentation in R/scate_functions.R
 \name{as_matrixRB}
 \alias{as_matrixRB}
-\title{Converts rate matrix Q for using in RevBayes}
+\title{Converts rate matrix Q for using in RevBayes.}
 \usage{
 as_matrixRB(Q, round = 2, symb = NULL)
 }
 \arguments{
-\item{Q}{rate matrix}
+\item{Q}{rate matrix.}
 
-\item{round}{rate rounding}
+\item{round}{rate rounding.}
 
-\item{symb}{symbol for rates}
+\item{symb}{symbol for rates.}
 }
 \value{
 text string
 }
 \description{
-Produces rate matrix that can be copy/paste into RevBayes script. The rate matrix can be represented as integers or symbols.
+Produces rate matrix that can be copy/pasted into RevBayes script. The rate matrix can be represented as integers or symbols.
 }
 \examples{
 Tl <- matrix(c(-1, 1, 1, -1), 2, 2, byrow = TRUE, dimnames =list( c("T*", "T"), c("T*", "T")) )
@@ -28,4 +28,7 @@ rb1 <- as_matrixRB(Q)
 cat(rb1)
 rb2 <- as_matrixRB(Q, symb='q')
 cat(rb2)
+}
+\author{
+Sergei Tarasov
 }

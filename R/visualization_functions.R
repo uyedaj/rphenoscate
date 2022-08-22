@@ -2,6 +2,15 @@
 
 #' Plots a heatmap along with a phylogeny and trait tree.
 #'
+#' @param td a treeplyr treedata object.
+#' @param njt a phylo or hclust object produced by the function 'makeTraitTree'.
+#' @param start integer, indicates the starting column from the data set.
+#' @param margs numeric, vector with values for the margins of the plots. 
+#' @param ... Additional arguments passed to plot.
+#'
+#' @return A heatmap with shaded cells indicating presence of a given anatomical entity. Tree to the left is the species phylogeny from the td treedata object.
+#' Tree to the top is the 'trait tree' produced by the function 'makeTraitTree'.
+#'
 #' @export
 ontologyHeatMap <- function(td, njt, start=3, margs=c(0.2, 0.25), ...){
   #vals <- na.omit(unique(do.call(c, lapply(3:ncol(td$dat), function(x) unique(as.character(td$dat[[x]]))))))
@@ -61,6 +70,14 @@ ontologyHeatMap <- function(td, njt, start=3, margs=c(0.2, 0.25), ...){
 
 
 #' Makes a trait tree using semantic similarity.
+#'
+#' @param td a treeplyr treedata object.
+#' @param external logical, indicates if an external ontology is used instead of UBERON.
+#' @param ONTO an ontology_index object of an external ontology imported using the R package 'ontologyIndex'.
+#' @param method character, indicates the method to be used to produce a 'trait tree' based on semantic similarity;
+#' if 'nj' produces a neighbor-joining tree using the function 'nj' from ape; if 'cls' produces a clustering dendrogram using 'hclust'. 
+#'
+#' @return A 'phylo' (neighbor-joining) or 'hclust' (clustering dendrogram) object.
 #'
 #' @export
 makeTraitTree <- function (td, external = F, ONT, method = "nj")

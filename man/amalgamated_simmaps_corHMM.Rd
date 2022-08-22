@@ -7,17 +7,17 @@
 amalgamated_simmaps_corHMM(fits, ...)
 }
 \arguments{
-\item{fits}{A list produced by `amalgamated_fits_corHMM`}
+\item{fits}{a list produced by 'amalgamated_fits_corHMM'.}
 
-\item{...}{Additional arguments passed to `corHMM::makeSimmap`}
+\item{...}{Additional arguments passed to 'corHMM::makeSimmap'.}
 }
 \value{
-A list of stochastic character maps for each character in the dataset
+A list of stochastic character maps for each character in the dataset.
 }
 \description{
 A wrapper for corHMM that draws stochastic character maps given a corHMM fit.
 }
 \details{
-This function takes the models produced from `amalgamated_fits_corHMM` and
+This function takes the models produced from 'amalgamated_fits_corHMM' and
 uses them to generate stochastic character maps.
 }

@@ -2,17 +2,23 @@
 % Please edit documentation in R/scate_functions.R
 \name{dep_matrix}
 \alias{dep_matrix}
-\title{Obtains a presence-absence dependency matrix when using external ontologies}
+\title{Obtains a dependency matrix when using external ontologies.}
 \usage{
 dep_matrix(td, ONT, tax.col = F)
 }
 \arguments{
-\item{td}{A treeplyr treedata object with characters to recode}
+\item{td}{a treeplyr treedata object with anatomical entities to assess dependencies.}
 
-\item{tax.col}{Indicates if the first column of the data set contains taxon names}
+\item{tax.col}{logical, indicates if the first column of the data set contains taxon names.}
 
-\item{ONTO}{An 'ontology_index' object of an external ontology imported in R using the package 'ontologyIndex'}
+\item{ONTO}{an ontology_index object of an external ontology imported using the R package 'ontologyIndex'.}
+}
+\value{
+A matrix M\[i,j\] where 1 indicates the dependency of the anatomical entity i on j.
 }
 \description{
-Obtains a presence-absence dependency matrix when using external ontologies
+Obtains a dependency matrix when using external ontologies.
+}
+\author{
+Diego S. Porto
 }

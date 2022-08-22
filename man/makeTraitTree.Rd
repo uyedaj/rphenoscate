@@ -6,6 +6,19 @@
 \usage{
 makeTraitTree(td, external = F, ONT, method = "nj")
 }
+\arguments{
+\item{td}{a treeplyr treedata object.}
+
+\item{external}{logical, indicates if an external ontology is used instead of UBERON.}
+
+\item{method}{character, indicates the method to be used to produce a 'trait tree' based on semantic similarity;
+if 'nj' produces a neighbor-joining tree using the function 'nj' from ape; if 'cls' produces a clustering dendrogram using 'hclust'.}
+
+\item{ONTO}{an ontology_index object of an external ontology imported using the R package 'ontologyIndex'.}
+}
+\value{
+A 'phylo' (neighbor-joining) or 'hclust' (clustering dendrogram) object.
+}
 \description{
 Makes a trait tree using semantic similarity.
 }

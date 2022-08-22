@@ -2,17 +2,23 @@
 % Please edit documentation in R/scate_functions.R
 \name{recode_traits_gen}
 \alias{recode_traits_gen}
-\title{Amalgamates and recodes traits using the matrices returned by amalgamate_deps_gen}
+\title{Amalgamates and recodes traits using the matrices returned by amalgamate_deps_gen.}
 \usage{
 recode_traits_gen(td, amal.deps, tax.col = T)
 }
 \arguments{
-\item{td}{A treeplyr treedata object with characters to recode}
+\item{td}{a treeplyr treedata object with characters to amalgamate and recode.}
 
-\item{amal.deps}{A list produced by the function `amalgamate_deps_gen`}
+\item{amal.deps}{a list produced by the function 'amalgamate_deps_gen'.}
 
-\item{tax.col}{Indicates if the first column of the data set contains taxon names}
+\item{tax.col}{logical, indicates if the first column of the data set contains taxon names.}
+}
+\value{
+A treeplyr treedata object with characters amalgamated and recoded.
 }
 \description{
-Amalgamates and recodes traits using the matrices returned by amalgamate_deps_gen
+Amalgamates and recodes traits using the matrices returned by amalgamate_deps_gen.
+}
+\author{
+Diego S. Porto
 }
