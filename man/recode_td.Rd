@@ -7,5 +7,5 @@
 recode_td(td, traits, states, depstates = numeric(0))
 }
 \description{
-Recodes a treedata object based on amalgamated characters.
+Internal function. Not exported.
 }

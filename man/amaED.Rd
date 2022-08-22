@@ -3,29 +3,29 @@
 \name{amaED}
 \alias{amaED}
 \alias{amaED_phi}
-\title{ED amalgamation of rate matrices}
+\title{ED amalgamation of rate matrices.}
 \usage{
 amaED(Qc, Qd, type = c("ql", "ap"), phi = NULL, name.sep = "", ...)
 
 amaED_phi(Qc, Qd, phi, name.sep = "", diag.as = NULL, non.rate.as = NULL)
 }
 \arguments{
-\item{Qc}{controlling character}
+\item{Qc}{controlling character.}
 
-\item{Qd}{dependent character}
+\item{Qd}{dependent character.}
 
 \item{type}{if \code{phi=NULL} specifies qualitative amalgamation (\code{ql}) or absent/present one (\code{ap}); for the latter absent state should be marked
-with "*" (see the examples)}
+with "*" (see the examples).}
 
-\item{phi}{initial vector of the states of Qd when transiting from "absent" to "present" in Qc; \code{length(phi)} should be equal to \code{nrow(Qd)}}
+\item{phi}{initial vector of the states of Qd when transiting from "absent" to "present" in Qc; \code{length(phi)} should be equal to \code{nrow(Qd)}.}
 
-\item{name.sep}{separator for the state names}
+\item{name.sep}{separator for the state names.}
 
-\item{...}{other parameters for \code{amaED_phi}}
+\item{...}{other parameters for \code{amaED_phi}.}
 
-\item{diag.as}{sets the main diagonal elements in the returned matrix}
+\item{diag.as}{sets the main diagonal elements in the returned matrix.}
 
-\item{non.rate.as}{changes negative elements in the returned matrix to the specified value}
+\item{non.rate.as}{changes negative elements in the returned matrix to the specified value.}
 }
 \value{
 matrix
@@ -33,13 +33,13 @@ matrix
 \description{
 Amalgamating two matrices using embedded dependency (ED); \code{amaED} is the general function
 that wraps \code{amaED_phi}. The parametric scheme of matrices is defined by integers, different integers
-indicate different rate parameters
+indicate different rate parameters.
 }
 \details{
 The ED amalgamation can be done automatically (\code{phi=NULL} and specified \code{type}) or manually if \code{phi} is provided.
 For the automatic amalgamation \code{type='ap'}, the absent state in Qd should be marked with \code{'*'} as e.g., \code{'A*'}; in the automatic amalgamation  \code{phi} is
 determined using \code{get_phi()}. When the state "present" in Qc controls more than one character (a/p and qualitative),
-the qualitative character should be the second in amalgamation, e.g., \code{amaSMM(Qap, Qqual)}
+the qualitative character and should be the second in amalgamation, e.g., \code{amaSMM(Qap, Qqual)}.
 }
 \examples{
 # tail: absent (T*), present (T)
@@ -55,4 +55,7 @@ amaED(Tl, A, type=c("ap"), phi=c(1,0))
 Tl <- matrix(c(-1, 1, 1, -1), 2, 2, byrow = TRUE, dimnames =list( c("T*", "T"), c("T*", "T")) )
 C <-matrix(c(-2, 2, 2, -2), 2, 2, byrow = TRUE, dimnames =list( c("r", "b"), c("r", "b")) )
 amaED_phi(Tl, C, phi=c(1,1))
+}
+\author{
+Sergei Tarasov
 }

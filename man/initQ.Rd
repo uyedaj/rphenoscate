@@ -2,23 +2,26 @@
 % Please edit documentation in R/scate_functions.R
 \name{initQ}
 \alias{initQ}
-\title{Initialize custom rate matrix Q}
+\title{Initialize custom rate matrix Q.}
 \usage{
 initQ(char.state, rate.param, diag.as = "negative")
 }
 \arguments{
-\item{char.state}{vector character states}
+\item{char.state}{vector character states.}
 
-\item{rate.param}{vector of the rate parameters}
+\item{rate.param}{vector of the rate parameters.}
 
-\item{diag.as}{sets the main diagonal elements; can be "negative", NA, or some value; "negative" returns negative row sum}
+\item{diag.as}{sets the main diagonal elements; can be "negative", NA, or some value; "negative" returns negative row sum.}
 }
 \value{
 matrix
 }
 \description{
-Initialize custom rate matrix Q
+Initialize custom rate matrix Q.
 }
 \examples{
 Q <- initQ(c('a', 'p'), c(1,2), diag.as = NA)
+}
+\author{
+Sergei Tarasov
 }

@@ -2,15 +2,21 @@
 % Please edit documentation in R/scate_functions.R
 \name{auto_dep_matrix}
 \alias{auto_dep_matrix}
-\title{Obtains a 'auto-dependency' matrix when amalgamating characters referring to the same anatomical entity}
+\title{Obtains a 'auto-dependency' matrix when amalgamating characters referring to the same anatomical entity.}
 \usage{
 auto_dep_matrix(td, tax.col = F)
 }
 \arguments{
-\item{td}{A treeplyr treedata object with characters to recode}
+\item{td}{a treeplyr treedata object with characters to amalgamate.}
 
-\item{tax.col}{Indicates if the first column of the data set contains taxon names}
+\item{tax.col}{logical, indicates if the first column of the data set contains taxon names.}
+}
+\value{
+A matrix M\[i,j\] where 1 indicates that characters i and j refer to the same anatomical entity.
 }
 \description{
-Obtains a 'auto-dependency' matrix when amalgamating characters referring to the same anatomical entity
+Obtains a 'auto-dependency' matrix when amalgamating characters referring to the same anatomical entity.
+}
+\author{
+Diego S. Porto
 }

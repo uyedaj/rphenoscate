@@ -2,16 +2,19 @@
 % Please edit documentation in R/scate_functions.R
 \name{combNmatrices}
 \alias{combNmatrices}
-\title{Combining multiple matrices}
+\title{Combining multiple matrices.}
 \usage{
 combNmatrices(list.matrices, ...)
 }
 \arguments{
-\item{list.matrices}{Lsit of matrices}
+\item{list.matrices}{List of matrices.}
 }
 \value{
-Matrix
+Matrix.
 }
 \description{
-Liely as independently evolving
+Liely as independently evolving.
+}
+\author{
+Sergei Tarasov
 }
