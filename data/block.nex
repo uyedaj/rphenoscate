@@ -1,0 +1,26 @@
+
+
+BEGIN MRBAYES;
+
+[Load matrix]
+exe &&filename&&.nex;
+
+[Preliminar Sets]
+log start filename = &&filename&&.txt;
+
+[Models]
+lset rates = gamma coding = variable; 
+
+[Priors]
+prset brlenspr = Unconstrained:Exp(10) ratepr = variable;
+
+[MCMCMCMC]
+mcmc ngen = &&ngens&& nruns = &&nruns&& nchains = &&nchains&& printfreq = 1000 samplefreq = 1000 diagnfreq = 1000 burninfrac = 0.25 filename = &&filename&&;
+
+[Summary of tree topologies and branch lengths]
+sumt filename = &&filename&&;
+
+[Summary of parameters]
+sump filename = &&filename&&;
+
+END;
