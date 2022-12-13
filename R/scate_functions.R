@@ -1,199 +1,28 @@
 
 
 #####################################
-##### General utility functions #####
-#####################################
-
-#####################################
 ##### UPDATE: Diego (2022)      #####
 #####################################
 
-#' Sample pairwise semantic similarity among phenotypes.
+#' Obtains a presence-absence dependency matrix when using external ontologies.
 #'
-#' @param exclu.obj a list produced by the function 'mutually_exclusive'.
-#' @param n integer, number of samples.
+#' @param td A treeplyr treedata object with characters to recode
+#' @param ONT An 'ontology_index' object of an external ontology imported in R using the package 'ontologyIndex'
+#' @param tax.col Indicates if the first column of the data set contains taxon names
 #'
-#' @return A numeric vector of sampled values of pairwise semantic similarity among phenotypes.
+#' @examples
+#' \dontrun{
+#'     dep_matrix(treedata, HAO, tax.col=TRUE)
+#' }
 #'
-#' @author Diego S. Porto
-#'
-#' @export
-sample.ss <- function(exclu.obj, n){
-
-  EX <- exclu.obj$dataframe
-
-  ex <- numeric()
-
-  for(i in 1:n){
-
-    ex[i] <- jaccard_similarity(terms = c(sample(EX$id.1, 1), sample(EX$id.2, 1)))[1,2]
-
-  }
-
-  ex <- ex[order(ex)]
-
-  return(ex)
-
-}
-
-
-#' Utility function for processing an ontoFAST object.
-#'
-#' @param ontoFAST a named list produced by the function 'annot_all_chars' from the package ontoFAST.
-#' @param ONTO an ontology_index object of an external ontology imported using the R package 'ontologyIndex'.
-#' @param s.filter logical, indicates if to use a strict filter of terms.
-#' @param g.filter logical, indicates if to use a general filter of terms.
-#' @param s.terms character, a character vector with particular ontology terms to be sorted out.
-#' @param g.terms character, a character vector with general terms or expressions to be sorted out.
-#'
-#' @return A list with filtered candidate terms from the output of the function 'annot_all_chars' from the package ontoFAST.
-#'
-#' @author Diego S. Porto
+#' @import ontologyIndex
 #'
 #' @export
-process.ontofast <- function(ontoFAST, ONT, s.filter = F, g.filter = F, s.terms, g.terms){
-
-  M <- lapply(ontoFAST, function(x) ONT$name[names(ONT$name) %in% x] )
-
-  if(s.filter == T){
-
-    M <- lapply(M, function(x) x[!x %in% s.terms])
-
-  }
-
-  if(g.filter == T){
-
-    for(j in 1:length(g.terms)){
-
-      M <- lapply(M, function(x) x[!grepl(x, pattern = g.terms[j])] )
-
-    }
-
-  }
-
-  for(i in 1:length(M)){
-
-    print(paste0("CHAR_", i, ": ", names(M)[i]))
-    print(rbind(1:length(M[[i]]), M[[i]]))
-
-    x <- as.numeric(readline("Choose a number or 0 to skip: "))
-
-    if(x > 0){ M[[i]] <- M[[i]][x] }else{
-
-      y <- readline("Do you want to try to find a more suitable term? yes or no: ")
-
-      if(y == "yes"){
-
-        z <- as.character(readline("Please, choose a term from your selected ontology (no quotes!): "))
-
-        candidates <- ONT$name[grepl(ONT$name, pattern = z)]
-
-        if(length(candidates) > 1){
-
-          print(cbind(candidates, 1:length(candidates)))
-
-          w <- as.numeric(readline("Please, select one of the terms from the list: "))
-
-          M[[i]] <- candidates[w]
-
-          names(M)[i] <- candidates[w]
-
-        }else{
-
-          M[[i]] <- candidates
-          names(M)[i] <- candidates
-
-          }
-
-
-      }
-
-    }
-
-  }
-
-  return(M)
-
-}
-
-
-#' Merge compatible phenotypes.
-#'
-#' Internal function. Not exported.
-#'
-#' @author Diego S. Porto
-#'
-merge.pheno <- function(x){
-
-  diag(x) <- 0
-  x[x != 1] <- 0
-
-  res <- clusters(graph.adjacency(x))$membership
-
-  return(res)
-
-}
-
-
-#' Rescore individual states.
-#'
-#' Internal function. Not exported.
-#'
-#' @author Diego S. Porto
-#'
-rescore <- function(x,y){
-
-  u <- rep("?", length(x))
-
-  u[x] <- y
-
-  return(u)
-
-}
-
-
-#' Rescore all states and build characters.
-#'
-#' Internal function. Not exported.
-#'
-#' @author Diego S. Porto
-#'
-rescore.all <- function(x, y){
-
-  # Collapse states #
-  u <- apply(mapply(x = x, y = y, function(x,y) rescore(x,y)), 1, function(x) paste0(unique(x), collapse = "") )
-
-  # Recoding missings #
-  u <- gsub(u, pattern = "\\?", replacement = "")
-  u <- gsub(u, pattern = "^$", replacement = "?")
-
-  # Recoding polymorphisms (MrBayes) #
-  u <- gsub(u, pattern = "(.)", replacement = "\\1,")
-  u <- gsub(u, pattern = ",$", replacement = "")
-  u <- gsub(u, pattern = "^(\\d),", replacement = "(\\1,")
-  u <- gsub(u, pattern = ",(\\d)$", replacement = ",\\1)")
-
-  return(u)
-
-}
-
-
-#' Obtains a dependency matrix when using external ontologies.
-#'
-#' @param td a treeplyr treedata object with anatomical entities to assess dependencies.
-#' @param ONTO an ontology_index object of an external ontology imported using the R package 'ontologyIndex'.
-#' @param tax.col logical, indicates if the first column of the data set contains taxon names.
-#'
-#' @return A matrix M\[i,j\] where 1 indicates the dependency of the anatomical entity i on j.
-#'
-#' @author Diego S. Porto
-#'
-#' @export
-dep_matrix <- function(td, ONT, tax.col = F){
+dep_matrix <- function(td, ONT, tax.col = FALSE){
 
   m <- as.data.frame(td$dat)
 
-  if(tax.col == T){ terms <- colnames(m)[-1] }else{ terms <- colnames(m) }
+  if(tax.col == TRUE){ terms <- colnames(m)[-1] }else{ terms <- colnames(m) }
 
   iris <- names(ONT$name[match(terms, ONT$name)])
 
@@ -212,27 +41,38 @@ dep_matrix <- function(td, ONT, tax.col = F){
 
 #' Obtains a 'auto-dependency' matrix when amalgamating characters referring to the same anatomical entity.
 #'
-#' @param td a treeplyr treedata object with characters to amalgamate.
-#' @param tax.col logical, indicates if the first column of the data set contains taxon names.
+#' @param td A treeplyr treedata object with characters to recode
+#' @param tax.col Indicates if the first column of the data set contains taxon names
 #'
-#' @return A matrix M\[i,j\] where 1 indicates that characters i and j refer to the same anatomical entity.
+#' @examples
+#' \dontrun{
+#'     auto_dep_matrix(treedata, tax.col = FALSE)
+#'  }
 #'
-#' @author Diego S. Porto
+#' @importFrom stats dist
 #'
 #' @export
-auto_dep_matrix <- function(td, tax.col = F){
+auto_dep_matrix <- function(td, tax.col = FALSE){
 
   m <- as.data.frame(td$dat)
 
-  if(tax.col == T){ mat <- as.matrix(dist(match(colnames(m)[-1], colnames(m)[-1]), diag = T, upper = T)) }else{
-    mat <- as.matrix(dist(match(colnames(m), colnames(m)), diag = T, upper = T))
-  }
+  if(tax.col == TRUE){
+    mat <- as.matrix(dist(match(colnames(m)[-1], colnames(m)[-1]), diag = TRUE, upper = TRUE))
+  }else{
+    mat <- as.matrix(dist(match(colnames(m), colnames(m)), diag = TRUE, upper = TRUE))
+    }
+
   mat[mat > 0] <- 2
   mat[mat == 0] <- 1
   mat[mat == 2] <- 0
   mat[upper.tri(mat)] <- 0
   diag(mat) <- NA
-  if(tax.col == T){ colnames(mat) <- rownames(mat) <- colnames(m)[-1] }else{ colnames(mat) <- rownames(mat) <- colnames(m) }
+
+  if(tax.col == TRUE){
+    colnames(mat) <- rownames(mat) <- colnames(m)[-1]
+  }else{
+    colnames(mat) <- rownames(mat) <- colnames(m)
+    }
 
   return(mat)
 
@@ -241,16 +81,17 @@ auto_dep_matrix <- function(td, tax.col = F){
 
 #' Amalgamates and recodes traits using the matrices returned by amalgamate_deps_gen.
 #'
-#' @param td a treeplyr treedata object with characters to amalgamate and recode.
-#' @param amal.deps a list produced by the function 'amalgamate_deps_gen'.
-#' @param tax.col logical, indicates if the first column of the data set contains taxon names.
+#' @param td A treeplyr treedata object with characters to recode
+#' @param amal.deps A list produced by the function `amalgamate_deps_gen`
+#' @param tax.col Indicates if the first column of the data set contains taxon names
 #'
-#' @return A treeplyr treedata object with characters amalgamated and recoded.
-#'
-#' @author Diego S. Porto
+#' @examples
+#' \dontrun{
+#'     recode_traits_gen(treedata, amal.deps)
+#' }
 #'
 #' @export
-recode_traits_gen <- function(td, amal.deps, tax.col = T)
+recode_traits_gen <- function(td, amal.deps, tax.col = TRUE)
 {
 
   # Format as data.frame #
@@ -361,26 +202,30 @@ recode_traits_gen <- function(td, amal.deps, tax.col = T)
 
 #' Generates a model for traits given a dependency matrix when using external ontologies.
 #'
-#' @param td a treeplyr treedata object with characters to amalgamate.
-#' @param dep.mat matrix, a dependency matrix produced by the function 'dep_matrix'.
-#' @param mode character, indicates whether to perform automatic amalgamations using SMM models ('auto') or
-#' to check for different types of dependencies using ED models ('check'). See Tarasov (2021) for details.
-#' @param state.data character, a list with information about character states descriptions. 
-#' If mode = 'check', the function will try to automatically check the type of trait dependency based on state descriptions.
-#' @param tax.col logical, indicates if the first column of the data set contains taxon names.
+#' @param td A treeplyr treedata object with characters to amalgamate
+#' @param dep.mat A dependency matrix produced by the function `dep_matrix`
+#' @param mode Indicates whether to perform automatic amalgamations using SMM models ('auto') or
+#' to check for different types of dependencies using ED models ('check'). See Tarasov (2021) for details
+#' @param state.data A list with information about character states descriptions. If mode = 'check', the function
+#' will try to automatically check the type of trait dependency based of state descriptions
+#' @param tax.col Indicates if the first column of the data set contains taxon names
 #'
-#' @return A list containing:
-#' $traits The old trait names that were amalgamated.
-#' $drop The dependent traits that were dropped after amalgamation.
-#' $groups The groups of traits that were amalgamated.
-#' $M Transition rate matrices for the Markov Models (SMM or ED) that can be used in RevBayes, corHMM or other tools.
-#' $states A list providing the final amalgamated states.
-#' $state.data A list providing the character state descriptions for the amalgamated traits.
+#' @examples
 #'
-#' @author Diego S. Porto
+#' \dontrun{
+#'     amalgamate_deps_gen(treedata, dep_mat, state.data = state.data)
+#' }
+#'
+#' @return A list of:
+#' $traits The old trait names that were amalgamated
+#' $drop The dependent traits that were dropped after amalgamation
+#' $groups The groups of traits that were amalgamated
+#' $M Transition matrices for the Markov Models (SMM or ED) that can be run in RevBayes, corHMM or other tools
+#' $states A list providing the final amalgamated states
+#' $state.data A list providing the character state descriptions for the amalgamated traits
 #'
 #' @export
-amalgamate_deps_gen <- function(td, dep.mat, mode = c("auto", "check"), state.data, tax.col = T)
+amalgamate_deps_gen <- function(td, dep.mat, mode = c("auto", "check"), state.data, tax.col = TRUE)
 {
 
   # Format as data.frame #
@@ -476,317 +321,29 @@ amalgamate_deps_gen <- function(td, dep.mat, mode = c("auto", "check"), state.da
 }
 
 
-#' Infer clusters of phenotypes based on mutually exclusivity. 
-#'
-#' @param exclu.obj a list produced by the function 'mutually_exclusive'.
-#'
-#' @return A list containing:
-#' $phenotypes The inferred clusters of phenotypes (phenotype IDs).
-#' $submatrices The exclusivity submatrices corresponding to each phenotype cluster extracted from the $matrix element of the exclu.obj object. 
-#'
-#' @author Diego S. Porto
-#'
-#' @export
-extract.chars <- function(exclu.obj){
-
-  # Convert exclusivity matrix to binary #
-  m <- exclu.obj$matrix
-
-  # Get only mutually exclusive phenotypes #
-  #m[m != 5] <- 0
-  #m[m == 5] <- 1
-
-  # Get only mutually exclusive and compatible phenotypes #
-  m[m != 1 & m != 5] <- 0
-  m[m == 1 | m == 5] <- 1
-
-  # Extract all clusters based on mutual exclusivity #
-  cls <- clusters(graph.adjacency(m))$membership
-
-  # Extract all exclusivity submatrices #
-  S <- split(colnames(exclu.obj$matrix), f = as.factor(cls))
-  S <- lapply(S, function(x) exclu.obj$matrix[c(x),c(x)] )
-
-  # Define clusters of phenotypes #
-  x <- unique(c(exclu.obj$dataframe$id.1, exclu.obj$dataframe$id.2))
-  CH <- split(x, f = as.factor(cls))
-
-  # Return results #
-  return(list(phenotypes = CH, submatrices = S))
-
-}
-
-
-#' Build characters based on inferred phenotype clusters.
-#'
-#' @param CH a named list produced by the function 'extract.chars'.
-#' @param chars.obj data.frame or list produced by the function 'chars' from the package rphenoscape.
-#'
-#' @return A list with two main elements: $solved and $unsolved. $solved contains all phenotypes assigned to inferred clusters.
-#' $unsolved contains phenotypes that were not assigned to clusters or singletons. Each main element contains:
-#' $chars Inferred clusters of phenotypes with character statements writen in natural language, as in the original study.
-#' $clusters Inferred clusters shown as phenotype IDs.
-#' $tokens Codes assigned to character states.
-#'
-#' @author Diego S. Porto
-#'
-#' @export
-build.chars <- function(CH, chars.obj){
-
-  ## STEP 1: Isolate different types of phenotype clusters ##
-  # Extract 'singletons' #
-  CH.sing <- CH$phenotypes[sapply(CH$phenotypes, function(x) length(x) < 2 )]
-
-  # Extract clusters with multiple phenotypes #
-  CH.mult <- CH$phenotypes[!sapply(CH$phenotypes, function(x) length(x) < 2 )]
-
-  # Extract submatrices for clusters with multiple phenotypes #
-  S <- CH$submatrices[names(CH.mult)]
-
-  # Extract submatrices with mutually compatible phenotypes (= should merge) #
-  S <- S[sapply(S, function(x) any(x[upper.tri(x)] != 5) )]
-
-  # Extract clusters with mutually exclusive and compatible phenotypes #
-  CH.mult.merge <- CH.mult[names(S)]
-
-  # Extract clusters with only mutually exclusive phenotypes #
-  CH.mult.done <- CH.mult[!names(CH.mult) %in% names(S)]
-
-
-
-  ## STEP 2: Deal with mutually compatible phenotypes ##
-  # Get phenotypes that should be merged #
-  m <- lapply(S, merge.pheno)
-
-  # Get initial clusters of phenotypes to be merged #
-  M <- mapply(x = CH.mult.merge, y = m, function(x,y) split(x, f = as.factor(y)), SIMPLIFY = F )
-
-  # Match phenotype clusters with state labels in the original works to check for redundant information #
-  x <- sapply(M, function(x) any(sapply(x, function(x) length(unique(chars.obj$state.label[match(x, chars.obj$phenotype.id)])) > 1 )) )
-
-  # Extract clusters of phenotype that can be merged #
-  M.merge <- M[!x]
-
-  # Extract clusters of phenotype that cannot be merged immediately #
-  M.redo <- M[x]
-
-  ## STEP 3: Get character and character state labels ##
-
-  ## Type 1: no problems ##
-  # Copy original phenotypes #
-  chars1 <- CH.mult.done
-
-  # Get character labels for 'regular' phenotypes (only mutually exclusive) #
-  char.lab1 <- lapply(chars1, function(x) unique(chars.obj$character.label[match(x, chars.obj$phenotype.id)]) )
-  names(chars1) <- sapply(char.lab1, function(x) paste0(x, collapse = " + ") )
-
-  # Get state labels for 'regular' phenotypes (only mutually exclusive) #
-  chars1 <- lapply(chars1, function(x) chars.obj$state.label[match(x, chars.obj$phenotype.id)] )
-
-  ## Type 2: compatible phenotypes merged and matching original state labels ##
-  # Copy original phenotypes #
-  chars2 <- M.merge
-
-  # Get character labels for mutually compatible phenotypes #
-  char.lab2 <- lapply(chars2, function(x) sapply(x, function(x)
-    unique(chars.obj$character.label[match(x, chars.obj$phenotype.id)]) ) )
-  char.lab2 <- lapply(char.lab2, function(x) paste0(unique(x), collapse = " + ") )
-  names(chars2) <- char.lab2
-
-  # Get state labels for mutually compatible phenotypes #
-  chars2 <- lapply(chars2, function(x) sapply(x, function(x)
-    paste0(unique(chars.obj$state.label[match(x, chars.obj$phenotype.id)]),collapse = " + ") ) )
-  chars2 <- lapply(chars2, unname)
-
-  if(length(M.redo) > 0){
-
-    ## STEP 2: Deal with mutually compatible phenotypes ##
-
-    # Extract cluster of phenotypes that require merge of non-redundant state labels #
-    M.redo.mult <- M.redo[sapply(m[names(M.redo)], function(x) length(unique(x)) > 1 )]
-
-    # Extract clusters with 'singletons' (in this case, all phenotypes merging to only one 'state') #
-    M.redo.sing <- M.redo[sapply(m[names(M.redo)], function(x) length(unique(x)) == 1 )]
-
-    # Join unsolved phenotypes #
-    M.redo.unsolved <- c(CH.sing, M.redo.sing)
-
-    ## STEP 3: Get character and character state labels ##
-
-    ## Type 3: compatible phenotypes merged and non-matching original state labels (= semantic diversity) ##
-    # Copy original phenotypes #
-    chars3 <- M.redo.mult
-
-    # Get character labels for mutually compatible phenotypes with non-redundant mergeable state labels #
-    char.lab3 <- lapply(chars3, function(x) sapply(x, function(x)
-      unique(chars.obj$character.label[match(x, chars.obj$phenotype.id)]) ) )
-    char.lab3 <- lapply(char.lab3, function(x) paste0(unique(unlist(x)), collapse = " + ") )
-    names(chars3) <- char.lab3
-
-    # Get state labels for mutually compatible phenotypes with non-redundant mergeable state labels #
-    chars3 <- lapply(chars3, function(x)
-      unname(sapply(x, function(x) unname(paste0(unique(chars.obj$state.label[match(x, chars.obj$phenotype.id)]),collapse = " + ")) )) )
-
-    ## Type 4: non-solved: phenotypes not clustering or all clustering as a single compatible 'state'  ##
-    # Copy original phenotypes #
-    chars4 <- M.redo.unsolved
-
-    # Get character labels for new clusters of phenotypes from strategy 2 #
-    char.lab4 <- lapply(chars4, function(x) sapply(x, function(x)
-      unique(chars.obj$character.label[match(x, chars.obj$phenotype.id)]) ) )
-    char.lab4 <- lapply(char.lab4, function(x) paste0(unique(unlist(x)), collapse = " + ") )
-    names(chars4) <- char.lab4
-
-    # Get state labels for new clusters of phenotypes from strategy 2 #
-    chars4 <- lapply(chars4, function(x)
-      unname(lapply(x, function(x) unname(unique(chars.obj$state.label[match(x, chars.obj$phenotype.id)])) )) )
-    chars4 <- lapply(chars4, unlist)
-
-    ## STEP 4: Build characters ##
-    # Create a list to store results #
-    res <- list()
-
-    # Join character statements #
-    res$solved$chars <- c(chars1, chars2, chars3)
-    res$unsolved$chars <- chars4
-
-    # Join clusters of phenotypes $
-    res$solved$clusters <- c(CH.mult.done, M.merge, M.redo.mult)
-    res$unsolved$clusters <- M.redo.unsolved
-
-    # Set character state tokens #
-    res$solved$tokens <- lapply(res$solved$chars, function(x) paste(0:(length(x) - 1)) )
-    res$unsolved$tokens <- lapply(res$unsolved$chars, function(x) paste(0:(length(x) - 1)) )
-
-  }else{
-
-    ## STEP 4: Build characters ##
-    # Create a list to store results #
-    res <- list()
-
-    # Join character statements #
-    res$solved$chars <- c(chars1, chars2)
-
-    # Join clusters of phenotypes $
-    res$solved$clusters <- c(CH.mult.done, M.merge)
-
-    # Set character state tokens #
-    res$solved$tokens <- lapply(res$solved$chars, function(x) paste(0:(length(x) - 1)) )
-
-  }
-
-  # Return results #
-  return(res)
-
-}
-
-
-## BUILD CHARACTER MATRICES ##
-
-#' Build character matrices based on inferred characters.
-#'
-#' @param character, a character vector with the taxon names to be scored.
-#' @param a list of phenotypes produced by the function 'get_phenotypes' and converted with 'as.phenotype' from the package rphenoscape.
-#' @param chars.obj data.frame or list produced by the function 'chars' from the package rphenoscape.
-#' @param CHARS a named list of inferred characters produced by the function 'build.chars'.
-#'
-#' @return A data.frame with the character matrix.
-#'
-#' @author Diego S. Porto
-#'
-#' @export
-build.matrix <- function(tax, pheno.obj, chars.obj, CHARS){
-
-  # Get set of taxa for each phenotype #
-  tax.list <- lapply(CHARS$solved$clusters, function(y)
-    lapply(y, function(x) unlist(sapply(pheno.obj, function(x)
-      x$taxa$label)[match(unlist(x), sapply(pheno.obj, function(x) x$id ))]) ))
-
-  # Check for taxa exhibiting each phenotype #
-  tax.scores <- lapply(tax.list, function(x) lapply(x, function(x) tax %in% x) )
-
-  # Get character matrix #
-  M <- mapply(x = tax.scores, y = CHARS$solved$tokens, function(x,y) rescore.all(x, y), SIMPLIFY = F )
-
-  # Build character matrix #
-  M <- as.data.frame(do.call(cbind, M))
-  rownames(M) <- tax
-  colnames(M) <- paste0("C", 1:length(tax.list))
-
-  # Return results #
-  return(M)
-
-}
-
-
 #########################
 ##### OLD FUNCTIONS #####
 #########################
 
-#' Utility function for displaying the number of matching species and average value across them from an Ontotrace matrix.
-#'
-#' @param x data.frame, a data.frame produced by the function 'pk_get_ontotrace' from the package rphenoscape.
-#'
-#' @return A data.frame with columns displaying entity names, number of matching species, and average value of coverage (percentage).
-#'
-#' @export
-print_coverage <- function(x){
-  coverage <- apply(x, 2, function(x) sum(!is.na(x)))
-  average <- sapply(x, function(x) mean(as.numeric(na.omit(x[x %in% c("0", "1")])), na.rm=TRUE))
-  cover <- cbind(coverage, average)
-  tmp <- dplyr::filter(data.frame(traits=rownames(cover), cover), coverage > 0, average < 1, average > 0) %>% arrange(., desc(coverage))
-  print(tmp)
-}
-
-
-#' Utility function for filtering data based on missing traits and taxa.
-#'
-#' @param td a treeplyr treedata object.
-#' @param traits numeric, a threshold value for the coverage across traits.
-#' @param taxa numeric, a threshold value for the coverage across taxa.
-#'
-#' @return A treeplyr treedata object filtered by trait and/or taxon coverage.
-#'
-#' @export
-filter_coverage <- function(td, traits=0, taxa=0){
-  taxa_coverage <- apply(td$dat, 1, function(x) mean(as.numeric(!is.na(x))))
-  trait_coverage <- apply(td$dat, 2, function(x) mean(as.numeric(!is.na(x))))
-  td <- dplyr::filter(td, taxa_coverage > taxa)
-  td <- dplyr::select(td, which(trait_coverage > traits))
-  return(td)
-}
-
-
-#' Utility function for cleaning up character data table after amalgamating characters.
-#'
-#' @param dep.mat data.frame, a dependency matrix produced by the function 'pa_dep_matrix' from the package rphenoscape.
-#' @param td a treeplyr treedata object.
-#'
-dropDependentTraits <- function(char_info, dep.mat, td){
-  char_info_comb <- char_info[which(apply(dep.mat, 1, sum, na.rm=TRUE)==0), c(1,5)]
-  new.traits <- colnames(td$dat)
-  old.traits <- sapply(new.traits, function(x) strsplit(x, "+", fixed=TRUE)[[1]][1])
-  trait.trans <- setNames(new.traits, old.traits)
-  char_info_comb$ID <- unname(trait.trans[as.character(char_info_comb$ID)])
-  return(char_info_comb)
-}
-
-
-#' Utility function for stripping off url from IRI.
-#'
-#' @param x character, a character string with an IRI.
-#'
-strip_IRI <- function(x){
-  x <- gsub("http://purl.obolibrary.org/obo/", "", x)
-  x <- gsub("_", ":", x)
-  return(x)
-}
-
-
 #' Recodes a treedata object based on amalgamated characters.
 #'
-#' Internal function. Not exported.
+#' @import utils
 #'
+#' @title Recode a treedata object
+#'
+#' @description Recodes a treedata object based on amalgamated characters.
+#'
+#' @param td The treedata object to recode
+#' @param traits The states that will be recoded
+#' @param states The new character states for recoding
+#' @param depstates Dependent states
+#'
+#' @examples
+#' \dontrun{
+#'     recode_td(treedata, traits = traits, states = states)
+#' }
+#'
+#' @export
 recode_td <- function(td, traits, states, depstates=numeric(0)){
   tmp <- select(td, traits)
   hidden0 <- names(depstates)
@@ -815,12 +372,17 @@ recode_td <- function(td, traits, states, depstates=numeric(0)){
 }
 
 
-#' Amalgamates and recodes traits using the matrices returned by amalgamate_deps.
+#' Amalgamates traits using the matrices returned by amalgamate_deps.
 #'
-#' @param td a treeplyr treedata object with characters to recode.
-#' @param M a list produced by the function 'amalgamate_deps'.
+#' @title Recode Traits in a treedata Object
 #'
-#' @return A treeplyr treedata object with characters amalgamated and recoded.
+#' @param td A 'treeplyr' treedata object with characters to recode
+#' @param M A list produced by the function `amalgamate_deps`
+#'
+#' @examples
+#' \dontrun{
+#'     recode_traits(treedata, matrix)
+#' }
 #'
 #' @export
 recode_traits <- function(td, M){
@@ -851,18 +413,18 @@ recode_traits <- function(td, M){
 
 #' Generates a graph and model for traits given a dependency matrix.
 #'
-#' @param dep_mat data.frame, a dependency matrix.
+#' @param dep_mat A dependency matrix
 #'
-#' @details The dependency matrix can come from 'rphenoscape::pa_dep_matrix' or be user generated.
+#' @details The dependency matrix can come from `rphenoscape::pa_dep_matrix` or be user generated
 #'
 #' @return A list of:
 #' $M Transition matrices for the Structured-Hidden State Markov Models that can be run in RevBayes,
-#' corHMM or other tools.
-#' $graph The full graph of all dependencies among traits.
-#' $con.comp A list of the group membership etc. produced by 'igraph::components'.
-#' $traits The old trait names that were amalgamated.
-#' $new.traits The new names of the amalgamated trait names.
-#' $depstates A list providing the dependencies of all characters.
+#' corHMM or other tools
+#' $graph The full graph of all dependencies among traits
+#' $con.comp A list of the group membership etc. produced by `igraph::components`
+#' $traits The old trait names that were amalgamated
+#' $new.traits The new names of the amalgamated trait names
+#' $depstates A list providing the dependencies of all characters
 #'
 #' @export
 amalgamate_deps <- function(dep_mat) {
@@ -920,13 +482,15 @@ combine_subgraph <- function(subgraph){
 
       if(i == 2) { # if we are currently on the first non-root vertex, we want to combine our current binary matrix with the binary matrix of the root vertex
         # set dependent state
-        dep_state <- get_dep_state(subgraph, igraph::V(subgraph)[name == node_name], bin_mats[[ancestor_v]], node_list) #trait_order)
+        ivs <- igraph::V(subgraph)
+        dep_state <- get_dep_state(subgraph, ivs[ivs$name == node_name], bin_mats[[ancestor_v]], node_list) #trait_order)
 
         M[[i]] <- comb2matrices(bin_mats[[ancestor_v]], bin_mats[[node_name]], dependent.state = dep_state)
       }
       else { # otherwise, combine with the resulting matrix from the combination we just did
         # set dependent state
-        dep_state <- get_dep_state(subgraph, igraph::V(subgraph)[name == node_name], M[[i - 1]], node_list) #trait_order)
+        ivs <- igraph::V(subgraph)
+        dep_state <- get_dep_state(subgraph, ivs[ivs$name == node_name], M[[i - 1]], node_list) #trait_order)
         M[[i]] <- comb2matrices(M[[i - 1]], bin_mats[[node_name]], dependent.state = dep_state)
       }
       # for debugging:
@@ -985,12 +549,11 @@ get_dep_state <- function(subgraph, v, ancestor_mat, trait_order) {
 
 #' Remove indirect links in a dependency graph.
 #'
-#' Internal function. Not exported.
-#'
 #' Function for removing redundant dependency edges from our graph.
 #'
-#' @param dependency_matrix A dependency matrix.
+#' @param dependency_matrix A dependency matrix
 #'
+#' @export
 remove_indirect <- function(dependency_matrix){
   z <- dependency_matrix
   diag(z) <- NA
@@ -1024,15 +587,13 @@ logical_mult = function(x,y)
 }
 
 
-## Not exported ##
+## Not exported (remove?) ##
 empty.df = function(colnames)
 {
     setNames(data.frame(matrix(ncol=length(colnames), nrow=0)),colnames)
 }
 
                                         # this doesn't really work with lists...
-
-## Not exported ##
 addrow = function (df,row)
 {
     colnames = names(df)
@@ -1044,101 +605,103 @@ addrow = function (df,row)
     rbind(df,dfrow)
 }
 
-
-## Not exported ##
-get.dependencies = function(uberon.filename, uterms, indirect=FALSE)
-{
-                                        # 1. Load uberon propagating different relationships
-    print("Loading ontology 'uberon.obo'")
-    uberon_is_a= get_ontology(uberon.filename,
-                              propagate_relationships = c("is_a"),
-                              extract_tags = 'minimal')
-
-    uberon_part_of = get_ontology(uberon.filename,
-                                  propagate_relationships = c("part_of"),
-                                  extract_tags = 'minimal')
-
-    uberon_develops_from = get_ontology(uberon.filename,
-                                        propagate_relationships = c("develops_from"),
-                                        extract_tags = 'minimal')
-
-    uberon = get_ontology(uberon.filename,
-                          propagate_relationships = c("is_a", "part_of","develops_from"),
-                          extract_tags = 'minimal')
-
-                                        # 2. Get names for the uberon terms
-    unames = c()
-    for(i in 1:length(uterms))
-    {
-        unames[i] = get_term_property(uberon,"name",uterms[i])
-    }
-
-                                        # 3. for each pair of terms, check dependencies
-    colnames = c("chr.id","dependent.chr.id","subrels")
-    df = empty.df(colnames)
-
-    if (indirect)
-    {
-        maybe.remove.indirect = function(x) {x}
-    }
-    else
-    {
-        maybe.remove.indirect = remove.indirect
-    }
-
-    D = maybe.remove.indirect(get_term_descendancy_matrix(uberon, uterms));
-    Disa = maybe.remove.indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
-    Dpartof = maybe.remove.indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
-    Ddevelopsfrom = maybe.remove.indirect(get_term_descendancy_matrix(uberon_develops_from, uterms));
-
-    for(i in 1:length(uterms))
-    {
-        for(j in 1:length(uterms))
-        {
-            if (i == j) next;
-
-            if (D[i,j])
-            {
-                cat(sprintf("%s %s\n",uterms[i],uterms[j]))
-
-                labels = c()
-
-                if (Disa[i,j])
-                {
-                    labels = c(labels,"is_a")
-                }
-                if (Dpartof[i,j])
-                {
-                    labels = c(labels, "part_of")
-                }
-                if (Ddevelopsfrom[i,j])
-                {
-                    labels = c(labels, "develops_from")
-                }
-
-                label = ""
-                if (length(labels) > 0)
-                {
-                    label = paste(labels,sep=":")
-                }
-
-                cat(sprintf("'%s' -> '%s'",unames[i],unames[j]),"\n")
-
-                # chr.id | chr.ancestor | label
-                df = addrow(df,c(uterms[i], uterms[j], label))
-
-                                        #                cat(sprintf("%s,0,%s,1\n",unames[j],unames[i]), file=outfile)
-                                        #                cat(sprintf("%s,1,%s,1\n",unames[j],unames[i]), file=outfile)
-
-
-                                        #                cat(edge, " ", attributes, "\n", file=dotfile)
-            }
-                                        # OK, so does i depend on j?
-        }
-    }
-
-    tuple(df,uterms,hashmap(uterms,unames),uberon)
-}
+#
+### Not exported (remove?) ##
+##'
+##'
+#get.dependencies = function(uberon.filename, uterms, indirect=FALSE)
+#{
+#                                        # 1. Load uberon propagating different relationships
+#    print("Loading ontology 'uberon.obo'")
+#    uberon_is_a= get_ontology(uberon.filename,
+#                              propagate_relationships = c("is_a"),
+#                              extract_tags = 'minimal')
+#
+#    uberon_part_of = get_ontology(uberon.filename,
+#                                  propagate_relationships = c("part_of"),
+#                                  extract_tags = 'minimal')
+#
+#    uberon_develops_from = get_ontology(uberon.filename,
+#                                        propagate_relationships = c("develops_from"),
+#                                        extract_tags = 'minimal')
+#
+#    uberon = get_ontology(uberon.filename,
+#                          propagate_relationships = c("is_a", "part_of","develops_from"),
+#                          extract_tags = 'minimal')
+#
+#                                        # 2. Get names for the uberon terms
+#    unames = c()
+#    for(i in 1:length(uterms))
+#    {
+#        unames[i] = get_term_property(uberon,"name",uterms[i])
+#    }
+#
+#                                        # 3. for each pair of terms, check dependencies
+#    colnames = c("chr.id","dependent.chr.id","subrels")
+#    df = empty.df(colnames)
+#
+#    if (indirect)
+#    {
+#        maybe.remove.indirect = function(x) {x}
+#    }
+#    else
+#    {
+#        maybe.remove.indirect = remove.indirect
+#    }
+#
+#    D = maybe.remove.indirect(get_term_descendancy_matrix(uberon, uterms));
+#    Disa = maybe.remove.indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
+#    Dpartof = maybe.remove.indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
+#    Ddevelopsfrom = maybe.remove.indirect(get_term_descendancy_matrix(uberon_develops_from, uterms));
+#
+#    for(i in 1:length(uterms))
+#    {
+#        for(j in 1:length(uterms))
+#        {
+#            if (i == j) next;
+#
+#            if (D[i,j])
+#            {
+#                cat(sprintf("%s %s\n",uterms[i],uterms[j]))
+#
+#                labels = c()
+#
+#                if (Disa[i,j])
+#                {
+#                    labels = c(labels,"is_a")
+#                }
+#                if (Dpartof[i,j])
+#                {
+#                    labels = c(labels, "part_of")
+#                }
+#                if (Ddevelopsfrom[i,j])
+#                {
+#                    labels = c(labels, "develops_from")
+#                }
+#
+#                label = ""
+#                if (length(labels) > 0)
+#                {
+#                    label = paste(labels,sep=":")
+#                }
+#
+#                cat(sprintf("'%s' -> '%s'",unames[i],unames[j]),"\n")
+#
+#                # chr.id | chr.ancestor | label
+#                df = addrow(df,c(uterms[i], uterms[j], label))
+#
+#                                        #                cat(sprintf("%s,0,%s,1\n",unames[j],unames[i]), file=outfile)
+#                                        #                cat(sprintf("%s,1,%s,1\n",unames[j],unames[i]), file=outfile)
+#
+#
+#                                        #                cat(edge, " ", attributes, "\n", file=dotfile)
+#            }
+#                                        # OK, so does i depend on j?
+#        }
+#    }
+#
+#    tuple(df,uterms,hashmap(uterms,unames),uberon)
+#}
 
 
 #############################################
@@ -1148,20 +711,15 @@ get.dependencies = function(uberon.filename, uterms, indirect=FALSE)
 
 # Tarasov et al. (2019): PARAMO #
 
-#' @title Combining two matrices.
-#' @description Combining two matrices. The parametric scheme of a matrix is defined by natural
-#' numbers; different numbers = different rate parameters.
-#'
-#' @param M1 matrix; if dependency true then: M1 controls M2.
-#' @param M2 matrix; if dependency true then: M2 depends on those states of M1 specified in dependent.state.
-#' @param dependent.state state(s) of M1 that switches on matrix M2.
-#' @param name.sep separator for state names.
-#' @param diag.as populate main diagonal with.
-#'
-#' @return Matrix.
-#'
-#' @author Sergei Tarasov
-#'
+#' @title Combining two matrices
+#' @description Combining two matrices. The parametric schem of matrice is defined by nattural
+#' numbers; different numbers = different rate parameters
+#' @param M1 matrix; if dependency true thenM1 controls M2
+#' @param M2 matrix; if dependency true then: M2 depends on those states of M1 specified in dependent.state
+#' @param dependent.state state(s) of M1 that switches on matrix M2
+#' @param name.sep separator for state names
+#' @param diag.as hpopulate main diagonal with
+#' @return Matrix
 #' @examples
 #' M1<-matrix(c(-1,1,  2,-2),2,2,byrow=TRUE)
 #' rownames(M1)<-colnames(M1)<-c("0","1")
@@ -1169,8 +727,8 @@ get.dependencies = function(uberon.filename, uterms, indirect=FALSE)
 #' rownames(M2)<-colnames(M2)<-c("0","1")
 #' comb2matrices(M1, M2, dependent.state=NULL)
 #' comb2matrices(M1, M2, dependent.state=2)
-#'
 #' @export
+# if dependency true then: M2 depends on M1 states specified in dependent.state
 comb2matrices<-function(M1,M2, dependent.state=NULL, name.sep="", diag.as=""){
 
   if (!is.null(dependent.state)){
@@ -1200,18 +758,16 @@ comb2matrices<-function(M1,M2, dependent.state=NULL, name.sep="", diag.as=""){
 }
 
 
-#' @title Initialize binary matrices given a graph.
-#' @description Call matrices are populated with different parameters.
-#'
-#' @param graph igraph object.
-#'
-#' @return List of matrices.
-#'
-#' @author Sergei Tarasov
-#'
+#' @title Initialize binary matrices given graph
+#' @description Call matrices are populated with different parameters
+#' @param graph igraph object
+#' @return List of matrices
 #' @examples
+#' g <- igraph::make_graph(c("A", "B", "B", "C", "C", "D"), directed = TRUE)
 #' init_binary_matrix(g)
-#'
+#' @importFrom igraph vcount
+#' @importFrom igraph V
+#' @importFrom igraph graph.edgelist
 #' @export
 init_binary_matrix<-function(graph){
   matrix.list=list()
@@ -1229,28 +785,26 @@ init_binary_matrix<-function(graph){
 }
 
 
-#' @title Get all dependency matrices given a dependecy graph.
-#' @description Construct dependency matrices and their correponding attributes.
-#'
-#' @param graph igraph object of ontology terms.
-#'
+#' @title Get all dependency matrices given a dependecy graph
+#' @description Construct dependency matrices and their correponding attributes
+#' @param graph igraph object of ontology terms
 #' @details
-#' $binary.matrices # intial binary matrices assigned to each node of graph.
-#' $comb.matrices$matrix # combined matrix for each node.
+#' $binary.matrices # intial binary matrices assigned to each node of graph
+#' $comb.matrices$matrix # combined matrix for each node
 #' $comb.matrices$state.string # vector of states [1] "00" "01" "10" "11"
 #' $comb.matrices$state.ident # specifies the order of ontology terms in each state [1] "UBERON:0007829" "UBERON:2000663"
-#' $comb.matrices$state.observable # ids and names of "observable" states. In red-blue tail notation refers to blue and red states.
-#' $comb.matrices$state.hidden # ids and names of "hidden" states. In red-blue tail notation refers to "blue absent" and "red absent".
-#' $nodes.sorted # topologically sorted nodes.
-#' $vertex.hier # hierarchy of the nodes.
-#'
-#' @return List of matrices and their attributes.
-#'
-#' @author Sergei Tarasov
-#'
+#' $comb.matrices$state.observable # ids and names of "observable" states. In red-blue tail notation refers to blue and red states
+#' $comb.matrices$state.hidden # ids and names of "hidden" states. In red-blue tail notation refers to "blue absent"
+#' and "red absent"
+#' $nodes.sorted # topologically sorted nodes
+#' $vertex.hier # hierrachy of the nodes
+#' @return List of matrices and their attributes
+#' @importFrom igraph make_graph
+#' @importFrom igraph topo_sort
+#' @importFrom igraph ego
 #' @examples
+#' g <- igraph::make_graph(c("A", "B", "B", "C", "C", "D"), directed = TRUE)
 #' get_graph_matrix(g)
-#'
 #' @export
 get_graph_matrix<-function(graph){
 
@@ -1333,18 +887,12 @@ get_graph_matrix<-function(graph){
 }
 
 
-#' @title Combining multiple matrices.
-#'
-#' @description Liely as independently evolving.
-#'
-#' @param list.matrices List of matrices.
-#'
-#' @return Matrix.
-#'
-#' @author Sergei Tarasov
-#'
+#' @title Combining multiple matrices
+#' @description Likely as independently evolving
+#' @param list.matrices List of matrices
+#' @return Matrix
 #' @export
-combNmatrices<-function(list.matrices,  ...){
+combNmatrices<-function(list.matrices){
   comb.matrix<-list.matrices[[1]]
 
   for (i in 1:(length(list.matrices)-1)){
@@ -1357,16 +905,11 @@ combNmatrices<-function(list.matrices,  ...){
 
 # Tarasov et al. (2019): PARAMO #
 
-#' @title Initialize binary matrices.
-#'
-#' @param char.state names for character states.
-#' @param rate.param names for the rate parameters.
-#' @param diag.as values to pass to the main diagonal elements.
-#'
-#' @return Matrix.
-#'
-#' @author Sergei Tarasov
-#'
+#' @title Initialize binary matrices
+#' @param char.state names for character states
+#' @param rate.param names for the rate parameters
+#' @param diag.as values to pas to the main diagonal elements
+#' @return matrix
 #' @export
 init_char_matrix<-function(char.state, rate.param, diag.as=NA){
   n.state<-length(char.state)
@@ -1379,17 +922,18 @@ init_char_matrix<-function(char.state, rate.param, diag.as=NA){
 }
 
 
-#' A wrapper for corHMM that fits Structured Hidden State Markov Models.
+#' A wrapper for corHMM that fits Structured Hidden State Models.
 #'
-#' @param td a treeplyr treedata object.
-#' @param amalgamations a list produced by 'amalgamate_deps'.
-#' @param ... Additional arguments passed to 'corHMM::rayDISC'.
+#' @param td A treeplyr treedata object
+#' @param amalgamations A list produced by `amalgamate_deps`
+#' @param ... Additional arguments passed to `corHMM::rayDISC`
 #'
-#' @details This function fits the models contained in 'amalgamations$M'.
-#' to each of the characters in td using the function 'corHMM::rayDISC'.
+#' @details This function fits the models contained in `amalgamations$M`
+#' to each of the characters in `td` using the function `corHMM::rayDISC`.
 #'
-#' @return A list of fits for each character in the dataset.
+#' @importFrom phytools bind.tip
 #'
+#' @return A list of fits for each character in the dataset
 #' @export
 amalgamated_fits_corHMM <- function(td, amalgamations, ...){
   trees <- list()
@@ -1415,13 +959,16 @@ amalgamated_fits_corHMM <- function(td, amalgamations, ...){
 
 #' A wrapper for corHMM that draws stochastic character maps given a corHMM fit.
 #'
-#' @param fits a list produced by 'amalgamated_fits_corHMM'.
-#' @param ... Additional arguments passed to 'corHMM::makeSimmap'.
+#' @param fits A list produced by `amalgamated_fits_corHMM`
+#' @param ... Additional arguments passed to `corHMM::makeSimmap`
 #'
-#' @details This function takes the models produced from 'amalgamated_fits_corHMM' and
+#' @details This function takes the models produced from `amalgamated_fits_corHMM` and
 #' uses them to generate stochastic character maps.
 #'
-#' @return A list of stochastic character maps for each character in the dataset.
+#' @importFrom phytools bind.tip
+#' @importFrom phytools drop.tip.simmap
+#'
+#' @return A list of stochastic character maps for each character in the dataset
 #'
 #' @export
 amalgamated_simmaps_corHMM <- function(fits, ...){
@@ -1454,22 +1001,18 @@ amalgamated_simmaps_corHMM <- function(fits, ...){
 #' @aliases amaSMM_2Q
 #' @rdname amaSMM
 #'
-#' @title SMM amalgamation of rate matrices.
-#' @description Amalgamating two (\code{amaSMM_2Q}) or several (\code{amaSMM}) rate matrices as independently (SMM-ind) or dependently (SMM-sw) evolving (Tarasov 2019, 2020). The parametric scheme of matrices is defined by integers, different integers
-#' indicate different rate parameters.
-#'
-#' @param ... rate matrices.
-#' @param Qc rate matrix (controlling character if dependency is true).
-#' @param Qd rate matrix (dependent character); if dependency is true then Qd depends on those states of Qc specified in controlling.state.
-#' @param controlling.state state(s) of Qc that switches on/off Qd matrix.
-#' @param name.sep separator for the state names.
-#' @param diag.as populates main diagonal elements.
-#' @param non.rate.as changes negative elements in the returned matrix to the specified value.
-#'
+#' @title SMM amalgamation of rate matrices
+#' @description Amalgamating two (\code{amaSMM_2Q}) or several (\code{amaSMM}) rate matrices as  as independently (SMM-ind) or dependently (SMM-sw) evolving (Tarasov 2019, 2020). The parametric scheme of matrices is defined by integers, different integers
+#' indicate different rate parameters
+#' @param ... rate matrices
+#' @param Qc rate matrix (controlling character if dependency is true)
+#' @param Qd rate matrix (dependent character); if dependency is true then Qd depends on those states of Qc specified in controlling.state
+#' @param controlling.state state(s) of Qc that switches on/off Qd matrix
+#' @param name.sep separator for the state names
+#' @param diag.as populates main diagonal elements
+#' @param non.rate.as changes negative elements in the returned matrix to the specified value
 #' @return matrix
-#'
 #' @author Sergei Tarasov
-#'
 #' @export
 #'
 #' @references Tarasov, S., 2019. Integration of anatomy ontologies and evo-devo using structured Markov models suggests a new framework for modeling discrete phenotypic traits. Systematic biology, 68(5), pp.698-716.
@@ -1498,10 +1041,7 @@ amaSMM <- function(..., controlling.state = NULL, name.sep = "", diag.as = NULL,
 
 #' @rdname amaSMM
 #'
-#' @author Sergei Tarasov
-#'
 #' @export
-#'
 #' @examples
 #'Tl <- matrix(c(-1, 1, 1, -1), 2, 2, byrow = TRUE, dimnames =list( c("a", "p"), c("a", "p")) )
 #'C <-matrix(c(-2, 2, 2, -2), 2, 2, byrow = TRUE, dimnames =list( c("r", "b"), c("r", "b")) )
@@ -1544,28 +1084,24 @@ amaSMM_2Q <- function(Qc, Qd, controlling.state = NULL, name.sep = "", diag.as =
 #' @aliases amaED_phi
 #' @rdname amaED
 #'
-#' @title ED amalgamation of rate matrices.
+#' @title ED amalgamation of rate matrices
 #' @description Amalgamating two matrices using embedded dependency (ED); \code{amaED} is the general function
 #' that wraps \code{amaED_phi}. The parametric scheme of matrices is defined by integers, different integers
-#' indicate different rate parameters.
+#' indicate different rate parameters
 #'
-#' @param Qc controlling character.
-#' @param Qd dependent character.
+#' @param Qc controlling character
+#' @param Qd dependent character
 #' @param type if \code{phi=NULL} specifies qualitative amalgamation (\code{ql}) or absent/present one (\code{ap}); for the latter absent state should be marked
-#' with "*" (see the examples).
-#' @param phi initial vector of the states of Qd when transiting from "absent" to "present" in Qc; \code{length(phi)} should be equal to \code{nrow(Qd)}.
-#' @param name.sep separator for the state names.
-#' @param ... other parameters for \code{amaED_phi}.
+#' with "*" (see the examples)
+#' @param phi initial vector of the states of Qd when transiting from "absent" to "present" in Qc; \code{length(phi)} should be equal to \code{nrow(Qd)}
+#' @param name.sep separator for the state names
+#' @param ... other parameters for \code{amaED_phi}
 #'
 #' @details The ED amalgamation can be done automatically (\code{phi=NULL} and specified \code{type}) or manually if \code{phi} is provided.
 #' For the automatic amalgamation \code{type='ap'}, the absent state in Qd should be marked with \code{'*'} as e.g., \code{'A*'}; in the automatic amalgamation  \code{phi} is
 #' determined using \code{get_phi()}. When the state "present" in Qc controls more than one character (a/p and qualitative),
-#' the qualitative character and should be the second in amalgamation, e.g., \code{amaSMM(Qap, Qqual)}.
-#'
+#' the qualitative character should be the second in amalgamation, e.g., \code{amaSMM(Qap, Qqual)}
 #' @return matrix
-#'
-#' @author Sergei Tarasov
-#'
 #' @export
 #'
 #' @examples
@@ -1609,13 +1145,9 @@ amaED <- function(Qc, Qd, type=c("ql", "ap"), phi=NULL, name.sep='', ...){
 
 #' @rdname amaED
 #'
-#' @param non.rate.as changes negative elements in the returned matrix to the specified value.
-#' @param diag.as sets the main diagonal elements in the returned matrix.
-#'
-#' @author Sergei Tarasov
-#'
+#' @param non.rate.as changes negative elements in the returned matrix to the specified value
+#' @param diag.as sets the main diagonal elements in the returned matrix
 #' @export
-#'
 #' @examples
 #' Tl <- matrix(c(-1, 1, 1, -1), 2, 2, byrow = TRUE, dimnames =list( c("T*", "T"), c("T*", "T")) )
 #' C <-matrix(c(-2, 2, 2, -2), 2, 2, byrow = TRUE, dimnames =list( c("r", "b"), c("r", "b")) )
@@ -1656,17 +1188,13 @@ amaED_phi <- function(Qc, Qd, phi, name.sep = "", diag.as = NULL, non.rate.as = 
 }
 
 
-#' @title Determine initial vector phi for ED amalgamation.
+#' @title Determine initial vector phi for ED amalgamation
 #' @description Given state names from rate matrix Qd constructs phi for ED amalgamation.
-#' The absent state in Qd should be marked with \code{'*'} as e.g., \code{'A*'}.
+#' The absent state in Qd should be marked with \code{'*'} as e.g., \code{'A*'}
 #'
-#' @param mtnames state names from rate matrix.
-#' @param state.sep separator in amalgamated states.
-#'
+#' @param mtnames state names from rate matrix
+#' @param state.sep separator in amalgamated states
 #' @return vector
-#'
-#' @author Sergei Tarasov
-#'
 #' @export
 #'
 #' @examples
@@ -1698,18 +1226,12 @@ get_phi <- function(mtnames, state.sep=''){
 
 
 
-#' @title Initialize custom rate matrix Q.
-#'
-#' @param char.state vector character states.
-#' @param rate.param vector of the rate parameters.
-#' @param diag.as sets the main diagonal elements; can be "negative", NA, or some value; "negative" returns negative row sum.
-#'
+#' @title Initialize custom rate matrix Q
+#' @param char.state vector character states
+#' @param rate.param vector of the rate parameters
+#' @param diag.as sets the main diagonal elements; can be "negative", NA, or some value; "negative" returns negative row sum
 #' @return matrix
-#'
-#' @author Sergei Tarasov
-#'
 #' @export
-#'
 #' @examples
 #' Q <- initQ(c('a', 'p'), c(1,2), diag.as = NA)
 initQ <- function(char.state, rate.param, diag.as = "negative") {
@@ -1734,17 +1256,14 @@ initQ <- function(char.state, rate.param, diag.as = "negative") {
 
 
 
-#' @title Converts rate matrix Q for using in RevBayes.
-#' @description Produces rate matrix that can be copy/pasted into RevBayes script. The rate matrix can be represented as integers or symbols.
+#' @title Converts rate matrix Q for using in RevBayes
+#' @description Produces rate matrix that can be copy/paste into RevBayes script. The rate matrix can be represented as integers or symbols.
 #'
-#' @param Q rate matrix.
-#' @param round rate rounding.
-#' @param symb symbol for rates.
+#' @param Q rate matrix
+#' @param round rate rounding
+#' @param symb symbol for rates
 #'
 #' @return text string
-#'
-#' @author Sergei Tarasov
-#'
 #' @export
 #'
 #' @examples
@@ -1768,10 +1287,7 @@ as_matrixRB <- function(Q, round=2, symb=NULL){
 }
 
 
-#' @title Converts rate matrix Q for using in RevBayes (entities as numbers).
-#'
-#' @author Sergei Tarasov
-#'
+# @title Converts rate matrix Q for using in RevBayes (entities as numbers)
 as_matrixRB_numeric <- function(Q, round=2){
   diag(Q) <- 0
   #i=1
@@ -1791,10 +1307,7 @@ as_matrixRB_numeric <- function(Q, round=2){
 }
 
 
-#' @title Converts rate matrix Q for using in RevBayes (entities as symbols).
-#'
-#' @author Sergei Tarasov
-#'
+# @title Converts rate matrix Q for using in RevBayes (entities as symbols)
 as_matrixRB_symbolic <- function(Q, symb='q'){
   round <- 0
 
@@ -1827,14 +1340,13 @@ as_matrixRB_symbolic <- function(Q, symb='q'){
 #' @importFrom MASS fractions
 #' @importFrom numbers mLCM
 
-#' @title Equal Rate Hidden Extension of rate matrix.
+#' @title Equal Rate Hidden Extension of rate matrix
 #' @description Gives minimal equal rate hidden extension by finding least common multiple of rates.
 #'
-#' @param Q rate matrix.
-#'
-#' @return matrix.
-#'
-#' @author Sergei Tarasov
+#' @param Q rate matrix
+#' @return matrix
+#' @export
+
 #'
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
@@ -1903,17 +1415,15 @@ EHEtransform<-function(Q)
 
 
 
-#' @title Correlated Hyperspace Extension of rate matrix.
+#' @title Correlated Hyperspace Extension of rate matrix
 #' @description Gives minimal Correlated Hyperspace Extension by first using EHEtransform() and then finding hypercube embedding.
 #' So far, it works only for two-state rate matrices. Since there are many minimal CHE transformations for a given Q, it randomly generates one.
 #'
-#' @param Q rate matrix.
+#' @param Q rate matrix
 #' @param threshold rounds the values in its first argument to the specified number of decimal places. It is needed for rate comparing rates using round().
-#'
 #' @return a list that contains matrix and state names generated by latent characters
-#'
-#' @author Sergei Tarasov
-#'
+
+#' @export
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
 #'tr <-CHEtransform(Q)
@@ -2013,15 +1523,12 @@ CHEtransform <- function(Q, threshold=10){
 
 
 
-#' @title Convert an instance of rate matrix to model.
-#'
-#' @param Q an instance of rate matrix with cells having specific rate values.
-#' @param diag.as sets the main diagonal elements; can be "negative", NA, or some value; "negative" returns negative row sum.
-#'
-#' @return matrix where numbers correspond to different rate parameters.
-#'
-#' @author Sergei Tarasov
-#'
+#' @title Convert an instance of rate matrix to model
+#' @param Q an instance of rate matrix with cells having specific rate values
+#' @param diag.as sets the main diagonal elements; can be "negative", NA, or some value; "negative" returns negative row sum
+#' @return matrix where numbers correspond to different rate parameters
+#' @export
+
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
 #'Q2model(Q)
@@ -2054,16 +1561,13 @@ Q2model<-function(Q, diag.as=NA)
 #
 ###########
 
-#' @title Tests if a rate matrix is strongly lumpable.
-#' @description Given rate matrix Q and state partition, checks if Q is strongly lumpable.
-#'
-#' @param Q a rate matrix with cells having specific rate values.
-#' @param part_scheme partition of state in Q represented as a list.
-#'
+#' @title Tests if a rate matrix is strongly lumpable
+#' @description Given rate matrix Q and state partition, checks if Q is strongly lumpable
+#' @param Q a rate matrix with cells having specific rate values
+#' @param part_scheme partition of state in Q represented as a list
 #' @return Boolean value
-#'
-#' @author Sergei Tarasov
-#'
+#' @export
+
 #' @examples
 #'Q <- initQ(c(1, 2), c(.3,.2))
 #'Q.h <- EHEtransform(Q)

@@ -2,33 +2,31 @@
 % Please edit documentation in R/scate_functions.R
 \name{get_graph_matrix}
 \alias{get_graph_matrix}
-\title{Get all dependency matrices given a dependecy graph.}
+\title{Get all dependency matrices given a dependecy graph}
 \usage{
 get_graph_matrix(graph)
 }
 \arguments{
-\item{graph}{igraph object of ontology terms.}
+\item{graph}{igraph object of ontology terms}
 }
 \value{
-List of matrices and their attributes.
+List of matrices and their attributes
 }
 \description{
-Construct dependency matrices and their correponding attributes.
+Construct dependency matrices and their correponding attributes
 }
 \details{
-$binary.matrices # intial binary matrices assigned to each node of graph.
-$comb.matrices$matrix # combined matrix for each node.
+$binary.matrices # intial binary matrices assigned to each node of graph
+$comb.matrices$matrix # combined matrix for each node
 $comb.matrices$state.string # vector of states [1] "00" "01" "10" "11"
 $comb.matrices$state.ident # specifies the order of ontology terms in each state [1] "UBERON:0007829" "UBERON:2000663"
-$comb.matrices$state.observable # ids and names of "observable" states. In red-blue tail notation refers to blue and red states.
-$comb.matrices$state.hidden # ids and names of "hidden" states. In red-blue tail notation refers to "blue absent" and "red absent".
-$nodes.sorted # topologically sorted nodes.
-$vertex.hier # hierarchy of the nodes.
+$comb.matrices$state.observable # ids and names of "observable" states. In red-blue tail notation refers to blue and red states
+$comb.matrices$state.hidden # ids and names of "hidden" states. In red-blue tail notation refers to "blue absent"
+and "red absent"
+$nodes.sorted # topologically sorted nodes
+$vertex.hier # hierrachy of the nodes
 }
 \examples{
+g <- igraph::make_graph(c("A", "B", "B", "C", "C", "D"), directed = TRUE)
 get_graph_matrix(g)
-
-}
-\author{
-Sergei Tarasov
 }

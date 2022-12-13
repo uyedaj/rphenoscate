@@ -2,24 +2,24 @@
 % Please edit documentation in R/scate_functions.R
 \name{amalgamated_fits_corHMM}
 \alias{amalgamated_fits_corHMM}
-\title{A wrapper for corHMM that fits Structured Hidden State Markov Models.}
+\title{A wrapper for corHMM that fits Structured Hidden State Models.}
 \usage{
 amalgamated_fits_corHMM(td, amalgamations, ...)
 }
 \arguments{
-\item{td}{a treeplyr treedata object.}
+\item{td}{A treeplyr treedata object}
 
-\item{amalgamations}{a list produced by 'amalgamate_deps'.}
+\item{amalgamations}{A list produced by `amalgamate_deps`}
 
-\item{...}{Additional arguments passed to 'corHMM::rayDISC'.}
+\item{...}{Additional arguments passed to `corHMM::rayDISC`}
 }
 \value{
-A list of fits for each character in the dataset.
+A list of fits for each character in the dataset
 }
 \description{
-A wrapper for corHMM that fits Structured Hidden State Markov Models.
+A wrapper for corHMM that fits Structured Hidden State Models.
 }
 \details{
-This function fits the models contained in 'amalgamations$M'.
-to each of the characters in td using the function 'corHMM::rayDISC'.
+This function fits the models contained in `amalgamations$M`
+to each of the characters in `td` using the function `corHMM::rayDISC`.
 }

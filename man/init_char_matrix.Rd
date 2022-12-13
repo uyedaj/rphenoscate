@@ -2,23 +2,20 @@
 % Please edit documentation in R/scate_functions.R
 \name{init_char_matrix}
 \alias{init_char_matrix}
-\title{Initialize binary matrices.}
+\title{Initialize binary matrices}
 \usage{
 init_char_matrix(char.state, rate.param, diag.as = NA)
 }
 \arguments{
-\item{char.state}{names for character states.}
+\item{char.state}{names for character states}
 
-\item{rate.param}{names for the rate parameters.}
+\item{rate.param}{names for the rate parameters}
 
-\item{diag.as}{values to pass to the main diagonal elements.}
+\item{diag.as}{values to pas to the main diagonal elements}
 }
 \value{
-Matrix.
+matrix
 }
 \description{
-Initialize binary matrices.
-}
-\author{
-Sergei Tarasov
+Initialize binary matrices
 }

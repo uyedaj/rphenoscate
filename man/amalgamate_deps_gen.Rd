@@ -9,34 +9,38 @@ amalgamate_deps_gen(
   dep.mat,
   mode = c("auto", "check"),
   state.data,
-  tax.col = T
+  tax.col = TRUE
 )
 }
 \arguments{
-\item{td}{a treeplyr treedata object with characters to amalgamate.}
+\item{td}{A treeplyr treedata object with characters to amalgamate}
 
-\item{dep.mat}{matrix, a dependency matrix produced by the function 'dep_matrix'.}
+\item{dep.mat}{A dependency matrix produced by the function `dep_matrix`}
 
-\item{mode}{character, indicates whether to perform automatic amalgamations using SMM models ('auto') or
-to check for different types of dependencies using ED models ('check'). See Tarasov (2021) for details.}
+\item{mode}{Indicates whether to perform automatic amalgamations using SMM models ('auto') or
+to check for different types of dependencies using ED models ('check'). See Tarasov (2021) for details}
 
-\item{state.data}{character, a list with information about character states descriptions. 
-If mode = 'check', the function will try to automatically check the type of trait dependency based on state descriptions.}
+\item{state.data}{A list with information about character states descriptions. If mode = 'check', the function
+will try to automatically check the type of trait dependency based of state descriptions}
 
-\item{tax.col}{logical, indicates if the first column of the data set contains taxon names.}
+\item{tax.col}{Indicates if the first column of the data set contains taxon names}
 }
 \value{
-A list containing:
-$traits The old trait names that were amalgamated.
-$drop The dependent traits that were dropped after amalgamation.
-$groups The groups of traits that were amalgamated.
-$M Transition rate matrices for the Markov Models (SMM or ED) that can be used in RevBayes, corHMM or other tools.
-$states A list providing the final amalgamated states.
-$state.data A list providing the character state descriptions for the amalgamated traits.
+A list of:
+$traits The old trait names that were amalgamated
+$drop The dependent traits that were dropped after amalgamation
+$groups The groups of traits that were amalgamated
+$M Transition matrices for the Markov Models (SMM or ED) that can be run in RevBayes, corHMM or other tools
+$states A list providing the final amalgamated states
+$state.data A list providing the character state descriptions for the amalgamated traits
 }
 \description{
 Generates a model for traits given a dependency matrix when using external ontologies.
 }
-\author{
-Diego S. Porto
+\examples{
+
+\dontrun{
+    amalgamate_deps_gen(treedata, dep_mat, state.data = state.data)
+}
+
 }

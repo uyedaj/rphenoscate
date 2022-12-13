@@ -2,20 +2,20 @@
 % Please edit documentation in R/scate_functions.R
 \name{is_slumpable}
 \alias{is_slumpable}
-\title{Tests if a rate matrix is strongly lumpable.}
+\title{Tests if a rate matrix is strongly lumpable}
 \usage{
 is_slumpable(Q, part_scheme)
 }
 \arguments{
-\item{Q}{a rate matrix with cells having specific rate values.}
+\item{Q}{a rate matrix with cells having specific rate values}
 
-\item{part_scheme}{partition of state in Q represented as a list.}
+\item{part_scheme}{partition of state in Q represented as a list}
 }
 \value{
 Boolean value
 }
 \description{
-Given rate matrix Q and state partition, checks if Q is strongly lumpable.
+Given rate matrix Q and state partition, checks if Q is strongly lumpable
 }
 \examples{
 Q <- initQ(c(1, 2), c(.3,.2))
@@ -34,7 +34,4 @@ is_slumpable(Q.h, part_scheme)
 
 part_scheme=list(c(1:3), c(4:8))
 is_slumpable(Q.h, part_scheme)
-}
-\author{
-Sergei Tarasov
 }

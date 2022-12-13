@@ -7,11 +7,8 @@
 remove_indirect(dependency_matrix)
 }
 \arguments{
-\item{dependency_matrix}{A dependency matrix.}
+\item{dependency_matrix}{A dependency matrix}
 }
 \description{
-Internal function. Not exported.
-}
-\details{
 Function for removing redundant dependency edges from our graph.
 }

@@ -2,18 +2,21 @@
 % Please edit documentation in R/scate_functions.R
 \name{recode_traits}
 \alias{recode_traits}
-\title{Amalgamates and recodes traits using the matrices returned by amalgamate_deps.}
+\title{Recode Traits in a treedata Object}
 \usage{
 recode_traits(td, M)
 }
 \arguments{
-\item{td}{a treeplyr treedata object with characters to recode.}
+\item{td}{A 'treeplyr' treedata object with characters to recode}
 
-\item{M}{a list produced by the function 'amalgamate_deps'.}
-}
-\value{
-A treeplyr treedata object with characters amalgamated and recoded.
+\item{M}{A list produced by the function `amalgamate_deps`}
 }
 \description{
-Amalgamates and recodes traits using the matrices returned by amalgamate_deps.
+Amalgamates traits using the matrices returned by amalgamate_deps.
+}
+\examples{
+\dontrun{
+    recode_traits(treedata, matrix)
+}
+
 }

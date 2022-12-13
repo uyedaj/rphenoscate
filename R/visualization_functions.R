@@ -2,14 +2,22 @@
 
 #' Plots a heatmap along with a phylogeny and trait tree.
 #'
-#' @param td a treeplyr treedata object.
-#' @param njt a phylo or hclust object produced by the function 'makeTraitTree'.
-#' @param start integer, indicates the starting column from the data set.
-#' @param margs numeric, vector with values for the margins of the plots. 
-#' @param ... Additional arguments passed to plot.
+#' @import ape
+#' @import phytools
+#' @import grDevices
+#' @import graphics
+#' @import dplyr
 #'
-#' @return A heatmap with shaded cells indicating presence of a given anatomical entity. Tree to the left is the species phylogeny from the td treedata object.
-#' Tree to the top is the 'trait tree' produced by the function 'makeTraitTree'.
+#' @param td The treedata object
+#' @param njt The trait tree created with the makeTraitTree() function
+#' @param start Starting column for traits to visualize in the treedata data.frame
+#' @param margs Margins for the plot
+#' @param ... Extra arguments to pass for visualization
+#'
+#' @importFrom stats na.omit
+#' @importFrom phytools force.ultrametric
+#'
+#' @return Plots a heatmap that matches a phylogeny to a trait tree.
 #'
 #' @export
 ontologyHeatMap <- function(td, njt, start=3, margs=c(0.2, 0.25), ...){
@@ -71,13 +79,18 @@ ontologyHeatMap <- function(td, njt, start=3, margs=c(0.2, 0.25), ...){
 
 #' Makes a trait tree using semantic similarity.
 #'
-#' @param td a treeplyr treedata object.
-#' @param external logical, indicates if an external ontology is used instead of UBERON.
-#' @param ONTO an ontology_index object of an external ontology imported using the R package 'ontologyIndex'.
-#' @param method character, indicates the method to be used to produce a 'trait tree' based on semantic similarity;
-#' if 'nj' produces a neighbor-joining tree using the function 'nj' from ape; if 'cls' produces a clustering dendrogram using 'hclust'. 
+#' @title Make a Trait Tree
 #'
-#' @return A 'phylo' (neighbor-joining) or 'hclust' (clustering dendrogram) object.
+#' @description Makes a trait tree using semantic similarity.
+#'
+#' @param td The treedata object containing character data
+#' @param external Should an external ontology be used
+#' @param ONT The ontology object to use
+#' @param method Neighbor-joining method for clustering-dendrogram. Options are "nj" or "cls"
+#'
+#' @importFrom stats hclust
+#' @importFrom stats setNames
+#' @importFrom stats as.dist
 #'
 #' @export
 makeTraitTree <- function (td, external = F, ONT, method = "nj")
@@ -129,7 +142,7 @@ makeTraitTree <- function (td, external = F, ONT, method = "nj")
 
   }
 
-  return (tree)
+  return(tree)
 
 }
 

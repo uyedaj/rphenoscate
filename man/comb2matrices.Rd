@@ -2,27 +2,27 @@
 % Please edit documentation in R/scate_functions.R
 \name{comb2matrices}
 \alias{comb2matrices}
-\title{Combining two matrices.}
+\title{Combining two matrices}
 \usage{
 comb2matrices(M1, M2, dependent.state = NULL, name.sep = "", diag.as = "")
 }
 \arguments{
-\item{M1}{matrix; if dependency true then: M1 controls M2.}
+\item{M1}{matrix; if dependency true thenM1 controls M2}
 
-\item{M2}{matrix; if dependency true then: M2 depends on those states of M1 specified in dependent.state.}
+\item{M2}{matrix; if dependency true then: M2 depends on those states of M1 specified in dependent.state}
 
-\item{dependent.state}{state(s) of M1 that switches on matrix M2.}
+\item{dependent.state}{state(s) of M1 that switches on matrix M2}
 
-\item{name.sep}{separator for state names.}
+\item{name.sep}{separator for state names}
 
-\item{diag.as}{populate main diagonal with.}
+\item{diag.as}{hpopulate main diagonal with}
 }
 \value{
-Matrix.
+Matrix
 }
 \description{
-Combining two matrices. The parametric scheme of a matrix is defined by natural
-numbers; different numbers = different rate parameters.
+Combining two matrices. The parametric schem of matrice is defined by nattural
+numbers; different numbers = different rate parameters
 }
 \examples{
 M1<-matrix(c(-1,1,  2,-2),2,2,byrow=TRUE)
@@ -31,8 +31,4 @@ M2<-matrix(c(-3,3,  4,-4),2,2,byrow=TRUE)
 rownames(M2)<-colnames(M2)<-c("0","1")
 comb2matrices(M1, M2, dependent.state=NULL)
 comb2matrices(M1, M2, dependent.state=2)
-
-}
-\author{
-Sergei Tarasov
 }
