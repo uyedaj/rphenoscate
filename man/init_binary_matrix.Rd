@@ -2,23 +2,20 @@
 % Please edit documentation in R/scate_functions.R
 \name{init_binary_matrix}
 \alias{init_binary_matrix}
-\title{Initialize binary matrices given a graph.}
+\title{Initialize binary matrices given graph}
 \usage{
 init_binary_matrix(graph)
 }
 \arguments{
-\item{graph}{igraph object.}
+\item{graph}{igraph object}
 }
 \value{
-List of matrices.
+List of matrices
 }
 \description{
-Call matrices are populated with different parameters.
+Call matrices are populated with different parameters
 }
 \examples{
+g <- igraph::make_graph(c("A", "B", "B", "C", "C", "D"), directed = TRUE)
 init_binary_matrix(g)
-
-}
-\author{
-Sergei Tarasov
 }

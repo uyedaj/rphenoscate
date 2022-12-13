@@ -4,21 +4,21 @@
 \alias{recode_traits_gen}
 \title{Amalgamates and recodes traits using the matrices returned by amalgamate_deps_gen.}
 \usage{
-recode_traits_gen(td, amal.deps, tax.col = T)
+recode_traits_gen(td, amal.deps, tax.col = TRUE)
 }
 \arguments{
-\item{td}{a treeplyr treedata object with characters to amalgamate and recode.}
+\item{td}{A treeplyr treedata object with characters to recode}
 
-\item{amal.deps}{a list produced by the function 'amalgamate_deps_gen'.}
+\item{amal.deps}{A list produced by the function `amalgamate_deps_gen`}
 
-\item{tax.col}{logical, indicates if the first column of the data set contains taxon names.}
-}
-\value{
-A treeplyr treedata object with characters amalgamated and recoded.
+\item{tax.col}{Indicates if the first column of the data set contains taxon names}
 }
 \description{
 Amalgamates and recodes traits using the matrices returned by amalgamate_deps_gen.
 }
-\author{
-Diego S. Porto
+\examples{
+\dontrun{
+    recode_traits_gen(treedata, amal.deps)
+}
+
 }

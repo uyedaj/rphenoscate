@@ -3,7 +3,7 @@
 \name{amaSMM}
 \alias{amaSMM}
 \alias{amaSMM_2Q}
-\title{SMM amalgamation of rate matrices.}
+\title{SMM amalgamation of rate matrices}
 \usage{
 amaSMM(
   ...,
@@ -23,26 +23,26 @@ amaSMM_2Q(
 )
 }
 \arguments{
-\item{...}{rate matrices.}
+\item{...}{rate matrices}
 
-\item{controlling.state}{state(s) of Qc that switches on/off Qd matrix.}
+\item{controlling.state}{state(s) of Qc that switches on/off Qd matrix}
 
-\item{name.sep}{separator for the state names.}
+\item{name.sep}{separator for the state names}
 
-\item{diag.as}{populates main diagonal elements.}
+\item{diag.as}{populates main diagonal elements}
 
-\item{non.rate.as}{changes negative elements in the returned matrix to the specified value.}
+\item{non.rate.as}{changes negative elements in the returned matrix to the specified value}
 
-\item{Qc}{rate matrix (controlling character if dependency is true).}
+\item{Qc}{rate matrix (controlling character if dependency is true)}
 
-\item{Qd}{rate matrix (dependent character); if dependency is true then Qd depends on those states of Qc specified in controlling.state.}
+\item{Qd}{rate matrix (dependent character); if dependency is true then Qd depends on those states of Qc specified in controlling.state}
 }
 \value{
 matrix
 }
 \description{
-Amalgamating two (\code{amaSMM_2Q}) or several (\code{amaSMM}) rate matrices as independently (SMM-ind) or dependently (SMM-sw) evolving (Tarasov 2019, 2020). The parametric scheme of matrices is defined by integers, different integers
-indicate different rate parameters.
+Amalgamating two (\code{amaSMM_2Q}) or several (\code{amaSMM}) rate matrices as  as independently (SMM-ind) or dependently (SMM-sw) evolving (Tarasov 2019, 2020). The parametric scheme of matrices is defined by integers, different integers
+indicate different rate parameters
 }
 \examples{
 C1 <-matrix(c(-1, 1, 1, -1), 2, 2, byrow = TRUE, dimnames =list( c("r", "b"), c("r", "b")) )

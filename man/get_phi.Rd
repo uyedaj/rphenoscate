@@ -2,26 +2,23 @@
 % Please edit documentation in R/scate_functions.R
 \name{get_phi}
 \alias{get_phi}
-\title{Determine initial vector phi for ED amalgamation.}
+\title{Determine initial vector phi for ED amalgamation}
 \usage{
 get_phi(mtnames, state.sep = "")
 }
 \arguments{
-\item{mtnames}{state names from rate matrix.}
+\item{mtnames}{state names from rate matrix}
 
-\item{state.sep}{separator in amalgamated states.}
+\item{state.sep}{separator in amalgamated states}
 }
 \value{
 vector
 }
 \description{
 Given state names from rate matrix Qd constructs phi for ED amalgamation.
-The absent state in Qd should be marked with \code{'*'} as e.g., \code{'A*'}.
+The absent state in Qd should be marked with \code{'*'} as e.g., \code{'A*'}
 }
 \examples{
 A <- matrix(c(-2, 2, 2, -2), 2, 2, byrow = TRUE, dimnames =list( c("A*", "A"), c("A*", "A")) )
 get_phi(colnames(A))
-}
-\author{
-Sergei Tarasov
 }

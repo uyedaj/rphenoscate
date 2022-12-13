@@ -2,12 +2,12 @@
 % Please edit documentation in R/scate_functions.R
 \name{CHEtransform}
 \alias{CHEtransform}
-\title{Correlated Hyperspace Extension of rate matrix.}
+\title{Correlated Hyperspace Extension of rate matrix}
 \usage{
 CHEtransform(Q, threshold = 10)
 }
 \arguments{
-\item{Q}{rate matrix.}
+\item{Q}{rate matrix}
 
 \item{threshold}{rounds the values in its first argument to the specified number of decimal places. It is needed for rate comparing rates using round().}
 }
@@ -25,7 +25,4 @@ tr <-CHEtransform(Q)
 Q.che <-tr$Q
 part_scheme=list(c(1:4), c(5:8))
 is_slumpable(Q.che, part_scheme)
-}
-\author{
-Sergei Tarasov
 }

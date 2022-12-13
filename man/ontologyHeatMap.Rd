@@ -7,19 +7,18 @@
 ontologyHeatMap(td, njt, start = 3, margs = c(0.2, 0.25), ...)
 }
 \arguments{
-\item{td}{a treeplyr treedata object.}
+\item{td}{The treedata object}
 
-\item{njt}{a phylo or hclust object produced by the function 'makeTraitTree'.}
+\item{njt}{The trait tree created with the makeTraitTree() function}
 
-\item{start}{integer, indicates the starting column from the data set.}
+\item{start}{Starting column for traits to visualize in the treedata data.frame}
 
-\item{margs}{numeric, vector with values for the margins of the plots.}
+\item{margs}{Margins for the plot}
 
-\item{...}{Additional arguments passed to plot.}
+\item{...}{Extra arguments to pass for visualization}
 }
 \value{
-A heatmap with shaded cells indicating presence of a given anatomical entity. Tree to the left is the species phylogeny from the td treedata object.
-Tree to the top is the 'trait tree' produced by the function 'makeTraitTree'.
+Plots a heatmap that matches a phylogeny to a trait tree.
 }
 \description{
 Plots a heatmap along with a phylogeny and trait tree.

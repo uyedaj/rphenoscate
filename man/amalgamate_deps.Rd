@@ -7,21 +7,21 @@
 amalgamate_deps(dep_mat)
 }
 \arguments{
-\item{dep_mat}{data.frame, a dependency matrix.}
+\item{dep_mat}{A dependency matrix}
 }
 \value{
 A list of:
 $M Transition matrices for the Structured-Hidden State Markov Models that can be run in RevBayes,
-corHMM or other tools.
-$graph The full graph of all dependencies among traits.
-$con.comp A list of the group membership etc. produced by 'igraph::components'.
-$traits The old trait names that were amalgamated.
-$new.traits The new names of the amalgamated trait names.
-$depstates A list providing the dependencies of all characters.
+corHMM or other tools
+$graph The full graph of all dependencies among traits
+$con.comp A list of the group membership etc. produced by `igraph::components`
+$traits The old trait names that were amalgamated
+$new.traits The new names of the amalgamated trait names
+$depstates A list providing the dependencies of all characters
 }
 \description{
 Generates a graph and model for traits given a dependency matrix.
 }
 \details{
-The dependency matrix can come from 'rphenoscape::pa_dep_matrix' or be user generated.
+The dependency matrix can come from `rphenoscape::pa_dep_matrix` or be user generated
 }

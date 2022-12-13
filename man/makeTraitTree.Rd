@@ -2,23 +2,22 @@
 % Please edit documentation in R/visualization_functions.R
 \name{makeTraitTree}
 \alias{makeTraitTree}
-\title{Makes a trait tree using semantic similarity.}
+\title{Make a Trait Tree}
 \usage{
 makeTraitTree(td, external = F, ONT, method = "nj")
 }
 \arguments{
-\item{td}{a treeplyr treedata object.}
+\item{td}{The treedata object containing character data}
 
-\item{external}{logical, indicates if an external ontology is used instead of UBERON.}
+\item{external}{Should an external ontology be used}
 
-\item{method}{character, indicates the method to be used to produce a 'trait tree' based on semantic similarity;
-if 'nj' produces a neighbor-joining tree using the function 'nj' from ape; if 'cls' produces a clustering dendrogram using 'hclust'.}
+\item{ONT}{The ontology object to use}
 
-\item{ONTO}{an ontology_index object of an external ontology imported using the R package 'ontologyIndex'.}
-}
-\value{
-A 'phylo' (neighbor-joining) or 'hclust' (clustering dendrogram) object.
+\item{method}{Neighbor-joining method for clustering-dendrogram. Options are "nj" or "cls"}
 }
 \description{
+Makes a trait tree using semantic similarity.
+}
+\details{
 Makes a trait tree using semantic similarity.
 }

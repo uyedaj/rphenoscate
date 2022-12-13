@@ -2,15 +2,15 @@
 % Please edit documentation in R/scate_functions.R
 \name{EHEtransform}
 \alias{EHEtransform}
-\title{Equal Rate Hidden Extension of rate matrix.}
+\title{Equal Rate Hidden Extension of rate matrix}
 \usage{
 EHEtransform(Q)
 }
 \arguments{
-\item{Q}{rate matrix.}
+\item{Q}{rate matrix}
 }
 \value{
-matrix.
+matrix
 }
 \description{
 Gives minimal equal rate hidden extension by finding least common multiple of rates.
@@ -21,7 +21,4 @@ Qehe <- EHEtransform(Q)
 
 part_scheme=list(c(1, 2), c(3,4,5))
 is_slumpable(Qehe, part_scheme)
-}
-\author{
-Sergei Tarasov
 }

@@ -4,19 +4,19 @@
 \alias{auto_dep_matrix}
 \title{Obtains a 'auto-dependency' matrix when amalgamating characters referring to the same anatomical entity.}
 \usage{
-auto_dep_matrix(td, tax.col = F)
+auto_dep_matrix(td, tax.col = FALSE)
 }
 \arguments{
-\item{td}{a treeplyr treedata object with characters to amalgamate.}
+\item{td}{A treeplyr treedata object with characters to recode}
 
-\item{tax.col}{logical, indicates if the first column of the data set contains taxon names.}
-}
-\value{
-A matrix M\[i,j\] where 1 indicates that characters i and j refer to the same anatomical entity.
+\item{tax.col}{Indicates if the first column of the data set contains taxon names}
 }
 \description{
 Obtains a 'auto-dependency' matrix when amalgamating characters referring to the same anatomical entity.
 }
-\author{
-Diego S. Porto
+\examples{
+\dontrun{
+    auto_dep_matrix(treedata, tax.col = FALSE)
+ }
+
 }
