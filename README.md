@@ -6,10 +6,10 @@
 
 -   Install rphenoscape and rphenoscate packages using devtools:
 ```
-install.packages("devtools")
-require(devtools)
-install_github("phenoscape/rphenoscape")
-install_github("uyedaj/rphenoscate")
+install.packages("remotes")
+require(remotes)
+remotes::install_github("phenoscape/rphenoscape")
+remotes::install_github("uyedaj/rphenoscate", build_vignettes = TRUE)
 ```
 
 
