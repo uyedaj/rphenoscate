@@ -52,7 +52,7 @@ The DDA algorithm (Fig. 1B) works by taking the diagram and traversing it from t
 
 The R code below is provided for manual amalgamations with the DDA algorithm for the four examples shown in Figure 1.
 
-![Fig. 1. **A)** Complex hierarchy of three *a/p* and four qualitative characters. **B)** Dependency Diagram for (A); "\#" indicates the sequence of steps in the DDA algorithm; *SMM()* idicates SMM amalgamation; *ED-bd()* and *ED-ql()* indicate *a/p* and qualitative types of the ED amalgamations respectively. **C-D)** Dependency Diagrams for the tail characters from @tarasov2022new.](https://github.com/sergeitarasov/MorphoModels/blob/main/vignettes/Fig_1_vignette.png){width="90%"}
+![Fig. 1. **A)** Complex hierarchy of three *a/p* and four qualitative characters. **B)** Dependency Diagram for (A); "\#" indicates the sequence of steps in the DDA algorithm; *SMM()* idicates SMM amalgamation; *ED-bd()* and *ED-ql()* indicate *a/p* and qualitative types of the ED amalgamations respectively. **C-D)** Dependency Diagrams for the tail characters from @tarasov2022new.](Fig_1_vignette.png){width="90%"}
 
 
 ## Example 1. Complex Hierrachy from Fig. 1B
