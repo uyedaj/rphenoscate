@@ -1328,7 +1328,6 @@ as_matrixRB_symbolic <- function(Q, symb='q'){
 }
 
 
-#####       NOT EXPORTED        #####
 
 #####################################
 ##### UPDATE: Sergei (2022)     #####
