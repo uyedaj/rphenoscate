@@ -11,7 +11,7 @@ amalgamated_fits_corHMM(td, amalgamations, ...)
 
 \item{amalgamations}{A list produced by `amalgamate_deps`}
 
-\item{...}{Additional arguments passed to `corHMM::rayDISC`}
+\item{...}{Additional arguments passed to `corHMM::corHMM`}
 }
 \value{
 A list of fits for each character in the dataset
@@ -21,5 +21,5 @@ A wrapper for corHMM that fits Structured Hidden State Models.
 }
 \details{
 This function fits the models contained in `amalgamations$M`
-to each of the characters in `td` using the function `corHMM::rayDISC`.
+to each of the characters in `td` using the function `corHMM::corHMM`.
 }

@@ -66,7 +66,7 @@ ontologyHeatMap <- function(td, njt, start=3, margs=c(0.2, 0.25), ...){
 
   par(new = TRUE)
 
-  plot(tree1, x.lim=c(0,(1+margs[2])*(h2$x.lim[2]+h1$x.lim[1])), y.lim=c(0,h1$y.lim[2]+h2$y.lim[2]), show.tip.label = F,...)
+  plot(tree1, x.lim=c(0,(1+margs[2])*(h2$x.lim[2]+h1$x.lim[1])), y.lim=c(0,h1$y.lim[2]+h2$y.lim[2]), ...)
 
   if(!is.null(njt)){
     par(new = TRUE)

@@ -400,9 +400,10 @@ build.matrix <- function(tax, pheno.obj, chars.obj, CHARS){
 #' @export
 print_coverage <- function(x){
   coverage <- apply(x, 2, function(x) sum(!is.na(x)))
-  average <- sapply(x, function(x) mean(as.numeric(na.omit(x[x %in% c("0", "1")])), na.rm=TRUE))
-  cover <- cbind(coverage, average)
-  tmp <- dplyr::filter(data.frame(traits=rownames(cover), cover), coverage > 0, average < 1, average > 0) %>% arrange(desc(coverage))
+  percentage <- round(coverage/dim(x)[1],2)
+  average <- sapply(x, function(x) round(mean(as.numeric(na.omit(x[x %in% c("0", "1")])), na.rm = TRUE),2))
+  cover <- dplyr::tibble(traits = names(coverage), coverage, percentage, average)
+  tmp <- dplyr::filter(cover, coverage > 0, average < 1, average > 0) %>% arrange(desc(coverage))
   print(tmp)
 }
 
