@@ -84,6 +84,7 @@ auto_dep_matrix <- function(td, tax.col = FALSE){
 #' @param td A treeplyr treedata object with characters to recode
 #' @param amal.deps A list produced by the function `amalgamate_deps_gen`
 #' @param tax.col Indicates if the first column of the data set contains taxon names
+#' @param ... Additional arguments passed to `make.treedata`
 #'
 #' @examples
 #' \dontrun{
@@ -91,7 +92,7 @@ auto_dep_matrix <- function(td, tax.col = FALSE){
 #' }
 #'
 #' @export
-recode_traits_gen <- function(td, amal.deps, tax.col = TRUE)
+recode_traits_gen <- function(td, amal.deps, tax.col = TRUE, ...)
 {
 
   # Format as data.frame #
@@ -99,7 +100,7 @@ recode_traits_gen <- function(td, amal.deps, tax.col = TRUE)
 
   ## Prepare data ##
   # Get vectors for new traits #
-  if(tax.col == T){ new.traits <- lapply(amal.deps$groups, function(x) { td$dat[, (x + 1)] } ) }else{
+  if(tax.col == TRUE){ new.traits <- lapply(amal.deps$groups, function(x) { td$dat[, (x + 1)] } ) }else{
 
     new.traits <- lapply(amal.deps$groups, function(x) { td$dat[,x] } )
 
@@ -121,7 +122,7 @@ recode_traits_gen <- function(td, amal.deps, tax.col = TRUE)
   miss.states <- lapply(amal.deps$states[nondep.index], function(x) paste0(x, collapse = "&") )
 
   # Recode missing for non-dependent traits #
-  nondep.traits <- mapply(x = nondep.traits, y = miss.states, function(x,y){ gsub(x, pattern = "\\?", replacement = y) }, SIMPLIFY = F)
+  nondep.traits <- mapply(x = nondep.traits, y = miss.states, function(x,y){ gsub(x, pattern = "\\?", replacement = y) }, SIMPLIFY = FALSE)
 
   ## Process dependent traits ##
   # OBS.: In this context 'dependency' means simply that two or more traits are annotated with the same ontology term.
@@ -163,7 +164,7 @@ recode_traits_gen <- function(td, amal.deps, tax.col = TRUE)
   }
 
   # Recode all non-missings from dependent traits #
-  new.states <- mapply(x = recode.states, y = dep.traits, z = dep.states, function(x,y,z) {x[match(y,z)]}, SIMPLIFY = F )
+  new.states <- mapply(x = recode.states, y = dep.traits, z = dep.states, function(x,y,z) {x[match(y,z)]}, SIMPLIFY = FALSE)
 
   # Get all elements with missing from depend traits #
   miss.states <- mapply(x = dep.traits, y = new.states, function(x,y) { x[is.na(y)] } )
@@ -192,7 +193,7 @@ recode_traits_gen <- function(td, amal.deps, tax.col = TRUE)
 
   # Build final data set #
   M <- as.data.frame(do.call(cbind, new.traits))
-  td <- treeplyr::make.treedata(td$phy, cbind(td$dat[,1],M))
+  td <- treeplyr::make.treedata(td$phy, cbind(td$phy$tip.label, M), ...)
 
   # Return results #
   return(td)
@@ -378,6 +379,7 @@ recode_td <- function(td, traits, states, depstates=numeric(0)){
 #'
 #' @param td A 'treeplyr' treedata object with characters to recode
 #' @param M A list produced by the function `amalgamate_deps`
+#' @param ... Additional arguments passed to `make.treedata`
 #'
 #' @examples
 #' \dontrun{
@@ -385,7 +387,7 @@ recode_td <- function(td, traits, states, depstates=numeric(0)){
 #' }
 #'
 #' @export
-recode_traits <- function(td, M){
+recode_traits <- function(td, M, ...){
   # iterate through each new amalgamated trait and recode the matrix for that trait into td
   for(i in seq_along(M$new_traits)){
     trait_name <- M$new_traits[[i]]
@@ -393,6 +395,10 @@ recode_traits <- function(td, M){
     # if trait is not connected (ie has no dependencies)
     if(pracma::strcmp(M$traits[[i]], M$new_traits[[i]]) == TRUE){
       states <- setNames(c("0", "1"), 1:2)
+      ##
+      td$dat[[i]] %>% as.character %>%  tidyr::replace_na("?") -> td$dat[[i]]
+      td$dat <- type.convert(as.data.frame(td$dat), as.is = T)
+      ##
       td <- recode_td(td, trait_name, states)
       td$dat[[trait_name]][td$dat[[trait_name]]=="?"] <- paste0(((1:length(states))-1), collapse="&")
     }
@@ -401,12 +407,16 @@ recode_traits <- function(td, M){
       gtraits <- M$traits[[i]]
       # set states
       states <- colnames(M$M[[trait_name]])
+      ##
+      td$dat[[i]] %>% as.character %>%  tidyr::replace_na("?") -> td$dat[[i]]
+      td$dat <- type.convert(as.data.frame(td$dat), as.is = T)
+      ##
       depstates <- M$depstates[[trait_name]]
       td <-recode_td(td, gtraits, states, depstates)
       td$dat[[trait_name]][td$dat[[trait_name]]=="?"] <- paste0(((1:length(states))-1), collapse="&")
     }
   }
-
+  td <- treeplyr::make.treedata(td$phy, cbind(td$phy$tip.label, td$dat), ...)
   return(td)
 }
 
@@ -926,12 +936,10 @@ init_char_matrix<-function(char.state, rate.param, diag.as=NA){
 #'
 #' @param td A treeplyr treedata object
 #' @param amalgamations A list produced by `amalgamate_deps`
-#' @param ... Additional arguments passed to `corHMM::rayDISC`
+#' @param ... Additional arguments passed to `corHMM::corHMM`
 #'
 #' @details This function fits the models contained in `amalgamations$M`
-#' to each of the characters in `td` using the function `corHMM::rayDISC`.
-#'
-#' @importFrom phytools bind.tip
+#' to each of the characters in `td` using the function `corHMM::corHMM`.
 #'
 #' @return A list of fits for each character in the dataset
 #' @export
@@ -943,13 +951,8 @@ amalgamated_fits_corHMM <- function(td, amalgamations, ...){
     diag(.M) <- NA
     .M[.M==0] <- NA
     colnames(.M) <- rownames(.M) <- 0:(ncol(.M)-1)
-    dat <- data.frame(td[,i,tip.label=TRUE])
-    #.testdat <- corHMM:::factorData(dat)
-    .phy <- phytools::bind.tip(td$phy, "...delete...", edge.length = 0, where=length(td$phy$tip.label)+1)
-    new.row <- data.frame("...delete...", paste(0:(ncol(.M)-1), collapse="&"))
-    colnames(new.row) <- colnames(dat)
-    .dat <- rbind(dat, new.row)
-    fits[[i]] <- corHMM::rayDISC(.phy, .dat, rate.mat = .M, model = "ARD", ...)
+    .dat <- data.frame(td[,i,tip.label = TRUE])
+    fits[[i]] <- corHMM::corHMM(phy = td$phy, data = .dat, rate.mat = .M, rate.cat = 1, ...)
   }
   attributes(fits)$td <- td
   names(fits) <- colnames(td$dat)
@@ -965,25 +968,18 @@ amalgamated_fits_corHMM <- function(td, amalgamations, ...){
 #' @details This function takes the models produced from `amalgamated_fits_corHMM` and
 #' uses them to generate stochastic character maps.
 #'
-#' @importFrom phytools bind.tip
-#' @importFrom phytools drop.tip.simmap
-#'
 #' @return A list of stochastic character maps for each character in the dataset
 #'
 #' @export
-amalgamated_simmaps_corHMM <- function(fits, ...){
+amalgamated_simmaps_corHMM <- function (fits, ...)
+{
   td <- attributes(fits)$td
   trees <- list()
-  for(i in 1:ncol(td$dat)){
-    xx <- as.data.frame(cbind(td$phy$tip.label, as.character(td$dat[[i]])))
-    Q <- fits[[i]]$solution
-	phy <- phytools::bind.tip(td$phy, "...delete...", edge.length = 0, where=length(td$phy$tip.label)+1)
-	new.row <- data.frame("...delete...", paste(0:(ncol(Q)-1), collapse="&"))
-	colnames(new.row) <- colnames(xx)
-	xx <- rbind(xx, new.row)
-    stmp <- corHMM::makeSimmap(td$phy, xx, model=Q, rate.cat = 1, ...)
+  for (i in 1:ncol(td$dat)) {
+    .dat <- as.data.frame(cbind(td$phy$tip.label, as.character(td$dat[[i]])))
+    .M <- fits[[i]]$solution
 
-	trees[[i]] <- lapply(stmp, function(x) x <- phytools::drop.tip.simmap(x, "...delete...") )
+    trees[[i]] <- makeSimmap(td$phy, data = .dat, model = .M, rate.cat = 1, collapse = F, ...)
 
   }
   return(trees)
