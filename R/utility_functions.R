@@ -150,6 +150,7 @@ rescore.all <- function(x, y){
 #' }
 #'
 #' @importFrom igraph graph.adjacency
+#' @importFrom igraph clusters
 #'
 #' @export
 extract.chars <- function(exclu.obj){
