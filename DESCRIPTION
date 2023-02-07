@@ -39,7 +39,7 @@ Imports: ape, phytools, corHMM, pracma, dplyr, tidyr, MASS, numbers,
 Suggests: tidyverse, rmarkdown, knitr, testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Remotes: uyedaj/rphenoscate
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Config/testthat/edition: 3
 NeedsCompilation: no
 Packaged: 2022-09-25 18:25:43 UTC; caleb
