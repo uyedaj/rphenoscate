@@ -18,7 +18,7 @@ https://github.com/uyedaj/rphenoscate/issues
 
 
 -   Tutorial and examples:
-https://github.com/diegosasso/XXXXX/XXXXX
+https://github.com/diegosasso/rphenoscate_tutorials
 
 
 -   Manuscript describing package utilities:
@@ -30,7 +30,7 @@ https://phenoscape.org/
 https://github.com/phenoscape
 
 
--	Additional information about the Phenoscate Project:
+-	Additional information about the SCATE Project:
 https://scate.phenoscape.org/
 
 
