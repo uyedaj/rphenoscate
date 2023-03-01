@@ -2,12 +2,12 @@ Package: rphenoscate
 Title: Semantics for Comparative Analyses of Trait Evolution
 Version: 0.1.1
 Authors@R: 
-    c(person("Porto", "Diego",
+    c(person(c("Diego", "S."), "Porto",
              email = "diegosporto@gmail.com",
              role = c("aut"),
              comment = c(ORCID="0000-0002-1657-9606")
            ),
-      person("Tarasov", "Sergei",
+      person("Sergei", "Tarasov",
              email = "sergei.tarasov@helsinki.fi",
              role = c("aut"),
              comment = c(ORCID="0000-0001-5237-2330")
@@ -17,6 +17,11 @@ Authors@R:
              role = c("aut"),
              comment = c(ORCID="0000-0001-9107-0714")
            ),
+      person(c("Benjamin", "D."), "Redelings",
+	     email = "benjamin.redelings@gmail.com",
+	     role = c("ctb"),
+	     comment = c(ORCID="0000-0002-3278-4343")
+	     ),
       person("Josef", "Uyeda",
              email = "juyeda@vt.edu",
              role = c("aut", "cre"),
@@ -43,8 +48,3 @@ RoxygenNote: 7.2.3
 Config/testthat/edition: 3
 NeedsCompilation: no
 Packaged: 2022-09-25 18:25:43 UTC; caleb
-Author: Porto Diego [aut] (<https://orcid.org/0000-0002-1657-9606>),
-  Tarasov Sergei [aut] (<https://orcid.org/0000-0001-5237-2330>),
-  Hilmar Lapp [aut] (<https://orcid.org/0000-0001-9107-0714>),
-  Josef Uyeda [aut, cre] (<https://orcid.org/0000-0003-4624-9680>)
-Maintainer: Josef Uyeda <juyeda@vt.edu>
