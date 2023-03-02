@@ -41,9 +41,9 @@ Depends: R (>= 3.5.0)
 Imports: ape, phytools, corHMM, pracma, dplyr, tidyr, MASS, numbers,
         treeplyr, rphenoscape, ontologyIndex, purrr, readr, stringr,
         ontoFAST, grDevices, graphics, igraph
-Suggests: tidyverse, rmarkdown, knitr, testthat (>= 3.0.0)
+Suggests: tidyverse, rmarkdown, knitr, testthat (>= 3.0.0), rphenoscape (>= 0.3.0)
 VignetteBuilder: knitr
-Remotes: uyedaj/rphenoscate
+Remotes: phenoscape/rphenoscape
 RoxygenNote: 7.2.3
 Config/testthat/edition: 3
 NeedsCompilation: no
