@@ -32,7 +32,7 @@ Description: Provides tools for semantic-aware evolutionary analyses of anatomic
   Current available capabilities include: setting structured Markov models for sets of characters based on a dependency matrix;
   recoding dependent traits as a single multistate character; building files to perform analyses on RevBayes or corHMM;
   visualizing dependency structure among characters with graphs and stochastic maps.
-License: GPL (>= 2)
+License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en-US
 URL: https://github.com/uyedaj/rphenoscate
