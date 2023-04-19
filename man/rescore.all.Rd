@@ -6,6 +6,13 @@
 \usage{
 rescore.all(x, y)
 }
+\arguments{
+\item{x}{A list of taxon phenotypes.}
+
+\item{y}{A list of character state tokens.
+
+Internal function. Not exported.}
+}
 \description{
-Internal function. Not exported.
+Rescore all states and build characters.
 }

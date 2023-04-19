@@ -18,11 +18,13 @@ $unsolved contains phenotypes that were not assigned to clusters or singletons. 
 $chars Inferred clusters of phenotypes with character statements writen in natural language, as in the original study
 $clusters Inferred clusters shown as phenotype IDs
 $tokens Codes assigned to character states
-
-\dontrun{
-    build.chars(CH, chars.obj)
-}
 }
 \description{
 Build characters based on inferred phenotype clusters.
+}
+\examples{
+\dontrun{
+    build.chars(CH, chars.obj)
+}
+
 }

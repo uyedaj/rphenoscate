@@ -15,6 +15,11 @@
 #'
 #' @return M
 #'
+#' @examples
+#' \dontrun{
+#'     process.ontofast(ontofast, HAO, s.terms = c("ridge", "carina", "spine") )
+#' }
+#'
 #' @export
 process.ontofast <- function(ontoFAST, ONT, s.filter = F, g.filter = F, s.terms, g.terms){
 
@@ -84,6 +89,8 @@ process.ontofast <- function(ontoFAST, ONT, s.filter = F, g.filter = F, s.terms,
 
 #' Merge compatible phenotypes.
 #'
+#' @param x A matrix.
+#'
 #' Internal function. Not exported.
 #'
 merge.pheno <- function(x){
@@ -100,6 +107,9 @@ merge.pheno <- function(x){
 
 #' Rescore individual states.
 #'
+#' @param x A list of taxon phenotypes.
+#' @param y A list of character state tokens.
+#'
 #' Internal function. Not exported.
 #'
 rescore <- function(x,y){
@@ -114,6 +124,9 @@ rescore <- function(x,y){
 
 
 #' Rescore all states and build characters.
+#'
+#' @param x A list of taxon phenotypes.
+#' @param y A list of character state tokens.
 #'
 #' Internal function. Not exported.
 #'
@@ -145,6 +158,7 @@ rescore.all <- function(x, y){
 #' $phenotypes The inferred clusters of phenotypes (phenotype IDs)
 #' $submatrices The exclusivity submatrices corresponding to each phenotype cluster extracted from the $matrix element of the exclu.obj object 
 #'
+#' @examples
 #' \dontrun{
 #'     extract.chars(exclu.obj)
 #' }
@@ -195,6 +209,7 @@ extract.chars <- function(exclu.obj){
 #' $clusters Inferred clusters shown as phenotype IDs
 #' $tokens Codes assigned to character states
 #'
+#' @examples
 #' \dontrun{
 #'     build.chars(CH, chars.obj)
 #' }
@@ -352,11 +367,12 @@ build.chars <- function(CH, chars.obj){
 
 #' Build character matrices based on inferred characters.
 #'
-#' @param character A character vector with the taxon names to be scored
+#' @param tax character A character vector with the taxon names to be scored
 #' @param pheno.obj A list of phenotypes produced by the function `get_phenotypes` and converted with `as.phenotype` from the package 'rphenoscape'
 #' @param chars.obj A data.frame or list produced by the function `chars` from the package 'rphenoscape'
 #' @param CHARS A named list of inferred characters produced by the function `build.chars`
 #'
+#' @examples
 #' \dontrun{
 #'     build.matrix(tax, pheno.obj, chars.obj, CHARS)
 #' }
@@ -398,6 +414,11 @@ build.matrix <- function(tax, pheno.obj, chars.obj, CHARS){
 #'
 #' @importFrom stats na.omit
 #'
+#' @examples
+#' \dontrun{
+#'     print_coverage(treedata$dat)
+#' }
+#'
 #' @export
 print_coverage <- function(x){
   coverage <- apply(x, 2, function(x) sum(!is.na(x)))
@@ -417,6 +438,11 @@ print_coverage <- function(x){
 #'
 #' @return td The filtered treedata object
 #'
+#' @examples
+#' \dontrun{
+#'     filter_coverage(treedata)
+#' }
+#'
 #' @export
 filter_coverage <- function(td, traits=0, taxa=0){
   taxa_coverage <- apply(td$dat, 1, function(x) mean(as.numeric(!is.na(x))))
@@ -427,34 +453,18 @@ filter_coverage <- function(td, traits=0, taxa=0){
 }
 
 
-#' Utility function for cleaning up character data table after amalgamating characters.
-#'
-#' @param char_info The character data table to clean
-#' @param dep.mat Dependency matrix
-#' @param td The treedata object with amalgamated characters
-#'
-#' @return char_info_comb Cleaned character data table after amalgamating characters.
-#'
-#' @importFrom stats setNames
-#'
-#' @export
-dropDependentTraits <- function(char_info, dep.mat, td){
-
-  char_info_comb <- char_info[which(apply(dep.mat, 1, sum, na.rm=TRUE)==0), c(1,5)]
-
-  new.traits <- colnames(td$dat)
-  old.traits <- sapply(new.traits, function(x) strsplit(x, "+", fixed=TRUE)[[1]][1])
-  trait.trans <- setNames(new.traits, old.traits)
-  char_info_comb$ID <- unname(trait.trans[as.character(char_info_comb$ID)])
-  return(char_info_comb)
-}
-
-
 #' Utility function for stripping off url from IRI.
 #'
 #' @param x A full IRI
 #'
 #' @return x The IRI with its url stripped.
+#'
+#' @examples
+#' \dontrun{
+#'     IRIs <- c("http://purl.obolibrary.org/obo/UBERON_0002396",
+#'     "http://purl.obolibrary.org/obo/UBERON_0011634")
+#'     strip_IRI(IRIs)
+#' }
 #'
 #' @export
 strip_IRI <- function(x){

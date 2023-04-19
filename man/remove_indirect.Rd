@@ -12,3 +12,9 @@ remove_indirect(dependency_matrix)
 \description{
 Function for removing redundant dependency edges from our graph.
 }
+\examples{
+\dontrun{
+    remove_indirect(dep_mat)
+}
+
+}

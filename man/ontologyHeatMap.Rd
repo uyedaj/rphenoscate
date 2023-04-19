@@ -23,3 +23,9 @@ Plots a heatmap that matches a phylogeny to a trait tree.
 \description{
 Plots a heatmap along with a phylogeny and trait tree.
 }
+\examples{
+\dontrun{
+    ontologyHeatMap(treedata, njt)
+}
+
+}

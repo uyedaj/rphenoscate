@@ -38,7 +38,6 @@ $state.data A list providing the character state descriptions for the amalgamate
 Generates a model for traits given a dependency matrix when using external ontologies.
 }
 \examples{
-
 \dontrun{
     amalgamate_deps_gen(treedata, dep_mat, state.data = state.data)
 }

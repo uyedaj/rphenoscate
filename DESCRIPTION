@@ -1,6 +1,6 @@
 Package: rphenoscate
 Title: Semantics for Comparative Analyses of Trait Evolution
-Version: 0.1.1
+Version: 1.0.0
 Authors@R: 
     c(person(c("Diego", "S."), "Porto",
              email = "diegosporto@gmail.com",
@@ -11,6 +11,11 @@ Authors@R:
              email = "sergei.tarasov@helsinki.fi",
              role = c("aut"),
              comment = c(ORCID="0000-0001-5237-2330")
+           ),
+	  person("Caleb", "Charpentier",
+             email = "calebc22@vt.edu",
+             role = c("aut"),
+             comment = c(ORCID="0000-0002-9787-7081")
            ),
 	  person("Hilmar", "Lapp",
              email = "hilmar.lapp@duke.edu",
@@ -38,13 +43,12 @@ Language: en-US
 URL: https://github.com/uyedaj/rphenoscate
 BugReports: https://github.com/uyedaj/rphenoscate/issues
 Depends: R (>= 3.5.0)
-Imports: ape, phytools, corHMM, pracma, dplyr, tidyr, MASS, numbers,
-        treeplyr, rphenoscape, ontologyIndex, purrr, readr, stringr,
-        ontoFAST, grDevices, graphics, igraph
-Suggests: tidyverse, rmarkdown, knitr, testthat (>= 3.0.0), rphenoscape (>= 0.3.0)
+Imports: ape, phytools, corHMM, pracma, dplyr, tidyr, stringr, MASS, numbers,
+        treeplyr, rphenoscape, ontologyIndex, grDevices, graphics, igraph
+Suggests: ontoFAST, tidyverse, rmarkdown, knitr, testthat (>= 3.0.0)
 VignetteBuilder: knitr
-Remotes: phenoscape/rphenoscape
+Remotes: uyedaj/rphenoscate
 RoxygenNote: 7.2.3
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2022-09-25 18:25:43 UTC; caleb
+Packaged: 2023-04-19; diego
