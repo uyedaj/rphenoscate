@@ -1,0 +1,421 @@
+"","taxa","antorbital","infraorbital 1","infraorbital 2","infraorbital 3","infraorbital 4","infraorbital 5","infraorbital 6","scapula","scapular process","coracoid bone","coracoid foramen","supraneural 1 bone","supraneural 2 bone","supraneural 3 bone","supraneural 4 bone","supraneural 5 bone","uroneural 1","uroneural 2"
+"1","Acanthocharax microlepis","1",1,1,1,"1",NA,"1",NA,NA,1,"0 and 1",NA,NA,NA,NA,NA,NA,NA
+"2","Acestrocephalus acutus","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"3","Acestrocephalus pallidus","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"4","Acestrocephalus sardina","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"5","Acestrocephalus stigmatus","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"6","Acrobrycon ipanquianus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"7","Agoniates anchovia","1",1,1,1,"1",1,"1",1,1,1,"1",NA,NA,NA,NA,NA,"1","1"
+"8","Agoniates halecinus","1",1,1,1,"1",1,"1",1,1,1,"1",NA,NA,NA,NA,NA,"1","1"
+"9","Agoniates sp. (Vari 1989a)","1",1,NA,NA,"1",1,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"10","Amazonspinther dalmata","1",1,1,1,"0 and 1",0,"0",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"11","Aphyocharacidium bolivianum","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"12","Aphyocharax anisitsi","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"13","Aphyocharax dentatus","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"14","Aphyocharax nattereri","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"15","Aphyodite grammica","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"16","Argopleura magdalenensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"17","Astyanacinus moorii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"18","Astyanax abramis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"19","Astyanax aurocaudatus","1",NA,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"20","Astyanax bransfordii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"21","Astyanax caballeroi","1",1,1,1,"1",1,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"22","Astyanax cf. rutilus (Mirande 2019)","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"23","Astyanax chico","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"24","Astyanax correntinus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"25","Astyanax cremnobates","1",1,1,1,"0 and 1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"26","Astyanax eigenmanniorum","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"27","Astyanax endy","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"28","Astyanax fasciatus","1",1,1,NA,"1",NA,"1",NA,NA,1,"0",NA,NA,NA,NA,NA,NA,NA
+"29","Astyanax intermedius","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"30","Astyanax lacustris","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"31","Astyanax latens","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"32","Astyanax lineatus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"33","Astyanax mexicanus","1",1,1,1,"1",1,"1",1,1,1,"0","0","0","0",NA,NA,"0 and 1","0"
+"34","Astyanax parahybae","1",1,1,1,"1",1,"1",1,NA,NA,NA,"0","0","0",0,0,NA,NA
+"35","Astyanax paris","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"36","Astyanax pellegrini","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"37","Astyanax puka","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"38","Astyanax troya","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"39","Atopomesus pachyodus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"40","Attonitus ephimeros","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"41","Aulixidens eugeniae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"42","Axelrodia lindeae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"43","Bario steindachneri","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"44","Brachychalcinus copei","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"45","Brittanichthys axelrodi","1",1,1,1,"0 and 1",1,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"46","Brycon amazonicus","1",1,1,NA,"1",NA,"1",NA,NA,1,"0",NA,NA,NA,NA,NA,NA,NA
+"47","Brycon falcatus","1",1,1,1,"1",1,"1",1,1,1,"1",NA,NA,NA,NA,NA,"1","1"
+"48","Brycon gouldingi","1",1,1,1,"1",1,"1",1,1,1,"1",NA,NA,NA,NA,NA,"1","1"
+"49","Brycon guatemalensis","1",NA,NA,1,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"50","Brycon orbignyanus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"51","Brycon pesu","1",1,1,1,"1",1,"1",1,1,1,"1",NA,NA,NA,NA,NA,"1","1"
+"52","Brycon polylepis","1",1,1,1,"1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"1","1"
+"53","Bryconacidnus pectinatus","1",1,1,1,"1",1,"1",1,NA,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"54","Bryconamericus agna","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"55","Bryconamericus cf. iheringii (Mirande 2019)","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"56","Bryconamericus exodon","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"57","Bryconamericus heteresthes","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"58","Bryconamericus iheringii","1",1,1,1,"1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"0 and 1","0"
+"59","Bryconamericus ikaa","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"60","Bryconamericus mennii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"61","Bryconamericus rubropictus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"62","Bryconamericus stramineus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"63","Bryconamericus uporas","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"64","Bryconella pallidifrons","1",1,1,1,"0 and 1",NA,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"65","Bryconetes enigmaticus","1",1,1,1,"1",1,"1",NA,NA,1,"1",NA,NA,NA,NA,NA,"0 and 1","0"
+"66","Bryconexodon juruenae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"67","Bryconops affinis","1",1,1,1,"0 and 1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"1","1"
+"68","Bryconops alburnoides","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"69","Bryconops caudomaculatus","1",1,1,NA,"1",NA,"1",NA,NA,1,"0",NA,NA,NA,NA,NA,NA,NA
+"70","Bryconops melanurus","1",1,1,1,"1",1,"1",1,1,1,"1",NA,NA,NA,NA,NA,"1","1"
+"71","Carlana eigenmanni","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"72","Charax condei","1",1,1,NA,"0",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"73","Charax gibbosus","1",1,1,1,"0 and 1",NA,"1",NA,NA,1,"0 and 1",NA,NA,NA,NA,NA,NA,NA
+"74","Charax leticiae","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"75","Charax pauciradiatus","1",1,1,1,"0 and 1",1,"1",1,NA,1,"0 and 1","0","0","0",0,0,NA,NA
+"76","Charax sp. (Buckup 1998)","1",NA,NA,1,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"77","Charax stenopterus","1",1,1,1,"0 and 1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"0 and 1","0"
+"78","Charax unimaculatus","1",1,1,NA,"1",1,"1",1,NA,1,"0 and 1",NA,NA,NA,0,NA,NA,NA
+"79","Cheirodon interruptus","1",1,1,1,"1",1,"1",1,1,1,"0","0","0","0",0,0,"0 and 1","0"
+"80","Cheirodon sp. (Burheim et al. 2008)","1",1,1,1,"1",1,"1",NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"81","Clupeacharax anchoveoides","1",1,NA,NA,"0 and 1",1,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"82","Compsura heterura","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"83","Coptobrycon bilineatus","1",1,1,1,"1",1,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"84","Creagrutus affinis","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"85","Creagrutus amoenus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"86","Creagrutus anary","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"87","Creagrutus atratus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"88","Creagrutus atrisignum","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"89","Creagrutus barrigai","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"90","Creagrutus beni","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"91","Creagrutus bolivari","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"92","Creagrutus brevipinnis","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"93","Creagrutus britskii","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"94","Creagrutus calai","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"95","Creagrutus caucanus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"96","Creagrutus changae","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"97","Creagrutus cochui","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"98","Creagrutus cracentis","1",1,1,1,"1",1,"1",1,NA,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"99","Creagrutus crenatus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"100","Creagrutus ephippiatus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"101","Creagrutus figueiredoi","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"102","Creagrutus flavescens","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"103","Creagrutus gephyrus","1",1,1,1,"1",1,"1",1,NA,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"104","Creagrutus gracilis","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"105","Creagrutus gyrospilus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"106","Creagrutus hildebrandi","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"107","Creagrutus holmi","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"108","Creagrutus hysginus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"109","Creagrutus ignotus","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"110","Creagrutus kunturus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"111","Creagrutus lassoi","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"112","Creagrutus lepidus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"113","Creagrutus machadoi","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"114","Creagrutus magdalenae","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"115","Creagrutus magoi","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"116","Creagrutus manu","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"117","Creagrutus maracaiboensis","1",1,NA,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"118","Creagrutus maxillaris","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"119","Creagrutus melanzonus","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"120","Creagrutus melasma","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"121","Creagrutus menezesi","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"122","Creagrutus meridionalis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"123","Creagrutus mucipu","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"124","Creagrutus muelleri","1",1,1,1,"1",1,"1",1,NA,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"125","Creagrutus nigrostigmatus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"126","Creagrutus occidaneus","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"127","Creagrutus ortegai","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"128","Creagrutus ouranonastes","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"129","Creagrutus paraguayensis","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"130","Creagrutus paralacus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"131","Creagrutus pearsoni","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"132","Creagrutus peruanus","1",1,1,1,"1",1,"1",1,NA,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"133","Creagrutus petilus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"134","Creagrutus phasma","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"135","Creagrutus pila","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"136","Creagrutus provenzanoi","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"137","Creagrutus runa","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"138","Creagrutus saxatilis","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"139","Creagrutus seductus","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"140","Creagrutus taphorni","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"141","Creagrutus ungulus","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"142","Creagrutus vexillapinnus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"143","Creagrutus zephyrus","1",1,1,NA,"1",NA,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"144","Ctenobrycon hauxwellianus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"145","Cyanogaster noctivaga","1",1,1,1,"1",1,NA,1,1,1,"0",NA,NA,"1",NA,NA,"0 and 1","0 and 1"
+"146","Cynopotamus argenteus","1",1,1,1,"1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"0 and 1","0"
+"147","Cynopotamus gouldingi","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"148","Cynopotamus juruenae","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"149","Cynopotamus kincaidi","1",1,1,1,"1",1,"1",1,NA,1,"0 and 1",NA,NA,NA,0,NA,NA,NA
+"150","Cynopotamus tocantinensis","1",1,1,1,"1",1,"1",1,NA,1,"0 and 1",NA,NA,NA,0,NA,NA,NA
+"151","Cynopotamus xinguano","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"152","Deuterodon iguape","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"153","Deuterodon langei","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"154","Deuterodon longirostris","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1",NA
+"155","Deuterodon potaroensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"156","Deuterodon rosae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"157","Deuterodon sp. (Mirande 2019)","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"158","Deuterodon stigmaturus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"159","Diapoma alburnum","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"160","Diapoma guarani","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"161","Diapoma obi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"162","Diapoma speculiferum","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"163","Diapoma terofali","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"164","Diapoma uruguayense","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"165","Ectrepopterus uruguayensis","1",1,1,1,"1",1,"1",1,NA,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"166","Engraulisoma taeniatum","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"167","Eretmobrycon emperador","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"168","Eretmobrycon peruanus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"169","Eretmobrycon scleroparius","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"170","Erythrocharax altipinnis","1",1,1,1,"0 and 1",1,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"171","Exodon paradoxus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"172","Galeocharax goeldii","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"173","Galeocharax gulo","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"174","Galeocharax humeralis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"175","Galeocharax knerii","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"176","Gnathocharax steindachneri","1",1,1,1,"0 and 1",1,"0 and 1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"177","Grundulus bogotensis","1",1,1,1,"1",1,NA,1,1,1,"0","0","0","0",NA,NA,"0 and 1","0"
+"178","Gymnocharacinus bergii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"179","Gymnocorymbus ternetzi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"180","Hasemania crenuchoides","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"181","Hasemania nana","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"182","Hemibrycon caucanus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"183","Hemibrycon dariensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"184","Hemibrycon surinamensis","1",1,1,1,"1",1,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"185","Hemigrammus aguaruna","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"186","Hemigrammus bleheri","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"187","Hemigrammus cf. lunatus (Mirande 2019)","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"188","Hemigrammus erythrozonus","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"189","Hemigrammus haraldi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"190","Hemigrammus marginatus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"191","Hemigrammus pulcher","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"192","Hemigrammus rodwayi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"193","Hemigrammus ulreyi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"194","Hemigrammus unilineatus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"195","Heterocharax leptogrammus","1",1,1,NA,"0",NA,"1",NA,NA,1,"0",NA,NA,NA,NA,NA,NA,NA
+"196","Heterocharax macrolepis","1",1,1,1,"0 and 1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"0 and 1","0"
+"197","Heterocharax virgulatus","1",1,1,NA,"1",NA,"1",NA,NA,1,"0",NA,NA,NA,NA,NA,NA,NA
+"198","Heterocheirodon yatai","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"199","Hollandichthys multifasciatus","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"200","Hollandichthys sp. (DiDario 2004)","1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"201","Hollandichthys sp. (Vari 1989a)","1",1,NA,NA,"1",1,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"202","Hoplocharax goethei","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"203","Hyphessobrycon anisitsi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"204","Hyphessobrycon bifasciatus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"205","Hyphessobrycon boulengeri","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"206","Hyphessobrycon compressus","1",1,1,1,"0 and 1",1,"1",1,NA,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"207","Hyphessobrycon elachys","1",1,1,1,"1",1,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"208","Hyphessobrycon eques","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"209","Hyphessobrycon erythrostigma","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"210","Hyphessobrycon herbertaxelrodi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"211","Hyphessobrycon loweae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"212","Hyphessobrycon megalopterus","1",1,1,1,"0 and 1",NA,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"213","Hyphessobrycon meridionalis","1",1,1,1,"1",1,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"214","Hyphessobrycon moniliger","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"215","Hyphessobrycon montagi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"216","Hyphessobrycon myrmex","1",1,NA,NA,"1",0,"0",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"217","Hyphessobrycon poecilioides","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"218","Hyphessobrycon pulchripinnis","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"219","Hyphessobrycon santae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"220","Hyphessobrycon socolofi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"221","Hyphessobrycon vanzolinii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"222","Hyphessobrycon wajat","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"223","Iguanodectes geisleri","1",1,1,1,"1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"1","1"
+"224","Inpaichthys kerri","1 and 0",1,1,1,"0 and 1",1,NA,1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"225","Jupiaba acanthogaster","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"226","Jupiaba anteroides","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"227","Jupiaba mucronata","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"228","Jupiaba polylepis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"229","Jupiaba scologaster","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"230","Knodus breviceps","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"231","Knodus gamma","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"232","Knodus meridae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"233","Knodus moenkhausii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"234","Knodus tanaothoros","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"235","Lignobrycon myersi","1",1,1,1,"1",1,"1",1,NA,1,"0 and 1",NA,NA,NA,NA,NA,"1","1"
+"236","Lonchogenys ilisha","1",1,1,1,"1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"0 and 1","0"
+"237","Macropsobrycon uruguayanae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"238","Markiana nigripinnis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"239","Microgenys minuta","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"240","Microschemobrycon casiquiare","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"241","Mimagoniates microlepis","1",1,1,1,"1",1,"0 and 1",NA,NA,1,"0",NA,NA,NA,NA,NA,"1",NA
+"242","Mimagoniates rheocharis","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"243","Moenkhausia bonita","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"244","Moenkhausia ceros","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"245","Moenkhausia collettii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"246","Moenkhausia cotinho","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"247","Moenkhausia dichroura","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"248","Moenkhausia heikoi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"249","Moenkhausia jamesi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"250","Moenkhausia lata","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"251","Moenkhausia lepidura","1",1,1,1,"1",1,"1",1,1,1,"0 and 1",NA,NA,NA,0,NA,"1","1"
+"252","Moenkhausia pirauba","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"253","Moenkhausia sanctaefilomenae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"254","Moenkhausia xinguensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"255","Myxiops aphos","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"256","Nantis indefessus","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"257","Nematobrycon palmeri","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"258","Nematocharax venustus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"259","Odontostilbe fugitiva","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"260","Odontostilbe microcephala","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"261","Odontostilbe paraguayensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"262","Odontostilbe pequira","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"263","Odontostilbe pulchra","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"264","Odontostilbe sp. (Burheim et al. 2008)","1",1,1,1,"1",1,"1",NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"265","Odontostoechus lethostigmus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"266","Oligosarcus argenteus","1",1,1,1,"1",1,"1",1,NA,1,"0 and 1",NA,NA,NA,0,NA,NA,NA
+"267","Oligosarcus bolivianus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"268","Oligosarcus itau","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"269","Oligosarcus jenynsii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"270","Oligosarcus longirostris","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"271","Oligosarcus menezesi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"272","Oligosarcus paranensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"273","Oligosarcus pintoi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"274","Orthospinus franciscensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"275","Paleotetra aiuruoca","1",1,1,1,"1",1,NA,1,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"276","Paleotetra entrecorregos","1",1,1,1,"1",1,"1",1,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"277","Paracheirodon axelrodi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"278","Paracheirodon innesi","1",1,1,1,"0",0,"0",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"279","Paragoniates alburnus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"280","Parecbasis cyclolepis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"281","Petitella georgiae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"282","Phenacogaster calverti","1",1,1,1,"1",1,"1",NA,NA,1,"0",NA,NA,NA,NA,NA,NA,NA
+"283","Phenacogaster franciscoensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"284","Phenacogaster tegatus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"285","Phenagoniates macrolepis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"286","Phycocharax rasbora","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"287","Piabarchus analis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"288","Piabina argentea","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"289","Piabina thomasi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"290","Piabucus melanostoma","1",1,1,1,"1",1,"1",1,1,1,"1",NA,NA,NA,NA,NA,"1","1"
+"291","Poptella paraguayensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"292","Priocharax ariel","1 and 0",0,0,0,"0",0,"0",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"293","Priocharax nanus","1 and 0",0,0,0,"0",0,"0",NA,NA,NA,NA,NA,NA,"1",NA,NA,NA,NA
+"294","Priocharax pygmaeus","1 and 0",0,0,0,"0",0,"0",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"295","Priocharax sp. (Mattox et al. 2016)","1",1,1,1,"0",0,"0",0,0,0,"0",NA,NA,"1",NA,NA,"1","1"
+"296","Prionobrama filigera","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"297","Prionobrama paraguayensis","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"298","Pristella maxillaris","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"299","Probolodus heterostomus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"300","Prodontocharax melanotus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"301","Protocheirodon pi","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"302","Psellogrammus kennedyi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"303","Pseudochalceus kyburzi","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"304","Pseudocheirodon terrabae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"305","Pseudocorynopoma doriae","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"306","Pseudocorynopoma heterandria","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"307","Rhoadsia altipinna","1",1,1,1,"1",1,"1",1,1,1,"0","0","0","0",NA,NA,"0 and 1","0"
+"308","Roeboexodon guyanensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"309","Roeboides descalvadensis","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0 and 1"
+"310","Roeboides dientonito","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"311","Roeboides microlepis","1",1,1,1,"0 and 1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"312","Roeboides myersii","1",1,1,NA,"0 and 1",1,"1",1,NA,1,"0 and 1",NA,NA,NA,0,NA,NA,NA
+"313","Roeboides occidentalis","1",1,1,NA,"1",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"314","Roeboides xenodon","1",1,1,NA,"0",NA,"1",NA,NA,NA,"0",NA,NA,NA,NA,NA,NA,NA
+"315","Salminus brasiliensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,"1",NA,NA,"1","1"
+"316","Salminus hilarii","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"317","Serrapinnus calliurus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"318","Serrapinnus microdon","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"319","Serrapinnus notomelas","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"320","Serrapinnus sp. (Burheim et al. 2008)","1",1,1,1,"1",1,"1",NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"321","Spintherobolus ankoseion","1",NA,1,1,"0 and 1",0,"0",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"322","Spintherobolus broccae","1",NA,NA,NA,"0",0,"0",NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"323","Spintherobolus leptoura","1",NA,NA,NA,"0",0,"0",NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"324","Spintherobolus papilliferus","1",1,1,1,"0 and 1",0,"0",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"325","Stethaprion erythrops","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"326","Stichonodon insignis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"327","Tetragonopterus argenteus","1",1,1,1,"1",1,"1",1,1,1,"0","0","0","0",0,0,"1","1"
+"328","Tetragonopterus chalceus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"329","Thayeria boehlkei","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"330","Thayeria obliqua","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"331","Triportheus albus","1",1,1,1,"1",1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"332","Triportheus angulatus","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"333","Triportheus nematurus","1",1,1,1,"1",1,"1",1,1,1,"0 and 1",NA,NA,NA,NA,NA,"1","1"
+"334","Triportheus pantanensis","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"1","1"
+"335","Xenagoniates bondi","1",1,1,1,"1",1,"1",1,1,1,"0",NA,NA,NA,NA,NA,"0 and 1","0"
+"336","Xenurobrycon coracoralinae","1",0,1,1,"0",0,NA,NA,NA,NA,NA,"0","0","0",0,0,NA,NA
+"337","Xenurobrycon macropus","1",1,1,1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"338","Xenurobrycon varii","1",1,1,1,"0",0,NA,NA,NA,NA,NA,"0","0","0",0,0,NA,NA
+"339","Acinocheirodon melanogramma",NA,1,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"340","Aphyocheirodon hemigrammus",NA,1,1,1,"1",NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"341","Aphyodite apiaka",NA,1,1,1,"1",1,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"342","Aphyodite tupebas",NA,1,1,1,"1",1,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"343","Astyanax",NA,1,1,1,"1",1,NA,NA,NA,1,"0 and 1",NA,NA,NA,NA,NA,NA,NA
+"344","Brycon dentex",NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,"0 and 1","0 and 1","0 and 1",1,1,"0","0"
+"345","Brycon sp. (Lucena and Menezes 1998)",NA,1,1,1,"1",1,NA,NA,NA,1,"1",NA,NA,NA,NA,NA,NA,NA
+"346","Cheirodontops geayi",NA,1,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"347","Compsura gorgonae",NA,1,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"348","Genus C species C (Malabarba 1998)",NA,1,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"349","Heterocheirodon",NA,1,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"350","Hoplocharax",NA,1,1,1,"1",1,NA,NA,NA,1,"0 and 1",NA,NA,NA,NA,NA,NA,NA
+"351","Kolpotocheirodon theloura",NA,1,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"352","Megacheirodon sp. (Burheim et al. 2008)",NA,1,1,1,"1",1,"1",NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"353","Megacheirodon unicus",NA,1,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"354","Odontostilbe dialeptura",NA,1,1,1,"1",NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"355","Odontostilbe mitoptera",NA,1,1,1,"1",NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"356","Pseudocheirodon arnoldi",NA,1,1,NA,"1",NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"357","Roeboides sp. A (Lucena and Menezes 1998)",NA,1,1,1,"1",NA,NA,NA,NA,1,"0 and 1",NA,NA,NA,NA,NA,NA,NA
+"358","Roeboides sp. B (Lucena and Menezes 1998)",NA,1,1,1,"1",1,NA,NA,NA,1,"0 and 1",NA,NA,NA,NA,NA,NA,NA
+"359","Saccoderma melanostigma",NA,1,1,1,"1",NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"360","Serrapinnus",NA,1,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"361","Serrapinnus malabarbai",NA,1,1,1,"0",0,"0",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"362","Triportheus guentheri",NA,1,1,1,"1",1,NA,NA,NA,1,"0 and 1",NA,NA,NA,NA,NA,NA,NA
+"363","Tyttobrycon marajoara",NA,1,1,1,"0",0,"0",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"364","Xenurobrycon heterodon",NA,1,1,1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"365","Xenurobrycon polyancistrus",NA,1,1,1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"366","Xenurobrycon pteropus",NA,1,1,1,"1",1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"367","Cheirodon pisciculus",NA,NA,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"368","Hemibrycon brevispini",NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"369","Nanocheirodon",NA,NA,1,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"370","Astyanax nasutus",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"371","Astyanax nicaraguensis",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"372","Astyanax orthodus",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"373","Axelrodia riesei",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"374","Bryconamericus bayano",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"375","Bryconamericus diaphanus",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"376","Cheirodon australe",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"377","Cheirodon kiliani",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"378","Chrysobrycon myersi",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"379","Eretmobrycon gonzalezi",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"380","Eretmobrycon miraensis",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"381","Gymnocorymbus bondi",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"1","1"
+"382","Hemibrycon quindos",NA,NA,NA,1,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"383","Hypobrycon leptorhynchus",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"384","Hypobrycon maromba",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"385","Knodus cinarucoense",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"386","Knodus deuterodonoides",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"387","Knodus smithi",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"388","Leptobrycon jatuaranae",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"389","Macropsobrycon xinguensis",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"390","Microschemobrycon melanotus",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"391","Moenkhausia comma",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"392","Moenkhausia copei",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"393","Moenkhausia costae",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"394","Moenkhausia hemigrammoides",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"395","Moenkhausia intermedia",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"396","Moenkhausia phaeonota",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"397","Nanocheirodon insignis",NA,NA,NA,1,"1",NA,NA,1,NA,1,NA,NA,NA,NA,NA,NA,NA,NA
+"398","Odontostilbe stenodon",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"399","Rachoviscus crassiceps",NA,NA,NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"400","Rhinobrycon negrensis",NA,NA,NA,1,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,"0 and 1","0"
+"401","Eretmobrycon dahli",NA,NA,NA,NA,"1",1,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"402","Hyphessobrycon piranga",NA,NA,NA,NA,"0",0,"0",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"403","Tetragonopterus anostomus",NA,NA,NA,NA,NA,NA,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"404","Tetragonopterus araguaiensis",NA,NA,NA,NA,NA,NA,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"405","Tetragonopterus carvalhoi",NA,NA,NA,NA,NA,NA,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"406","Tetragonopterus denticulatus",NA,NA,NA,NA,NA,NA,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"407","Tetragonopterus rarus",NA,NA,NA,NA,NA,NA,"1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"408","Ceratobranchia obtusirostris",NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,"0 and 1","0"
+"409","Gephyrocharax atracaudatus",NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,"0 and 1","0"
+"410","Glandulocauda melanopleura",NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,"0 and 1","0"
+"411","Lepidocharax burnsi",NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,"0 and 1","0"
+"412","Planaltina britskii",NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,"0 and 1","0"
+"413","Tyttocharax tambopatensis",NA,NA,NA,NA,NA,NA,NA,NA,NA,1,NA,NA,NA,NA,NA,NA,"0 and 1","0"
+"414","Brycon sp. (Fink and Fink 1981)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"0","0","0",NA,NA,NA,NA
+"415","Creagrutus sp. (Fink and Fink 1981)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"0","0","0",NA,NA,NA,NA
+"416","Eretmobrycon brevirostris",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"0","0","0",NA,NA,NA,NA
+"417","Gymnocorymbus sp. (Fink and Fink 1981)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"0","0","0",NA,NA,NA,NA
+"418","Characidae",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"0",NA,NA,NA,NA,NA
+"419","Gymnocorymbus thayeri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"0 and 1","0"
+"420","Mimagoniates inequalis",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"1",NA
