@@ -6,6 +6,11 @@
 \usage{
 \method{merge}{pheno}(x)
 }
+\arguments{
+\item{x}{A matrix.
+
+Internal function. Not exported.}
+}
 \description{
-Internal function. Not exported.
+Merge compatible phenotypes.
 }

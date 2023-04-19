@@ -15,3 +15,13 @@ Matrix
 \description{
 Likely as independently evolving
 }
+\examples{
+M1<-matrix(c(-1,1,  2,-2),2,2, byrow = TRUE)
+rownames(M1) <- colnames(M1) <- c("0","1")
+M2 <- matrix(c(-3,3,  4,-4),2,2, byrow = TRUE)
+rownames(M2) <- colnames(M2) <- c("0","1")
+M3 <- matrix(c(-5,5,  6,-6),2,2, byrow = TRUE)
+rownames(M3) <- colnames(M3) <- c("0","1")
+ms <- list(M1 = M1, M2 = M2, M3 = M3)
+combNmatrices(ms) 
+}

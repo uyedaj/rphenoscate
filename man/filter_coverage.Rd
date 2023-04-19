@@ -19,3 +19,9 @@ td The filtered treedata object
 \description{
 Utility function for filtering data based on missing traits and taxa.
 }
+\examples{
+\dontrun{
+    filter_coverage(treedata)
+}
+
+}

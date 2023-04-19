@@ -25,3 +25,9 @@ M
 \description{
 Utility function for process an ontoFAST object.
 }
+\examples{
+\dontrun{
+    process.ontofast(ontofast, HAO, s.terms = c("ridge", "carina", "spine") )
+}
+
+}

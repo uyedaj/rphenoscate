@@ -23,3 +23,9 @@ A wrapper for corHMM that fits Structured Hidden State Models.
 This function fits the models contained in `amalgamations$M`
 to each of the characters in `td` using the function `corHMM::corHMM`.
 }
+\examples{
+\dontrun{
+    amalgamated_fits_corHMM(treedata, amaldeps)
+}
+
+}

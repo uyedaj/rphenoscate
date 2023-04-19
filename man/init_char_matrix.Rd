@@ -19,3 +19,6 @@ matrix
 \description{
 Initialize binary matrices
 }
+\examples{
+init_char_matrix(c("0", "1"), c("0", "1"), diag.as = NA)
+}

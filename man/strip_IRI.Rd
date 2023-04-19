@@ -15,3 +15,11 @@ x The IRI with its url stripped.
 \description{
 Utility function for stripping off url from IRI.
 }
+\examples{
+\dontrun{
+    IRIs <- c("http://purl.obolibrary.org/obo/UBERON_0002396",
+    "http://purl.obolibrary.org/obo/UBERON_0011634")
+    strip_IRI(IRIs)
+}
+
+}

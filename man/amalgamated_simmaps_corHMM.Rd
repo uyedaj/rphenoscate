@@ -21,3 +21,9 @@ A wrapper for corHMM that draws stochastic character maps given a corHMM fit.
 This function takes the models produced from `amalgamated_fits_corHMM` and
 uses them to generate stochastic character maps.
 }
+\examples{
+\dontrun{
+    amalgamated_simmaps_corHMM(fitdata)
+}
+
+}

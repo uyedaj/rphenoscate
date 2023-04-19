@@ -2,7 +2,6 @@
 
 #' Plots a heatmap along with a phylogeny and trait tree.
 #'
-#' @import ape
 #' @import phytools
 #' @import grDevices
 #' @import graphics
@@ -14,8 +13,15 @@
 #' @param margs Margins for the plot
 #' @param ... Extra arguments to pass for visualization
 #'
+#' @importFrom ape chronopl
+#' @importFrom ape branching.times
 #' @importFrom stats na.omit
 #' @importFrom phytools force.ultrametric
+#'
+#' @examples
+#' \dontrun{
+#'     ontologyHeatMap(treedata, njt)
+#' }
 #'
 #' @return Plots a heatmap that matches a phylogeny to a trait tree.
 #'
@@ -88,15 +94,21 @@ ontologyHeatMap <- function(td, njt, start=3, margs=c(0.2, 0.25), ...){
 #' @param ONT The ontology object to use
 #' @param method Neighbor-joining method for clustering-dendrogram. Options are "nj" or "cls"
 #'
+#' @importFrom ape nj
 #' @importFrom stats hclust
 #' @importFrom stats setNames
 #' @importFrom stats as.dist
 #'
+#' @examples
+#' \dontrun{
+#'     makeTraitTree(treedata, external = TRUE, HAO)
+#' }
+#'
 #' @export
-makeTraitTree <- function (td, external = F, ONT, method = "nj")
+makeTraitTree <- function (td, external = FALSE, ONT, method = "nj")
 {
 
-  if(external == T){
+  if(external == TRUE){
 
     traits <- colnames(td$dat) # extract trait terms
 
@@ -145,5 +157,4 @@ makeTraitTree <- function (td, external = F, ONT, method = "nj")
   return(tree)
 
 }
-
 

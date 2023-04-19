@@ -7,18 +7,20 @@
 build.matrix(tax, pheno.obj, chars.obj, CHARS)
 }
 \arguments{
+\item{tax}{character A character vector with the taxon names to be scored}
+
 \item{pheno.obj}{A list of phenotypes produced by the function `get_phenotypes` and converted with `as.phenotype` from the package 'rphenoscape'}
 
 \item{chars.obj}{A data.frame or list produced by the function `chars` from the package 'rphenoscape'}
 
-\item{CHARS}{A named list of inferred characters produced by the function `build.chars`
-
-\dontrun{
-    build.matrix(tax, pheno.obj, chars.obj, CHARS)
-}}
-
-\item{character}{A character vector with the taxon names to be scored}
+\item{CHARS}{A named list of inferred characters produced by the function `build.chars`}
 }
 \description{
 Build character matrices based on inferred characters.
+}
+\examples{
+\dontrun{
+    build.matrix(tax, pheno.obj, chars.obj, CHARS)
+}
+
 }

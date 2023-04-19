@@ -4,7 +4,7 @@
 \alias{makeTraitTree}
 \title{Make a Trait Tree}
 \usage{
-makeTraitTree(td, external = F, ONT, method = "nj")
+makeTraitTree(td, external = FALSE, ONT, method = "nj")
 }
 \arguments{
 \item{td}{The treedata object containing character data}
@@ -20,4 +20,10 @@ Makes a trait tree using semantic similarity.
 }
 \details{
 Makes a trait tree using semantic similarity.
+}
+\examples{
+\dontrun{
+    makeTraitTree(treedata, external = TRUE, HAO)
+}
+
 }

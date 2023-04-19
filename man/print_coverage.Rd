@@ -15,3 +15,9 @@ Prints the number of matching species and average value across them from an Onto
 \description{
 Utility function for displaying the number of matching species and average value across them from an Ontotrace matrix.
 }
+\examples{
+\dontrun{
+    print_coverage(treedata$dat)
+}
+
+}

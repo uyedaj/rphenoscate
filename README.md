@@ -1,6 +1,6 @@
 # RPhenoscate: Semantics for Comparative Analyses of Trait Evolution # 
 
--   Authors: Diego Porto, Sergei Tarasov, Hilmar Lapp, Josef Uyeda
+-   Authors: Diego Porto, Sergei Tarasov, Caleb Charpentier, Hilmar Lapp, Josef Uyeda
 -   Maintainer: Josef Uyeda
 
 

@@ -25,3 +25,9 @@ Generates a graph and model for traits given a dependency matrix.
 \details{
 The dependency matrix can come from `rphenoscape::pa_dep_matrix` or be user generated
 }
+\examples{
+\dontrun{
+    amalgamate_deps(dep_mat)
+}
+
+}

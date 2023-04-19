@@ -12,12 +12,14 @@ extract.chars(exclu.obj)
 \value{
 A list containing:
 $phenotypes The inferred clusters of phenotypes (phenotype IDs)
-$submatrices The exclusivity submatrices corresponding to each phenotype cluster extracted from the $matrix element of the exclu.obj object 
-
-\dontrun{
-    extract.chars(exclu.obj)
-}
+$submatrices The exclusivity submatrices corresponding to each phenotype cluster extracted from the $matrix element of the exclu.obj object
 }
 \description{
 Infer clusters of phenotypes based on mutually exclusivity.
+}
+\examples{
+\dontrun{
+    extract.chars(exclu.obj)
+}
+
 }

@@ -212,7 +212,6 @@ recode_traits_gen <- function(td, amal.deps, tax.col = TRUE, ...)
 #' @param tax.col Indicates if the first column of the data set contains taxon names
 #'
 #' @examples
-#'
 #' \dontrun{
 #'     amalgamate_deps_gen(treedata, dep_mat, state.data = state.data)
 #' }
@@ -346,7 +345,7 @@ amalgamate_deps_gen <- function(td, dep.mat, mode = c("auto", "check"), state.da
 #'
 #' @export
 recode_td <- function(td, traits, states, depstates=numeric(0)){
-  tmp <- select(td, traits)
+  tmp <- select(td, one_of(traits))
   hidden0 <- names(depstates)
   obs_char <- which(!(1:length(traits) %in% hidden0))
   for(i in 1:ncol(tmp$dat)){
@@ -435,6 +434,11 @@ recode_traits <- function(td, M, ...){
 #' $traits The old trait names that were amalgamated
 #' $new.traits The new names of the amalgamated trait names
 #' $depstates A list providing the dependencies of all characters
+#'
+#' @examples
+#' \dontrun{
+#'     amalgamate_deps(dep_mat)
+#' }
 #'
 #' @export
 amalgamate_deps <- function(dep_mat) {
@@ -563,6 +567,11 @@ get_dep_state <- function(subgraph, v, ancestor_mat, trait_order) {
 #'
 #' @param dependency_matrix A dependency matrix
 #'
+#' @examples
+#' \dontrun{
+#'     remove_indirect(dep_mat)
+#' }
+#'
 #' @export
 remove_indirect <- function(dependency_matrix){
   z <- dependency_matrix
@@ -595,123 +604,6 @@ logical_mult = function(x,y)
   }
   z
 }
-
-
-## Not exported (remove?) ##
-empty.df = function(colnames)
-{
-    setNames(data.frame(matrix(ncol=length(colnames), nrow=0)),colnames)
-}
-
-                                        # this doesn't really work with lists...
-addrow = function (df,row)
-{
-    colnames = names(df)
-                                        #    print("addrow:")
-                                        #    print(row)
-                                        #    print(colnames)
-    dfrow = data.frame(matrix(ncol=length(row),nrow=1,row), stringsAsFactors=FALSE)
-    dfrow = setNames(dfrow,colnames)
-    rbind(df,dfrow)
-}
-
-#
-### Not exported (remove?) ##
-##'
-##'
-#get.dependencies = function(uberon.filename, uterms, indirect=FALSE)
-#{
-#                                        # 1. Load uberon propagating different relationships
-#    print("Loading ontology 'uberon.obo'")
-#    uberon_is_a= get_ontology(uberon.filename,
-#                              propagate_relationships = c("is_a"),
-#                              extract_tags = 'minimal')
-#
-#    uberon_part_of = get_ontology(uberon.filename,
-#                                  propagate_relationships = c("part_of"),
-#                                  extract_tags = 'minimal')
-#
-#    uberon_develops_from = get_ontology(uberon.filename,
-#                                        propagate_relationships = c("develops_from"),
-#                                        extract_tags = 'minimal')
-#
-#    uberon = get_ontology(uberon.filename,
-#                          propagate_relationships = c("is_a", "part_of","develops_from"),
-#                          extract_tags = 'minimal')
-#
-#                                        # 2. Get names for the uberon terms
-#    unames = c()
-#    for(i in 1:length(uterms))
-#    {
-#        unames[i] = get_term_property(uberon,"name",uterms[i])
-#    }
-#
-#                                        # 3. for each pair of terms, check dependencies
-#    colnames = c("chr.id","dependent.chr.id","subrels")
-#    df = empty.df(colnames)
-#
-#    if (indirect)
-#    {
-#        maybe.remove.indirect = function(x) {x}
-#    }
-#    else
-#    {
-#        maybe.remove.indirect = remove.indirect
-#    }
-#
-#    D = maybe.remove.indirect(get_term_descendancy_matrix(uberon, uterms));
-#    Disa = maybe.remove.indirect(get_term_descendancy_matrix(uberon_is_a, uterms));
-#    Dpartof = maybe.remove.indirect(get_term_descendancy_matrix(uberon_part_of, uterms));
-#    Ddevelopsfrom = maybe.remove.indirect(get_term_descendancy_matrix(uberon_develops_from, uterms));
-#
-#    for(i in 1:length(uterms))
-#    {
-#        for(j in 1:length(uterms))
-#        {
-#            if (i == j) next;
-#
-#            if (D[i,j])
-#            {
-#                cat(sprintf("%s %s\n",uterms[i],uterms[j]))
-#
-#                labels = c()
-#
-#                if (Disa[i,j])
-#                {
-#                    labels = c(labels,"is_a")
-#                }
-#                if (Dpartof[i,j])
-#                {
-#                    labels = c(labels, "part_of")
-#                }
-#                if (Ddevelopsfrom[i,j])
-#                {
-#                    labels = c(labels, "develops_from")
-#                }
-#
-#                label = ""
-#                if (length(labels) > 0)
-#                {
-#                    label = paste(labels,sep=":")
-#                }
-#
-#                cat(sprintf("'%s' -> '%s'",unames[i],unames[j]),"\n")
-#
-#                # chr.id | chr.ancestor | label
-#                df = addrow(df,c(uterms[i], uterms[j], label))
-#
-#                                        #                cat(sprintf("%s,0,%s,1\n",unames[j],unames[i]), file=outfile)
-#                                        #                cat(sprintf("%s,1,%s,1\n",unames[j],unames[i]), file=outfile)
-#
-#
-#                                        #                cat(edge, " ", attributes, "\n", file=dotfile)
-#            }
-#                                        # OK, so does i depend on j?
-#        }
-#    }
-#
-#    tuple(df,uterms,hashmap(uterms,unames),uberon)
-#}
 
 
 #############################################
@@ -901,6 +793,15 @@ get_graph_matrix<-function(graph){
 #' @description Likely as independently evolving
 #' @param list.matrices List of matrices
 #' @return Matrix
+#' @examples
+#' M1<-matrix(c(-1,1,  2,-2),2,2, byrow = TRUE)
+#' rownames(M1) <- colnames(M1) <- c("0","1")
+#' M2 <- matrix(c(-3,3,  4,-4),2,2, byrow = TRUE)
+#' rownames(M2) <- colnames(M2) <- c("0","1")
+#' M3 <- matrix(c(-5,5,  6,-6),2,2, byrow = TRUE)
+#' rownames(M3) <- colnames(M3) <- c("0","1")
+#' ms <- list(M1 = M1, M2 = M2, M3 = M3)
+#' combNmatrices(ms) 
 #' @export
 combNmatrices<-function(list.matrices){
   comb.matrix<-list.matrices[[1]]
@@ -920,6 +821,8 @@ combNmatrices<-function(list.matrices){
 #' @param rate.param names for the rate parameters
 #' @param diag.as values to pas to the main diagonal elements
 #' @return matrix
+#' @examples
+#' init_char_matrix(c("0", "1"), c("0", "1"), diag.as = NA)
 #' @export
 init_char_matrix<-function(char.state, rate.param, diag.as=NA){
   n.state<-length(char.state)
@@ -940,6 +843,10 @@ init_char_matrix<-function(char.state, rate.param, diag.as=NA){
 #'
 #' @details This function fits the models contained in `amalgamations$M`
 #' to each of the characters in `td` using the function `corHMM::corHMM`.
+#' @examples
+#' \dontrun{
+#'     amalgamated_fits_corHMM(treedata, amaldeps)
+#' }
 #'
 #' @return A list of fits for each character in the dataset
 #' @export
@@ -970,6 +877,11 @@ amalgamated_fits_corHMM <- function(td, amalgamations, ...){
 #'
 #' @return A list of stochastic character maps for each character in the dataset
 #'
+#' @examples
+#' \dontrun{
+#'     amalgamated_simmaps_corHMM(fitdata)
+#' }
+#'
 #' @export
 amalgamated_simmaps_corHMM <- function (fits, ...)
 {
@@ -979,7 +891,7 @@ amalgamated_simmaps_corHMM <- function (fits, ...)
     .dat <- as.data.frame(cbind(td$phy$tip.label, as.character(td$dat[[i]])))
     .M <- fits[[i]]$solution
 
-    trees[[i]] <- makeSimmap(td$phy, data = .dat, model = .M, rate.cat = 1, collapse = F, ...)
+    trees[[i]] <- corHMM::makeSimmap(td$phy, data = .dat, model = .M, rate.cat = 1, collapse = F, ...)
 
   }
   return(trees)
